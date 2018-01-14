@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Compute.Cli")]
+[assembly: AssemblyTitle("Compute.Bindings.Cli")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Compute.Cli")]
+[assembly: AssemblyProduct("Compute.Bindings.Cli")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8b8f7349-ea6a-4211-ab2b-fe8fb914e7d7")]
+[assembly: Guid("8510bf0f-87b1-497c-914c-73beaff84c26")]
 
 // Version information for an assembly consists of the following four values:
 //
