@@ -72,7 +72,7 @@ namespace Compute.Bindings
                 else if (errors.Any(e => e.Tag == ErrorType.NoVerbSelectedError))
                 {
                     help.AddVerbs(BindOptionTypes);
-                    help.AddPreOptionsLine("No category selected. Select a category or verb from the options below:");
+                    help.AddPreOptionsLine("No library selected. Select a library or verb from the options below:");
                     L.Information(help);
                     Exit(ExitResult.INVALID_OPTIONS);
                 }
@@ -113,21 +113,37 @@ namespace Compute.Bindings
                 foreach (PropertyInfo prop in o.GetType().GetProperties())
                 {
                     ProgramOptions.Add(prop.Name, prop.GetValue(o));
-                }                                    
+                }
+                if (!string.IsNullOrEmpty(o.Root) && !Directory.Exists((string)ProgramOptions["Root"]))
+                {
+                    Log.Error($"The library root directory specified {(string)ProgramOptions["Root"]} does not exist.");
+                    Exit(ExitResult.INVALID_OPTIONS);
+                }
+                else if (!string.IsNullOrEmpty(o.Root))
+                {
+                    ProgramOptions.Add("RootDirectory", new DirectoryInfo((string)ProgramOptions["Root"]));
+                }
             })
             .WithParsed<MKLOptions>(o =>
             {
-                if (!ProgramOptions.ContainsKey("MKLRoot"))
+                if (!ProgramOptions.ContainsKey("RootDirectory"))
                 {
                     string e = Environment.GetEnvironmentVariable("MKLRoot");
                     if (string.IsNullOrEmpty(e))
                     {
-                        L.Error("The --mklroot option was not specified and the MKLRoot environment variable was not found.");
+                        L.Error("The --root option was not specified and the MKLRoot environment variable was not found.");
                         Exit(ExitResult.INVALID_OPTIONS);
+                    }
+                    else if (!Directory.Exists(e))
+                    {
+                        L.Error("The --root option was not specified and the directory specified by the MKLRoot environment variable does not exist.");
+                        Exit(ExitResult.INVALID_OPTIONS);
+                        ProgramOptions.Add("Root", e);
                     }
                     else
                     {
-                        ProgramOptions.Add("MKLRoot", e);
+                        ProgramOptions.Add("RootDirectory", new DirectoryInfo(e));
+
                     }
                 }
                 ConsoleDriver.Run(new MKLLibrary(ProgramOptions));

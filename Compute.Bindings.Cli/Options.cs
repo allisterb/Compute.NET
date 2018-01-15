@@ -30,18 +30,24 @@ namespace Compute.Bindings
         [Option('d', "double", Required = false, HelpText = "Map double-precision floating point type to the specified .NET type.", SetName = "type")]
         public string Double { get; set; }
 
-        [Option('m', "root", Required = false, HelpText = "Set the root directory on the local filesystem for the native comute library.")]
-        public string MKLRoot { get; set; }
+        [Option('r', "root", Required = false, HelpText = "Set the root directory on the local filesystem for the native comute library.")]
+        public string Root { get; set; }
 
-        [Option('o', "file", Required = false, HelpText = "Set the name and path of the output file for the bindings.")]
-        public string OutputFile { get; set; }
+        [Option('o', "output", Required = false, HelpText = "Set the output directory for the class files for the bindings.")]
+        public string OutputDirName { get; set; }
+
+        [Option("class", Required = false, HelpText = "Specify the name of the .NET class that the binding methods will be belong to.")]
+        public string ClassName { get; set; }
+
+        [Option('n', "namespace", Required = false, HelpText = "Specify the namespace that the bindings will belong to.")]
+        public string Namespace { get; set; }
 
     }
 
-    [Verb("blas", HelpText = "Generate bindings for the MKL libraries.")]
+    [Verb("mkl", HelpText = "Generate bindings for the Intel Math Kernel Libraries.")]
     class MKLOptions : Options
     {
-        
+       
  
     }
 }
