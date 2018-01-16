@@ -146,7 +146,7 @@ namespace Compute.Bindings
 
                     }
                 }
-                ConsoleDriver.Run(new MKLLibrary(ProgramOptions));
+                ConsoleDriver.Run(new MKL(ProgramOptions));
             });
         }
 

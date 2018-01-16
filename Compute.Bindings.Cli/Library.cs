@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Serilog;
 using CppSharp;
 using CppSharp.AST;
 using CppSharp.Generators;
@@ -43,7 +44,7 @@ namespace Compute.Bindings
             }
             if (string.IsNullOrEmpty(Namespace))
             {
-                Namespace = Name + "Bindings";
+                Namespace = Name + ".Bindings";
             }
             Contract.Requires(!string.IsNullOrEmpty(OutputDirName));
             Contract.Requires(!string.IsNullOrEmpty(ClassName));
@@ -83,15 +84,21 @@ namespace Compute.Bindings
 
 
         #region Properties
+        public ILogger L { get; } = Log.Logger.ForContext<Library>();
         public abstract LibraryKind Kind { get; }
         public string Name => Kind.ToString();
         public Dictionary<string, object> BindOptions { get; internal set; }
         public DirectoryInfo RootDirectory { get; internal set; }
+        public string R => RootDirectory.FullName;
         public string OutputDirName { get; internal set; }
         public string ModuleName { get; internal set; }
         public Module Module { get; internal set; }
         public string ClassName { get; internal set; }
         public string Namespace { get; internal set; }
+        #endregion
+
+        #region Methods
+        protected void Info(string m, params object[] o) => L.Information(m, o); 
         #endregion
     }
 }

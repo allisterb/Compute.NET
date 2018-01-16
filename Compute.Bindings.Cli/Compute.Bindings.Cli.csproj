@@ -101,8 +101,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACML.cs" />
     <Compile Include="Library.cs" />
-    <Compile Include="MKLLibrary.cs" />
+    <Compile Include="MKL.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
