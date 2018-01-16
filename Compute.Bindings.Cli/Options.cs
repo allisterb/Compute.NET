@@ -44,6 +44,10 @@ namespace Compute.Bindings
 
         [Option('n', "namespace", Required = false, HelpText = "Specify the namespace that the bindings will belong to.")]
         public string Namespace { get; set; }
+
+        [Option('v', "verbose", Required = false, HelpText = "Enable verbose output from CppSharp.")]
+        public bool Verbose { get; set; }
+
     }
 
     [Verb("mkl", HelpText = "Generate bindings for the Intel Math Kernel Libraries.")]
@@ -51,6 +55,9 @@ namespace Compute.Bindings
     {
         [Option("blas", Required = false, HelpText = "Generate bindings for the MKL BLAS routines. See https://software.intel.com/en-us/node/528682")]
         public bool Blas { get => ModuleName == "blas"; set => ModuleName = "blas"; }
+
+        [Option("vml", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Vml { get => ModuleName == "vml"; set => ModuleName = "vml"; }
 
         [Option("ilp64", Required = false, HelpText = "Use the ILP64 interfaces to MKL.", Default = false)]
         public bool Ilp64 { get; set; }
