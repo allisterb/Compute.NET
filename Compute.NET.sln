@@ -8,11 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{850395BD-B863-4CBD-8627-3D616E8D1D99}"
 	ProjectSection(SolutionItems) = preProject
 		bind.cmd = bind.cmd
+		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compute.NET.Tests", "Compute.NET.Tests\Compute.NET.Tests.csproj", "{F5DDD296-33DC-49CD-AA1C-FFAC980DD498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compute.NET.Tests", "Compute.NET.Tests\Compute.NET.Tests.csproj", "{F5DDD296-33DC-49CD-AA1C-FFAC980DD498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compute.Winx64.IntelMKL", "Compute.Winx64.IntelMKL\Compute.Winx64.IntelMKL.csproj", "{E2585EA9-5EFA-4863-B5D9-8EFE1212A056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compute.Winx64.IntelMKL", "Compute.Winx64.IntelMKL\Compute.Winx64.IntelMKL.csproj", "{E2585EA9-5EFA-4863-B5D9-8EFE1212A056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compute.Bindings.IntelMKL", "Compute.Bindings.IntelMKL\Compute.Bindings.IntelMKL.csproj", "{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +63,18 @@ Global
 		{E2585EA9-5EFA-4863-B5D9-8EFE1212A056}.Release|x64.Build.0 = Release|Any CPU
 		{E2585EA9-5EFA-4863-B5D9-8EFE1212A056}.Release|x86.ActiveCfg = Release|Any CPU
 		{E2585EA9-5EFA-4863-B5D9-8EFE1212A056}.Release|x86.Build.0 = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|x64.Build.0 = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Debug|x86.Build.0 = Debug|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|x64.ActiveCfg = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|x64.Build.0 = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|x86.ActiveCfg = Release|Any CPU
+		{978F5FFA-5215-4BA3-8ECB-C77BC50E6CAA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

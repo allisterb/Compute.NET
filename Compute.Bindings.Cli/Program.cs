@@ -18,13 +18,15 @@ namespace Compute.Bindings
         {
             SUCCESS = 0,
             UNHANDLED_EXCEPTION = 1,
-            INVALID_OPTIONS = 2
+            INVALID_OPTIONS = 2,
+            ERROR_DURING_CLEANUP = 3
         }
 
         static System.Version Version = Assembly.GetExecutingAssembly().GetName().Version;
         static LoggerConfiguration LConfig;
         static ILogger L;
         static Dictionary<string, object> ProgramOptions = new Dictionary<string, object>();
+        static Library ProgramLibrary;
 
         static void Main(string[] args)
         {
@@ -80,7 +82,7 @@ namespace Compute.Bindings
                 {
                     MissingRequiredOptionError error = (MissingRequiredOptionError)errors.First(e => e is MissingRequiredOptionError);
                     help.AddOptions(result);
-                    help.AddPreOptionsLine($"A required option or value is missing. The options and values for this benchmark category are: ");
+                    help.AddPreOptionsLine($"A required option or value is missing: {error.NameInfo.NameText} The options and values for this benchmark category are: ");
                     L.Information(help);
                     Exit(ExitResult.INVALID_OPTIONS);
                 }
@@ -146,7 +148,17 @@ namespace Compute.Bindings
 
                     }
                 }
-                ConsoleDriver.Run(new MKL(ProgramOptions));
+                ProgramLibrary = new MKL(ProgramOptions);
+                ConsoleDriver.Run(ProgramLibrary);
+                if (ProgramLibrary.CleanAndFixup())
+                {
+                    Exit(ExitResult.SUCCESS);
+                }
+                else
+                {
+                    Exit(ExitResult.ERROR_DURING_CLEANUP);
+                }
+
             });
         }
 

@@ -46,9 +46,23 @@ namespace Compute.Bindings
             {
                 Namespace = Name;
             }
+            Contract.Requires(!string.IsNullOrEmpty(ModuleName));
             Contract.Requires(!string.IsNullOrEmpty(OutputDirName));
             Contract.Requires(!string.IsNullOrEmpty(ClassName));
             Contract.Requires(!string.IsNullOrEmpty(Namespace));
+
+            Info($"Using {R} as library directory.");
+            Info($"Using {OutputDirName} as output directory.");
+            Info($"Using {Namespace} as library namespace.");
+            Info($"Using {ModuleName} as library module name directory.");
+            if (File.Exists(Path.Combine(R, ModuleName + ".cs")))
+            {
+                L.Warning($"Output file {Path.Combine(R, ModuleName + ".cs")} will be overwritten.");
+            }
+            else
+            {
+                L.Warning($"Output file is {Path.Combine(R, ModuleName + ".cs")}.");
+            }
         }
         #endregion
 
@@ -62,7 +76,7 @@ namespace Compute.Bindings
             Module = options.AddModule(ModuleName);
             Module.OutputNamespace = Namespace;
             options.OutputDir = OutputDirName;
-
+            options.GenerateSingleCSharpFile = true;
         }
 
         /// Setup your passes here.
@@ -80,6 +94,19 @@ namespace Compute.Bindings
         /// Do transformations that should happen after passes are processed.
         public virtual void Postprocess(Driver driver, ASTContext ctx)
         {
+        }
+
+        public virtual bool CleanAndFixup()
+        {
+            if (File.Exists(Path.Combine(R, Module.OutputNamespace + "-symbols.cpp")))
+            {
+                File.Delete(Path.Combine(R, Module.OutputNamespace + "-symbols.cpp"));
+            }
+            if (File.Exists(Path.Combine(R, "Std.cs")))
+            {
+                File.Delete(Path.Combine(R, "Std.cs"));
+            }
+            return true;
         }
         #endregion
 
@@ -100,7 +127,9 @@ namespace Compute.Bindings
         #endregion
 
         #region Methods
-        protected void Info(string m, params object[] o) => L.Information(m, o); 
+        protected void Info(string m, params object[] o) => L.Information(m, o);
+        protected void Warn(string m, params object[] o) => L.Warning(m, o);
+        protected void Error(string m, params object[] o) => L.Error(m, o);
         #endregion
     }
 }

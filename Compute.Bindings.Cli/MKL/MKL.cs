@@ -23,6 +23,8 @@ namespace Compute.Bindings
         #endregion
 
         #region Properties
+        public bool WithoutCommon { get; protected set; }
+
         public bool Sequential { get; protected set; }
         public bool TBB { get; protected set; }
 
@@ -36,7 +38,6 @@ namespace Compute.Bindings
         public override void Setup(Driver driver)
         {
             base.Setup(driver);
-            Info($"Using {R} as MKL root directory.");
             Module.Defines.Add("MKL_CALL_CONV=__cdecl");
             Module.IncludeDirs.Add(Path.Combine(R, "include"));
             if (Environment.Is64BitOperatingSystem)
@@ -49,7 +50,7 @@ namespace Compute.Bindings
                 Info("Using ia32 architecture.");
                 Module.LibraryDirs.Add(Path.Combine("lib", "ia32"));
             }
-            this.Module.LibraryName = "mkl_rt";
+            this.Module.SharedLibraryName = "mkl_rt";
             if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             {
                 if (Sequential)
@@ -60,33 +61,42 @@ namespace Compute.Bindings
                 else if (TBB)
                 {
                     this.Module.Libraries.Add("mkl_tbb_dll.lib");
-                    Info("Using Intel Thread Building Blocks threading.");
+                    Info("Using Intel Thread Building Blocks threading library.");
                 }
                 else
                 {
                     this.Module.Libraries.Add("mkl_intel_thread_dll.lib");
-                    Info("Using default threading.");
+                    Info("Using Intel threading library.");
                 }
                 Module.Libraries.Add("mkl_rt.lib");
             }
             else throw new PlatformNotSupportedException("Non-Windows platforms not currently supported.");
 
-            this.Module.Headers.Add("mkl_version.h");
+            if (!WithoutCommon)
+            {
+                this.Module.Headers.Add("mkl_version.h");
+                this.Module.Headers.Add("mkl_service.h");
+            }
+            else
+            {
+                Info("Not binding MKL common data structures and functions.");
+            }
+
             if (Blas)
             {
                 this.ModuleName = "blas";
                 this.Module.Headers.Add("mkl_blas.h");    
-                Info("Creating bindings for Blas routines.");
+                Info("Creating bindings for BLAS routines...");
             }
             else if (Vml)
             {
                 this.ModuleName = "vml";    
                 this.Module.Headers.Add("mkl_vml.h");
-                Info("Creating bindings for Vector Math routines.");
+                Info("Creating bindings for Vector Math routines...");
             }
             else
             {
-                throw new NotSupportedException();
+                throw new InvalidOperationException("Invalid module name.");
             }
             
         }
@@ -94,8 +104,12 @@ namespace Compute.Bindings
         public override void SetupPasses(Driver driver)
         {
             base.SetupPasses(driver);
-            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDecls(driver.Generator)); //
-            driver.AddTranslationUnitPass(new MKL_ConvertFunctionParameterDecls(this, driver.Generator));
+            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDeclsPass(this, driver.Generator)); //
+            driver.AddTranslationUnitPass(new MKL_IgnoreCommonDeclsPass(this, driver.Generator));
+            if (WithoutCommon)
+            {
+                driver.AddTranslationUnitPass(new MKL_IgnoreCommonDeclsPass(this, driver.Generator));
+            }
         }
         /// Do transformations that should happen before passes are processed.
         public override void Preprocess(Driver driver, ASTContext ctx)
@@ -107,8 +121,10 @@ namespace Compute.Bindings
         /// Do transformations that should happen after passes are processed.
         public override void Postprocess(Driver driver, ASTContext ctx)
         {
+
             IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8");
-            foreach(Class c in classes)
+            
+            foreach (Class c in classes)
             {
                 ctx.SetClassAsValueType(c.Name);
             }
@@ -119,19 +135,17 @@ namespace Compute.Bindings
                 ctx.SetClassAsValueType(c.Name);
             }
 
-            classes = ctx.FindClass("MKLVersion");
+            classes = ctx.FindClass("MKL_Version");
             foreach (Class c in classes)
             {
                 ctx.SetClassAsValueType(c.Name);
-
             }
-            classes = ctx.FindClass("DefVmlErrorContext");
-            foreach (Class c in classes)
-            {
-                ctx.SetClassAsValueType(c.Name);
-            }      
+
         }
 
+        #endregion
+
+        #region Methods
         #endregion
     }
 }

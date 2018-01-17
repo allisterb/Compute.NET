@@ -9,6 +9,7 @@ namespace Compute.Bindings
 {
     class Options
     {
+        /*
         [Option('b', "int8", Required = false, HelpText = "Map int8_t or byte types to the specified .NET type.", SetName = "type")]
         public string Int8 { get; set; }
 
@@ -30,24 +31,21 @@ namespace Compute.Bindings
         [Option('d', "double", Required = false, HelpText = "Map double-precision floating point type to the specified .NET type.", SetName = "type")]
         public string Double { get; set; }
 
+        */
         [Option('r', "root", Required = false, HelpText = "Set the root directory on the local filesystem for the native comute library.")]
         public string Root { get; set; }
 
         [Option('o', "output", Required = false, HelpText = "Set the output directory for the class files for the bindings.")]
         public string OutputDirName { get; set; }
 
-        [Option("class", Required = false, HelpText = "Specify the name of a module or subset of the library to generate bindings to. If this is omitted then all routines will be included.")]
+        [Option('m', "module", Required = false, HelpText = "Specify the name of a module or subset of the library to generate bindings to. If this is omitted then all routines will be included.")]
         public string ModuleName { get; set; }
-
-        [Option("class", Required = false, HelpText = "Specify the name of the .NET class that the binding methods will be belong to.")]
-        public string ClassName { get; set; }
 
         [Option('n', "namespace", Required = false, HelpText = "Specify the namespace that the bindings will belong to.")]
         public string Namespace { get; set; }
 
         [Option('v', "verbose", Required = false, HelpText = "Enable verbose output from CppSharp.", Default = false)]
         public bool Verbose { get; set; }
-
     }
 
     [Verb("mkl", HelpText = "Generate bindings for the Intel Math Kernel Libraries.")]
@@ -64,6 +62,9 @@ namespace Compute.Bindings
 
         [Option("tbb", Required = false, HelpText = "Use the Intel Thread Building Blocks library threading model.", Default = false)]
         public bool TBB { get; set; }
+
+        [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
+        public bool WithoutCommon { get; set; }
 
     }
 }
