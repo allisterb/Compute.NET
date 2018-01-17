@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Compute.Winx64.IntelMKL</id>
+    <version>0.1.0-alpha</version>
+    <authors>Allister Beharry</authors>
+    <owners>Allister Beharry</owners>
+    <licenseUrl>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.IntelMKL/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/allisterb/Compute.NET/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Intel MKL redistributable Windows x64 dependencies</description>
+    <releaseNotes></releaseNotes>
+    <tags>numerical HPC</tags>
+  </metadata>
+  <files>
+    <file src="native\**\*.dll" target="build\native" />
+    <file src="Compute.Winx64.IntelMKL.targets" target="build\netstandard2.0\Compute.Winx64.IntelMKL.targets" />
+  </files>
+</package>
