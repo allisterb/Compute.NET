@@ -1,4 +1,7 @@
 # Compute.NET: .NET bindings for native numerical computing
+Get the latest release frm the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
+
+![Screenshot of bind CLI](https://lh4.googleusercontent.com/NqxNNcK2pnOZ4xXo5rD9HkSOQ6XKKnd6i2xKdspo8NZaFPaC-CuaTiwmYPaFFYr8IxsFQBBTPv4oqw=w1920-h1010)
 
 Compute.NET provides auto-generated bindings for native numerical computing libraries like [Intel Math Kernel Library](https://software.intel.com/en-us/mkl), [AMD Core Math Library](https://developer.amd.com/tools-and-sdks/archive/acml-downloads-resources/) (and its successors), AMD [clBLAS](https://gpuopen.com/compute-product/clblas/), cl* and others. The bindings are auto-generated from the library's C headers using the excellent [CppSharp](https:/github.com/Mono/CppSharp) library. The generator is a CLI program that be can used to generate individual modules of each library as well as customize key aspects of the generated code, such as the use of .NET structs instead of classes for complex data types, and marshalling array parameters in native code functions (either as managed arrays or pointers.) 
 
