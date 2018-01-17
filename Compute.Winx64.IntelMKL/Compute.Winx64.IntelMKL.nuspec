@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Compute.Winx64.IntelMKL</id>
-    <version>2018.1.156</version>
+    <version>2018.1.156.1</version>
     <authors>Allister Beharry</authors>
     <owners>Allister Beharry</owners>
     <copyright>Copyright © 2017 Intel Corporation</copyright>
