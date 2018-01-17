@@ -2,16 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.0-alpha</Version>
+    <Version>2018.1.156</Version>
     <Authors>Allister Beharry</Authors>
-    <Company></Company>
     <Product>Compute.NET</Product>
     <Description>Intel Math Kernel Libraries redistributable x64 binaries for Windows.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.IntelMKL/LICENSE.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/allisterb/Compute.NET</PackageProjectUrl>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>2018.1.156</AssemblyVersion>
+    <FileVersion>2018.1.156</FileVersion>
     <NuspecFile>Compute.Winx64.IntelMKL.nuspec</NuspecFile>
   </PropertyGroup>
 

@@ -2,18 +2,20 @@
 <package >
   <metadata>
     <id>Compute.Winx64.IntelMKL</id>
-    <version>0.1.0-alpha</version>
+    <version>2018.1.156</version>
     <authors>Allister Beharry</authors>
     <owners>Allister Beharry</owners>
-    <licenseUrl>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.IntelMKL/LICENSE.txt</licenseUrl>
+    <copyright>Copyright © 2017 Intel Corporation</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/allisterb/Compute.NET/master/Compute.Winx64.IntelMKL/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/allisterb/Compute.NET/</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Intel MKL redistributable Windows x64 dependencies</description>
-    <releaseNotes></releaseNotes>
-    <tags>numerical HPC</tags>
+    <summary>Intel Math Kernel Library redistributable native Windows x64 dependencies</summary>
+    <description>Intel Math Kernel Library redistributable native Windows x64 dependencies from the Compute.NET project. The DLL files will be automatically copied to your project output directory.</description>
+    <releaseNotes>See https://software.intel.com/en-us/articles/intel-math-kernel-library-intel-mkl-2018-release-notes</releaseNotes>
+    <tags>numerical Intel HPC</tags>
   </metadata>
   <files>
-    <file src="native\**\*.dll" target="build\native" />
-    <file src="Compute.Winx64.IntelMKL.targets" target="build\netstandard2.0\Compute.Winx64.IntelMKL.targets" />
+    <file src="native\**\*.dll" target="build\native\" />
+    <file src="Compute.Winx64.IntelMKL.targets" target="build\Compute.Winx64.IntelMKL.targets" />
   </files>
 </package>
