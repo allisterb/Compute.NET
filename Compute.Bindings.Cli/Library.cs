@@ -40,11 +40,11 @@ namespace Compute.Bindings
             }
             if (string.IsNullOrEmpty(ClassName))
             {
-                ClassName = Name;
+                ClassName = ModuleName;
             }
             if (string.IsNullOrEmpty(Namespace))
             {
-                Namespace = Name + ".Bindings";
+                Namespace = Name;
             }
             Contract.Requires(!string.IsNullOrEmpty(OutputDirName));
             Contract.Requires(!string.IsNullOrEmpty(ClassName));
@@ -58,10 +58,11 @@ namespace Compute.Bindings
         {
             DriverOptions options = driver.Options;
             options.GeneratorKind = GeneratorKind.CSharp;
-            options.Verbose = true;
-            Module = options.AddModule(ClassName);
+            options.Verbose = this.Verbose;
+            Module = options.AddModule(ModuleName);
             Module.OutputNamespace = Namespace;
             options.OutputDir = OutputDirName;
+
         }
 
         /// Setup your passes here.
@@ -95,6 +96,7 @@ namespace Compute.Bindings
         public Module Module { get; internal set; }
         public string ClassName { get; internal set; }
         public string Namespace { get; internal set; }
+        public bool Verbose { get; internal set; }
         #endregion
 
         #region Methods

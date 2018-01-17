@@ -23,7 +23,6 @@ namespace Compute.Bindings
         #endregion
 
         #region Properties
-        public bool Ilp64 { get; protected set; }
         public bool Sequential { get; protected set; }
         public bool TBB { get; protected set; }
 
@@ -37,11 +36,9 @@ namespace Compute.Bindings
         public override void Setup(Driver driver)
         {
             base.Setup(driver);
-
             Info($"Using {R} as MKL root directory.");
             Module.Defines.Add("MKL_CALL_CONV=__cdecl");
             Module.IncludeDirs.Add(Path.Combine(R, "include"));
-
             if (Environment.Is64BitOperatingSystem)
             {
                 Info("Using intel64 architecture.");
@@ -52,21 +49,9 @@ namespace Compute.Bindings
                 Info("Using ia32 architecture.");
                 Module.LibraryDirs.Add(Path.Combine("lib", "ia32"));
             }
-
+            this.Module.LibraryName = "mkl_rt";
             if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             {
-                Module.Libraries.Add("mkl_core_dll.lib");
-                if (Ilp64)
-                {
-                    this.Module.Libraries.Add("mkl_intel_ilp64_dll.lib");
-                    Info("Using ilp64 array interface.");
-                }
-                else
-                {
-                    this.Module.Libraries.Add("mkl_intel_lp64_dll.lib");
-                    Info("Using lp64 array interface.");
-                }
-
                 if (Sequential)
                 {
                     this.Module.Libraries.Add("mkl_sequential_dll.lib");
@@ -82,20 +67,20 @@ namespace Compute.Bindings
                     this.Module.Libraries.Add("mkl_intel_thread_dll.lib");
                     Info("Using default threading.");
                 }
+                Module.Libraries.Add("mkl_rt.lib");
             }
             else throw new PlatformNotSupportedException("Non-Windows platforms not currently supported.");
 
+            this.Module.Headers.Add("mkl_version.h");
             if (Blas)
             {
                 this.ModuleName = "blas";
-                this.Module.LibraryName = "blas";
                 this.Module.Headers.Add("mkl_blas.h");    
                 Info("Creating bindings for Blas routines.");
             }
             else if (Vml)
             {
-                this.ModuleName = "vml";
-                this.Module.LibraryName = "vml";
+                this.ModuleName = "vml";    
                 this.Module.Headers.Add("mkl_vml.h");
                 Info("Creating bindings for Vector Math routines.");
             }
@@ -109,7 +94,8 @@ namespace Compute.Bindings
         public override void SetupPasses(Driver driver)
         {
             base.SetupPasses(driver);
-            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDecls(driver.Generator));
+            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDecls(driver.Generator)); //
+            driver.AddTranslationUnitPass(new MKL_ConvertFunctionParameterDecls(this, driver.Generator));
         }
         /// Do transformations that should happen before passes are processed.
         public override void Preprocess(Driver driver, ASTContext ctx)
@@ -143,7 +129,7 @@ namespace Compute.Bindings
             foreach (Class c in classes)
             {
                 ctx.SetClassAsValueType(c.Name);
-            }
+            }      
         }
 
         #endregion

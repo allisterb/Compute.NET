@@ -24,8 +24,13 @@ namespace Compute.Bindings
             if (function.PreprocessedEntities.Any(p => p.ToString().StartsWith("_MKL_API") || p.ToString().StartsWith("_mkl_api")))
             {
                 function.Ignore = true;
+                return false;
             }
-            return false;
+            else
+            {
+                return true;
+            }
+            
         }
 
     }

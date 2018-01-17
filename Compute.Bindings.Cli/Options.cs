@@ -45,7 +45,7 @@ namespace Compute.Bindings
         [Option('n', "namespace", Required = false, HelpText = "Specify the namespace that the bindings will belong to.")]
         public string Namespace { get; set; }
 
-        [Option('v', "verbose", Required = false, HelpText = "Enable verbose output from CppSharp.")]
+        [Option('v', "verbose", Required = false, HelpText = "Enable verbose output from CppSharp.", Default = false)]
         public bool Verbose { get; set; }
 
     }
@@ -58,9 +58,6 @@ namespace Compute.Bindings
 
         [Option("vml", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
         public bool Vml { get => ModuleName == "vml"; set => ModuleName = "vml"; }
-
-        [Option("ilp64", Required = false, HelpText = "Use the ILP64 interfaces to MKL.", Default = false)]
-        public bool Ilp64 { get; set; }
 
         [Option("sequential", Required = false, HelpText = "Use the sequential library threading model.", Default = false)]
         public bool Sequential { get; set; }

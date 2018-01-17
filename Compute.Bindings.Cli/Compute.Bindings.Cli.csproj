@@ -104,6 +104,8 @@
     <Compile Include="ACML\ACML.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="MKL\MKL.cs" />
+    <Compile Include="MKL\MKLTypeMaps.cs" />
+    <Compile Include="MKL\MKL_ConvertFunctionParameterDecls.cs" />
     <Compile Include="MKL\MKL_IgnoreFortanFunctionDecls.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />

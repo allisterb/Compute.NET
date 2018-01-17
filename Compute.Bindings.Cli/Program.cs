@@ -128,15 +128,15 @@ namespace Compute.Bindings
             {
                 if (!ProgramOptions.ContainsKey("RootDirectory"))
                 {
-                    string e = Environment.GetEnvironmentVariable("MKLRoot");
+                    string e = Environment.GetEnvironmentVariable("MKLROOT");
                     if (string.IsNullOrEmpty(e))
                     {
-                        L.Error("The --root option was not specified and the MKLRoot environment variable was not found.");
+                        L.Error("The --root option was not specified and the MKLROOT environment variable was not found.");
                         Exit(ExitResult.INVALID_OPTIONS);
                     }
                     else if (!Directory.Exists(e))
                     {
-                        L.Error("The --root option was not specified and the directory specified by the MKLRoot environment variable does not exist.");
+                        L.Error("The --root option was not specified and the directory specified by the MKLROOT environment variable does not exist.");
                         Exit(ExitResult.INVALID_OPTIONS);
                         ProgramOptions.Add("Root", e);
                     }
