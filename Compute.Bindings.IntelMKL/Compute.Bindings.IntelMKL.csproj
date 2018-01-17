@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>0.1.0.1</Version>
     <Authors>Allister Beharry</Authors>
     <Company />
     <Product>Compute.NET</Product>
     <Description>.NET bindings for the Intel MKL library.</Description>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>0.1.0.1</AssemblyVersion>
+    <FileVersion>0.1.0.1</FileVersion>
     <RootNamespace>IntelMKL</RootNamespace>
     <PackageProjectUrl>https://github.com/allisterb/Compute.NET</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/allisterb/Compute.NET/blob/master/LICENSE</PackageLicenseUrl>
@@ -19,6 +19,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>..\x64\Debug</OutputPath>
   </PropertyGroup>
 
 </Project>
