@@ -52,7 +52,7 @@ namespace Compute.Bindings
             Contract.Requires(!string.IsNullOrEmpty(Namespace));
 
             Info($"Using {R} as library directory.");
-            Info($"Using {OutputDirName} as output directory.");
+            Info($"Using {Path.GetFullPath(OutputDirName)} as output directory.");
             Info($"Using {Namespace} as library namespace.");
             Info($"Using {ModuleName} as library module name directory.");
             if (File.Exists(Path.Combine(R, ModuleName + ".cs")))
@@ -98,14 +98,17 @@ namespace Compute.Bindings
 
         public virtual bool CleanAndFixup()
         {
-            if (File.Exists(Path.Combine(R, Module.OutputNamespace + "-symbols.cpp")))
+            if (File.Exists(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")))
             {
-                File.Delete(Path.Combine(R, Module.OutputNamespace + "-symbols.cpp"));
+                File.Delete(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp"));
+                Info($"Removing unneeded file {Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")}");
             }
-            if (File.Exists(Path.Combine(R, "Std.cs")))
+            if (File.Exists(Path.Combine(OutputDirName, "Std.cs")))
             {
-                File.Delete(Path.Combine(R, "Std.cs"));
+                File.Delete(Path.Combine(OutputDirName, "Std.cs"));
+                Info($"Removing unneeded file {Path.Combine(OutputDirName, Module.OutputNamespace + "Std.cs")}");
             }
+            
             return true;
         }
         #endregion
@@ -118,6 +121,7 @@ namespace Compute.Bindings
         public Dictionary<string, object> BindOptions { get; internal set; }
         public DirectoryInfo RootDirectory { get; internal set; }
         public string R => RootDirectory.FullName;
+        public string F => Path.Combine(Path.GetFullPath(OutputDirName), ModuleName + ".cs");
         public string OutputDirName { get; internal set; }
         public string ModuleName { get; internal set; }
         public Module Module { get; internal set; }

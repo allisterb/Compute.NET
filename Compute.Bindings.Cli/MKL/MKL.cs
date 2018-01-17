@@ -140,7 +140,31 @@ namespace Compute.Bindings
             {
                 ctx.SetClassAsValueType(c.Name);
             }
+        }
 
+        public override bool CleanAndFixup()
+        {
+            if (!base.CleanAndFixup())
+            {
+                return false;
+            }
+            
+            string s = File.ReadAllText(F);
+            StringBuilder sb = new StringBuilder(s);
+            if (s.Contains($" *(global::{Module.OutputNamespace}.MKL_Complex8.__Internal*) "))
+            {
+                sb.Replace($" *(global::{Module.OutputNamespace}.MKL_Complex8.__Internal*) ", string.Empty);
+            }
+            if (s.Contains($" *(global::{Module.OutputNamespace}.MKL_Complex16.__Internal*) "))
+            {
+                sb.Replace($" *(global::{Module.OutputNamespace}.MKL_Complex16.__Internal*) ", string.Empty);
+            }
+            if (s.Contains($" *(global::{Module.OutputNamespace}.MKL_Version.__Internal*) "))
+            {
+                sb.Replace($" *(global::{Module.OutputNamespace}.MKL_Complex8.__Internal*) ", string.Empty);
+            }
+            File.WriteAllText(F, sb.ToString());
+            return true;
         }
 
         #endregion
