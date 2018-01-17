@@ -57,11 +57,11 @@ namespace Compute.Bindings
             Info($"Using {ModuleName} as library module name directory.");
             if (File.Exists(Path.Combine(R, ModuleName + ".cs")))
             {
-                L.Warning($"Output file {Path.Combine(R, ModuleName + ".cs")} will be overwritten.");
+                Warn($"Output file {Path.Combine(R, ModuleName + ".cs")} will be overwritten.");
             }
             else
             {
-                L.Warning($"Output file is {Path.Combine(R, ModuleName + ".cs")}.");
+                Info($"Output file is {Path.Combine(R, ModuleName + ".cs")}.");
             }
         }
         #endregion

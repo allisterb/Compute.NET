@@ -104,8 +104,8 @@ namespace Compute.Bindings
         public override void SetupPasses(Driver driver)
         {
             base.SetupPasses(driver);
-            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDeclsPass(this, driver.Generator)); //
-            driver.AddTranslationUnitPass(new MKL_IgnoreCommonDeclsPass(this, driver.Generator));
+            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDeclsPass(this, driver.Generator)); 
+            driver.AddTranslationUnitPass(new MKL_ConvertFunctionParameterDeclsPass(this, driver.Generator));
             if (WithoutCommon)
             {
                 driver.AddTranslationUnitPass(new MKL_IgnoreCommonDeclsPass(this, driver.Generator));

@@ -7,8 +7,7 @@ using Xunit;
 
 namespace Compute.Tests
 {
-
-    public class MKL_VMLTests
+    public class MKL_VmlTests
     {
         [Fact]
         public void CanAdd()
@@ -16,8 +15,8 @@ namespace Compute.Tests
             float[] a = new float[3] { 1f, 2f, 3f };
             float[] b = new float[3] { 4f, 5f, 6f };
             float[] r = new float[3];
-            //Vml.VsAdd(2, ref a[0], ref b[0], ref r[0]);
-            MKL_Complex8 c = new MKL_Complex8() { Real = 2f, Imag = 1f };
+            Vml.VsAdd(2, ref a[0], ref b[0], ref r[0]);
+            Assert.Equal(5, r[0]);
         }
     }
 }
