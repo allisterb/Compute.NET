@@ -1,4 +1,7 @@
 # Compute.NET: .NET bindings for native numerical computing
+Get the latest release frm the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
+
+![Screenshot of bind CLI](https://lh3.googleusercontent.com/DAy0mrGKmUCSUIXG8El-yciFLMGvRjZ_i2kRmnDkjl4vX94FXpnY-P6xB9nfTvH-psiRJ_7myqA0hdWptjwf=w1920-h1010)
 
 Compute.NET provides auto-generated bindings for native numerical computing libraries like [Intel Math Kernel Library](https://software.intel.com/en-us/mkl), [AMD Core Math Library](https://developer.amd.com/tools-and-sdks/archive/acml-downloads-resources/) (and its successors), AMD [clBLAS](https://gpuopen.com/compute-product/clblas/), cl* and others. The bindings are auto-generated from the library's C headers using the excellent [CppSharp](https:/github.com/Mono/CppSharp) library. The generator is a CLI program that be can used to generate individual modules of each library as well as customize key aspects of the generated code, such as the use of .NET structs instead of classes for complex data types, and marshalling array parameters in native code functions (either as managed arrays or pointers.) 
 
@@ -20,6 +23,28 @@ Compute.NET provides auto-generated bindings for native numerical computing libr
 2. (Optional) Install the native library [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.IntelMKL) into your project: `Install-Package Compute.Winx64.IntelMKL`.
 
 Without step 2 you will need to make sure the .NET runtime can locate the native MKL library DLLs or shared library files. You can set your path to include the directory where the library files are located (typically %MKLROOT%\redist). Or you can copy the needed files into your project output directory with a build task.
+
+With the packages installed you can use the MKL BLAS or vector math routines in your code. E.g.:
+```
+using IntelMKL;
+class Program
+{
+static void Main(string[] args)
+{
+    float[] a = new float[3] { 1f, 2f, 3f };
+    float[] b = new float[3] { 4f, 5f, 6f };
+    float[] r = new float[3];
+    Vml.VsAdd(2, ref a[0], ref b[0], ref r[0]);
+
+    double[] a1 = new double[3] { 10d, 11d, 12d };
+    double[] a2 = new double[3] { 20d, 22d, 24d };
+    double[] r2 = new double[3];
+    Vml.VdAdd(3, ref a1[0], ref a2[0], ref r2[0]);
+}
+}
+```
+
+You pass `double[]` and `float[] arrays` to the BLAS `VsAdd` function using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function.
 
 ### Bindings Generator
 The basic syntax is `bind LIBRARY MODULE [OPTIONS]` e.g ` bind mkl --vml --without-common -n IntelMKL -o .\Compute.Bindings.IntelMKL` will create bindings for the Intel MKL VML module, without including common types and functions, in the .NET namespace `IntelMKL` and the `.\Compute.Bindings.IntelMKL` output directory.   
