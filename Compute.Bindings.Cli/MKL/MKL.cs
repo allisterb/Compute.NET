@@ -23,11 +23,13 @@ namespace Compute.Bindings
         #endregion
 
         #region Properties
+        public bool Ilp64 { get; protected set; }
         public bool WithoutCommon { get; protected set; }
 
         public bool Sequential { get; protected set; }
         public bool TBB { get; protected set; }
 
+ 
         public bool Blas { get; protected set; }
         public bool Vml { get; protected set; }
 
@@ -42,7 +44,7 @@ namespace Compute.Bindings
             Module.IncludeDirs.Add(Path.Combine(R, "include"));
             if (Environment.Is64BitOperatingSystem)
             {
-                Info("Using intel64 architecture.");
+                Info("Using Intel64 architecture.");
                 Module.LibraryDirs.Add(Path.Combine(R, "lib", "intel64"));                
             }
             else
@@ -72,14 +74,33 @@ namespace Compute.Bindings
             }
             else throw new PlatformNotSupportedException("Non-Windows platforms not currently supported.");
 
+            this.Module.Defines.Add("MKL_INT64=long long int");
+            this.Module.Defines.Add("MKL_UINT64=unsigned long long int");
+
             if (!WithoutCommon)
             {
                 this.Module.Headers.Add("mkl_version.h");
                 this.Module.Headers.Add("mkl_service.h");
             }
+
             else
             {
                 Info("Not binding MKL common data structures and functions.");
+            }
+
+            if (Ilp64)
+            {
+                this.Module.Defines.Add("MKL_ILP64=1");
+                this.Module.Defines.Add("MKL_INT=MKL_INT64");
+                this.Module.Defines.Add("MKL_UINT=MKL_UINT64");
+                Info("Using ILP64 (Int64) array indexing");
+            }
+            else
+            {
+                this.Module.Defines.Add("MKL_LP64=1");
+                this.Module.Defines.Add("MKL_INT=int");
+                this.Module.Defines.Add("MKL_UINT=unsigned int");
+                Info("Using LP64 (Int32) array indexing");
             }
 
             if (Blas)
@@ -96,7 +117,7 @@ namespace Compute.Bindings
             }
             else
             {
-                throw new InvalidOperationException("Invalid module name.");
+                throw new InvalidOperationException("Invalid module.");
             }
             
         }

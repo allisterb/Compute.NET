@@ -8,7 +8,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace IntelMKL
+namespace IntelMKL.LP64
 {
     [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
     public unsafe delegate int VMLErrorCallBack(global::System.IntPtr pdefVmlErrorContext);
@@ -63,29 +63,29 @@ namespace IntelMKL
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::IntelMKL.DefVmlErrorContext> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::IntelMKL.DefVmlErrorContext>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::IntelMKL.LP64.DefVmlErrorContext> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::IntelMKL.LP64.DefVmlErrorContext>();
         protected void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::IntelMKL.DefVmlErrorContext __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::IntelMKL.LP64.DefVmlErrorContext __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::IntelMKL.DefVmlErrorContext(native.ToPointer(), skipVTables);
+            return new global::IntelMKL.LP64.DefVmlErrorContext(native.ToPointer(), skipVTables);
         }
 
-        internal static global::IntelMKL.DefVmlErrorContext __CreateInstance(global::IntelMKL.DefVmlErrorContext.__Internal native, bool skipVTables = false)
+        internal static global::IntelMKL.LP64.DefVmlErrorContext __CreateInstance(global::IntelMKL.LP64.DefVmlErrorContext.__Internal native, bool skipVTables = false)
         {
-            return new global::IntelMKL.DefVmlErrorContext(native, skipVTables);
+            return new global::IntelMKL.LP64.DefVmlErrorContext(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::IntelMKL.DefVmlErrorContext.__Internal native)
+        private static void* __CopyValue(global::IntelMKL.LP64.DefVmlErrorContext.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::IntelMKL.DefVmlErrorContext.__Internal));
-            *(global::IntelMKL.DefVmlErrorContext.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::IntelMKL.LP64.DefVmlErrorContext.__Internal));
+            *(global::IntelMKL.LP64.DefVmlErrorContext.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private DefVmlErrorContext(global::IntelMKL.DefVmlErrorContext.__Internal native, bool skipVTables = false)
+        private DefVmlErrorContext(global::IntelMKL.LP64.DefVmlErrorContext.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -101,17 +101,17 @@ namespace IntelMKL
 
         public DefVmlErrorContext()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::IntelMKL.DefVmlErrorContext.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::IntelMKL.LP64.DefVmlErrorContext.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public DefVmlErrorContext(global::IntelMKL.DefVmlErrorContext _0)
+        public DefVmlErrorContext(global::IntelMKL.LP64.DefVmlErrorContext _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::IntelMKL.DefVmlErrorContext.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::IntelMKL.LP64.DefVmlErrorContext.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::IntelMKL.DefVmlErrorContext.__Internal*) __Instance) = *((global::IntelMKL.DefVmlErrorContext.__Internal*) _0.__Instance);
+            *((global::IntelMKL.LP64.DefVmlErrorContext.__Internal*) __Instance) = *((global::IntelMKL.LP64.DefVmlErrorContext.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -123,7 +123,7 @@ namespace IntelMKL
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::IntelMKL.DefVmlErrorContext __dummy;
+            global::IntelMKL.LP64.DefVmlErrorContext __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -6322,26 +6322,26 @@ namespace IntelMKL
             return __ret;
         }
 
-        public static global::IntelMKL.VMLErrorCallBack VmlSetErrorCallBack(global::IntelMKL.VMLErrorCallBack func)
+        public static global::IntelMKL.LP64.VMLErrorCallBack VmlSetErrorCallBack(global::IntelMKL.LP64.VMLErrorCallBack func)
         {
             var __arg0 = func == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(func);
             var __ret = __Internal.VmlSetErrorCallBack(__arg0);
             var __ptr0 = __ret;
-            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.VMLErrorCallBack));
+            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.LP64.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.LP64.VMLErrorCallBack));
         }
 
-        public static global::IntelMKL.VMLErrorCallBack VmlGetErrorCallBack()
+        public static global::IntelMKL.LP64.VMLErrorCallBack VmlGetErrorCallBack()
         {
             var __ret = __Internal.VmlGetErrorCallBack();
             var __ptr0 = __ret;
-            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.VMLErrorCallBack));
+            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.LP64.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.LP64.VMLErrorCallBack));
         }
 
-        public static global::IntelMKL.VMLErrorCallBack VmlClearErrorCallBack()
+        public static global::IntelMKL.LP64.VMLErrorCallBack VmlClearErrorCallBack()
         {
             var __ret = __Internal.VmlClearErrorCallBack();
             var __ptr0 = __ret;
-            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.VMLErrorCallBack));
+            return __ptr0 == IntPtr.Zero? null : (global::IntelMKL.LP64.VMLErrorCallBack) Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.LP64.VMLErrorCallBack));
         }
 
         public static uint VmlSetMode(uint newmode)

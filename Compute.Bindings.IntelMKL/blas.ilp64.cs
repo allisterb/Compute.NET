@@ -8,9 +8,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace MKL
+namespace IntelMKL.ILP64
 {
-    public unsafe partial class mkl_blas
+    public unsafe partial class Blas
     {
         public partial struct __Internal
         {
@@ -22,67 +22,67 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="LSAME")]
-            internal static extern int LSAME([MarshalAs(UnmanagedType.LPStr)] string ca, [MarshalAs(UnmanagedType.LPStr)] string cb, int lca, int lcb);
+            internal static extern int LSAME([MarshalAs(UnmanagedType.LPStr)] string ca, [MarshalAs(UnmanagedType.LPStr)] string cb, long lca, long lcb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SASUM")]
-            internal static extern float SASUM(int* n, float* x, int* incx);
+            internal static extern float SASUM(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SAXPY")]
-            internal static extern void SAXPY(int* n, float* alpha, float* x, int* incx, float* y, int* incy);
+            internal static extern void SAXPY(long* n, float* alpha, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SAXPBY")]
-            internal static extern void SAXPBY(int* n, float* alpha, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SAXPBY(long* n, float* alpha, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SAXPYI")]
-            internal static extern void SAXPYI(int* nz, float* a, float* x, int* indx, float* y);
+            internal static extern void SAXPYI(long* nz, float* a, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SCOPY")]
-            internal static extern void SCOPY(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern void SCOPY(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SDOT")]
-            internal static extern float SDOT(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern float SDOT(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SDSDOT")]
-            internal static extern float SDSDOT(int* n, float* sb, float* x, int* incx, float* y, int* incy);
+            internal static extern float SDSDOT(long* n, float* sb, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SDOTI")]
-            internal static extern float SDOTI(int* nz, float* x, int* indx, float* y);
+            internal static extern float SDOTI(long* nz, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGTHR")]
-            internal static extern void SGTHR(int* nz, float* y, float* x, int* indx);
+            internal static extern void SGTHR(long* nz, float* y, float* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGTHRZ")]
-            internal static extern void SGTHRZ(int* nz, float* y, float* x, int* indx);
+            internal static extern void SGTHRZ(long* nz, float* y, float* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SNRM2")]
-            internal static extern float SNRM2(int* n, float* x, int* incx);
+            internal static extern float SNRM2(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SROT")]
-            internal static extern void SROT(int* n, float* x, int* incx, float* y, int* incy, float* c, float* s);
+            internal static extern void SROT(long* n, float* x, long* incx, float* y, long* incy, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -92,12 +92,12 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SROTI")]
-            internal static extern void SROTI(int* nz, float* x, int* indx, float* y, float* c, float* s);
+            internal static extern void SROTI(long* nz, float* x, long* indx, float* y, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SROTM")]
-            internal static extern void SROTM(int* n, float* x, int* incx, float* y, int* incy, float* param);
+            internal static extern void SROTM(long* n, float* x, long* incx, float* y, long* incy, float* param);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -107,87 +107,87 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSCAL")]
-            internal static extern void SSCAL(int* n, float* a, float* x, int* incx);
+            internal static extern void SSCAL(long* n, float* a, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSCTR")]
-            internal static extern void SSCTR(int* nz, float* x, int* indx, float* y);
+            internal static extern void SSCTR(long* nz, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSWAP")]
-            internal static extern void SSWAP(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern void SSWAP(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ISAMAX")]
-            internal static extern int ISAMAX(int* n, float* x, int* incx);
+            internal static extern long ISAMAX(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ISAMIN")]
-            internal static extern int ISAMIN(int* n, float* x, int* incx);
+            internal static extern long ISAMIN(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DASUM")]
-            internal static extern double DASUM(int* n, double* x, int* incx);
+            internal static extern double DASUM(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DAXPY")]
-            internal static extern void DAXPY(int* n, double* alpha, double* x, int* incx, double* y, int* incy);
+            internal static extern void DAXPY(long* n, double* alpha, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DAXPBY")]
-            internal static extern void DAXPBY(int* n, double* alpha, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DAXPBY(long* n, double* alpha, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DAXPYI")]
-            internal static extern void DAXPYI(int* nz, double* a, double* x, int* indx, double* y);
+            internal static extern void DAXPYI(long* nz, double* a, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DCOPY")]
-            internal static extern void DCOPY(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern void DCOPY(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DDOT")]
-            internal static extern double DDOT(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern double DDOT(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSDOT")]
-            internal static extern double DSDOT(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern double DSDOT(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DDOTI")]
-            internal static extern double DDOTI(int* nz, double* x, int* indx, double* y);
+            internal static extern double DDOTI(long* nz, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGTHR")]
-            internal static extern void DGTHR(int* nz, double* y, double* x, int* indx);
+            internal static extern void DGTHR(long* nz, double* y, double* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGTHRZ")]
-            internal static extern void DGTHRZ(int* nz, double* y, double* x, int* indx);
+            internal static extern void DGTHRZ(long* nz, double* y, double* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DNRM2")]
-            internal static extern double DNRM2(int* n, double* x, int* incx);
+            internal static extern double DNRM2(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DROT")]
-            internal static extern void DROT(int* n, double* x, int* incx, double* y, int* incy, double* c, double* s);
+            internal static extern void DROT(long* n, double* x, long* incx, double* y, long* incy, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -197,12 +197,12 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DROTI")]
-            internal static extern void DROTI(int* nz, double* x, int* indx, double* y, double* c, double* s);
+            internal static extern void DROTI(long* nz, double* x, long* indx, double* y, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DROTM")]
-            internal static extern void DROTM(int* n, double* x, int* incx, double* y, int* incy, double* param);
+            internal static extern void DROTM(long* n, double* x, long* incx, double* y, long* incy, double* param);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -212,217 +212,217 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSCAL")]
-            internal static extern void DSCAL(int* n, double* a, double* x, int* incx);
+            internal static extern void DSCAL(long* n, double* a, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSCTR")]
-            internal static extern void DSCTR(int* nz, double* x, int* indx, double* y);
+            internal static extern void DSCTR(long* nz, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSWAP")]
-            internal static extern void DSWAP(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern void DSWAP(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="IDAMAX")]
-            internal static extern int IDAMAX(int* n, double* x, int* incx);
+            internal static extern long IDAMAX(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="IDAMIN")]
-            internal static extern int IDAMIN(int* n, double* x, int* incx);
+            internal static extern long IDAMIN(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGBMV")]
-            internal static extern void SGBMV([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* kl, int* ku, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SGBMV([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* kl, long* ku, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMV")]
-            internal static extern void SGEMV([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SGEMV([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGER")]
-            internal static extern void SGER(int* m, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* a, int* lda);
+            internal static extern void SGER(long* m, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSBMV")]
-            internal static extern void SSBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, int* k, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SSBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, long* k, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSPMV")]
-            internal static extern void SSPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* ap, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SSPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* ap, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSPR")]
-            internal static extern void SSPR([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* ap);
+            internal static extern void SSPR([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSPR2")]
-            internal static extern void SSPR2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* ap);
+            internal static extern void SSPR2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYMV")]
-            internal static extern void SSYMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void SSYMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYR")]
-            internal static extern void SSYR([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* a, int* lda);
+            internal static extern void SSYR([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYR2")]
-            internal static extern void SSYR2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* a, int* lda);
+            internal static extern void SSYR2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STBMV")]
-            internal static extern void STBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, float* a, int* lda, float* x, int* incx);
+            internal static extern void STBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STBSV")]
-            internal static extern void STBSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, float* a, int* lda, float* x, int* incx);
+            internal static extern void STBSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STPMV")]
-            internal static extern void STPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* ap, float* x, int* incx);
+            internal static extern void STPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* ap, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STPSV")]
-            internal static extern void STPSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* ap, float* x, int* incx);
+            internal static extern void STPSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* ap, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STRMV")]
-            internal static extern void STRMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* a, int* lda, float* b, int* incx);
+            internal static extern void STRMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* a, long* lda, float* b, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STRSV")]
-            internal static extern void STRSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* a, int* lda, float* x, int* incx);
+            internal static extern void STRSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEM2VU")]
-            internal static extern void SGEM2VU(int* m, int* n, float* alpha, float* a, int* lda, float* x1, int* incx1, float* x2, int* incx2, float* beta, float* y1, int* incy1, float* y2, int* incy2);
+            internal static extern void SGEM2VU(long* m, long* n, float* alpha, float* a, long* lda, float* x1, long* incx1, float* x2, long* incx2, float* beta, float* y1, long* incy1, float* y2, long* incy2);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGBMV")]
-            internal static extern void DGBMV([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* kl, int* ku, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DGBMV([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* kl, long* ku, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMV")]
-            internal static extern void DGEMV([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DGEMV([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGER")]
-            internal static extern void DGER(int* m, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* a, int* lda);
+            internal static extern void DGER(long* m, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSBMV")]
-            internal static extern void DSBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, int* k, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DSBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, long* k, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSPMV")]
-            internal static extern void DSPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* ap, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DSPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* ap, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSPR")]
-            internal static extern void DSPR([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* ap);
+            internal static extern void DSPR([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSPR2")]
-            internal static extern void DSPR2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* ap);
+            internal static extern void DSPR2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYMV")]
-            internal static extern void DSYMV([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void DSYMV([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYR")]
-            internal static extern void DSYR([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* a, int* lda);
+            internal static extern void DSYR([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYR2")]
-            internal static extern void DSYR2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* a, int* lda);
+            internal static extern void DSYR2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTBMV")]
-            internal static extern void DTBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, double* a, int* lda, double* x, int* incx);
+            internal static extern void DTBMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTBSV")]
-            internal static extern void DTBSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, double* a, int* lda, double* x, int* incx);
+            internal static extern void DTBSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTPMV")]
-            internal static extern void DTPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* ap, double* x, int* incx);
+            internal static extern void DTPMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* ap, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTPSV")]
-            internal static extern void DTPSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* ap, double* x, int* incx);
+            internal static extern void DTPSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* ap, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTRMV")]
-            internal static extern void DTRMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* a, int* lda, double* b, int* incx);
+            internal static extern void DTRMV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* a, long* lda, double* b, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTRSV")]
-            internal static extern void DTRSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* a, int* lda, double* x, int* incx);
+            internal static extern void DTRSV([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEM2VU")]
-            internal static extern void DGEM2VU(int* m, int* n, double* alpha, double* a, int* lda, double* x1, int* incx1, double* x2, int* incx2, double* beta, double* y1, int* incy1, double* y2, int* incy2);
+            internal static extern void DGEM2VU(long* m, long* n, double* alpha, double* a, long* lda, double* x1, long* incx1, double* x2, long* incx2, double* beta, double* y1, long* incy1, double* y2, long* incy2);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMM")]
-            internal static extern void SGEMM([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SGEMM([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMM_ALLOC")]
-            internal static extern float* SGEMM_ALLOC([MarshalAs(UnmanagedType.LPStr)] string identifier, int* m, int* n, int* k);
+            internal static extern float* SGEMM_ALLOC([MarshalAs(UnmanagedType.LPStr)] string identifier, long* m, long* n, long* k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMM_PACK")]
-            internal static extern void SGEMM_PACK([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* k, float* alpha, float* src, int* ld, float* dest);
+            internal static extern void SGEMM_PACK([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* k, float* alpha, float* src, long* ld, float* dest);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMM_COMPUTE")]
-            internal static extern void SGEMM_COMPUTE([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SGEMM_COMPUTE([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -432,62 +432,62 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMM_BATCH")]
-            internal static extern void SGEMM_BATCH([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, int* m_array, int* n_array, int* k_array, float* alpha_array, float** a_array, int* lda_array, float** b_array, int* ldb_array, float* beta_array, float** c_array, int* ldc_array, int* group_count, int* group_size);
+            internal static extern void SGEMM_BATCH([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, long* m_array, long* n_array, long* k_array, float* alpha_array, float** a_array, long* lda_array, float** b_array, long* ldb_array, float* beta_array, float** c_array, long* ldc_array, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SGEMMT")]
-            internal static extern void SGEMMT([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SGEMMT([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYMM")]
-            internal static extern void SSYMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SSYMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYR2K")]
-            internal static extern void SSYR2K([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SSYR2K([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="SSYRK")]
-            internal static extern void SSYRK([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, float* alpha, float* a, int* lda, float* beta, float* c, int* ldc);
+            internal static extern void SSYRK([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, float* alpha, float* a, long* lda, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STRMM")]
-            internal static extern void STRMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb);
+            internal static extern void STRMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STRSM")]
-            internal static extern void STRSM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb);
+            internal static extern void STRSM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="STRSM_BATCH")]
-            internal static extern void STRSM_BATCH([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, int* m_array, int* n_array, float* alpha_array, float** a_array, int* lda_array, float** b_array, int* ldb, int* group_count, int* group_size);
+            internal static extern void STRSM_BATCH([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, long* m_array, long* n_array, float* alpha_array, float** a_array, long* lda_array, float** b_array, long* ldb, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMM")]
-            internal static extern void DGEMM([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DGEMM([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMM_ALLOC")]
-            internal static extern double* DGEMM_ALLOC([MarshalAs(UnmanagedType.LPStr)] string identifier, int* m, int* n, int* k);
+            internal static extern double* DGEMM_ALLOC([MarshalAs(UnmanagedType.LPStr)] string identifier, long* m, long* n, long* k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMM_PACK")]
-            internal static extern void DGEMM_PACK([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* k, double* alpha, double* src, int* ld, double* dest);
+            internal static extern void DGEMM_PACK([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* k, double* alpha, double* src, long* ld, double* dest);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMM_COMPUTE")]
-            internal static extern void DGEMM_COMPUTE([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DGEMM_COMPUTE([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -497,52 +497,52 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMM_BATCH")]
-            internal static extern void DGEMM_BATCH([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, int* m_array, int* n_array, int* k_array, double* alpha_array, double** a_array, int* lda_array, double** b_array, int* ldb_array, double* beta_array, double** c_array, int* ldc_array, int* group_count, int* group_size);
+            internal static extern void DGEMM_BATCH([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, long* m_array, long* n_array, long* k_array, double* alpha_array, double** a_array, long* lda_array, double** b_array, long* ldb_array, double* beta_array, double** c_array, long* ldc_array, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DGEMMT")]
-            internal static extern void DGEMMT([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DGEMMT([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYMM")]
-            internal static extern void DSYMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DSYMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYR2K")]
-            internal static extern void DSYR2K([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DSYR2K([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DSYRK")]
-            internal static extern void DSYRK([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, double* alpha, double* a, int* lda, double* beta, double* c, int* ldc);
+            internal static extern void DSYRK([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, double* alpha, double* a, long* lda, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTRMM")]
-            internal static extern void DTRMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb);
+            internal static extern void DTRMM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTRSM")]
-            internal static extern void DTRSM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb);
+            internal static extern void DTRSM([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="DTRSM_BATCH")]
-            internal static extern void DTRSM_BATCH([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, int* m_array, int* n_array, double* alpha_array, double** a_array, int* lda_array, double** b_array, int* ldb, int* group_count, int* group_size);
+            internal static extern void DTRSM_BATCH([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, long* m_array, long* n_array, double* alpha_array, double** a_array, long* lda_array, double** b_array, long* ldb, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="GEMM_S8U8S32")]
-            internal static extern void GEMM_S8U8S32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, int* m, int* n, int* k, float* alpha, [MarshalAs(UnmanagedType.LPStr)] string a, int* lda, [MarshalAs(UnmanagedType.LPStr)] string ao, byte* b, int* ldb, [MarshalAs(UnmanagedType.LPStr)] string bo, float* beta, int* c, int* ldc, int* co);
+            internal static extern void GEMM_S8U8S32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, long* m, long* n, long* k, float* alpha, [MarshalAs(UnmanagedType.LPStr)] string a, long* lda, [MarshalAs(UnmanagedType.LPStr)] string ao, byte* b, long* ldb, [MarshalAs(UnmanagedType.LPStr)] string bo, float* beta, int* c, long* ldc, int* co);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="GEMM_S16S16S32")]
-            internal static extern void GEMM_S16S16S32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, int* m, int* n, int* k, float* alpha, short* a, int* lda, short* ao, short* b, int* ldb, short* bo, float* beta, int* c, int* ldc, int* co);
+            internal static extern void GEMM_S16S16S32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, long* m, long* n, long* k, float* alpha, short* a, long* lda, short* ao, short* b, long* ldb, short* bo, float* beta, int* c, long* ldc, int* co);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -552,67 +552,67 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="lsame")]
-            internal static extern int Lsame([MarshalAs(UnmanagedType.LPStr)] string ca, [MarshalAs(UnmanagedType.LPStr)] string cb, int lca, int lcb);
+            internal static extern int Lsame([MarshalAs(UnmanagedType.LPStr)] string ca, [MarshalAs(UnmanagedType.LPStr)] string cb, long lca, long lcb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sasum")]
-            internal static extern float Sasum(int* n, float* x, int* incx);
+            internal static extern float Sasum(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="saxpy")]
-            internal static extern void Saxpy(int* n, float* alpha, float* x, int* incx, float* y, int* incy);
+            internal static extern void Saxpy(long* n, float* alpha, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="saxpby")]
-            internal static extern void Saxpby(int* n, float* alpha, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Saxpby(long* n, float* alpha, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="saxpyi")]
-            internal static extern void Saxpyi(int* nz, float* a, float* x, int* indx, float* y);
+            internal static extern void Saxpyi(long* nz, float* a, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="scopy")]
-            internal static extern void Scopy(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern void Scopy(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sdot")]
-            internal static extern float Sdot(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern float Sdot(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sdoti")]
-            internal static extern float Sdoti(int* nz, float* x, int* indx, float* y);
+            internal static extern float Sdoti(long* nz, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sdsdot")]
-            internal static extern float Sdsdot(int* n, float* sb, float* x, int* incx, float* y, int* incy);
+            internal static extern float Sdsdot(long* n, float* sb, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgthr")]
-            internal static extern void Sgthr(int* nz, float* y, float* x, int* indx);
+            internal static extern void Sgthr(long* nz, float* y, float* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgthrz")]
-            internal static extern void Sgthrz(int* nz, float* y, float* x, int* indx);
+            internal static extern void Sgthrz(long* nz, float* y, float* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="snrm2")]
-            internal static extern float Snrm2(int* n, float* x, int* incx);
+            internal static extern float Snrm2(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="srot")]
-            internal static extern void Srot(int* n, float* x, int* incx, float* y, int* incy, float* c, float* s);
+            internal static extern void Srot(long* n, float* x, long* incx, float* y, long* incy, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -622,12 +622,12 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sroti")]
-            internal static extern void Sroti(int* nz, float* x, int* indx, float* y, float* c, float* s);
+            internal static extern void Sroti(long* nz, float* x, long* indx, float* y, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="srotm")]
-            internal static extern void Srotm(int* n, float* x, int* incx, float* y, int* incy, float* param);
+            internal static extern void Srotm(long* n, float* x, long* incx, float* y, long* incy, float* param);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -637,87 +637,87 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sscal")]
-            internal static extern void Sscal(int* n, float* a, float* x, int* incx);
+            internal static extern void Sscal(long* n, float* a, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssctr")]
-            internal static extern void Ssctr(int* nz, float* x, int* indx, float* y);
+            internal static extern void Ssctr(long* nz, float* x, long* indx, float* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sswap")]
-            internal static extern void Sswap(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern void Sswap(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="isamax")]
-            internal static extern int Isamax(int* n, float* x, int* incx);
+            internal static extern long Isamax(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="isamin")]
-            internal static extern int Isamin(int* n, float* x, int* incx);
+            internal static extern long Isamin(long* n, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dasum")]
-            internal static extern double Dasum(int* n, double* x, int* incx);
+            internal static extern double Dasum(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="daxpy")]
-            internal static extern void Daxpy(int* n, double* alpha, double* x, int* incx, double* y, int* incy);
+            internal static extern void Daxpy(long* n, double* alpha, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="daxpby")]
-            internal static extern void Daxpby(int* n, double* alpha, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Daxpby(long* n, double* alpha, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="daxpyi")]
-            internal static extern void Daxpyi(int* nz, double* a, double* x, int* indx, double* y);
+            internal static extern void Daxpyi(long* nz, double* a, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dcopy")]
-            internal static extern void Dcopy(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern void Dcopy(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ddot")]
-            internal static extern double Ddot(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern double Ddot(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsdot")]
-            internal static extern double Dsdot(int* n, float* x, int* incx, float* y, int* incy);
+            internal static extern double Dsdot(long* n, float* x, long* incx, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ddoti")]
-            internal static extern double Ddoti(int* nz, double* x, int* indx, double* y);
+            internal static extern double Ddoti(long* nz, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgthr")]
-            internal static extern void Dgthr(int* nz, double* y, double* x, int* indx);
+            internal static extern void Dgthr(long* nz, double* y, double* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgthrz")]
-            internal static extern void Dgthrz(int* nz, double* y, double* x, int* indx);
+            internal static extern void Dgthrz(long* nz, double* y, double* x, long* indx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dnrm2")]
-            internal static extern double Dnrm2(int* n, double* x, int* incx);
+            internal static extern double Dnrm2(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="drot")]
-            internal static extern void Drot(int* n, double* x, int* incx, double* y, int* incy, double* c, double* s);
+            internal static extern void Drot(long* n, double* x, long* incx, double* y, long* incy, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -727,12 +727,12 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="droti")]
-            internal static extern void Droti(int* nz, double* x, int* indx, double* y, double* c, double* s);
+            internal static extern void Droti(long* nz, double* x, long* indx, double* y, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="drotm")]
-            internal static extern void Drotm(int* n, double* x, int* incx, double* y, int* incy, double* param);
+            internal static extern void Drotm(long* n, double* x, long* incx, double* y, long* incy, double* param);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -742,217 +742,217 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dscal")]
-            internal static extern void Dscal(int* n, double* a, double* x, int* incx);
+            internal static extern void Dscal(long* n, double* a, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsctr")]
-            internal static extern void Dsctr(int* nz, double* x, int* indx, double* y);
+            internal static extern void Dsctr(long* nz, double* x, long* indx, double* y);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dswap")]
-            internal static extern void Dswap(int* n, double* x, int* incx, double* y, int* incy);
+            internal static extern void Dswap(long* n, double* x, long* incx, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="idamax")]
-            internal static extern int Idamax(int* n, double* x, int* incx);
+            internal static extern long Idamax(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="idamin")]
-            internal static extern int Idamin(int* n, double* x, int* incx);
+            internal static extern long Idamin(long* n, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgbmv")]
-            internal static extern void Sgbmv([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* kl, int* ku, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Sgbmv([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* kl, long* ku, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemv")]
-            internal static extern void Sgemv([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Sgemv([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sger")]
-            internal static extern void Sger(int* m, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* a, int* lda);
+            internal static extern void Sger(long* m, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssbmv")]
-            internal static extern void Ssbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, int* k, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Ssbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, long* k, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sspmv")]
-            internal static extern void Sspmv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* ap, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Sspmv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* ap, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sspr")]
-            internal static extern void Sspr([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* ap);
+            internal static extern void Sspr([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sspr2")]
-            internal static extern void Sspr2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* ap);
+            internal static extern void Sspr2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssymv")]
-            internal static extern void Ssymv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* a, int* lda, float* x, int* incx, float* beta, float* y, int* incy);
+            internal static extern void Ssymv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* a, long* lda, float* x, long* incx, float* beta, float* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssyr")]
-            internal static extern void Ssyr([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* a, int* lda);
+            internal static extern void Ssyr([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssyr2")]
-            internal static extern void Ssyr2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, float* alpha, float* x, int* incx, float* y, int* incy, float* a, int* lda);
+            internal static extern void Ssyr2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, float* alpha, float* x, long* incx, float* y, long* incy, float* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="stbmv")]
-            internal static extern void Stbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, float* a, int* lda, float* x, int* incx);
+            internal static extern void Stbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="stbsv")]
-            internal static extern void Stbsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, float* a, int* lda, float* x, int* incx);
+            internal static extern void Stbsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="stpmv")]
-            internal static extern void Stpmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* ap, float* x, int* incx);
+            internal static extern void Stpmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* ap, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="stpsv")]
-            internal static extern void Stpsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* ap, float* x, int* incx);
+            internal static extern void Stpsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* ap, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="strmv")]
-            internal static extern void Strmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* a, int* lda, float* b, int* incx);
+            internal static extern void Strmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* a, long* lda, float* b, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="strsv")]
-            internal static extern void Strsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, float* a, int* lda, float* x, int* incx);
+            internal static extern void Strsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, float* a, long* lda, float* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgem2vu")]
-            internal static extern void Sgem2vu(int* m, int* n, float* alpha, float* a, int* lda, float* x1, int* incx1, float* x2, int* incx2, float* beta, float* y1, int* incy1, float* y2, int* incy2);
+            internal static extern void Sgem2vu(long* m, long* n, float* alpha, float* a, long* lda, float* x1, long* incx1, float* x2, long* incx2, float* beta, float* y1, long* incy1, float* y2, long* incy2);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgbmv")]
-            internal static extern void Dgbmv([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* kl, int* ku, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Dgbmv([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* kl, long* ku, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemv")]
-            internal static extern void Dgemv([MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Dgemv([MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dger")]
-            internal static extern void Dger(int* m, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* a, int* lda);
+            internal static extern void Dger(long* m, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsbmv")]
-            internal static extern void Dsbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, int* k, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Dsbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, long* k, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dspmv")]
-            internal static extern void Dspmv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* ap, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Dspmv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* ap, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dspr")]
-            internal static extern void Dspr([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* ap);
+            internal static extern void Dspr([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dspr2")]
-            internal static extern void Dspr2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* ap);
+            internal static extern void Dspr2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* ap);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsymv")]
-            internal static extern void Dsymv([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* a, int* lda, double* x, int* incx, double* beta, double* y, int* incy);
+            internal static extern void Dsymv([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* a, long* lda, double* x, long* incx, double* beta, double* y, long* incy);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsyr")]
-            internal static extern void Dsyr([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* a, int* lda);
+            internal static extern void Dsyr([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsyr2")]
-            internal static extern void Dsyr2([MarshalAs(UnmanagedType.LPStr)] string uplo, int* n, double* alpha, double* x, int* incx, double* y, int* incy, double* a, int* lda);
+            internal static extern void Dsyr2([MarshalAs(UnmanagedType.LPStr)] string uplo, long* n, double* alpha, double* x, long* incx, double* y, long* incy, double* a, long* lda);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtbmv")]
-            internal static extern void Dtbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, double* a, int* lda, double* x, int* incx);
+            internal static extern void Dtbmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtbsv")]
-            internal static extern void Dtbsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, int* k, double* a, int* lda, double* x, int* incx);
+            internal static extern void Dtbsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, long* k, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtpmv")]
-            internal static extern void Dtpmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* ap, double* x, int* incx);
+            internal static extern void Dtpmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* ap, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtpsv")]
-            internal static extern void Dtpsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* ap, double* x, int* incx);
+            internal static extern void Dtpsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* ap, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtrmv")]
-            internal static extern void Dtrmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* a, int* lda, double* b, int* incx);
+            internal static extern void Dtrmv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* a, long* lda, double* b, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtrsv")]
-            internal static extern void Dtrsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, int* n, double* a, int* lda, double* x, int* incx);
+            internal static extern void Dtrsv([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, [MarshalAs(UnmanagedType.LPStr)] string diag, long* n, double* a, long* lda, double* x, long* incx);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgem2vu")]
-            internal static extern void Dgem2vu(int* m, int* n, double* alpha, double* a, int* lda, double* x1, int* incx1, double* x2, int* incx2, double* beta, double* y1, int* incy1, double* y2, int* incy2);
+            internal static extern void Dgem2vu(long* m, long* n, double* alpha, double* a, long* lda, double* x1, long* incx1, double* x2, long* incx2, double* beta, double* y1, long* incy1, double* y2, long* incy2);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemm")]
-            internal static extern void Sgemm([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void Sgemm([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemm_alloc")]
-            internal static extern float* SgemmAlloc([MarshalAs(UnmanagedType.LPStr)] string identifier, int* m, int* n, int* k);
+            internal static extern float* SgemmAlloc([MarshalAs(UnmanagedType.LPStr)] string identifier, long* m, long* n, long* k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemm_pack")]
-            internal static extern void SgemmPack([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* k, float* alpha, float* src, int* ld, float* dest);
+            internal static extern void SgemmPack([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* k, float* alpha, float* src, long* ld, float* dest);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemm_compute")]
-            internal static extern void SgemmCompute([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void SgemmCompute([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -962,62 +962,62 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemm_batch")]
-            internal static extern void SgemmBatch([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, int* m_array, int* n_array, int* k_array, float* alpha_array, float** a_array, int* lda_array, float** b_array, int* ldb_array, float* beta_array, float** c_array, int* ldc_array, int* group_count, int* group_size);
+            internal static extern void SgemmBatch([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, long* m_array, long* n_array, long* k_array, float* alpha_array, float** a_array, long* lda_array, float** b_array, long* ldb_array, float* beta_array, float** c_array, long* ldc_array, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="sgemmt")]
-            internal static extern void Sgemmt([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void Sgemmt([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssymm")]
-            internal static extern void Ssymm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void Ssymm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssyr2k")]
-            internal static extern void Ssyr2k([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, float* alpha, float* a, int* lda, float* b, int* ldb, float* beta, float* c, int* ldc);
+            internal static extern void Ssyr2k([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, float* alpha, float* a, long* lda, float* b, long* ldb, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="ssyrk")]
-            internal static extern void Ssyrk([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, float* alpha, float* a, int* lda, float* beta, float* c, int* ldc);
+            internal static extern void Ssyrk([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, float* alpha, float* a, long* lda, float* beta, float* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="strmm")]
-            internal static extern void Strmm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb);
+            internal static extern void Strmm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="strsm")]
-            internal static extern void Strsm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, float* alpha, float* a, int* lda, float* b, int* ldb);
+            internal static extern void Strsm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, float* alpha, float* a, long* lda, float* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="strsm_batch")]
-            internal static extern void StrsmBatch([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, int* m_array, int* n_array, float* alpha_array, float** a_array, int* lda_array, float** b_array, int* ldb, int* group_count, int* group_size);
+            internal static extern void StrsmBatch([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, long* m_array, long* n_array, float* alpha_array, float** a_array, long* lda_array, float** b_array, long* ldb, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemm")]
-            internal static extern void Dgemm([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void Dgemm([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemm_alloc")]
-            internal static extern double* DgemmAlloc([MarshalAs(UnmanagedType.LPStr)] string identifier, int* m, int* n, int* k);
+            internal static extern double* DgemmAlloc([MarshalAs(UnmanagedType.LPStr)] string identifier, long* m, long* n, long* k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemm_pack")]
-            internal static extern void DgemmPack([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, int* m, int* n, int* k, double* alpha, double* src, int* ld, double* dest);
+            internal static extern void DgemmPack([MarshalAs(UnmanagedType.LPStr)] string identifier, [MarshalAs(UnmanagedType.LPStr)] string trans, long* m, long* n, long* k, double* alpha, double* src, long* ld, double* dest);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemm_compute")]
-            internal static extern void DgemmCompute([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* m, int* n, int* k, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void DgemmCompute([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* m, long* n, long* k, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -1027,52 +1027,52 @@ namespace MKL
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemm_batch")]
-            internal static extern void DgemmBatch([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, int* m_array, int* n_array, int* k_array, double* alpha_array, double** a_array, int* lda_array, double** b_array, int* ldb_array, double* beta_array, double** c_array, int* ldc_array, int* group_count, int* group_size);
+            internal static extern void DgemmBatch([MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string transb_array, long* m_array, long* n_array, long* k_array, double* alpha_array, double** a_array, long* lda_array, double** b_array, long* ldb_array, double* beta_array, double** c_array, long* ldc_array, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dgemmt")]
-            internal static extern void Dgemmt([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void Dgemmt([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsymm")]
-            internal static extern void Dsymm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void Dsymm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsyr2k")]
-            internal static extern void Dsyr2k([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, double* alpha, double* a, int* lda, double* b, int* ldb, double* beta, double* c, int* ldc);
+            internal static extern void Dsyr2k([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, double* alpha, double* a, long* lda, double* b, long* ldb, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dsyrk")]
-            internal static extern void Dsyrk([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, int* n, int* k, double* alpha, double* a, int* lda, double* beta, double* c, int* ldc);
+            internal static extern void Dsyrk([MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string trans, long* n, long* k, double* alpha, double* a, long* lda, double* beta, double* c, long* ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtrmm")]
-            internal static extern void Dtrmm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb);
+            internal static extern void Dtrmm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtrsm")]
-            internal static extern void Dtrsm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, int* m, int* n, double* alpha, double* a, int* lda, double* b, int* ldb);
+            internal static extern void Dtrsm([MarshalAs(UnmanagedType.LPStr)] string side, [MarshalAs(UnmanagedType.LPStr)] string uplo, [MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string diag, long* m, long* n, double* alpha, double* a, long* lda, double* b, long* ldb);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="dtrsm_batch")]
-            internal static extern void DtrsmBatch([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, int* m_array, int* n_array, double* alpha_array, double** a_array, int* lda_array, double** b_array, int* ldb, int* group_count, int* group_size);
+            internal static extern void DtrsmBatch([MarshalAs(UnmanagedType.LPStr)] string side_array, [MarshalAs(UnmanagedType.LPStr)] string uplo_array, [MarshalAs(UnmanagedType.LPStr)] string transa_array, [MarshalAs(UnmanagedType.LPStr)] string diag_array, long* m_array, long* n_array, double* alpha_array, double** a_array, long* lda_array, double** b_array, long* ldb, long* group_count, long* group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="gemm_s8u8s32")]
-            internal static extern void GemmS8u8s32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, int* m, int* n, int* k, float* alpha, [MarshalAs(UnmanagedType.LPStr)] string a, int* lda, [MarshalAs(UnmanagedType.LPStr)] string ao, byte* b, int* ldb, [MarshalAs(UnmanagedType.LPStr)] string bo, float* beta, int* c, int* ldc, int* co);
+            internal static extern void GemmS8u8s32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, long* m, long* n, long* k, float* alpha, [MarshalAs(UnmanagedType.LPStr)] string a, long* lda, [MarshalAs(UnmanagedType.LPStr)] string ao, byte* b, long* ldb, [MarshalAs(UnmanagedType.LPStr)] string bo, float* beta, int* c, long* ldc, int* co);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="gemm_s16s16s32")]
-            internal static extern void GemmS16s16s32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, int* m, int* n, int* k, float* alpha, short* a, int* lda, short* ao, short* b, int* ldb, short* bo, float* beta, int* c, int* ldc, int* co);
+            internal static extern void GemmS16s16s32([MarshalAs(UnmanagedType.LPStr)] string transa, [MarshalAs(UnmanagedType.LPStr)] string transb, [MarshalAs(UnmanagedType.LPStr)] string offsetc, long* m, long* n, long* k, float* alpha, short* a, long* lda, short* ao, short* b, long* ldb, short* bo, float* beta, int* c, long* ldc, int* co);
         }
 
         public static void XERBLA(string srname, ref int info, int lsrname)
@@ -1084,21 +1084,21 @@ namespace MKL
             }
         }
 
-        public static int LSAME(string ca, string cb, int lca, int lcb)
+        public static int LSAME(string ca, string cb, long lca, long lcb)
         {
             var __ret = __Internal.LSAME(ca, cb, lca, lcb);
             return __ret;
         }
 
-        public static float SASUM(ref int n, ref float x, ref int incx)
+        public static float SASUM(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.SASUM(__arg0, __arg1, __arg2);
@@ -1108,9 +1108,9 @@ namespace MKL
             }
         }
 
-        public static void SAXPY(ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy)
+        public static void SAXPY(ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &alpha)
@@ -1119,13 +1119,13 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     __Internal.SAXPY(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -1137,9 +1137,9 @@ namespace MKL
             }
         }
 
-        public static void SAXPBY(ref int n, ref float alpha, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SAXPBY(ref long n, ref float alpha, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &alpha)
@@ -1148,7 +1148,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &beta)
@@ -1157,7 +1157,7 @@ namespace MKL
                                 fixed (float* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         __Internal.SAXPBY(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -1170,9 +1170,9 @@ namespace MKL
             }
         }
 
-        public static void SAXPYI(ref int nz, ref float a, ref float x, ref int indx, ref float y)
+        public static void SAXPYI(ref long nz, ref float a, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &a)
@@ -1181,7 +1181,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
@@ -1195,21 +1195,21 @@ namespace MKL
             }
         }
 
-        public static void SCOPY(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static void SCOPY(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.SCOPY(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1220,21 +1220,21 @@ namespace MKL
             }
         }
 
-        public static float SDOT(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static float SDOT(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.SDOT(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1246,9 +1246,9 @@ namespace MKL
             }
         }
 
-        public static float SDSDOT(ref int n, ref float sb, ref float x, ref int incx, ref float y, ref int incy)
+        public static float SDSDOT(ref long n, ref float sb, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &sb)
@@ -1257,13 +1257,13 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     var __ret = __Internal.SDSDOT(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -1276,15 +1276,15 @@ namespace MKL
             }
         }
 
-        public static float SDOTI(ref int nz, ref float x, ref int indx, ref float y)
+        public static float SDOTI(ref long nz, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -1298,9 +1298,9 @@ namespace MKL
             }
         }
 
-        public static void SGTHR(ref int nz, ref float y, ref float x, ref int indx)
+        public static void SGTHR(ref long nz, ref float y, ref float x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &y)
@@ -1309,7 +1309,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.SGTHR(__arg0, __arg1, __arg2, __arg3);
@@ -1319,9 +1319,9 @@ namespace MKL
             }
         }
 
-        public static void SGTHRZ(ref int nz, ref float y, ref float x, ref int indx)
+        public static void SGTHRZ(ref long nz, ref float y, ref float x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &y)
@@ -1330,7 +1330,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.SGTHRZ(__arg0, __arg1, __arg2, __arg3);
@@ -1340,15 +1340,15 @@ namespace MKL
             }
         }
 
-        public static float SNRM2(ref int n, ref float x, ref int incx)
+        public static float SNRM2(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.SNRM2(__arg0, __arg1, __arg2);
@@ -1358,21 +1358,21 @@ namespace MKL
             }
         }
 
-        public static void SROT(ref int n, ref float x, ref int incx, ref float y, ref int incy, ref float c, ref float s)
+        public static void SROT(ref long n, ref float x, ref long incx, ref float y, ref long incy, ref float c, ref float s)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &c)
@@ -1412,15 +1412,15 @@ namespace MKL
             }
         }
 
-        public static void SROTI(ref int nz, ref float x, ref int indx, ref float y, ref float c, ref float s)
+        public static void SROTI(ref long nz, ref float x, ref long indx, ref float y, ref float c, ref float s)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -1441,21 +1441,21 @@ namespace MKL
             }
         }
 
-        public static void SROTM(ref int n, ref float x, ref int incx, ref float y, ref int incy, ref float param)
+        public static void SROTM(ref long n, ref float x, ref long incx, ref float y, ref long incy, ref float param)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &param)
@@ -1495,9 +1495,9 @@ namespace MKL
             }
         }
 
-        public static void SSCAL(ref int n, ref float a, ref float x, ref int incx)
+        public static void SSCAL(ref long n, ref float a, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &a)
@@ -1506,7 +1506,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.SSCAL(__arg0, __arg1, __arg2, __arg3);
@@ -1516,15 +1516,15 @@ namespace MKL
             }
         }
 
-        public static void SSCTR(ref int nz, ref float x, ref int indx, ref float y)
+        public static void SSCTR(ref long nz, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -1537,21 +1537,21 @@ namespace MKL
             }
         }
 
-        public static void SSWAP(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static void SSWAP(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.SSWAP(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1562,15 +1562,15 @@ namespace MKL
             }
         }
 
-        public static int ISAMAX(ref int n, ref float x, ref int incx)
+        public static long ISAMAX(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.ISAMAX(__arg0, __arg1, __arg2);
@@ -1580,15 +1580,15 @@ namespace MKL
             }
         }
 
-        public static int ISAMIN(ref int n, ref float x, ref int incx)
+        public static long ISAMIN(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.ISAMIN(__arg0, __arg1, __arg2);
@@ -1598,15 +1598,15 @@ namespace MKL
             }
         }
 
-        public static double DASUM(ref int n, ref double x, ref int incx)
+        public static double DASUM(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.DASUM(__arg0, __arg1, __arg2);
@@ -1616,9 +1616,9 @@ namespace MKL
             }
         }
 
-        public static void DAXPY(ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy)
+        public static void DAXPY(ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &alpha)
@@ -1627,13 +1627,13 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     __Internal.DAXPY(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -1645,9 +1645,9 @@ namespace MKL
             }
         }
 
-        public static void DAXPBY(ref int n, ref double alpha, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DAXPBY(ref long n, ref double alpha, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &alpha)
@@ -1656,7 +1656,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &beta)
@@ -1665,7 +1665,7 @@ namespace MKL
                                 fixed (double* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         __Internal.DAXPBY(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -1678,9 +1678,9 @@ namespace MKL
             }
         }
 
-        public static void DAXPYI(ref int nz, ref double a, ref double x, ref int indx, ref double y)
+        public static void DAXPYI(ref long nz, ref double a, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &a)
@@ -1689,7 +1689,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &y)
@@ -1703,21 +1703,21 @@ namespace MKL
             }
         }
 
-        public static void DCOPY(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static void DCOPY(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.DCOPY(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1728,21 +1728,21 @@ namespace MKL
             }
         }
 
-        public static double DDOT(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static double DDOT(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.DDOT(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1754,21 +1754,21 @@ namespace MKL
             }
         }
 
-        public static double DSDOT(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static double DSDOT(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.DSDOT(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -1780,15 +1780,15 @@ namespace MKL
             }
         }
 
-        public static double DDOTI(ref int nz, ref double x, ref int indx, ref double y)
+        public static double DDOTI(ref long nz, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -1802,9 +1802,9 @@ namespace MKL
             }
         }
 
-        public static void DGTHR(ref int nz, ref double y, ref double x, ref int indx)
+        public static void DGTHR(ref long nz, ref double y, ref double x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &y)
@@ -1813,7 +1813,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.DGTHR(__arg0, __arg1, __arg2, __arg3);
@@ -1823,9 +1823,9 @@ namespace MKL
             }
         }
 
-        public static void DGTHRZ(ref int nz, ref double y, ref double x, ref int indx)
+        public static void DGTHRZ(ref long nz, ref double y, ref double x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &y)
@@ -1834,7 +1834,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.DGTHRZ(__arg0, __arg1, __arg2, __arg3);
@@ -1844,15 +1844,15 @@ namespace MKL
             }
         }
 
-        public static double DNRM2(ref int n, ref double x, ref int incx)
+        public static double DNRM2(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.DNRM2(__arg0, __arg1, __arg2);
@@ -1862,21 +1862,21 @@ namespace MKL
             }
         }
 
-        public static void DROT(ref int n, ref double x, ref int incx, ref double y, ref int incy, ref double c, ref double s)
+        public static void DROT(ref long n, ref double x, ref long incx, ref double y, ref long incy, ref double c, ref double s)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &c)
@@ -1916,15 +1916,15 @@ namespace MKL
             }
         }
 
-        public static void DROTI(ref int nz, ref double x, ref int indx, ref double y, ref double c, ref double s)
+        public static void DROTI(ref long nz, ref double x, ref long indx, ref double y, ref double c, ref double s)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -1945,21 +1945,21 @@ namespace MKL
             }
         }
 
-        public static void DROTM(ref int n, ref double x, ref int incx, ref double y, ref int incy, ref double param)
+        public static void DROTM(ref long n, ref double x, ref long incx, ref double y, ref long incy, ref double param)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &param)
@@ -1999,9 +1999,9 @@ namespace MKL
             }
         }
 
-        public static void DSCAL(ref int n, ref double a, ref double x, ref int incx)
+        public static void DSCAL(ref long n, ref double a, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &a)
@@ -2010,7 +2010,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.DSCAL(__arg0, __arg1, __arg2, __arg3);
@@ -2020,15 +2020,15 @@ namespace MKL
             }
         }
 
-        public static void DSCTR(ref int nz, ref double x, ref int indx, ref double y)
+        public static void DSCTR(ref long nz, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -2041,21 +2041,21 @@ namespace MKL
             }
         }
 
-        public static void DSWAP(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static void DSWAP(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.DSWAP(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -2066,15 +2066,15 @@ namespace MKL
             }
         }
 
-        public static int IDAMAX(ref int n, ref double x, ref int incx)
+        public static long IDAMAX(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.IDAMAX(__arg0, __arg1, __arg2);
@@ -2084,15 +2084,15 @@ namespace MKL
             }
         }
 
-        public static int IDAMIN(ref int n, ref double x, ref int incx)
+        public static long IDAMIN(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.IDAMIN(__arg0, __arg1, __arg2);
@@ -2102,18 +2102,18 @@ namespace MKL
             }
         }
 
-        public static void SGBMV(string trans, ref int m, ref int n, ref int kl, ref int ku, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SGBMV(string trans, ref long m, ref long n, ref long kl, ref long ku, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &kl)
+                    fixed (long* __refParamPtr3 = &kl)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &ku)
+                        fixed (long* __refParamPtr4 = &ku)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &alpha)
@@ -2122,13 +2122,13 @@ namespace MKL
                                 fixed (float* __refParamPtr6 = &a)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &lda)
+                                    fixed (long* __refParamPtr7 = &lda)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &x)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incx)
+                                            fixed (long* __refParamPtr9 = &incx)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 fixed (float* __refParamPtr10 = &beta)
@@ -2137,7 +2137,7 @@ namespace MKL
                                                     fixed (float* __refParamPtr11 = &y)
                                                     {
                                                         var __arg11 = __refParamPtr11;
-                                                        fixed (int* __refParamPtr12 = &incy)
+                                                        fixed (long* __refParamPtr12 = &incy)
                                                         {
                                                             var __arg12 = __refParamPtr12;
                                                             __Internal.SGBMV(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -2155,12 +2155,12 @@ namespace MKL
             }
         }
 
-        public static void SGEMV(string trans, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SGEMV(string trans, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (float* __refParamPtr3 = &alpha)
@@ -2169,13 +2169,13 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &beta)
@@ -2184,7 +2184,7 @@ namespace MKL
                                             fixed (float* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.SGEMV(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -2200,12 +2200,12 @@ namespace MKL
             }
         }
 
-        public static void SGER(ref int m, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float a, ref int lda)
+        public static void SGER(ref long m, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (float* __refParamPtr2 = &alpha)
@@ -2214,19 +2214,19 @@ namespace MKL
                         fixed (float* __refParamPtr3 = &x)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incx)
+                            fixed (long* __refParamPtr4 = &incx)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (float* __refParamPtr7 = &a)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &lda)
+                                            fixed (long* __refParamPtr8 = &lda)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 __Internal.SGER(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2241,12 +2241,12 @@ namespace MKL
             }
         }
 
-        public static void SSBMV(string uplo, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SSBMV(string uplo, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &k)
+                fixed (long* __refParamPtr2 = &k)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (float* __refParamPtr3 = &alpha)
@@ -2255,13 +2255,13 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &beta)
@@ -2270,7 +2270,7 @@ namespace MKL
                                             fixed (float* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.SSBMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -2286,9 +2286,9 @@ namespace MKL
             }
         }
 
-        public static void SSPMV(string uplo, ref int n, ref float alpha, ref float ap, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SSPMV(string uplo, ref long n, ref float alpha, ref float ap, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2300,7 +2300,7 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &x)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &incx)
+                            fixed (long* __refParamPtr5 = &incx)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &beta)
@@ -2309,7 +2309,7 @@ namespace MKL
                                     fixed (float* __refParamPtr7 = &y)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &incy)
+                                        fixed (long* __refParamPtr8 = &incy)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.SSPMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2323,9 +2323,9 @@ namespace MKL
             }
         }
 
-        public static void SSPR(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float ap)
+        public static void SSPR(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2334,7 +2334,7 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &ap)
@@ -2348,9 +2348,9 @@ namespace MKL
             }
         }
 
-        public static void SSPR2(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float ap)
+        public static void SSPR2(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2359,13 +2359,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &ap)
@@ -2381,9 +2381,9 @@ namespace MKL
             }
         }
 
-        public static void SSYMV(string uplo, ref int n, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void SSYMV(string uplo, ref long n, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2392,13 +2392,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &a)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &lda)
+                        fixed (long* __refParamPtr4 = &lda)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &x)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incx)
+                                fixed (long* __refParamPtr6 = &incx)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &beta)
@@ -2407,7 +2407,7 @@ namespace MKL
                                         fixed (float* __refParamPtr8 = &y)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incy)
+                                            fixed (long* __refParamPtr9 = &incy)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 __Internal.SSYMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -2422,9 +2422,9 @@ namespace MKL
             }
         }
 
-        public static void SSYR(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float a, ref int lda)
+        public static void SSYR(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2433,13 +2433,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &a)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &lda)
+                                fixed (long* __refParamPtr6 = &lda)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     __Internal.SSYR(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -2451,9 +2451,9 @@ namespace MKL
             }
         }
 
-        public static void SSYR2(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float a, ref int lda)
+        public static void SSYR2(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -2462,19 +2462,19 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &a)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &lda)
+                                        fixed (long* __refParamPtr8 = &lda)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.SSYR2(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2488,24 +2488,24 @@ namespace MKL
             }
         }
 
-        public static void STBMV(string uplo, string trans, string diag, ref int n, ref int k, ref float a, ref int lda, ref float x, ref int incx)
+        public static void STBMV(string uplo, string trans, string diag, ref long n, ref long k, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (float* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.STBMV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2517,24 +2517,24 @@ namespace MKL
             }
         }
 
-        public static void STBSV(string uplo, string trans, string diag, ref int n, ref int k, ref float a, ref int lda, ref float x, ref int incx)
+        public static void STBSV(string uplo, string trans, string diag, ref long n, ref long k, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (float* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.STBSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2546,9 +2546,9 @@ namespace MKL
             }
         }
 
-        public static void STPMV(string uplo, string trans, string diag, ref int n, ref float ap, ref float x, ref int incx)
+        public static void STPMV(string uplo, string trans, string diag, ref long n, ref float ap, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &ap)
@@ -2557,7 +2557,7 @@ namespace MKL
                     fixed (float* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.STPMV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -2567,9 +2567,9 @@ namespace MKL
             }
         }
 
-        public static void STPSV(string uplo, string trans, string diag, ref int n, ref float ap, ref float x, ref int incx)
+        public static void STPSV(string uplo, string trans, string diag, ref long n, ref float ap, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &ap)
@@ -2578,7 +2578,7 @@ namespace MKL
                     fixed (float* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.STPSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -2588,21 +2588,21 @@ namespace MKL
             }
         }
 
-        public static void STRMV(string uplo, string transa, string diag, ref int n, ref float a, ref int lda, ref float b, ref int incx)
+        public static void STRMV(string uplo, string transa, string diag, ref long n, ref float a, ref long lda, ref float b, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &b)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.STRMV(uplo, transa, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -2613,21 +2613,21 @@ namespace MKL
             }
         }
 
-        public static void STRSV(string uplo, string trans, string diag, ref int n, ref float a, ref int lda, ref float x, ref int incx)
+        public static void STRSV(string uplo, string trans, string diag, ref long n, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &x)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.STRSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -2638,12 +2638,12 @@ namespace MKL
             }
         }
 
-        public static void SGEM2VU(ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float x1, ref int incx1, ref float x2, ref int incx2, ref float beta, ref float y1, ref int incy1, ref float y2, ref int incy2)
+        public static void SGEM2VU(ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float x1, ref long incx1, ref float x2, ref long incx2, ref float beta, ref float y1, ref long incy1, ref float y2, ref long incy2)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (float* __refParamPtr2 = &alpha)
@@ -2652,19 +2652,19 @@ namespace MKL
                         fixed (float* __refParamPtr3 = &a)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &lda)
+                            fixed (long* __refParamPtr4 = &lda)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &x1)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incx1)
+                                    fixed (long* __refParamPtr6 = &incx1)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (float* __refParamPtr7 = &x2)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &incx2)
+                                            fixed (long* __refParamPtr8 = &incx2)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 fixed (float* __refParamPtr9 = &beta)
@@ -2673,13 +2673,13 @@ namespace MKL
                                                     fixed (float* __refParamPtr10 = &y1)
                                                     {
                                                         var __arg10 = __refParamPtr10;
-                                                        fixed (int* __refParamPtr11 = &incy1)
+                                                        fixed (long* __refParamPtr11 = &incy1)
                                                         {
                                                             var __arg11 = __refParamPtr11;
                                                             fixed (float* __refParamPtr12 = &y2)
                                                             {
                                                                 var __arg12 = __refParamPtr12;
-                                                                fixed (int* __refParamPtr13 = &incy2)
+                                                                fixed (long* __refParamPtr13 = &incy2)
                                                                 {
                                                                     var __arg13 = __refParamPtr13;
                                                                     __Internal.SGEM2VU(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12, __arg13);
@@ -2699,18 +2699,18 @@ namespace MKL
             }
         }
 
-        public static void DGBMV(string trans, ref int m, ref int n, ref int kl, ref int ku, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DGBMV(string trans, ref long m, ref long n, ref long kl, ref long ku, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &kl)
+                    fixed (long* __refParamPtr3 = &kl)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &ku)
+                        fixed (long* __refParamPtr4 = &ku)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &alpha)
@@ -2719,13 +2719,13 @@ namespace MKL
                                 fixed (double* __refParamPtr6 = &a)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &lda)
+                                    fixed (long* __refParamPtr7 = &lda)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &x)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incx)
+                                            fixed (long* __refParamPtr9 = &incx)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 fixed (double* __refParamPtr10 = &beta)
@@ -2734,7 +2734,7 @@ namespace MKL
                                                     fixed (double* __refParamPtr11 = &y)
                                                     {
                                                         var __arg11 = __refParamPtr11;
-                                                        fixed (int* __refParamPtr12 = &incy)
+                                                        fixed (long* __refParamPtr12 = &incy)
                                                         {
                                                             var __arg12 = __refParamPtr12;
                                                             __Internal.DGBMV(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -2752,12 +2752,12 @@ namespace MKL
             }
         }
 
-        public static void DGEMV(string trans, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DGEMV(string trans, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (double* __refParamPtr3 = &alpha)
@@ -2766,13 +2766,13 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &beta)
@@ -2781,7 +2781,7 @@ namespace MKL
                                             fixed (double* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.DGEMV(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -2797,12 +2797,12 @@ namespace MKL
             }
         }
 
-        public static void DGER(ref int m, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double a, ref int lda)
+        public static void DGER(ref long m, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (double* __refParamPtr2 = &alpha)
@@ -2811,19 +2811,19 @@ namespace MKL
                         fixed (double* __refParamPtr3 = &x)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incx)
+                            fixed (long* __refParamPtr4 = &incx)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (double* __refParamPtr7 = &a)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &lda)
+                                            fixed (long* __refParamPtr8 = &lda)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 __Internal.DGER(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2838,12 +2838,12 @@ namespace MKL
             }
         }
 
-        public static void DSBMV(string uplo, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DSBMV(string uplo, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &k)
+                fixed (long* __refParamPtr2 = &k)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (double* __refParamPtr3 = &alpha)
@@ -2852,13 +2852,13 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &beta)
@@ -2867,7 +2867,7 @@ namespace MKL
                                             fixed (double* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.DSBMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -2883,9 +2883,9 @@ namespace MKL
             }
         }
 
-        public static void DSPMV(string uplo, ref int n, ref double alpha, ref double ap, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DSPMV(string uplo, ref long n, ref double alpha, ref double ap, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -2897,7 +2897,7 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &x)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &incx)
+                            fixed (long* __refParamPtr5 = &incx)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &beta)
@@ -2906,7 +2906,7 @@ namespace MKL
                                     fixed (double* __refParamPtr7 = &y)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &incy)
+                                        fixed (long* __refParamPtr8 = &incy)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.DSPMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -2920,9 +2920,9 @@ namespace MKL
             }
         }
 
-        public static void DSPR(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double ap)
+        public static void DSPR(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -2931,7 +2931,7 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &ap)
@@ -2945,9 +2945,9 @@ namespace MKL
             }
         }
 
-        public static void DSPR2(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double ap)
+        public static void DSPR2(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -2956,13 +2956,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &ap)
@@ -2978,9 +2978,9 @@ namespace MKL
             }
         }
 
-        public static void DSYMV(string uplo, ref int n, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void DSYMV(string uplo, ref long n, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -2989,13 +2989,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &a)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &lda)
+                        fixed (long* __refParamPtr4 = &lda)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &x)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incx)
+                                fixed (long* __refParamPtr6 = &incx)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &beta)
@@ -3004,7 +3004,7 @@ namespace MKL
                                         fixed (double* __refParamPtr8 = &y)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incy)
+                                            fixed (long* __refParamPtr9 = &incy)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 __Internal.DSYMV(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -3019,9 +3019,9 @@ namespace MKL
             }
         }
 
-        public static void DSYR(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double a, ref int lda)
+        public static void DSYR(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -3030,13 +3030,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &a)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &lda)
+                                fixed (long* __refParamPtr6 = &lda)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     __Internal.DSYR(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -3048,9 +3048,9 @@ namespace MKL
             }
         }
 
-        public static void DSYR2(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double a, ref int lda)
+        public static void DSYR2(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -3059,19 +3059,19 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &a)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &lda)
+                                        fixed (long* __refParamPtr8 = &lda)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.DSYR2(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -3085,24 +3085,24 @@ namespace MKL
             }
         }
 
-        public static void DTBMV(string uplo, string trans, string diag, ref int n, ref int k, ref double a, ref int lda, ref double x, ref int incx)
+        public static void DTBMV(string uplo, string trans, string diag, ref long n, ref long k, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (double* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.DTBMV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -3114,24 +3114,24 @@ namespace MKL
             }
         }
 
-        public static void DTBSV(string uplo, string trans, string diag, ref int n, ref int k, ref double a, ref int lda, ref double x, ref int incx)
+        public static void DTBSV(string uplo, string trans, string diag, ref long n, ref long k, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (double* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.DTBSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -3143,9 +3143,9 @@ namespace MKL
             }
         }
 
-        public static void DTPMV(string uplo, string trans, string diag, ref int n, ref double ap, ref double x, ref int incx)
+        public static void DTPMV(string uplo, string trans, string diag, ref long n, ref double ap, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &ap)
@@ -3154,7 +3154,7 @@ namespace MKL
                     fixed (double* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.DTPMV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -3164,9 +3164,9 @@ namespace MKL
             }
         }
 
-        public static void DTPSV(string uplo, string trans, string diag, ref int n, ref double ap, ref double x, ref int incx)
+        public static void DTPSV(string uplo, string trans, string diag, ref long n, ref double ap, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &ap)
@@ -3175,7 +3175,7 @@ namespace MKL
                     fixed (double* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.DTPSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -3185,21 +3185,21 @@ namespace MKL
             }
         }
 
-        public static void DTRMV(string uplo, string transa, string diag, ref int n, ref double a, ref int lda, ref double b, ref int incx)
+        public static void DTRMV(string uplo, string transa, string diag, ref long n, ref double a, ref long lda, ref double b, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (double* __refParamPtr6 = &b)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.DTRMV(uplo, transa, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -3210,21 +3210,21 @@ namespace MKL
             }
         }
 
-        public static void DTRSV(string uplo, string trans, string diag, ref int n, ref double a, ref int lda, ref double x, ref int incx)
+        public static void DTRSV(string uplo, string trans, string diag, ref long n, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (double* __refParamPtr6 = &x)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.DTRSV(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -3235,12 +3235,12 @@ namespace MKL
             }
         }
 
-        public static void DGEM2VU(ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double x1, ref int incx1, ref double x2, ref int incx2, ref double beta, ref double y1, ref int incy1, ref double y2, ref int incy2)
+        public static void DGEM2VU(ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double x1, ref long incx1, ref double x2, ref long incx2, ref double beta, ref double y1, ref long incy1, ref double y2, ref long incy2)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (double* __refParamPtr2 = &alpha)
@@ -3249,19 +3249,19 @@ namespace MKL
                         fixed (double* __refParamPtr3 = &a)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &lda)
+                            fixed (long* __refParamPtr4 = &lda)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &x1)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incx1)
+                                    fixed (long* __refParamPtr6 = &incx1)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (double* __refParamPtr7 = &x2)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &incx2)
+                                            fixed (long* __refParamPtr8 = &incx2)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 fixed (double* __refParamPtr9 = &beta)
@@ -3270,13 +3270,13 @@ namespace MKL
                                                     fixed (double* __refParamPtr10 = &y1)
                                                     {
                                                         var __arg10 = __refParamPtr10;
-                                                        fixed (int* __refParamPtr11 = &incy1)
+                                                        fixed (long* __refParamPtr11 = &incy1)
                                                         {
                                                             var __arg11 = __refParamPtr11;
                                                             fixed (double* __refParamPtr12 = &y2)
                                                             {
                                                                 var __arg12 = __refParamPtr12;
-                                                                fixed (int* __refParamPtr13 = &incy2)
+                                                                fixed (long* __refParamPtr13 = &incy2)
                                                                 {
                                                                     var __arg13 = __refParamPtr13;
                                                                     __Internal.DGEM2VU(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12, __arg13);
@@ -3296,15 +3296,15 @@ namespace MKL
             }
         }
 
-        public static void SGEMM(string transa, string transb, ref int m, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SGEMM(string transa, string transb, ref long m, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha)
@@ -3313,13 +3313,13 @@ namespace MKL
                             fixed (float* __refParamPtr6 = &a)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &lda)
+                                fixed (long* __refParamPtr7 = &lda)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (float* __refParamPtr8 = &b)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldb)
+                                        fixed (long* __refParamPtr9 = &ldb)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             fixed (float* __refParamPtr10 = &beta)
@@ -3328,7 +3328,7 @@ namespace MKL
                                                 fixed (float* __refParamPtr11 = &c)
                                                 {
                                                     var __arg11 = __refParamPtr11;
-                                                    fixed (int* __refParamPtr12 = &ldc)
+                                                    fixed (long* __refParamPtr12 = &ldc)
                                                     {
                                                         var __arg12 = __refParamPtr12;
                                                         __Internal.SGEMM(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -3345,15 +3345,15 @@ namespace MKL
             }
         }
 
-        public static float* SGEMM_ALLOC(string identifier, ref int m, ref int n, ref int k)
+        public static float* SGEMM_ALLOC(string identifier, ref long m, ref long n, ref long k)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &k)
+                    fixed (long* __refParamPtr3 = &k)
                     {
                         var __arg3 = __refParamPtr3;
                         var __ret = __Internal.SGEMM_ALLOC(identifier, __arg1, __arg2, __arg3);
@@ -3363,15 +3363,15 @@ namespace MKL
             }
         }
 
-        public static void SGEMM_PACK(string identifier, string trans, ref int m, ref int n, ref int k, ref float alpha, ref float src, ref int ld, ref float dest)
+        public static void SGEMM_PACK(string identifier, string trans, ref long m, ref long n, ref long k, ref float alpha, ref float src, ref long ld, ref float dest)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha)
@@ -3380,7 +3380,7 @@ namespace MKL
                             fixed (float* __refParamPtr6 = &src)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &ld)
+                                fixed (long* __refParamPtr7 = &ld)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (float* __refParamPtr8 = &dest)
@@ -3396,27 +3396,27 @@ namespace MKL
             }
         }
 
-        public static void SGEMM_COMPUTE(string transa, string transb, ref int m, ref int n, ref int k, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SGEMM_COMPUTE(string transa, string transb, ref long m, ref long n, ref long k, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -3425,7 +3425,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.SGEMM_COMPUTE(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -3450,36 +3450,36 @@ namespace MKL
             }
         }
 
-        public static void SGEMM_BATCH(string transa_array, string transb_array, ref int m_array, ref int n_array, ref int k_array, ref float alpha_array, float** a_array, ref int lda_array, float** b_array, ref int ldb_array, ref float beta_array, float** c_array, ref int ldc_array, ref int group_count, ref int group_size)
+        public static void SGEMM_BATCH(string transa_array, string transb_array, ref long m_array, ref long n_array, ref long k_array, ref float alpha_array, float** a_array, ref long lda_array, float** b_array, ref long ldb_array, ref float beta_array, float** c_array, ref long ldc_array, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr2 = &m_array)
+            fixed (long* __refParamPtr2 = &m_array)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n_array)
+                fixed (long* __refParamPtr3 = &n_array)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k_array)
+                    fixed (long* __refParamPtr4 = &k_array)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha_array)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr7 = &lda_array)
+                            fixed (long* __refParamPtr7 = &lda_array)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr9 = &ldb_array)
+                                fixed (long* __refParamPtr9 = &ldb_array)
                                 {
                                     var __arg9 = __refParamPtr9;
                                     fixed (float* __refParamPtr10 = &beta_array)
                                     {
                                         var __arg10 = __refParamPtr10;
-                                        fixed (int* __refParamPtr12 = &ldc_array)
+                                        fixed (long* __refParamPtr12 = &ldc_array)
                                         {
                                             var __arg12 = __refParamPtr12;
-                                            fixed (int* __refParamPtr13 = &group_count)
+                                            fixed (long* __refParamPtr13 = &group_count)
                                             {
                                                 var __arg13 = __refParamPtr13;
-                                                fixed (int* __refParamPtr14 = &group_size)
+                                                fixed (long* __refParamPtr14 = &group_size)
                                                 {
                                                     var __arg14 = __refParamPtr14;
                                                     __Internal.SGEMM_BATCH(transa_array, transb_array, __arg2, __arg3, __arg4, __arg5, a_array, __arg7, b_array, __arg9, __arg10, c_array, __arg12, __arg13, __arg14);
@@ -3495,12 +3495,12 @@ namespace MKL
             }
         }
 
-        public static void SGEMMT(string uplo, string transa, string transb, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SGEMMT(string uplo, string transa, string transb, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &alpha)
@@ -3509,13 +3509,13 @@ namespace MKL
                         fixed (float* __refParamPtr6 = &a)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &lda)
+                            fixed (long* __refParamPtr7 = &lda)
                             {
                                 var __arg7 = __refParamPtr7;
                                 fixed (float* __refParamPtr8 = &b)
                                 {
                                     var __arg8 = __refParamPtr8;
-                                    fixed (int* __refParamPtr9 = &ldb)
+                                    fixed (long* __refParamPtr9 = &ldb)
                                     {
                                         var __arg9 = __refParamPtr9;
                                         fixed (float* __refParamPtr10 = &beta)
@@ -3524,7 +3524,7 @@ namespace MKL
                                             fixed (float* __refParamPtr11 = &c)
                                             {
                                                 var __arg11 = __refParamPtr11;
-                                                fixed (int* __refParamPtr12 = &ldc)
+                                                fixed (long* __refParamPtr12 = &ldc)
                                                 {
                                                     var __arg12 = __refParamPtr12;
                                                     __Internal.SGEMMT(uplo, transa, transb, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -3540,12 +3540,12 @@ namespace MKL
             }
         }
 
-        public static void SSYMM(string side, string uplo, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SSYMM(string side, string uplo, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -3554,13 +3554,13 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -3569,7 +3569,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.SSYMM(side, uplo, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -3585,12 +3585,12 @@ namespace MKL
             }
         }
 
-        public static void SSYR2K(string uplo, string trans, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SSYR2K(string uplo, string trans, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -3599,13 +3599,13 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -3614,7 +3614,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.SSYR2K(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -3630,12 +3630,12 @@ namespace MKL
             }
         }
 
-        public static void SSYRK(string uplo, string trans, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float beta, ref float c, ref int ldc)
+        public static void SSYRK(string uplo, string trans, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -3644,7 +3644,7 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &beta)
@@ -3653,7 +3653,7 @@ namespace MKL
                                     fixed (float* __refParamPtr8 = &c)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldc)
+                                        fixed (long* __refParamPtr9 = &ldc)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             __Internal.SSYRK(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -3667,12 +3667,12 @@ namespace MKL
             }
         }
 
-        public static void STRMM(string side, string uplo, string transa, string diag, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb)
+        public static void STRMM(string side, string uplo, string transa, string diag, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha)
@@ -3681,13 +3681,13 @@ namespace MKL
                         fixed (float* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (float* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.STRMM(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -3700,12 +3700,12 @@ namespace MKL
             }
         }
 
-        public static void STRSM(string side, string uplo, string transa, string diag, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb)
+        public static void STRSM(string side, string uplo, string transa, string diag, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha)
@@ -3714,13 +3714,13 @@ namespace MKL
                         fixed (float* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (float* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.STRSM(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -3733,27 +3733,27 @@ namespace MKL
             }
         }
 
-        public static void STRSM_BATCH(string side_array, string uplo_array, string transa_array, string diag_array, ref int m_array, ref int n_array, ref float alpha_array, float** a_array, ref int lda_array, float** b_array, ref int ldb, ref int group_count, ref int group_size)
+        public static void STRSM_BATCH(string side_array, string uplo_array, string transa_array, string diag_array, ref long m_array, ref long n_array, ref float alpha_array, float** a_array, ref long lda_array, float** b_array, ref long ldb, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr4 = &m_array)
+            fixed (long* __refParamPtr4 = &m_array)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n_array)
+                fixed (long* __refParamPtr5 = &n_array)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha_array)
                     {
                         var __arg6 = __refParamPtr6;
-                        fixed (int* __refParamPtr8 = &lda_array)
+                        fixed (long* __refParamPtr8 = &lda_array)
                         {
                             var __arg8 = __refParamPtr8;
-                            fixed (int* __refParamPtr10 = &ldb)
+                            fixed (long* __refParamPtr10 = &ldb)
                             {
                                 var __arg10 = __refParamPtr10;
-                                fixed (int* __refParamPtr11 = &group_count)
+                                fixed (long* __refParamPtr11 = &group_count)
                                 {
                                     var __arg11 = __refParamPtr11;
-                                    fixed (int* __refParamPtr12 = &group_size)
+                                    fixed (long* __refParamPtr12 = &group_size)
                                     {
                                         var __arg12 = __refParamPtr12;
                                         __Internal.STRSM_BATCH(side_array, uplo_array, transa_array, diag_array, __arg4, __arg5, __arg6, a_array, __arg8, b_array, __arg10, __arg11, __arg12);
@@ -3766,15 +3766,15 @@ namespace MKL
             }
         }
 
-        public static void DGEMM(string transa, string transb, ref int m, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DGEMM(string transa, string transb, ref long m, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha)
@@ -3783,13 +3783,13 @@ namespace MKL
                             fixed (double* __refParamPtr6 = &a)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &lda)
+                                fixed (long* __refParamPtr7 = &lda)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (double* __refParamPtr8 = &b)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldb)
+                                        fixed (long* __refParamPtr9 = &ldb)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             fixed (double* __refParamPtr10 = &beta)
@@ -3798,7 +3798,7 @@ namespace MKL
                                                 fixed (double* __refParamPtr11 = &c)
                                                 {
                                                     var __arg11 = __refParamPtr11;
-                                                    fixed (int* __refParamPtr12 = &ldc)
+                                                    fixed (long* __refParamPtr12 = &ldc)
                                                     {
                                                         var __arg12 = __refParamPtr12;
                                                         __Internal.DGEMM(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -3815,15 +3815,15 @@ namespace MKL
             }
         }
 
-        public static double* DGEMM_ALLOC(string identifier, ref int m, ref int n, ref int k)
+        public static double* DGEMM_ALLOC(string identifier, ref long m, ref long n, ref long k)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &k)
+                    fixed (long* __refParamPtr3 = &k)
                     {
                         var __arg3 = __refParamPtr3;
                         var __ret = __Internal.DGEMM_ALLOC(identifier, __arg1, __arg2, __arg3);
@@ -3833,15 +3833,15 @@ namespace MKL
             }
         }
 
-        public static void DGEMM_PACK(string identifier, string trans, ref int m, ref int n, ref int k, ref double alpha, ref double src, ref int ld, ref double dest)
+        public static void DGEMM_PACK(string identifier, string trans, ref long m, ref long n, ref long k, ref double alpha, ref double src, ref long ld, ref double dest)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha)
@@ -3850,7 +3850,7 @@ namespace MKL
                             fixed (double* __refParamPtr6 = &src)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &ld)
+                                fixed (long* __refParamPtr7 = &ld)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (double* __refParamPtr8 = &dest)
@@ -3866,27 +3866,27 @@ namespace MKL
             }
         }
 
-        public static void DGEMM_COMPUTE(string transa, string transb, ref int m, ref int n, ref int k, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DGEMM_COMPUTE(string transa, string transb, ref long m, ref long n, ref long k, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -3895,7 +3895,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.DGEMM_COMPUTE(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -3920,36 +3920,36 @@ namespace MKL
             }
         }
 
-        public static void DGEMM_BATCH(string transa_array, string transb_array, ref int m_array, ref int n_array, ref int k_array, ref double alpha_array, double** a_array, ref int lda_array, double** b_array, ref int ldb_array, ref double beta_array, double** c_array, ref int ldc_array, ref int group_count, ref int group_size)
+        public static void DGEMM_BATCH(string transa_array, string transb_array, ref long m_array, ref long n_array, ref long k_array, ref double alpha_array, double** a_array, ref long lda_array, double** b_array, ref long ldb_array, ref double beta_array, double** c_array, ref long ldc_array, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr2 = &m_array)
+            fixed (long* __refParamPtr2 = &m_array)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n_array)
+                fixed (long* __refParamPtr3 = &n_array)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k_array)
+                    fixed (long* __refParamPtr4 = &k_array)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha_array)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr7 = &lda_array)
+                            fixed (long* __refParamPtr7 = &lda_array)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr9 = &ldb_array)
+                                fixed (long* __refParamPtr9 = &ldb_array)
                                 {
                                     var __arg9 = __refParamPtr9;
                                     fixed (double* __refParamPtr10 = &beta_array)
                                     {
                                         var __arg10 = __refParamPtr10;
-                                        fixed (int* __refParamPtr12 = &ldc_array)
+                                        fixed (long* __refParamPtr12 = &ldc_array)
                                         {
                                             var __arg12 = __refParamPtr12;
-                                            fixed (int* __refParamPtr13 = &group_count)
+                                            fixed (long* __refParamPtr13 = &group_count)
                                             {
                                                 var __arg13 = __refParamPtr13;
-                                                fixed (int* __refParamPtr14 = &group_size)
+                                                fixed (long* __refParamPtr14 = &group_size)
                                                 {
                                                     var __arg14 = __refParamPtr14;
                                                     __Internal.DGEMM_BATCH(transa_array, transb_array, __arg2, __arg3, __arg4, __arg5, a_array, __arg7, b_array, __arg9, __arg10, c_array, __arg12, __arg13, __arg14);
@@ -3965,12 +3965,12 @@ namespace MKL
             }
         }
 
-        public static void DGEMMT(string uplo, string transa, string transb, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DGEMMT(string uplo, string transa, string transb, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &alpha)
@@ -3979,13 +3979,13 @@ namespace MKL
                         fixed (double* __refParamPtr6 = &a)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &lda)
+                            fixed (long* __refParamPtr7 = &lda)
                             {
                                 var __arg7 = __refParamPtr7;
                                 fixed (double* __refParamPtr8 = &b)
                                 {
                                     var __arg8 = __refParamPtr8;
-                                    fixed (int* __refParamPtr9 = &ldb)
+                                    fixed (long* __refParamPtr9 = &ldb)
                                     {
                                         var __arg9 = __refParamPtr9;
                                         fixed (double* __refParamPtr10 = &beta)
@@ -3994,7 +3994,7 @@ namespace MKL
                                             fixed (double* __refParamPtr11 = &c)
                                             {
                                                 var __arg11 = __refParamPtr11;
-                                                fixed (int* __refParamPtr12 = &ldc)
+                                                fixed (long* __refParamPtr12 = &ldc)
                                                 {
                                                     var __arg12 = __refParamPtr12;
                                                     __Internal.DGEMMT(uplo, transa, transb, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -4010,12 +4010,12 @@ namespace MKL
             }
         }
 
-        public static void DSYMM(string side, string uplo, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DSYMM(string side, string uplo, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -4024,13 +4024,13 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -4039,7 +4039,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.DSYMM(side, uplo, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -4055,12 +4055,12 @@ namespace MKL
             }
         }
 
-        public static void DSYR2K(string uplo, string trans, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DSYR2K(string uplo, string trans, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -4069,13 +4069,13 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -4084,7 +4084,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.DSYR2K(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -4100,12 +4100,12 @@ namespace MKL
             }
         }
 
-        public static void DSYRK(string uplo, string trans, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double beta, ref double c, ref int ldc)
+        public static void DSYRK(string uplo, string trans, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -4114,7 +4114,7 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &beta)
@@ -4123,7 +4123,7 @@ namespace MKL
                                     fixed (double* __refParamPtr8 = &c)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldc)
+                                        fixed (long* __refParamPtr9 = &ldc)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             __Internal.DSYRK(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -4137,12 +4137,12 @@ namespace MKL
             }
         }
 
-        public static void DTRMM(string side, string uplo, string transa, string diag, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb)
+        public static void DTRMM(string side, string uplo, string transa, string diag, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha)
@@ -4151,13 +4151,13 @@ namespace MKL
                         fixed (double* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (double* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.DTRMM(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -4170,12 +4170,12 @@ namespace MKL
             }
         }
 
-        public static void DTRSM(string side, string uplo, string transa, string diag, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb)
+        public static void DTRSM(string side, string uplo, string transa, string diag, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha)
@@ -4184,13 +4184,13 @@ namespace MKL
                         fixed (double* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (double* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.DTRSM(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -4203,27 +4203,27 @@ namespace MKL
             }
         }
 
-        public static void DTRSM_BATCH(string side_array, string uplo_array, string transa_array, string diag_array, ref int m_array, ref int n_array, ref double alpha_array, double** a_array, ref int lda_array, double** b_array, ref int ldb, ref int group_count, ref int group_size)
+        public static void DTRSM_BATCH(string side_array, string uplo_array, string transa_array, string diag_array, ref long m_array, ref long n_array, ref double alpha_array, double** a_array, ref long lda_array, double** b_array, ref long ldb, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr4 = &m_array)
+            fixed (long* __refParamPtr4 = &m_array)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n_array)
+                fixed (long* __refParamPtr5 = &n_array)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha_array)
                     {
                         var __arg6 = __refParamPtr6;
-                        fixed (int* __refParamPtr8 = &lda_array)
+                        fixed (long* __refParamPtr8 = &lda_array)
                         {
                             var __arg8 = __refParamPtr8;
-                            fixed (int* __refParamPtr10 = &ldb)
+                            fixed (long* __refParamPtr10 = &ldb)
                             {
                                 var __arg10 = __refParamPtr10;
-                                fixed (int* __refParamPtr11 = &group_count)
+                                fixed (long* __refParamPtr11 = &group_count)
                                 {
                                     var __arg11 = __refParamPtr11;
-                                    fixed (int* __refParamPtr12 = &group_size)
+                                    fixed (long* __refParamPtr12 = &group_size)
                                     {
                                         var __arg12 = __refParamPtr12;
                                         __Internal.DTRSM_BATCH(side_array, uplo_array, transa_array, diag_array, __arg4, __arg5, __arg6, a_array, __arg8, b_array, __arg10, __arg11, __arg12);
@@ -4236,24 +4236,24 @@ namespace MKL
             }
         }
 
-        public static void GEMM_S8U8S32(string transa, string transb, string offsetc, ref int m, ref int n, ref int k, ref float alpha, string a, ref int lda, string ao, byte* b, ref int ldb, string bo, ref float beta, ref int c, ref int ldc, ref int co)
+        public static void GEMM_S8U8S32(string transa, string transb, string offsetc, ref long m, ref long n, ref long k, ref float alpha, string a, ref long lda, string ao, byte* b, ref long ldb, string bo, ref float beta, ref int c, ref long ldc, ref int co)
         {
-            fixed (int* __refParamPtr3 = &m)
+            fixed (long* __refParamPtr3 = &m)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &n)
+                fixed (long* __refParamPtr4 = &n)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &k)
+                    fixed (long* __refParamPtr5 = &k)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &alpha)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
-                                fixed (int* __refParamPtr11 = &ldb)
+                                fixed (long* __refParamPtr11 = &ldb)
                                 {
                                     var __arg11 = __refParamPtr11;
                                     fixed (float* __refParamPtr13 = &beta)
@@ -4262,7 +4262,7 @@ namespace MKL
                                         fixed (int* __refParamPtr14 = &c)
                                         {
                                             var __arg14 = __refParamPtr14;
-                                            fixed (int* __refParamPtr15 = &ldc)
+                                            fixed (long* __refParamPtr15 = &ldc)
                                             {
                                                 var __arg15 = __refParamPtr15;
                                                 fixed (int* __refParamPtr16 = &co)
@@ -4281,15 +4281,15 @@ namespace MKL
             }
         }
 
-        public static void GEMM_S16S16S32(string transa, string transb, string offsetc, ref int m, ref int n, ref int k, ref float alpha, ref short a, ref int lda, ref short ao, ref short b, ref int ldb, ref short bo, ref float beta, ref int c, ref int ldc, ref int co)
+        public static void GEMM_S16S16S32(string transa, string transb, string offsetc, ref long m, ref long n, ref long k, ref float alpha, ref short a, ref long lda, ref short ao, ref short b, ref long ldb, ref short bo, ref float beta, ref int c, ref long ldc, ref int co)
         {
-            fixed (int* __refParamPtr3 = &m)
+            fixed (long* __refParamPtr3 = &m)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &n)
+                fixed (long* __refParamPtr4 = &n)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &k)
+                    fixed (long* __refParamPtr5 = &k)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &alpha)
@@ -4298,7 +4298,7 @@ namespace MKL
                             fixed (short* __refParamPtr7 = &a)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &lda)
+                                fixed (long* __refParamPtr8 = &lda)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     fixed (short* __refParamPtr9 = &ao)
@@ -4307,7 +4307,7 @@ namespace MKL
                                         fixed (short* __refParamPtr10 = &b)
                                         {
                                             var __arg10 = __refParamPtr10;
-                                            fixed (int* __refParamPtr11 = &ldb)
+                                            fixed (long* __refParamPtr11 = &ldb)
                                             {
                                                 var __arg11 = __refParamPtr11;
                                                 fixed (short* __refParamPtr12 = &bo)
@@ -4319,7 +4319,7 @@ namespace MKL
                                                         fixed (int* __refParamPtr14 = &c)
                                                         {
                                                             var __arg14 = __refParamPtr14;
-                                                            fixed (int* __refParamPtr15 = &ldc)
+                                                            fixed (long* __refParamPtr15 = &ldc)
                                                             {
                                                                 var __arg15 = __refParamPtr15;
                                                                 fixed (int* __refParamPtr16 = &co)
@@ -4351,21 +4351,21 @@ namespace MKL
             }
         }
 
-        public static int Lsame(string ca, string cb, int lca, int lcb)
+        public static int Lsame(string ca, string cb, long lca, long lcb)
         {
             var __ret = __Internal.Lsame(ca, cb, lca, lcb);
             return __ret;
         }
 
-        public static float Sasum(ref int n, ref float x, ref int incx)
+        public static float Sasum(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Sasum(__arg0, __arg1, __arg2);
@@ -4375,9 +4375,9 @@ namespace MKL
             }
         }
 
-        public static void Saxpy(ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy)
+        public static void Saxpy(ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &alpha)
@@ -4386,13 +4386,13 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     __Internal.Saxpy(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -4404,9 +4404,9 @@ namespace MKL
             }
         }
 
-        public static void Saxpby(ref int n, ref float alpha, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Saxpby(ref long n, ref float alpha, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &alpha)
@@ -4415,7 +4415,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &beta)
@@ -4424,7 +4424,7 @@ namespace MKL
                                 fixed (float* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         __Internal.Saxpby(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -4437,9 +4437,9 @@ namespace MKL
             }
         }
 
-        public static void Saxpyi(ref int nz, ref float a, ref float x, ref int indx, ref float y)
+        public static void Saxpyi(ref long nz, ref float a, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &a)
@@ -4448,7 +4448,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
@@ -4462,21 +4462,21 @@ namespace MKL
             }
         }
 
-        public static void Scopy(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static void Scopy(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.Scopy(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -4487,21 +4487,21 @@ namespace MKL
             }
         }
 
-        public static float Sdot(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static float Sdot(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.Sdot(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -4513,15 +4513,15 @@ namespace MKL
             }
         }
 
-        public static float Sdoti(ref int nz, ref float x, ref int indx, ref float y)
+        public static float Sdoti(ref long nz, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -4535,9 +4535,9 @@ namespace MKL
             }
         }
 
-        public static float Sdsdot(ref int n, ref float sb, ref float x, ref int incx, ref float y, ref int incy)
+        public static float Sdsdot(ref long n, ref float sb, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &sb)
@@ -4546,13 +4546,13 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (float* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     var __ret = __Internal.Sdsdot(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -4565,9 +4565,9 @@ namespace MKL
             }
         }
 
-        public static void Sgthr(ref int nz, ref float y, ref float x, ref int indx)
+        public static void Sgthr(ref long nz, ref float y, ref float x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &y)
@@ -4576,7 +4576,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Sgthr(__arg0, __arg1, __arg2, __arg3);
@@ -4586,9 +4586,9 @@ namespace MKL
             }
         }
 
-        public static void Sgthrz(ref int nz, ref float y, ref float x, ref int indx)
+        public static void Sgthrz(ref long nz, ref float y, ref float x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &y)
@@ -4597,7 +4597,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Sgthrz(__arg0, __arg1, __arg2, __arg3);
@@ -4607,15 +4607,15 @@ namespace MKL
             }
         }
 
-        public static float Snrm2(ref int n, ref float x, ref int incx)
+        public static float Snrm2(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Snrm2(__arg0, __arg1, __arg2);
@@ -4625,21 +4625,21 @@ namespace MKL
             }
         }
 
-        public static void Srot(ref int n, ref float x, ref int incx, ref float y, ref int incy, ref float c, ref float s)
+        public static void Srot(ref long n, ref float x, ref long incx, ref float y, ref long incy, ref float c, ref float s)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &c)
@@ -4679,15 +4679,15 @@ namespace MKL
             }
         }
 
-        public static void Sroti(ref int nz, ref float x, ref int indx, ref float y, ref float c, ref float s)
+        public static void Sroti(ref long nz, ref float x, ref long indx, ref float y, ref float c, ref float s)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -4708,21 +4708,21 @@ namespace MKL
             }
         }
 
-        public static void Srotm(ref int n, ref float x, ref int incx, ref float y, ref int incy, ref float param)
+        public static void Srotm(ref long n, ref float x, ref long incx, ref float y, ref long incy, ref float param)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &param)
@@ -4762,9 +4762,9 @@ namespace MKL
             }
         }
 
-        public static void Sscal(ref int n, ref float a, ref float x, ref int incx)
+        public static void Sscal(ref long n, ref float a, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &a)
@@ -4773,7 +4773,7 @@ namespace MKL
                     fixed (float* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Sscal(__arg0, __arg1, __arg2, __arg3);
@@ -4783,15 +4783,15 @@ namespace MKL
             }
         }
 
-        public static void Ssctr(ref int nz, ref float x, ref int indx, ref float y)
+        public static void Ssctr(ref long nz, ref float x, ref long indx, ref float y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
@@ -4804,21 +4804,21 @@ namespace MKL
             }
         }
 
-        public static void Sswap(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static void Sswap(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.Sswap(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -4829,15 +4829,15 @@ namespace MKL
             }
         }
 
-        public static int Isamax(ref int n, ref float x, ref int incx)
+        public static long Isamax(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Isamax(__arg0, __arg1, __arg2);
@@ -4847,15 +4847,15 @@ namespace MKL
             }
         }
 
-        public static int Isamin(ref int n, ref float x, ref int incx)
+        public static long Isamin(ref long n, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Isamin(__arg0, __arg1, __arg2);
@@ -4865,15 +4865,15 @@ namespace MKL
             }
         }
 
-        public static double Dasum(ref int n, ref double x, ref int incx)
+        public static double Dasum(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Dasum(__arg0, __arg1, __arg2);
@@ -4883,9 +4883,9 @@ namespace MKL
             }
         }
 
-        public static void Daxpy(ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy)
+        public static void Daxpy(ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &alpha)
@@ -4894,13 +4894,13 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &y)
                             {
                                 var __arg4 = __refParamPtr4;
-                                fixed (int* __refParamPtr5 = &incy)
+                                fixed (long* __refParamPtr5 = &incy)
                                 {
                                     var __arg5 = __refParamPtr5;
                                     __Internal.Daxpy(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
@@ -4912,9 +4912,9 @@ namespace MKL
             }
         }
 
-        public static void Daxpby(ref int n, ref double alpha, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Daxpby(ref long n, ref double alpha, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &alpha)
@@ -4923,7 +4923,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &beta)
@@ -4932,7 +4932,7 @@ namespace MKL
                                 fixed (double* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         __Internal.Daxpby(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -4945,9 +4945,9 @@ namespace MKL
             }
         }
 
-        public static void Daxpyi(ref int nz, ref double a, ref double x, ref int indx, ref double y)
+        public static void Daxpyi(ref long nz, ref double a, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &a)
@@ -4956,7 +4956,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             fixed (double* __refParamPtr4 = &y)
@@ -4970,21 +4970,21 @@ namespace MKL
             }
         }
 
-        public static void Dcopy(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static void Dcopy(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.Dcopy(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -4995,21 +4995,21 @@ namespace MKL
             }
         }
 
-        public static double Ddot(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static double Ddot(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.Ddot(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -5021,21 +5021,21 @@ namespace MKL
             }
         }
 
-        public static double Dsdot(ref int n, ref float x, ref int incx, ref float y, ref int incy)
+        public static double Dsdot(ref long n, ref float x, ref long incx, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (float* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (float* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 var __ret = __Internal.Dsdot(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -5047,15 +5047,15 @@ namespace MKL
             }
         }
 
-        public static double Ddoti(ref int nz, ref double x, ref int indx, ref double y)
+        public static double Ddoti(ref long nz, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -5069,9 +5069,9 @@ namespace MKL
             }
         }
 
-        public static void Dgthr(ref int nz, ref double y, ref double x, ref int indx)
+        public static void Dgthr(ref long nz, ref double y, ref double x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &y)
@@ -5080,7 +5080,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Dgthr(__arg0, __arg1, __arg2, __arg3);
@@ -5090,9 +5090,9 @@ namespace MKL
             }
         }
 
-        public static void Dgthrz(ref int nz, ref double y, ref double x, ref int indx)
+        public static void Dgthrz(ref long nz, ref double y, ref double x, ref long indx)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &y)
@@ -5101,7 +5101,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &indx)
+                        fixed (long* __refParamPtr3 = &indx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Dgthrz(__arg0, __arg1, __arg2, __arg3);
@@ -5111,15 +5111,15 @@ namespace MKL
             }
         }
 
-        public static double Dnrm2(ref int n, ref double x, ref int incx)
+        public static double Dnrm2(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Dnrm2(__arg0, __arg1, __arg2);
@@ -5129,21 +5129,21 @@ namespace MKL
             }
         }
 
-        public static void Drot(ref int n, ref double x, ref int incx, ref double y, ref int incy, ref double c, ref double s)
+        public static void Drot(ref long n, ref double x, ref long incx, ref double y, ref long incy, ref double c, ref double s)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &c)
@@ -5183,15 +5183,15 @@ namespace MKL
             }
         }
 
-        public static void Droti(ref int nz, ref double x, ref int indx, ref double y, ref double c, ref double s)
+        public static void Droti(ref long nz, ref double x, ref long indx, ref double y, ref double c, ref double s)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -5212,21 +5212,21 @@ namespace MKL
             }
         }
 
-        public static void Drotm(ref int n, ref double x, ref int incx, ref double y, ref int incy, ref double param)
+        public static void Drotm(ref long n, ref double x, ref long incx, ref double y, ref long incy, ref double param)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &param)
@@ -5266,9 +5266,9 @@ namespace MKL
             }
         }
 
-        public static void Dscal(ref int n, ref double a, ref double x, ref int incx)
+        public static void Dscal(ref long n, ref double a, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &a)
@@ -5277,7 +5277,7 @@ namespace MKL
                     fixed (double* __refParamPtr2 = &x)
                     {
                         var __arg2 = __refParamPtr2;
-                        fixed (int* __refParamPtr3 = &incx)
+                        fixed (long* __refParamPtr3 = &incx)
                         {
                             var __arg3 = __refParamPtr3;
                             __Internal.Dscal(__arg0, __arg1, __arg2, __arg3);
@@ -5287,15 +5287,15 @@ namespace MKL
             }
         }
 
-        public static void Dsctr(ref int nz, ref double x, ref int indx, ref double y)
+        public static void Dsctr(ref long nz, ref double x, ref long indx, ref double y)
         {
-            fixed (int* __refParamPtr0 = &nz)
+            fixed (long* __refParamPtr0 = &nz)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &indx)
+                    fixed (long* __refParamPtr2 = &indx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
@@ -5308,21 +5308,21 @@ namespace MKL
             }
         }
 
-        public static void Dswap(ref int n, ref double x, ref int incx, ref double y, ref int incy)
+        public static void Dswap(ref long n, ref double x, ref long incx, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         fixed (double* __refParamPtr3 = &y)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incy)
+                            fixed (long* __refParamPtr4 = &incy)
                             {
                                 var __arg4 = __refParamPtr4;
                                 __Internal.Dswap(__arg0, __arg1, __arg2, __arg3, __arg4);
@@ -5333,15 +5333,15 @@ namespace MKL
             }
         }
 
-        public static int Idamax(ref int n, ref double x, ref int incx)
+        public static long Idamax(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Idamax(__arg0, __arg1, __arg2);
@@ -5351,15 +5351,15 @@ namespace MKL
             }
         }
 
-        public static int Idamin(ref int n, ref double x, ref int incx)
+        public static long Idamin(ref long n, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr0 = &n)
+            fixed (long* __refParamPtr0 = &n)
             {
                 var __arg0 = __refParamPtr0;
                 fixed (double* __refParamPtr1 = &x)
                 {
                     var __arg1 = __refParamPtr1;
-                    fixed (int* __refParamPtr2 = &incx)
+                    fixed (long* __refParamPtr2 = &incx)
                     {
                         var __arg2 = __refParamPtr2;
                         var __ret = __Internal.Idamin(__arg0, __arg1, __arg2);
@@ -5369,18 +5369,18 @@ namespace MKL
             }
         }
 
-        public static void Sgbmv(string trans, ref int m, ref int n, ref int kl, ref int ku, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Sgbmv(string trans, ref long m, ref long n, ref long kl, ref long ku, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &kl)
+                    fixed (long* __refParamPtr3 = &kl)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &ku)
+                        fixed (long* __refParamPtr4 = &ku)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &alpha)
@@ -5389,13 +5389,13 @@ namespace MKL
                                 fixed (float* __refParamPtr6 = &a)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &lda)
+                                    fixed (long* __refParamPtr7 = &lda)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &x)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incx)
+                                            fixed (long* __refParamPtr9 = &incx)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 fixed (float* __refParamPtr10 = &beta)
@@ -5404,7 +5404,7 @@ namespace MKL
                                                     fixed (float* __refParamPtr11 = &y)
                                                     {
                                                         var __arg11 = __refParamPtr11;
-                                                        fixed (int* __refParamPtr12 = &incy)
+                                                        fixed (long* __refParamPtr12 = &incy)
                                                         {
                                                             var __arg12 = __refParamPtr12;
                                                             __Internal.Sgbmv(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -5422,12 +5422,12 @@ namespace MKL
             }
         }
 
-        public static void Sgemv(string trans, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Sgemv(string trans, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (float* __refParamPtr3 = &alpha)
@@ -5436,13 +5436,13 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &beta)
@@ -5451,7 +5451,7 @@ namespace MKL
                                             fixed (float* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.Sgemv(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -5467,12 +5467,12 @@ namespace MKL
             }
         }
 
-        public static void Sger(ref int m, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float a, ref int lda)
+        public static void Sger(ref long m, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (float* __refParamPtr2 = &alpha)
@@ -5481,19 +5481,19 @@ namespace MKL
                         fixed (float* __refParamPtr3 = &x)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incx)
+                            fixed (long* __refParamPtr4 = &incx)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (float* __refParamPtr7 = &a)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &lda)
+                                            fixed (long* __refParamPtr8 = &lda)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 __Internal.Sger(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -5508,12 +5508,12 @@ namespace MKL
             }
         }
 
-        public static void Ssbmv(string uplo, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Ssbmv(string uplo, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &k)
+                fixed (long* __refParamPtr2 = &k)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (float* __refParamPtr3 = &alpha)
@@ -5522,13 +5522,13 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (float* __refParamPtr8 = &beta)
@@ -5537,7 +5537,7 @@ namespace MKL
                                             fixed (float* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.Ssbmv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -5553,9 +5553,9 @@ namespace MKL
             }
         }
 
-        public static void Sspmv(string uplo, ref int n, ref float alpha, ref float ap, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Sspmv(string uplo, ref long n, ref float alpha, ref float ap, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5567,7 +5567,7 @@ namespace MKL
                         fixed (float* __refParamPtr4 = &x)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &incx)
+                            fixed (long* __refParamPtr5 = &incx)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (float* __refParamPtr6 = &beta)
@@ -5576,7 +5576,7 @@ namespace MKL
                                     fixed (float* __refParamPtr7 = &y)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &incy)
+                                        fixed (long* __refParamPtr8 = &incy)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.Sspmv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -5590,9 +5590,9 @@ namespace MKL
             }
         }
 
-        public static void Sspr(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float ap)
+        public static void Sspr(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5601,7 +5601,7 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &ap)
@@ -5615,9 +5615,9 @@ namespace MKL
             }
         }
 
-        public static void Sspr2(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float ap)
+        public static void Sspr2(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5626,13 +5626,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &ap)
@@ -5648,9 +5648,9 @@ namespace MKL
             }
         }
 
-        public static void Ssymv(string uplo, ref int n, ref float alpha, ref float a, ref int lda, ref float x, ref int incx, ref float beta, ref float y, ref int incy)
+        public static void Ssymv(string uplo, ref long n, ref float alpha, ref float a, ref long lda, ref float x, ref long incx, ref float beta, ref float y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5659,13 +5659,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &a)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &lda)
+                        fixed (long* __refParamPtr4 = &lda)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &x)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incx)
+                                fixed (long* __refParamPtr6 = &incx)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &beta)
@@ -5674,7 +5674,7 @@ namespace MKL
                                         fixed (float* __refParamPtr8 = &y)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incy)
+                                            fixed (long* __refParamPtr9 = &incy)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 __Internal.Ssymv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -5689,9 +5689,9 @@ namespace MKL
             }
         }
 
-        public static void Ssyr(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float a, ref int lda)
+        public static void Ssyr(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5700,13 +5700,13 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &a)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &lda)
+                                fixed (long* __refParamPtr6 = &lda)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     __Internal.Ssyr(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -5718,9 +5718,9 @@ namespace MKL
             }
         }
 
-        public static void Ssyr2(string uplo, ref int n, ref float alpha, ref float x, ref int incx, ref float y, ref int incy, ref float a, ref int lda)
+        public static void Ssyr2(string uplo, ref long n, ref float alpha, ref float x, ref long incx, ref float y, ref long incy, ref float a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (float* __refParamPtr2 = &alpha)
@@ -5729,19 +5729,19 @@ namespace MKL
                     fixed (float* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (float* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (float* __refParamPtr7 = &a)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &lda)
+                                        fixed (long* __refParamPtr8 = &lda)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.Ssyr2(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -5755,24 +5755,24 @@ namespace MKL
             }
         }
 
-        public static void Stbmv(string uplo, string trans, string diag, ref int n, ref int k, ref float a, ref int lda, ref float x, ref int incx)
+        public static void Stbmv(string uplo, string trans, string diag, ref long n, ref long k, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (float* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.Stbmv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -5784,24 +5784,24 @@ namespace MKL
             }
         }
 
-        public static void Stbsv(string uplo, string trans, string diag, ref int n, ref int k, ref float a, ref int lda, ref float x, ref int incx)
+        public static void Stbsv(string uplo, string trans, string diag, ref long n, ref long k, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (float* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.Stbsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -5813,9 +5813,9 @@ namespace MKL
             }
         }
 
-        public static void Stpmv(string uplo, string trans, string diag, ref int n, ref float ap, ref float x, ref int incx)
+        public static void Stpmv(string uplo, string trans, string diag, ref long n, ref float ap, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &ap)
@@ -5824,7 +5824,7 @@ namespace MKL
                     fixed (float* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.Stpmv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -5834,9 +5834,9 @@ namespace MKL
             }
         }
 
-        public static void Stpsv(string uplo, string trans, string diag, ref int n, ref float ap, ref float x, ref int incx)
+        public static void Stpsv(string uplo, string trans, string diag, ref long n, ref float ap, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &ap)
@@ -5845,7 +5845,7 @@ namespace MKL
                     fixed (float* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.Stpsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -5855,21 +5855,21 @@ namespace MKL
             }
         }
 
-        public static void Strmv(string uplo, string transa, string diag, ref int n, ref float a, ref int lda, ref float b, ref int incx)
+        public static void Strmv(string uplo, string transa, string diag, ref long n, ref float a, ref long lda, ref float b, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &b)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.Strmv(uplo, transa, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -5880,21 +5880,21 @@ namespace MKL
             }
         }
 
-        public static void Strsv(string uplo, string trans, string diag, ref int n, ref float a, ref int lda, ref float x, ref int incx)
+        public static void Strsv(string uplo, string trans, string diag, ref long n, ref float a, ref long lda, ref float x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (float* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &x)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.Strsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -5905,12 +5905,12 @@ namespace MKL
             }
         }
 
-        public static void Sgem2vu(ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float x1, ref int incx1, ref float x2, ref int incx2, ref float beta, ref float y1, ref int incy1, ref float y2, ref int incy2)
+        public static void Sgem2vu(ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float x1, ref long incx1, ref float x2, ref long incx2, ref float beta, ref float y1, ref long incy1, ref float y2, ref long incy2)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (float* __refParamPtr2 = &alpha)
@@ -5919,19 +5919,19 @@ namespace MKL
                         fixed (float* __refParamPtr3 = &a)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &lda)
+                            fixed (long* __refParamPtr4 = &lda)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (float* __refParamPtr5 = &x1)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incx1)
+                                    fixed (long* __refParamPtr6 = &incx1)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (float* __refParamPtr7 = &x2)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &incx2)
+                                            fixed (long* __refParamPtr8 = &incx2)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 fixed (float* __refParamPtr9 = &beta)
@@ -5940,13 +5940,13 @@ namespace MKL
                                                     fixed (float* __refParamPtr10 = &y1)
                                                     {
                                                         var __arg10 = __refParamPtr10;
-                                                        fixed (int* __refParamPtr11 = &incy1)
+                                                        fixed (long* __refParamPtr11 = &incy1)
                                                         {
                                                             var __arg11 = __refParamPtr11;
                                                             fixed (float* __refParamPtr12 = &y2)
                                                             {
                                                                 var __arg12 = __refParamPtr12;
-                                                                fixed (int* __refParamPtr13 = &incy2)
+                                                                fixed (long* __refParamPtr13 = &incy2)
                                                                 {
                                                                     var __arg13 = __refParamPtr13;
                                                                     __Internal.Sgem2vu(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12, __arg13);
@@ -5966,18 +5966,18 @@ namespace MKL
             }
         }
 
-        public static void Dgbmv(string trans, ref int m, ref int n, ref int kl, ref int ku, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Dgbmv(string trans, ref long m, ref long n, ref long kl, ref long ku, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &kl)
+                    fixed (long* __refParamPtr3 = &kl)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &ku)
+                        fixed (long* __refParamPtr4 = &ku)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &alpha)
@@ -5986,13 +5986,13 @@ namespace MKL
                                 fixed (double* __refParamPtr6 = &a)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &lda)
+                                    fixed (long* __refParamPtr7 = &lda)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &x)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incx)
+                                            fixed (long* __refParamPtr9 = &incx)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 fixed (double* __refParamPtr10 = &beta)
@@ -6001,7 +6001,7 @@ namespace MKL
                                                     fixed (double* __refParamPtr11 = &y)
                                                     {
                                                         var __arg11 = __refParamPtr11;
-                                                        fixed (int* __refParamPtr12 = &incy)
+                                                        fixed (long* __refParamPtr12 = &incy)
                                                         {
                                                             var __arg12 = __refParamPtr12;
                                                             __Internal.Dgbmv(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -6019,12 +6019,12 @@ namespace MKL
             }
         }
 
-        public static void Dgemv(string trans, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Dgemv(string trans, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (double* __refParamPtr3 = &alpha)
@@ -6033,13 +6033,13 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &beta)
@@ -6048,7 +6048,7 @@ namespace MKL
                                             fixed (double* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.Dgemv(trans, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -6064,12 +6064,12 @@ namespace MKL
             }
         }
 
-        public static void Dger(ref int m, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double a, ref int lda)
+        public static void Dger(ref long m, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (double* __refParamPtr2 = &alpha)
@@ -6078,19 +6078,19 @@ namespace MKL
                         fixed (double* __refParamPtr3 = &x)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &incx)
+                            fixed (long* __refParamPtr4 = &incx)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &y)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incy)
+                                    fixed (long* __refParamPtr6 = &incy)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (double* __refParamPtr7 = &a)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &lda)
+                                            fixed (long* __refParamPtr8 = &lda)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 __Internal.Dger(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -6105,12 +6105,12 @@ namespace MKL
             }
         }
 
-        public static void Dsbmv(string uplo, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Dsbmv(string uplo, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &k)
+                fixed (long* __refParamPtr2 = &k)
                 {
                     var __arg2 = __refParamPtr2;
                     fixed (double* __refParamPtr3 = &alpha)
@@ -6119,13 +6119,13 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &a)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &lda)
+                            fixed (long* __refParamPtr5 = &lda)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &x)
                                 {
                                     var __arg6 = __refParamPtr6;
-                                    fixed (int* __refParamPtr7 = &incx)
+                                    fixed (long* __refParamPtr7 = &incx)
                                     {
                                         var __arg7 = __refParamPtr7;
                                         fixed (double* __refParamPtr8 = &beta)
@@ -6134,7 +6134,7 @@ namespace MKL
                                             fixed (double* __refParamPtr9 = &y)
                                             {
                                                 var __arg9 = __refParamPtr9;
-                                                fixed (int* __refParamPtr10 = &incy)
+                                                fixed (long* __refParamPtr10 = &incy)
                                                 {
                                                     var __arg10 = __refParamPtr10;
                                                     __Internal.Dsbmv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -6150,9 +6150,9 @@ namespace MKL
             }
         }
 
-        public static void Dspmv(string uplo, ref int n, ref double alpha, ref double ap, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Dspmv(string uplo, ref long n, ref double alpha, ref double ap, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6164,7 +6164,7 @@ namespace MKL
                         fixed (double* __refParamPtr4 = &x)
                         {
                             var __arg4 = __refParamPtr4;
-                            fixed (int* __refParamPtr5 = &incx)
+                            fixed (long* __refParamPtr5 = &incx)
                             {
                                 var __arg5 = __refParamPtr5;
                                 fixed (double* __refParamPtr6 = &beta)
@@ -6173,7 +6173,7 @@ namespace MKL
                                     fixed (double* __refParamPtr7 = &y)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &incy)
+                                        fixed (long* __refParamPtr8 = &incy)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.Dspmv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -6187,9 +6187,9 @@ namespace MKL
             }
         }
 
-        public static void Dspr(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double ap)
+        public static void Dspr(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6198,7 +6198,7 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &ap)
@@ -6212,9 +6212,9 @@ namespace MKL
             }
         }
 
-        public static void Dspr2(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double ap)
+        public static void Dspr2(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double ap)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6223,13 +6223,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &ap)
@@ -6245,9 +6245,9 @@ namespace MKL
             }
         }
 
-        public static void Dsymv(string uplo, ref int n, ref double alpha, ref double a, ref int lda, ref double x, ref int incx, ref double beta, ref double y, ref int incy)
+        public static void Dsymv(string uplo, ref long n, ref double alpha, ref double a, ref long lda, ref double x, ref long incx, ref double beta, ref double y, ref long incy)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6256,13 +6256,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &a)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &lda)
+                        fixed (long* __refParamPtr4 = &lda)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &x)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incx)
+                                fixed (long* __refParamPtr6 = &incx)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &beta)
@@ -6271,7 +6271,7 @@ namespace MKL
                                         fixed (double* __refParamPtr8 = &y)
                                         {
                                             var __arg8 = __refParamPtr8;
-                                            fixed (int* __refParamPtr9 = &incy)
+                                            fixed (long* __refParamPtr9 = &incy)
                                             {
                                                 var __arg9 = __refParamPtr9;
                                                 __Internal.Dsymv(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -6286,9 +6286,9 @@ namespace MKL
             }
         }
 
-        public static void Dsyr(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double a, ref int lda)
+        public static void Dsyr(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6297,13 +6297,13 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &a)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &lda)
+                                fixed (long* __refParamPtr6 = &lda)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     __Internal.Dsyr(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6);
@@ -6315,9 +6315,9 @@ namespace MKL
             }
         }
 
-        public static void Dsyr2(string uplo, ref int n, ref double alpha, ref double x, ref int incx, ref double y, ref int incy, ref double a, ref int lda)
+        public static void Dsyr2(string uplo, ref long n, ref double alpha, ref double x, ref long incx, ref double y, ref long incy, ref double a, ref long lda)
         {
-            fixed (int* __refParamPtr1 = &n)
+            fixed (long* __refParamPtr1 = &n)
             {
                 var __arg1 = __refParamPtr1;
                 fixed (double* __refParamPtr2 = &alpha)
@@ -6326,19 +6326,19 @@ namespace MKL
                     fixed (double* __refParamPtr3 = &x)
                     {
                         var __arg3 = __refParamPtr3;
-                        fixed (int* __refParamPtr4 = &incx)
+                        fixed (long* __refParamPtr4 = &incx)
                         {
                             var __arg4 = __refParamPtr4;
                             fixed (double* __refParamPtr5 = &y)
                             {
                                 var __arg5 = __refParamPtr5;
-                                fixed (int* __refParamPtr6 = &incy)
+                                fixed (long* __refParamPtr6 = &incy)
                                 {
                                     var __arg6 = __refParamPtr6;
                                     fixed (double* __refParamPtr7 = &a)
                                     {
                                         var __arg7 = __refParamPtr7;
-                                        fixed (int* __refParamPtr8 = &lda)
+                                        fixed (long* __refParamPtr8 = &lda)
                                         {
                                             var __arg8 = __refParamPtr8;
                                             __Internal.Dsyr2(uplo, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -6352,24 +6352,24 @@ namespace MKL
             }
         }
 
-        public static void Dtbmv(string uplo, string trans, string diag, ref int n, ref int k, ref double a, ref int lda, ref double x, ref int incx)
+        public static void Dtbmv(string uplo, string trans, string diag, ref long n, ref long k, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (double* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.Dtbmv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -6381,24 +6381,24 @@ namespace MKL
             }
         }
 
-        public static void Dtbsv(string uplo, string trans, string diag, ref int n, ref int k, ref double a, ref int lda, ref double x, ref int incx)
+        public static void Dtbsv(string uplo, string trans, string diag, ref long n, ref long k, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &a)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &lda)
+                        fixed (long* __refParamPtr6 = &lda)
                         {
                             var __arg6 = __refParamPtr6;
                             fixed (double* __refParamPtr7 = &x)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &incx)
+                                fixed (long* __refParamPtr8 = &incx)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     __Internal.Dtbsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8);
@@ -6410,9 +6410,9 @@ namespace MKL
             }
         }
 
-        public static void Dtpmv(string uplo, string trans, string diag, ref int n, ref double ap, ref double x, ref int incx)
+        public static void Dtpmv(string uplo, string trans, string diag, ref long n, ref double ap, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &ap)
@@ -6421,7 +6421,7 @@ namespace MKL
                     fixed (double* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.Dtpmv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -6431,9 +6431,9 @@ namespace MKL
             }
         }
 
-        public static void Dtpsv(string uplo, string trans, string diag, ref int n, ref double ap, ref double x, ref int incx)
+        public static void Dtpsv(string uplo, string trans, string diag, ref long n, ref double ap, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &ap)
@@ -6442,7 +6442,7 @@ namespace MKL
                     fixed (double* __refParamPtr5 = &x)
                     {
                         var __arg5 = __refParamPtr5;
-                        fixed (int* __refParamPtr6 = &incx)
+                        fixed (long* __refParamPtr6 = &incx)
                         {
                             var __arg6 = __refParamPtr6;
                             __Internal.Dtpsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6);
@@ -6452,21 +6452,21 @@ namespace MKL
             }
         }
 
-        public static void Dtrmv(string uplo, string transa, string diag, ref int n, ref double a, ref int lda, ref double b, ref int incx)
+        public static void Dtrmv(string uplo, string transa, string diag, ref long n, ref double a, ref long lda, ref double b, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (double* __refParamPtr6 = &b)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.Dtrmv(uplo, transa, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -6477,21 +6477,21 @@ namespace MKL
             }
         }
 
-        public static void Dtrsv(string uplo, string trans, string diag, ref int n, ref double a, ref int lda, ref double x, ref int incx)
+        public static void Dtrsv(string uplo, string trans, string diag, ref long n, ref double a, ref long lda, ref double x, ref long incx)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
                 fixed (double* __refParamPtr4 = &a)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &lda)
+                    fixed (long* __refParamPtr5 = &lda)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (double* __refParamPtr6 = &x)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &incx)
+                            fixed (long* __refParamPtr7 = &incx)
                             {
                                 var __arg7 = __refParamPtr7;
                                 __Internal.Dtrsv(uplo, trans, diag, __arg3, __arg4, __arg5, __arg6, __arg7);
@@ -6502,12 +6502,12 @@ namespace MKL
             }
         }
 
-        public static void Dgem2vu(ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double x1, ref int incx1, ref double x2, ref int incx2, ref double beta, ref double y1, ref int incy1, ref double y2, ref int incy2)
+        public static void Dgem2vu(ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double x1, ref long incx1, ref double x2, ref long incx2, ref double beta, ref double y1, ref long incy1, ref double y2, ref long incy2)
         {
-            fixed (int* __refParamPtr0 = &m)
+            fixed (long* __refParamPtr0 = &m)
             {
                 var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &n)
+                fixed (long* __refParamPtr1 = &n)
                 {
                     var __arg1 = __refParamPtr1;
                     fixed (double* __refParamPtr2 = &alpha)
@@ -6516,19 +6516,19 @@ namespace MKL
                         fixed (double* __refParamPtr3 = &a)
                         {
                             var __arg3 = __refParamPtr3;
-                            fixed (int* __refParamPtr4 = &lda)
+                            fixed (long* __refParamPtr4 = &lda)
                             {
                                 var __arg4 = __refParamPtr4;
                                 fixed (double* __refParamPtr5 = &x1)
                                 {
                                     var __arg5 = __refParamPtr5;
-                                    fixed (int* __refParamPtr6 = &incx1)
+                                    fixed (long* __refParamPtr6 = &incx1)
                                     {
                                         var __arg6 = __refParamPtr6;
                                         fixed (double* __refParamPtr7 = &x2)
                                         {
                                             var __arg7 = __refParamPtr7;
-                                            fixed (int* __refParamPtr8 = &incx2)
+                                            fixed (long* __refParamPtr8 = &incx2)
                                             {
                                                 var __arg8 = __refParamPtr8;
                                                 fixed (double* __refParamPtr9 = &beta)
@@ -6537,13 +6537,13 @@ namespace MKL
                                                     fixed (double* __refParamPtr10 = &y1)
                                                     {
                                                         var __arg10 = __refParamPtr10;
-                                                        fixed (int* __refParamPtr11 = &incy1)
+                                                        fixed (long* __refParamPtr11 = &incy1)
                                                         {
                                                             var __arg11 = __refParamPtr11;
                                                             fixed (double* __refParamPtr12 = &y2)
                                                             {
                                                                 var __arg12 = __refParamPtr12;
-                                                                fixed (int* __refParamPtr13 = &incy2)
+                                                                fixed (long* __refParamPtr13 = &incy2)
                                                                 {
                                                                     var __arg13 = __refParamPtr13;
                                                                     __Internal.Dgem2vu(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12, __arg13);
@@ -6563,15 +6563,15 @@ namespace MKL
             }
         }
 
-        public static void Sgemm(string transa, string transb, ref int m, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void Sgemm(string transa, string transb, ref long m, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha)
@@ -6580,13 +6580,13 @@ namespace MKL
                             fixed (float* __refParamPtr6 = &a)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &lda)
+                                fixed (long* __refParamPtr7 = &lda)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (float* __refParamPtr8 = &b)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldb)
+                                        fixed (long* __refParamPtr9 = &ldb)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             fixed (float* __refParamPtr10 = &beta)
@@ -6595,7 +6595,7 @@ namespace MKL
                                                 fixed (float* __refParamPtr11 = &c)
                                                 {
                                                     var __arg11 = __refParamPtr11;
-                                                    fixed (int* __refParamPtr12 = &ldc)
+                                                    fixed (long* __refParamPtr12 = &ldc)
                                                     {
                                                         var __arg12 = __refParamPtr12;
                                                         __Internal.Sgemm(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -6612,15 +6612,15 @@ namespace MKL
             }
         }
 
-        public static float* SgemmAlloc(string identifier, ref int m, ref int n, ref int k)
+        public static float* SgemmAlloc(string identifier, ref long m, ref long n, ref long k)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &k)
+                    fixed (long* __refParamPtr3 = &k)
                     {
                         var __arg3 = __refParamPtr3;
                         var __ret = __Internal.SgemmAlloc(identifier, __arg1, __arg2, __arg3);
@@ -6630,15 +6630,15 @@ namespace MKL
             }
         }
 
-        public static void SgemmPack(string identifier, string trans, ref int m, ref int n, ref int k, ref float alpha, ref float src, ref int ld, ref float dest)
+        public static void SgemmPack(string identifier, string trans, ref long m, ref long n, ref long k, ref float alpha, ref float src, ref long ld, ref float dest)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha)
@@ -6647,7 +6647,7 @@ namespace MKL
                             fixed (float* __refParamPtr6 = &src)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &ld)
+                                fixed (long* __refParamPtr7 = &ld)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (float* __refParamPtr8 = &dest)
@@ -6663,27 +6663,27 @@ namespace MKL
             }
         }
 
-        public static void SgemmCompute(string transa, string transb, ref int m, ref int n, ref int k, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void SgemmCompute(string transa, string transb, ref long m, ref long n, ref long k, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -6692,7 +6692,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.SgemmCompute(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -6717,36 +6717,36 @@ namespace MKL
             }
         }
 
-        public static void SgemmBatch(string transa_array, string transb_array, ref int m_array, ref int n_array, ref int k_array, ref float alpha_array, float** a_array, ref int lda_array, float** b_array, ref int ldb_array, ref float beta_array, float** c_array, ref int ldc_array, ref int group_count, ref int group_size)
+        public static void SgemmBatch(string transa_array, string transb_array, ref long m_array, ref long n_array, ref long k_array, ref float alpha_array, float** a_array, ref long lda_array, float** b_array, ref long ldb_array, ref float beta_array, float** c_array, ref long ldc_array, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr2 = &m_array)
+            fixed (long* __refParamPtr2 = &m_array)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n_array)
+                fixed (long* __refParamPtr3 = &n_array)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k_array)
+                    fixed (long* __refParamPtr4 = &k_array)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (float* __refParamPtr5 = &alpha_array)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr7 = &lda_array)
+                            fixed (long* __refParamPtr7 = &lda_array)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr9 = &ldb_array)
+                                fixed (long* __refParamPtr9 = &ldb_array)
                                 {
                                     var __arg9 = __refParamPtr9;
                                     fixed (float* __refParamPtr10 = &beta_array)
                                     {
                                         var __arg10 = __refParamPtr10;
-                                        fixed (int* __refParamPtr12 = &ldc_array)
+                                        fixed (long* __refParamPtr12 = &ldc_array)
                                         {
                                             var __arg12 = __refParamPtr12;
-                                            fixed (int* __refParamPtr13 = &group_count)
+                                            fixed (long* __refParamPtr13 = &group_count)
                                             {
                                                 var __arg13 = __refParamPtr13;
-                                                fixed (int* __refParamPtr14 = &group_size)
+                                                fixed (long* __refParamPtr14 = &group_size)
                                                 {
                                                     var __arg14 = __refParamPtr14;
                                                     __Internal.SgemmBatch(transa_array, transb_array, __arg2, __arg3, __arg4, __arg5, a_array, __arg7, b_array, __arg9, __arg10, c_array, __arg12, __arg13, __arg14);
@@ -6762,12 +6762,12 @@ namespace MKL
             }
         }
 
-        public static void Sgemmt(string uplo, string transa, string transb, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void Sgemmt(string uplo, string transa, string transb, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (float* __refParamPtr5 = &alpha)
@@ -6776,13 +6776,13 @@ namespace MKL
                         fixed (float* __refParamPtr6 = &a)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &lda)
+                            fixed (long* __refParamPtr7 = &lda)
                             {
                                 var __arg7 = __refParamPtr7;
                                 fixed (float* __refParamPtr8 = &b)
                                 {
                                     var __arg8 = __refParamPtr8;
-                                    fixed (int* __refParamPtr9 = &ldb)
+                                    fixed (long* __refParamPtr9 = &ldb)
                                     {
                                         var __arg9 = __refParamPtr9;
                                         fixed (float* __refParamPtr10 = &beta)
@@ -6791,7 +6791,7 @@ namespace MKL
                                             fixed (float* __refParamPtr11 = &c)
                                             {
                                                 var __arg11 = __refParamPtr11;
-                                                fixed (int* __refParamPtr12 = &ldc)
+                                                fixed (long* __refParamPtr12 = &ldc)
                                                 {
                                                     var __arg12 = __refParamPtr12;
                                                     __Internal.Sgemmt(uplo, transa, transb, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -6807,12 +6807,12 @@ namespace MKL
             }
         }
 
-        public static void Ssymm(string side, string uplo, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void Ssymm(string side, string uplo, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -6821,13 +6821,13 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -6836,7 +6836,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.Ssymm(side, uplo, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -6852,12 +6852,12 @@ namespace MKL
             }
         }
 
-        public static void Ssyr2k(string uplo, string trans, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb, ref float beta, ref float c, ref int ldc)
+        public static void Ssyr2k(string uplo, string trans, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -6866,13 +6866,13 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (float* __refParamPtr9 = &beta)
@@ -6881,7 +6881,7 @@ namespace MKL
                                             fixed (float* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.Ssyr2k(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -6897,12 +6897,12 @@ namespace MKL
             }
         }
 
-        public static void Ssyrk(string uplo, string trans, ref int n, ref int k, ref float alpha, ref float a, ref int lda, ref float beta, ref float c, ref int ldc)
+        public static void Ssyrk(string uplo, string trans, ref long n, ref long k, ref float alpha, ref float a, ref long lda, ref float beta, ref float c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (float* __refParamPtr4 = &alpha)
@@ -6911,7 +6911,7 @@ namespace MKL
                         fixed (float* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (float* __refParamPtr7 = &beta)
@@ -6920,7 +6920,7 @@ namespace MKL
                                     fixed (float* __refParamPtr8 = &c)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldc)
+                                        fixed (long* __refParamPtr9 = &ldc)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             __Internal.Ssyrk(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -6934,12 +6934,12 @@ namespace MKL
             }
         }
 
-        public static void Strmm(string side, string uplo, string transa, string diag, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb)
+        public static void Strmm(string side, string uplo, string transa, string diag, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha)
@@ -6948,13 +6948,13 @@ namespace MKL
                         fixed (float* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (float* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.Strmm(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -6967,12 +6967,12 @@ namespace MKL
             }
         }
 
-        public static void Strsm(string side, string uplo, string transa, string diag, ref int m, ref int n, ref float alpha, ref float a, ref int lda, ref float b, ref int ldb)
+        public static void Strsm(string side, string uplo, string transa, string diag, ref long m, ref long n, ref float alpha, ref float a, ref long lda, ref float b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha)
@@ -6981,13 +6981,13 @@ namespace MKL
                         fixed (float* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (float* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.Strsm(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -7000,27 +7000,27 @@ namespace MKL
             }
         }
 
-        public static void StrsmBatch(string side_array, string uplo_array, string transa_array, string diag_array, ref int m_array, ref int n_array, ref float alpha_array, float** a_array, ref int lda_array, float** b_array, ref int ldb, ref int group_count, ref int group_size)
+        public static void StrsmBatch(string side_array, string uplo_array, string transa_array, string diag_array, ref long m_array, ref long n_array, ref float alpha_array, float** a_array, ref long lda_array, float** b_array, ref long ldb, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr4 = &m_array)
+            fixed (long* __refParamPtr4 = &m_array)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n_array)
+                fixed (long* __refParamPtr5 = &n_array)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (float* __refParamPtr6 = &alpha_array)
                     {
                         var __arg6 = __refParamPtr6;
-                        fixed (int* __refParamPtr8 = &lda_array)
+                        fixed (long* __refParamPtr8 = &lda_array)
                         {
                             var __arg8 = __refParamPtr8;
-                            fixed (int* __refParamPtr10 = &ldb)
+                            fixed (long* __refParamPtr10 = &ldb)
                             {
                                 var __arg10 = __refParamPtr10;
-                                fixed (int* __refParamPtr11 = &group_count)
+                                fixed (long* __refParamPtr11 = &group_count)
                                 {
                                     var __arg11 = __refParamPtr11;
-                                    fixed (int* __refParamPtr12 = &group_size)
+                                    fixed (long* __refParamPtr12 = &group_size)
                                     {
                                         var __arg12 = __refParamPtr12;
                                         __Internal.StrsmBatch(side_array, uplo_array, transa_array, diag_array, __arg4, __arg5, __arg6, a_array, __arg8, b_array, __arg10, __arg11, __arg12);
@@ -7033,15 +7033,15 @@ namespace MKL
             }
         }
 
-        public static void Dgemm(string transa, string transb, ref int m, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void Dgemm(string transa, string transb, ref long m, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha)
@@ -7050,13 +7050,13 @@ namespace MKL
                             fixed (double* __refParamPtr6 = &a)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &lda)
+                                fixed (long* __refParamPtr7 = &lda)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (double* __refParamPtr8 = &b)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldb)
+                                        fixed (long* __refParamPtr9 = &ldb)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             fixed (double* __refParamPtr10 = &beta)
@@ -7065,7 +7065,7 @@ namespace MKL
                                                 fixed (double* __refParamPtr11 = &c)
                                                 {
                                                     var __arg11 = __refParamPtr11;
-                                                    fixed (int* __refParamPtr12 = &ldc)
+                                                    fixed (long* __refParamPtr12 = &ldc)
                                                     {
                                                         var __arg12 = __refParamPtr12;
                                                         __Internal.Dgemm(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -7082,15 +7082,15 @@ namespace MKL
             }
         }
 
-        public static double* DgemmAlloc(string identifier, ref int m, ref int n, ref int k)
+        public static double* DgemmAlloc(string identifier, ref long m, ref long n, ref long k)
         {
-            fixed (int* __refParamPtr1 = &m)
+            fixed (long* __refParamPtr1 = &m)
             {
                 var __arg1 = __refParamPtr1;
-                fixed (int* __refParamPtr2 = &n)
+                fixed (long* __refParamPtr2 = &n)
                 {
                     var __arg2 = __refParamPtr2;
-                    fixed (int* __refParamPtr3 = &k)
+                    fixed (long* __refParamPtr3 = &k)
                     {
                         var __arg3 = __refParamPtr3;
                         var __ret = __Internal.DgemmAlloc(identifier, __arg1, __arg2, __arg3);
@@ -7100,15 +7100,15 @@ namespace MKL
             }
         }
 
-        public static void DgemmPack(string identifier, string trans, ref int m, ref int n, ref int k, ref double alpha, ref double src, ref int ld, ref double dest)
+        public static void DgemmPack(string identifier, string trans, ref long m, ref long n, ref long k, ref double alpha, ref double src, ref long ld, ref double dest)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha)
@@ -7117,7 +7117,7 @@ namespace MKL
                             fixed (double* __refParamPtr6 = &src)
                             {
                                 var __arg6 = __refParamPtr6;
-                                fixed (int* __refParamPtr7 = &ld)
+                                fixed (long* __refParamPtr7 = &ld)
                                 {
                                     var __arg7 = __refParamPtr7;
                                     fixed (double* __refParamPtr8 = &dest)
@@ -7133,27 +7133,27 @@ namespace MKL
             }
         }
 
-        public static void DgemmCompute(string transa, string transb, ref int m, ref int n, ref int k, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void DgemmCompute(string transa, string transb, ref long m, ref long n, ref long k, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k)
+                    fixed (long* __refParamPtr4 = &k)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -7162,7 +7162,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.DgemmCompute(transa, transb, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -7187,36 +7187,36 @@ namespace MKL
             }
         }
 
-        public static void DgemmBatch(string transa_array, string transb_array, ref int m_array, ref int n_array, ref int k_array, ref double alpha_array, double** a_array, ref int lda_array, double** b_array, ref int ldb_array, ref double beta_array, double** c_array, ref int ldc_array, ref int group_count, ref int group_size)
+        public static void DgemmBatch(string transa_array, string transb_array, ref long m_array, ref long n_array, ref long k_array, ref double alpha_array, double** a_array, ref long lda_array, double** b_array, ref long ldb_array, ref double beta_array, double** c_array, ref long ldc_array, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr2 = &m_array)
+            fixed (long* __refParamPtr2 = &m_array)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n_array)
+                fixed (long* __refParamPtr3 = &n_array)
                 {
                     var __arg3 = __refParamPtr3;
-                    fixed (int* __refParamPtr4 = &k_array)
+                    fixed (long* __refParamPtr4 = &k_array)
                     {
                         var __arg4 = __refParamPtr4;
                         fixed (double* __refParamPtr5 = &alpha_array)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr7 = &lda_array)
+                            fixed (long* __refParamPtr7 = &lda_array)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr9 = &ldb_array)
+                                fixed (long* __refParamPtr9 = &ldb_array)
                                 {
                                     var __arg9 = __refParamPtr9;
                                     fixed (double* __refParamPtr10 = &beta_array)
                                     {
                                         var __arg10 = __refParamPtr10;
-                                        fixed (int* __refParamPtr12 = &ldc_array)
+                                        fixed (long* __refParamPtr12 = &ldc_array)
                                         {
                                             var __arg12 = __refParamPtr12;
-                                            fixed (int* __refParamPtr13 = &group_count)
+                                            fixed (long* __refParamPtr13 = &group_count)
                                             {
                                                 var __arg13 = __refParamPtr13;
-                                                fixed (int* __refParamPtr14 = &group_size)
+                                                fixed (long* __refParamPtr14 = &group_size)
                                                 {
                                                     var __arg14 = __refParamPtr14;
                                                     __Internal.DgemmBatch(transa_array, transb_array, __arg2, __arg3, __arg4, __arg5, a_array, __arg7, b_array, __arg9, __arg10, c_array, __arg12, __arg13, __arg14);
@@ -7232,12 +7232,12 @@ namespace MKL
             }
         }
 
-        public static void Dgemmt(string uplo, string transa, string transb, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void Dgemmt(string uplo, string transa, string transb, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr3 = &n)
+            fixed (long* __refParamPtr3 = &n)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &k)
+                fixed (long* __refParamPtr4 = &k)
                 {
                     var __arg4 = __refParamPtr4;
                     fixed (double* __refParamPtr5 = &alpha)
@@ -7246,13 +7246,13 @@ namespace MKL
                         fixed (double* __refParamPtr6 = &a)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr7 = &lda)
+                            fixed (long* __refParamPtr7 = &lda)
                             {
                                 var __arg7 = __refParamPtr7;
                                 fixed (double* __refParamPtr8 = &b)
                                 {
                                     var __arg8 = __refParamPtr8;
-                                    fixed (int* __refParamPtr9 = &ldb)
+                                    fixed (long* __refParamPtr9 = &ldb)
                                     {
                                         var __arg9 = __refParamPtr9;
                                         fixed (double* __refParamPtr10 = &beta)
@@ -7261,7 +7261,7 @@ namespace MKL
                                             fixed (double* __refParamPtr11 = &c)
                                             {
                                                 var __arg11 = __refParamPtr11;
-                                                fixed (int* __refParamPtr12 = &ldc)
+                                                fixed (long* __refParamPtr12 = &ldc)
                                                 {
                                                     var __arg12 = __refParamPtr12;
                                                     __Internal.Dgemmt(uplo, transa, transb, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11, __arg12);
@@ -7277,12 +7277,12 @@ namespace MKL
             }
         }
 
-        public static void Dsymm(string side, string uplo, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void Dsymm(string side, string uplo, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &m)
+            fixed (long* __refParamPtr2 = &m)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &n)
+                fixed (long* __refParamPtr3 = &n)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -7291,13 +7291,13 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -7306,7 +7306,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.Dsymm(side, uplo, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -7322,12 +7322,12 @@ namespace MKL
             }
         }
 
-        public static void Dsyr2k(string uplo, string trans, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb, ref double beta, ref double c, ref int ldc)
+        public static void Dsyr2k(string uplo, string trans, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -7336,13 +7336,13 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &b)
                                 {
                                     var __arg7 = __refParamPtr7;
-                                    fixed (int* __refParamPtr8 = &ldb)
+                                    fixed (long* __refParamPtr8 = &ldb)
                                     {
                                         var __arg8 = __refParamPtr8;
                                         fixed (double* __refParamPtr9 = &beta)
@@ -7351,7 +7351,7 @@ namespace MKL
                                             fixed (double* __refParamPtr10 = &c)
                                             {
                                                 var __arg10 = __refParamPtr10;
-                                                fixed (int* __refParamPtr11 = &ldc)
+                                                fixed (long* __refParamPtr11 = &ldc)
                                                 {
                                                     var __arg11 = __refParamPtr11;
                                                     __Internal.Dsyr2k(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10, __arg11);
@@ -7367,12 +7367,12 @@ namespace MKL
             }
         }
 
-        public static void Dsyrk(string uplo, string trans, ref int n, ref int k, ref double alpha, ref double a, ref int lda, ref double beta, ref double c, ref int ldc)
+        public static void Dsyrk(string uplo, string trans, ref long n, ref long k, ref double alpha, ref double a, ref long lda, ref double beta, ref double c, ref long ldc)
         {
-            fixed (int* __refParamPtr2 = &n)
+            fixed (long* __refParamPtr2 = &n)
             {
                 var __arg2 = __refParamPtr2;
-                fixed (int* __refParamPtr3 = &k)
+                fixed (long* __refParamPtr3 = &k)
                 {
                     var __arg3 = __refParamPtr3;
                     fixed (double* __refParamPtr4 = &alpha)
@@ -7381,7 +7381,7 @@ namespace MKL
                         fixed (double* __refParamPtr5 = &a)
                         {
                             var __arg5 = __refParamPtr5;
-                            fixed (int* __refParamPtr6 = &lda)
+                            fixed (long* __refParamPtr6 = &lda)
                             {
                                 var __arg6 = __refParamPtr6;
                                 fixed (double* __refParamPtr7 = &beta)
@@ -7390,7 +7390,7 @@ namespace MKL
                                     fixed (double* __refParamPtr8 = &c)
                                     {
                                         var __arg8 = __refParamPtr8;
-                                        fixed (int* __refParamPtr9 = &ldc)
+                                        fixed (long* __refParamPtr9 = &ldc)
                                         {
                                             var __arg9 = __refParamPtr9;
                                             __Internal.Dsyrk(uplo, trans, __arg2, __arg3, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9);
@@ -7404,12 +7404,12 @@ namespace MKL
             }
         }
 
-        public static void Dtrmm(string side, string uplo, string transa, string diag, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb)
+        public static void Dtrmm(string side, string uplo, string transa, string diag, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha)
@@ -7418,13 +7418,13 @@ namespace MKL
                         fixed (double* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (double* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.Dtrmm(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -7437,12 +7437,12 @@ namespace MKL
             }
         }
 
-        public static void Dtrsm(string side, string uplo, string transa, string diag, ref int m, ref int n, ref double alpha, ref double a, ref int lda, ref double b, ref int ldb)
+        public static void Dtrsm(string side, string uplo, string transa, string diag, ref long m, ref long n, ref double alpha, ref double a, ref long lda, ref double b, ref long ldb)
         {
-            fixed (int* __refParamPtr4 = &m)
+            fixed (long* __refParamPtr4 = &m)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n)
+                fixed (long* __refParamPtr5 = &n)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha)
@@ -7451,13 +7451,13 @@ namespace MKL
                         fixed (double* __refParamPtr7 = &a)
                         {
                             var __arg7 = __refParamPtr7;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
                                 fixed (double* __refParamPtr9 = &b)
                                 {
                                     var __arg9 = __refParamPtr9;
-                                    fixed (int* __refParamPtr10 = &ldb)
+                                    fixed (long* __refParamPtr10 = &ldb)
                                     {
                                         var __arg10 = __refParamPtr10;
                                         __Internal.Dtrsm(side, uplo, transa, diag, __arg4, __arg5, __arg6, __arg7, __arg8, __arg9, __arg10);
@@ -7470,27 +7470,27 @@ namespace MKL
             }
         }
 
-        public static void DtrsmBatch(string side_array, string uplo_array, string transa_array, string diag_array, ref int m_array, ref int n_array, ref double alpha_array, double** a_array, ref int lda_array, double** b_array, ref int ldb, ref int group_count, ref int group_size)
+        public static void DtrsmBatch(string side_array, string uplo_array, string transa_array, string diag_array, ref long m_array, ref long n_array, ref double alpha_array, double** a_array, ref long lda_array, double** b_array, ref long ldb, ref long group_count, ref long group_size)
         {
-            fixed (int* __refParamPtr4 = &m_array)
+            fixed (long* __refParamPtr4 = &m_array)
             {
                 var __arg4 = __refParamPtr4;
-                fixed (int* __refParamPtr5 = &n_array)
+                fixed (long* __refParamPtr5 = &n_array)
                 {
                     var __arg5 = __refParamPtr5;
                     fixed (double* __refParamPtr6 = &alpha_array)
                     {
                         var __arg6 = __refParamPtr6;
-                        fixed (int* __refParamPtr8 = &lda_array)
+                        fixed (long* __refParamPtr8 = &lda_array)
                         {
                             var __arg8 = __refParamPtr8;
-                            fixed (int* __refParamPtr10 = &ldb)
+                            fixed (long* __refParamPtr10 = &ldb)
                             {
                                 var __arg10 = __refParamPtr10;
-                                fixed (int* __refParamPtr11 = &group_count)
+                                fixed (long* __refParamPtr11 = &group_count)
                                 {
                                     var __arg11 = __refParamPtr11;
-                                    fixed (int* __refParamPtr12 = &group_size)
+                                    fixed (long* __refParamPtr12 = &group_size)
                                     {
                                         var __arg12 = __refParamPtr12;
                                         __Internal.DtrsmBatch(side_array, uplo_array, transa_array, diag_array, __arg4, __arg5, __arg6, a_array, __arg8, b_array, __arg10, __arg11, __arg12);
@@ -7503,24 +7503,24 @@ namespace MKL
             }
         }
 
-        public static void GemmS8u8s32(string transa, string transb, string offsetc, ref int m, ref int n, ref int k, ref float alpha, string a, ref int lda, string ao, byte* b, ref int ldb, string bo, ref float beta, ref int c, ref int ldc, ref int co)
+        public static void GemmS8u8s32(string transa, string transb, string offsetc, ref long m, ref long n, ref long k, ref float alpha, string a, ref long lda, string ao, byte* b, ref long ldb, string bo, ref float beta, ref int c, ref long ldc, ref int co)
         {
-            fixed (int* __refParamPtr3 = &m)
+            fixed (long* __refParamPtr3 = &m)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &n)
+                fixed (long* __refParamPtr4 = &n)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &k)
+                    fixed (long* __refParamPtr5 = &k)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &alpha)
                         {
                             var __arg6 = __refParamPtr6;
-                            fixed (int* __refParamPtr8 = &lda)
+                            fixed (long* __refParamPtr8 = &lda)
                             {
                                 var __arg8 = __refParamPtr8;
-                                fixed (int* __refParamPtr11 = &ldb)
+                                fixed (long* __refParamPtr11 = &ldb)
                                 {
                                     var __arg11 = __refParamPtr11;
                                     fixed (float* __refParamPtr13 = &beta)
@@ -7529,7 +7529,7 @@ namespace MKL
                                         fixed (int* __refParamPtr14 = &c)
                                         {
                                             var __arg14 = __refParamPtr14;
-                                            fixed (int* __refParamPtr15 = &ldc)
+                                            fixed (long* __refParamPtr15 = &ldc)
                                             {
                                                 var __arg15 = __refParamPtr15;
                                                 fixed (int* __refParamPtr16 = &co)
@@ -7548,15 +7548,15 @@ namespace MKL
             }
         }
 
-        public static void GemmS16s16s32(string transa, string transb, string offsetc, ref int m, ref int n, ref int k, ref float alpha, ref short a, ref int lda, ref short ao, ref short b, ref int ldb, ref short bo, ref float beta, ref int c, ref int ldc, ref int co)
+        public static void GemmS16s16s32(string transa, string transb, string offsetc, ref long m, ref long n, ref long k, ref float alpha, ref short a, ref long lda, ref short ao, ref short b, ref long ldb, ref short bo, ref float beta, ref int c, ref long ldc, ref int co)
         {
-            fixed (int* __refParamPtr3 = &m)
+            fixed (long* __refParamPtr3 = &m)
             {
                 var __arg3 = __refParamPtr3;
-                fixed (int* __refParamPtr4 = &n)
+                fixed (long* __refParamPtr4 = &n)
                 {
                     var __arg4 = __refParamPtr4;
-                    fixed (int* __refParamPtr5 = &k)
+                    fixed (long* __refParamPtr5 = &k)
                     {
                         var __arg5 = __refParamPtr5;
                         fixed (float* __refParamPtr6 = &alpha)
@@ -7565,7 +7565,7 @@ namespace MKL
                             fixed (short* __refParamPtr7 = &a)
                             {
                                 var __arg7 = __refParamPtr7;
-                                fixed (int* __refParamPtr8 = &lda)
+                                fixed (long* __refParamPtr8 = &lda)
                                 {
                                     var __arg8 = __refParamPtr8;
                                     fixed (short* __refParamPtr9 = &ao)
@@ -7574,7 +7574,7 @@ namespace MKL
                                         fixed (short* __refParamPtr10 = &b)
                                         {
                                             var __arg10 = __refParamPtr10;
-                                            fixed (int* __refParamPtr11 = &ldb)
+                                            fixed (long* __refParamPtr11 = &ldb)
                                             {
                                                 var __arg11 = __refParamPtr11;
                                                 fixed (short* __refParamPtr12 = &bo)
@@ -7586,7 +7586,7 @@ namespace MKL
                                                         fixed (int* __refParamPtr14 = &c)
                                                         {
                                                             var __arg14 = __refParamPtr14;
-                                                            fixed (int* __refParamPtr15 = &ldc)
+                                                            fixed (long* __refParamPtr15 = &ldc)
                                                             {
                                                                 var __arg15 = __refParamPtr15;
                                                                 fixed (int* __refParamPtr16 = &co)

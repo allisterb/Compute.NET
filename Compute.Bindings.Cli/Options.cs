@@ -51,11 +51,8 @@ namespace Compute.Bindings
     [Verb("mkl", HelpText = "Generate bindings for the Intel Math Kernel Libraries.")]
     class MKLOptions : Options
     {
-        [Option("blas", Required = false, HelpText = "Generate bindings for the MKL BLAS routines. See https://software.intel.com/en-us/node/528682")]
-        public bool Blas { get => ModuleName == "blas"; set => ModuleName = "blas"; }
-
-        [Option("vml", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
-        public bool Vml { get => ModuleName == "vml"; set => ModuleName = "vml"; }
+        [Option("ilp64", Required = false, HelpText = "Use ILP64 integer types.")]
+        public bool Ilp64 { get; set; }
 
         [Option("sequential", Required = false, HelpText = "Use the sequential library threading model.", Default = false)]
         public bool Sequential { get; set; }
@@ -63,8 +60,21 @@ namespace Compute.Bindings
         [Option("tbb", Required = false, HelpText = "Use the Intel Thread Building Blocks library threading model.", Default = false)]
         public bool TBB { get; set; }
 
+        [Option("blas", Required = false, HelpText = "Generate bindings for the MKL BLAS routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Blas { get => ModuleName == "blas"; set => ModuleName = "blas"; }
+
+        [Option("vml", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Vml { get => ModuleName == "vml"; set => ModuleName = "vml"; }
+
+        [Option("laplace", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Laplace { get => ModuleName == "vml"; set => ModuleName = "vml"; }
+
         [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
         public bool WithoutCommon { get; set; }
+
+
+
+
 
     }
 }
