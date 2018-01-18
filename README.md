@@ -1,19 +1,17 @@
 # Compute.NET: .NET bindings for native numerical computing
-Get the latest release frm the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
+Get the latest release from the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
 
-![Screenshot of bind CLI](https://lh3.googleusercontent.com/DAy0mrGKmUCSUIXG8El-yciFLMGvRjZ_i2kRmnDkjl4vX94FXpnY-P6xB9nfTvH-psiRJ_7myqA0hdWptjwf=w1920-h1010)
-
+## About
 Compute.NET provides auto-generated bindings for native numerical computing libraries like [Intel Math Kernel Library](https://software.intel.com/en-us/mkl), [AMD Core Math Library](https://developer.amd.com/tools-and-sdks/archive/acml-downloads-resources/) (and its successors), AMD [clBLAS](https://gpuopen.com/compute-product/clblas/), cl* and others. The bindings are auto-generated from the library's C headers using the excellent [CppSharp](https:/github.com/Mono/CppSharp) library. The generator is a CLI program that be can used to generate individual modules of each library as well as customize key aspects of the generated code, such as the use of .NET structs instead of classes for complex data types, and marshalling array parameters in native code functions (either as managed arrays or pointers.) 
 
 ## Status
-
 * CLI Bindings Generator: Works on Windows for Intel Math Kernel Library. Blas and Vml modules can be bound.
 
 * Bindings: 
 	* Compute.Bindings.IntelMKL [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Bindings.IntelMKL) available on Myget [feed](https://www.myget.org/F/computedotnet/api/v2) with MKL BLAS and vector math functions. This library is not Windows-specific but I haven't tested it on Linux or other platforms yet.
 
 * Native Library Packages: 
-	* Compute.Winx64.IntelMKL packahe available on MyGet [feed](https://www.myget.org/F/computedotnet/api/v2).
+	* Compute.Winx64.IntelMKL [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.IntelMKL) available on MyGet [feed](https://www.myget.org/F/computedotnet/api/v2).
  
 ## Usage
 
@@ -26,7 +24,7 @@ Without step 2 you will need to make sure the .NET runtime can locate the native
 
 With the packages installed you can use the MKL BLAS or vector math routines in your code. E.g.:
 ```
-using IntelMKL;
+using IntelMKL.ILP64;
 class Program
 {
 static void Main(string[] args)
@@ -44,7 +42,7 @@ static void Main(string[] args)
 }
 ```
 
-You pass `double[]` and `float[] arrays` to the BLAS `VsAdd` function using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function.
+You pass `double[]` and `float[] arrays` to the BLAS `VsAdd` function using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function. You can use either MKL LP64 or ILP64 array indexing depending on the namespace you import 
 
 ### Bindings Generator
-The basic syntax is `bind LIBRARY MODULE [OPTIONS]` e.g ` bind mkl --vml --without-common -n IntelMKL -o .\Compute.Bindings.IntelMKL` will create bindings for the Intel MKL VML module, without including common types and functions, in the .NET namespace `IntelMKL` and the `.\Compute.Bindings.IntelMKL` output directory.   
+The basic syntax is `bind LIBRARY MODULE [OPTIONS]` e.g ` bind mkl --lp64 --vml -n IntelMKL -o .\Compute.Bindings.IntelMKL` will create bindings for the Intel MKL VML module, with LP64 indexing, in the .NET namespace `IntelMKL` and the `.\Compute.Bindings.IntelMKL` output directory.   
