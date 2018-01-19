@@ -73,6 +73,7 @@ namespace Compute.Bindings
             DriverOptions options = driver.Options;
             options.GeneratorKind = GeneratorKind.CSharp;
             options.Verbose = this.Verbose;
+            options.MarshalCharAsManagedChar = false;
             Module = options.AddModule(ModuleName);
             Module.OutputNamespace = Namespace;
             options.OutputDir = OutputDirName;

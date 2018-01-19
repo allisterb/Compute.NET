@@ -6,9 +6,9 @@ using Xunit;
 
 using IntelMKL.ILP64;
 
-namespace Compute.Tests
+namespace Compute.Tests.MKL
 {
-    public class MKL_VmlTests
+    public class VmlTests
     {
         [Fact]
         public void CanAdd()

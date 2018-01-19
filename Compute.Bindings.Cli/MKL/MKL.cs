@@ -142,21 +142,8 @@ namespace Compute.Bindings
         /// Do transformations that should happen after passes are processed.
         public override void Postprocess(Driver driver, ASTContext ctx)
         {
-
-            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8");
+            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8").Concat(ctx.FindClass("MKL_Complex16")).Concat(ctx.FindClass("MKLVersion"));
             
-            foreach (Class c in classes)
-            {
-                ctx.SetClassAsValueType(c.Name);
-            }
-
-            classes = ctx.FindClass("MKL_Complex16");
-            foreach (Class c in classes)
-            {
-                ctx.SetClassAsValueType(c.Name);
-            }
-
-            classes = ctx.FindClass("MKL_Version");
             foreach (Class c in classes)
             {
                 ctx.SetClassAsValueType(c.Name);
@@ -180,9 +167,9 @@ namespace Compute.Bindings
             {
                 sb.Replace($" *(global::{Module.OutputNamespace}.MKL_Complex16.__Internal*) ", string.Empty);
             }
-            if (s.Contains($" *(global::{Module.OutputNamespace}.MKL_Version.__Internal*) "))
+            if (s.Contains($" *(global::{Module.OutputNamespace}.MKLVersion.__Internal*) "))
             {
-                sb.Replace($" *(global::{Module.OutputNamespace}.MKL_Complex8.__Internal*) ", string.Empty);
+                sb.Replace($" *(global::{Module.OutputNamespace}.MKLVersion.__Internal*) ", string.Empty);
             }
             File.WriteAllText(F, sb.ToString());
             return true;

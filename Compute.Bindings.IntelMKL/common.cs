@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using System.Security;
 
 namespace IntelMKL
@@ -56,6 +57,322 @@ namespace IntelMKL
         MKL_COMPACT_SSE = 181,
         MKL_COMPACT_AVX = 182,
         MKL_COMPACT_AVX512 = 183
+    }
+
+    public unsafe partial struct MKL_Complex8
+    {
+        [StructLayout(LayoutKind.Explicit, Size = 8)]
+        public partial struct __Internal
+        {
+            [FieldOffset(0)]
+            internal float real;
+
+            [FieldOffset(4)]
+            internal float imag;
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "??0_MKL_Complex8@@QEAA@AEBU0@@Z")]
+            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
+        }
+
+        private MKL_Complex8.__Internal __instance;
+        internal MKL_Complex8.__Internal __Instance { get { return __instance; } }
+
+        internal static global::IntelMKL.MKL_Complex8 __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKL_Complex8(native.ToPointer(), skipVTables);
+        }
+
+        internal static global::IntelMKL.MKL_Complex8 __CreateInstance(global::IntelMKL.MKL_Complex8.__Internal native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKL_Complex8(native, skipVTables);
+        }
+
+        private MKL_Complex8(global::IntelMKL.MKL_Complex8.__Internal native, bool skipVTables = false)
+            : this()
+        {
+            __instance = native;
+        }
+
+        private MKL_Complex8(void* native, bool skipVTables = false) : this()
+        {
+            __instance = *(global::IntelMKL.MKL_Complex8.__Internal*)native;
+        }
+
+        public MKL_Complex8(global::IntelMKL.MKL_Complex8 _0)
+            : this()
+        {
+            var ____arg0 = _0.__Instance;
+            var __arg0 = new global::System.IntPtr(&____arg0);
+            fixed (__Internal* __instancePtr = &__instance)
+            {
+                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
+            }
+        }
+
+        public float Real
+        {
+            get
+            {
+                return __instance.real;
+            }
+
+            set
+            {
+                __instance.real = value;
+            }
+        }
+
+        public float Imag
+        {
+            get
+            {
+                return __instance.imag;
+            }
+
+            set
+            {
+                __instance.imag = value;
+            }
+        }
+    }
+
+    public unsafe partial struct MKL_Complex16
+    {
+        [StructLayout(LayoutKind.Explicit, Size = 16)]
+        public partial struct __Internal
+        {
+            [FieldOffset(0)]
+            internal double real;
+
+            [FieldOffset(8)]
+            internal double imag;
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "??0_MKL_Complex16@@QEAA@AEBU0@@Z")]
+            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
+        }
+
+        private MKL_Complex16.__Internal __instance;
+        internal MKL_Complex16.__Internal __Instance { get { return __instance; } }
+
+        internal static global::IntelMKL.MKL_Complex16 __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKL_Complex16(native.ToPointer(), skipVTables);
+        }
+
+        internal static global::IntelMKL.MKL_Complex16 __CreateInstance(global::IntelMKL.MKL_Complex16.__Internal native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKL_Complex16(native, skipVTables);
+        }
+
+        private MKL_Complex16(global::IntelMKL.MKL_Complex16.__Internal native, bool skipVTables = false)
+            : this()
+        {
+            __instance = native;
+        }
+
+        private MKL_Complex16(void* native, bool skipVTables = false) : this()
+        {
+            __instance = *(global::IntelMKL.MKL_Complex16.__Internal*)native;
+        }
+
+        public MKL_Complex16(global::IntelMKL.MKL_Complex16 _0)
+            : this()
+        {
+            var ____arg0 = _0.__Instance;
+            var __arg0 = new global::System.IntPtr(&____arg0);
+            fixed (__Internal* __instancePtr = &__instance)
+            {
+                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
+            }
+        }
+
+        public double Real
+        {
+            get
+            {
+                return __instance.real;
+            }
+
+            set
+            {
+                __instance.real = value;
+            }
+        }
+
+        public double Imag
+        {
+            get
+            {
+                return __instance.imag;
+            }
+
+            set
+            {
+                __instance.imag = value;
+            }
+        }
+    }
+
+    public unsafe partial struct MKLVersion
+    {
+        [StructLayout(LayoutKind.Explicit, Size = 48)]
+        public partial struct __Internal
+        {
+            [FieldOffset(0)]
+            internal int MajorVersion;
+
+            [FieldOffset(4)]
+            internal int MinorVersion;
+
+            [FieldOffset(8)]
+            internal int UpdateVersion;
+
+            [FieldOffset(16)]
+            internal global::System.IntPtr ProductStatus;
+
+            [FieldOffset(24)]
+            internal global::System.IntPtr Build;
+
+            [FieldOffset(32)]
+            internal global::System.IntPtr Processor;
+
+            [FieldOffset(40)]
+            internal global::System.IntPtr Platform;
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "??0MKLVersion@@QEAA@AEBU0@@Z")]
+            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
+        }
+
+        private MKLVersion.__Internal __instance;
+        internal MKLVersion.__Internal __Instance { get { return __instance; } }
+
+        internal static global::IntelMKL.MKLVersion __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKLVersion(native.ToPointer(), skipVTables);
+        }
+
+        internal static global::IntelMKL.MKLVersion __CreateInstance(global::IntelMKL.MKLVersion.__Internal native, bool skipVTables = false)
+        {
+            return new global::IntelMKL.MKLVersion(native, skipVTables);
+        }
+
+        private MKLVersion(global::IntelMKL.MKLVersion.__Internal native, bool skipVTables = false)
+            : this()
+        {
+            __instance = native;
+        }
+
+        private MKLVersion(void* native, bool skipVTables = false) : this()
+        {
+            __instance = *(global::IntelMKL.MKLVersion.__Internal*)native;
+        }
+
+        public MKLVersion(global::IntelMKL.MKLVersion _0)
+            : this()
+        {
+            var ____arg0 = _0.__Instance;
+            var __arg0 = new global::System.IntPtr(&____arg0);
+            fixed (__Internal* __instancePtr = &__instance)
+            {
+                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
+            }
+        }
+
+        public int MajorVersion
+        {
+            get
+            {
+                return __instance.MajorVersion;
+            }
+
+            set
+            {
+                __instance.MajorVersion = value;
+            }
+        }
+
+        public int MinorVersion
+        {
+            get
+            {
+                return __instance.MinorVersion;
+            }
+
+            set
+            {
+                __instance.MinorVersion = value;
+            }
+        }
+
+        public int UpdateVersion
+        {
+            get
+            {
+                return __instance.UpdateVersion;
+            }
+
+            set
+            {
+                __instance.UpdateVersion = value;
+            }
+        }
+
+        public string ProductStatus
+        {
+            get
+            {
+                return Marshal.PtrToStringAnsi(__instance.ProductStatus);
+            }
+
+            set
+            {
+                __instance.ProductStatus = Marshal.StringToHGlobalAnsi(value);
+            }
+        }
+
+        public string Build
+        {
+            get
+            {
+                return Marshal.PtrToStringAnsi(__instance.Build);
+            }
+
+            set
+            {
+                __instance.Build = Marshal.StringToHGlobalAnsi(value);
+            }
+        }
+
+        public string Processor
+        {
+            get
+            {
+                return Marshal.PtrToStringAnsi(__instance.Processor);
+            }
+
+            set
+            {
+                __instance.Processor = Marshal.StringToHGlobalAnsi(value);
+            }
+        }
+
+        public string Platform
+        {
+            get
+            {
+                return Marshal.PtrToStringAnsi(__instance.Platform);
+            }
+            set
+            {
+                __instance.Platform = Marshal.StringToHGlobalAnsi(value);
+            }
+        }
     }
 
 
@@ -373,11 +690,12 @@ namespace IntelMKL
             internal static extern void MKL_Finalize();
         }
 
-        public static void MKL_GetVersion(global::IntelMKL.MKLVersion ver)
+        public static void MKL_GetVersion(ref global::IntelMKL.MKLVersion ver)
         {
-            var ____arg0 = ver.__Instance;
-            var __arg0 = new global::System.IntPtr(&____arg0);
-            __Internal.MKL_GetVersion(__arg0);
+            unsafe
+            {
+                __Internal.MKL_GetVersion(new IntPtr(Unsafe.AsPointer(ref ver)));
+            }
         }
 
         public static void MKL_GetVersionString(sbyte* buffer, int len)
@@ -795,323 +1113,4 @@ namespace IntelMKL
             __Internal.MKL_Finalize();
         }
     }
-
-  
-    public unsafe partial struct MKL_Complex8
-    {
-        [StructLayout(LayoutKind.Explicit, Size = 8)]
-        public partial struct __Internal
-        {
-            [FieldOffset(0)]
-            internal float real;
-
-            [FieldOffset(4)]
-            internal float imag;
-
-            [SuppressUnmanagedCodeSecurity]
-            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint = "??0_MKL_Complex8@@QEAA@AEBU0@@Z")]
-            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
-        }
-
-        private MKL_Complex8.__Internal __instance;
-        internal MKL_Complex8.__Internal __Instance { get { return __instance; } }
-
-        internal static global::IntelMKL.MKL_Complex8 __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKL_Complex8(native.ToPointer(), skipVTables);
-        }
-
-        internal static global::IntelMKL.MKL_Complex8 __CreateInstance(global::IntelMKL.MKL_Complex8.__Internal native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKL_Complex8(native, skipVTables);
-        }
-
-        private MKL_Complex8(global::IntelMKL.MKL_Complex8.__Internal native, bool skipVTables = false)
-            : this()
-        {
-            __instance = native;
-        }
-
-        private MKL_Complex8(void* native, bool skipVTables = false) : this()
-        {
-            __instance = *(global::IntelMKL.MKL_Complex8.__Internal*)native;
-        }
-
-        public MKL_Complex8(global::IntelMKL.MKL_Complex8 _0)
-            : this()
-        {
-            var ____arg0 = _0.__Instance;
-            var __arg0 = new global::System.IntPtr(&____arg0);
-            fixed (__Internal* __instancePtr = &__instance)
-            {
-                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
-            }
-        }
-
-        public float Real
-        {
-            get
-            {
-                return __instance.real;
-            }
-
-            set
-            {
-                __instance.real = value;
-            }
-        }
-
-        public float Imag
-        {
-            get
-            {
-                return __instance.imag;
-            }
-
-            set
-            {
-                __instance.imag = value;
-            }
-        }
-    }
-
-    public unsafe partial struct MKL_Complex16
-    {
-        [StructLayout(LayoutKind.Explicit, Size = 16)]
-        public partial struct __Internal
-        {
-            [FieldOffset(0)]
-            internal double real;
-
-            [FieldOffset(8)]
-            internal double imag;
-
-            [SuppressUnmanagedCodeSecurity]
-            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint = "??0_MKL_Complex16@@QEAA@AEBU0@@Z")]
-            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
-        }
-
-        private MKL_Complex16.__Internal __instance;
-        internal MKL_Complex16.__Internal __Instance { get { return __instance; } }
-
-        internal static global::IntelMKL.MKL_Complex16 __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKL_Complex16(native.ToPointer(), skipVTables);
-        }
-
-        internal static global::IntelMKL.MKL_Complex16 __CreateInstance(global::IntelMKL.MKL_Complex16.__Internal native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKL_Complex16(native, skipVTables);
-        }
-
-        private MKL_Complex16(global::IntelMKL.MKL_Complex16.__Internal native, bool skipVTables = false)
-            : this()
-        {
-            __instance = native;
-        }
-
-        private MKL_Complex16(void* native, bool skipVTables = false) : this()
-        {
-            __instance = *(global::IntelMKL.MKL_Complex16.__Internal*)native;
-        }
-
-        public MKL_Complex16(global::IntelMKL.MKL_Complex16 _0)
-            : this()
-        {
-            var ____arg0 = _0.__Instance;
-            var __arg0 = new global::System.IntPtr(&____arg0);
-            fixed (__Internal* __instancePtr = &__instance)
-            {
-                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
-            }
-        }
-
-        public double Real
-        {
-            get
-            {
-                return __instance.real;
-            }
-
-            set
-            {
-                __instance.real = value;
-            }
-        }
-
-        public double Imag
-        {
-            get
-            {
-                return __instance.imag;
-            }
-
-            set
-            {
-                __instance.imag = value;
-            }
-        }
-    }
-
-    public unsafe partial struct MKLVersion
-    {
-        [StructLayout(LayoutKind.Explicit, Size = 48)]
-        public partial struct __Internal
-        {
-            [FieldOffset(0)]
-            internal int MajorVersion;
-
-            [FieldOffset(4)]
-            internal int MinorVersion;
-
-            [FieldOffset(8)]
-            internal int UpdateVersion;
-
-            [FieldOffset(16)]
-            internal global::System.IntPtr ProductStatus;
-
-            [FieldOffset(24)]
-            internal global::System.IntPtr Build;
-
-            [FieldOffset(32)]
-            internal global::System.IntPtr Processor;
-
-            [FieldOffset(40)]
-            internal global::System.IntPtr Platform;
-
-            [SuppressUnmanagedCodeSecurity]
-            [DllImport("mkl_rt", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint = "??0MKLVersion@@QEAA@AEBU0@@Z")]
-            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
-        }
-
-        private MKLVersion.__Internal __instance;
-        internal MKLVersion.__Internal __Instance { get { return __instance; } }
-
-        internal static global::IntelMKL.MKLVersion __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKLVersion(native.ToPointer(), skipVTables);
-        }
-
-        internal static global::IntelMKL.MKLVersion __CreateInstance(global::IntelMKL.MKLVersion.__Internal native, bool skipVTables = false)
-        {
-            return new global::IntelMKL.MKLVersion(native, skipVTables);
-        }
-
-        private MKLVersion(global::IntelMKL.MKLVersion.__Internal native, bool skipVTables = false)
-            : this()
-        {
-            __instance = native;
-        }
-
-        private MKLVersion(void* native, bool skipVTables = false) : this()
-        {
-            __instance = *(global::IntelMKL.MKLVersion.__Internal*)native;
-        }
-
-        public MKLVersion(global::IntelMKL.MKLVersion _0)
-            : this()
-        {
-            var ____arg0 = _0.__Instance;
-            var __arg0 = new global::System.IntPtr(&____arg0);
-            fixed (__Internal* __instancePtr = &__instance)
-            {
-                __Internal.cctor(new global::System.IntPtr(__instancePtr), __arg0);
-            }
-        }
-
-        public int MajorVersion
-        {
-            get
-            {
-                return __instance.MajorVersion;
-            }
-
-            set
-            {
-                __instance.MajorVersion = value;
-            }
-        }
-
-        public int MinorVersion
-        {
-            get
-            {
-                return __instance.MinorVersion;
-            }
-
-            set
-            {
-                __instance.MinorVersion = value;
-            }
-        }
-
-        public int UpdateVersion
-        {
-            get
-            {
-                return __instance.UpdateVersion;
-            }
-
-            set
-            {
-                __instance.UpdateVersion = value;
-            }
-        }
-
-        public sbyte* ProductStatus
-        {
-            get
-            {
-                return (sbyte*)__instance.ProductStatus;
-            }
-
-            set
-            {
-                __instance.ProductStatus = (global::System.IntPtr)value;
-            }
-        }
-
-        public sbyte* Build
-        {
-            get
-            {
-                return (sbyte*)__instance.Build;
-            }
-
-            set
-            {
-                __instance.Build = (global::System.IntPtr)value;
-            }
-        }
-
-        public sbyte* Processor
-        {
-            get
-            {
-                return (sbyte*)__instance.Processor;
-            }
-
-            set
-            {
-                __instance.Processor = (global::System.IntPtr)value;
-            }
-        }
-
-        public sbyte* Platform
-        {
-            get
-            {
-                return (sbyte*)__instance.Platform;
-            }
-
-            set
-            {
-                __instance.Platform = (global::System.IntPtr)value;
-            }
-        }
-    }
-
 }
