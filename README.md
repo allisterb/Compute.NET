@@ -1,5 +1,5 @@
 # Compute.NET: .NET bindings for native numerical computing
-![bind program screenshot](https://lh3.googleusercontent.com/2RbLRXz9dAq5_sFpDNa6zp81bUFRzBmaAr0EVUOZrNYgs89Ni_RYpDLQ69Vai8L1m0-zGwbputYat3EmmQAMuZpRlWehfnW3sPUm8irAnEodaVGxWfiAGL5msiGUTmVGyzEpoVekJUVRyUlSFl5HrYD0MW1T-yzHc6VtxJICWW2nUIneSxZiiewLqKfXaw7VEWLr_zBctJ9buuTib2LNZEHKMg2xuBEc6ld5FbC86Gqj-PS1Mh-j15ekrboaVpQmUCr7sokiY1xPYgcE9bAYH8iLmCacX-Ndoqg_eL6KVf7WJnHb4XZYEcRtsspV8E1j_l6Yyf5HM-ini2RSJZjpgj8l8TgBiTkFZn3GU1gZWf9iHyXkNZVjmA4ldluhIgaCyhD_68Vg6HEtVoTblRrMoT7DaRGGVd6QHd7DdjxlJJoxDACwx7HlFX_FzN6TsDJglkSaxalYfQ7xozNiYvbto7bhvnsbNRisDqSuso3E3JYVqnBool64S3CJmfx2bflIKnJ8ZmDe3zvu2jWwJMqzKLR0HUp_I3UYiiOYTj4Hzl8D5zS7jLifrpWHfVpu2X-QrZQcUJNGWKsPRrjdT3H6gAEPBNnwaVxprctX9w4=w845-h394-no)
+![bind program screenshot](https://cmewmw.dm2301.livefilestore.com/y4mojOOFQ38XiWWFEhjDv855htWsnP-nFXeDW2Rtnm3z4csuLumwHDe7_YvHWvCOQEvTI00N6vV4ZDk6CcTHxQz6XbK0GEwJnHpA0lDoOFWl-26Goi6UihJMK32cGGhSNsGv2m_loxDF1cUncS2Qj1Uv9Ly5A6TeN9S2thjBtOkSMKxfI5K6XlUKITGtwd1xhuH4ADNHmelYoNW9AypM5j9hA?width=845&height=394&cropmode=none)
 
 Get the latest release from the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
 
@@ -44,7 +44,7 @@ class Program
 }
 ```
 
-You pass `double[]` and `float[] arrays` to the BLAS `VsAdd` and `VdAdd` functions using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function. You can use either LP64 or ILP64 array indexing depending on the namespace you import. 
+You pass `double[]` and `float[]` arrays to the BLAS `VsAdd` and `VdAdd` functions using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function. You can use either LP64 or ILP64 array indexing depending on the namespace you import. 
 
 ### Bindings Generator
-The basic syntax is `bind LIBRARY MODULE [OPTIONS]` e.g ` bind mkl --lp64 --vml -n IntelMKL -o .\Compute.Bindings.IntelMKL` will create bindings for the Intel MKL VML module, with LP64 indexing, in the .NET namespace `IntelMKL` and the `.\Compute.Bindings.IntelMKL` output directory.   
+The basic syntax is `bind LIBRARY MODULE [OPTIONS]` e.g ` bind mkl --ilp64 --vml -n IntelMKL -o .\Compute.Bindings.IntelMKL` will create bindings for the Intel MKL VML module, with ILP64 array indexing, in the .NET namespace `IntelMKL` and the `.\Compute.Bindings.IntelMKL` output directory.   
