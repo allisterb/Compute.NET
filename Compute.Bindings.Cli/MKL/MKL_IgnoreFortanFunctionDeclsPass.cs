@@ -25,15 +25,18 @@ namespace Compute.Bindings
         {
             if (function.PreprocessedEntities.Any(p => p.ToString().StartsWith("_MKL_API") || p.ToString().StartsWith("_mkl_api")))
             {
-                function.Ignore = true;
+                function.ExplicitlyIgnore();
                 return false;
             }
-            else
+            if (Library.ModuleName == "lapack")
             {
-                return true;
+                if (function.Name.EndsWith("_") || function.Name.ToUpperInvariant() == function.Name)
+                {
+                    function.ExplicitlyIgnore();
+                    return false;
+                }
             }
-            
+            return true;
         }
-
     }
 }

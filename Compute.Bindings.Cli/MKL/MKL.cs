@@ -29,10 +29,11 @@ namespace Compute.Bindings
         public bool Sequential { get; protected set; }
         public bool TBB { get; protected set; }
 
- 
         public bool Blas { get; protected set; }
         public bool Vml { get; protected set; }
-
+        public bool Lapack { get; protected set; }
+        public bool Vsl { get; protected set; }
+        
         #endregion
 
         #region Overriden members
@@ -49,7 +50,7 @@ namespace Compute.Bindings
             }
             else
             {
-                Info("Using ia32 architecture.");
+                Info("Using IA32 architecture.");
                 Module.LibraryDirs.Add(Path.Combine("lib", "ia32"));
             }
             this.Module.SharedLibraryName = "mkl_rt";
@@ -68,7 +69,7 @@ namespace Compute.Bindings
                 else
                 {
                     this.Module.Libraries.Add("mkl_intel_thread_dll.lib");
-                    Info("Using Intel threading library.");
+                    Info("Using default Intel threading library.");
                 }
                 Module.Libraries.Add("mkl_rt.lib");
             }
@@ -105,15 +106,24 @@ namespace Compute.Bindings
 
             if (Blas)
             {
-                this.ModuleName = "blas";
                 this.Module.Headers.Add("mkl_blas.h");    
                 Info("Creating bindings for BLAS routines...");
             }
-            else if (Vml)
+            else if (Lapack)
             {
-                this.ModuleName = "vml";    
+                this.Module.Headers.Add("mkl_lapack.h");
+                Info("Creating bindings for LAPACK routines...");
+            }
+            else if (Vml)
+            {    
                 this.Module.Headers.Add("mkl_vml.h");
                 Info("Creating bindings for Vector Math routines...");
+            }
+            else if (Vsl)
+            {
+                this.ModuleName = "vsl";
+                this.Module.Headers.Add("mkl_vsl.h");
+                Info("Creating bindings for Vector Statistics routines...");
             }
             else
             {
@@ -142,8 +152,8 @@ namespace Compute.Bindings
         /// Do transformations that should happen after passes are processed.
         public override void Postprocess(Driver driver, ASTContext ctx)
         {
-            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8").Concat(ctx.FindClass("MKL_Complex16")).Concat(ctx.FindClass("MKLVersion"));
-            
+            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8").Concat(ctx.FindClass("MKL_Complex16")).Concat(ctx.FindClass("MKLVersion")).Concat(ctx.FindClass("VSLBRngProperties"));//VSLBRngProperties
+
             foreach (Class c in classes)
             {
                 ctx.SetClassAsValueType(c.Name);

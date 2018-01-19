@@ -35,8 +35,11 @@ namespace Compute.Bindings
         [Option('r', "root", Required = false, HelpText = "Set the root directory on the local filesystem for the native comute library.")]
         public string Root { get; set; }
 
-        [Option('o', "output", Required = false, HelpText = "Set the output directory for the class files for the bindings.")]
+        [Option('o', "output", Required = false, HelpText = "Set the output directory for the class file for the bindings.")]
         public string OutputDirName { get; set; }
+
+        [Option("file", Required = false, HelpText = "Set the output filename for the class file for the bindings.")]
+        public string OutputFileName { get; set; }
 
         [Option('m', "module", Required = false, HelpText = "Specify the name of a module or subset of the library to generate bindings to. If this is omitted then all routines will be included.")]
         public string ModuleName { get; set; }
@@ -66,8 +69,11 @@ namespace Compute.Bindings
         [Option("vml", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
         public bool Vml { get => ModuleName == "vml"; set => ModuleName = "vml"; }
 
-        [Option("laplace", Required = false, HelpText = "Generate bindings for the MKL vector math routines. See https://software.intel.com/en-us/node/528682")]
-        public bool Laplace { get => ModuleName == "vml"; set => ModuleName = "vml"; }
+        [Option("lapack", Required = false, HelpText = "Generate bindings for the MKL LAPACK routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Lapack { get => ModuleName == "lapack"; set => ModuleName = "lapack"; }
+
+        [Option("vsl", Required = false, HelpText = "Generate bindings for the MKL vector statistics routines. See https://software.intel.com/en-us/node/528682")]
+        public bool Vsl { get => ModuleName == "vsl"; set => ModuleName = "vsl"; }
 
         [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
         public bool WithoutCommon { get; set; }

@@ -46,10 +46,12 @@ namespace Compute.Bindings
             {
                 Namespace = Name;
             }
+            
             Contract.Requires(!string.IsNullOrEmpty(ModuleName));
             Contract.Requires(!string.IsNullOrEmpty(OutputDirName));
             Contract.Requires(!string.IsNullOrEmpty(ClassName));
             Contract.Requires(!string.IsNullOrEmpty(Namespace));
+            F = Path.Combine(Path.GetFullPath(OutputDirName), ModuleName + ".cs");
 
             Info($"Using {R} as library directory.");
             Info($"Using {Path.GetFullPath(OutputDirName)} as output directory.");
@@ -107,7 +109,19 @@ namespace Compute.Bindings
             if (File.Exists(Path.Combine(OutputDirName, "Std.cs")))
             {
                 File.Delete(Path.Combine(OutputDirName, "Std.cs"));
-                Info($"Removing unneeded file {Path.Combine(OutputDirName, Module.OutputNamespace + "Std.cs")}");
+                Info($"Removing unneeded file {Path.Combine(OutputDirName, "Std.cs")}");
+            }
+
+            string f = Path.Combine(Path.GetFullPath(OutputDirName), OutputFileName);
+            if (!string.IsNullOrEmpty(OutputFileName) && F != f)
+            {
+                if (File.Exists(f))
+                {
+                    Warn($"Overwriting file {f}.");
+                    File.Delete(f);
+                }
+                File.Move(F, f);
+                F = f;
             }
             
             return true;
@@ -122,8 +136,9 @@ namespace Compute.Bindings
         public Dictionary<string, object> BindOptions { get; internal set; }
         public DirectoryInfo RootDirectory { get; internal set; }
         public string R => RootDirectory.FullName;
-        public string F => Path.Combine(Path.GetFullPath(OutputDirName), ModuleName + ".cs");
+        public string F { get; protected set; } 
         public string OutputDirName { get; internal set; }
+        public string OutputFileName { get; internal set; }
         public string ModuleName { get; internal set; }
         public Module Module { get; internal set; }
         public string ClassName { get; internal set; }

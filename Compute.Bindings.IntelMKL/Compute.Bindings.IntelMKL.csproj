@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/allisterb/Compute.NET</RepositoryUrl>
     <PackageTags>numeric Intel HPC</PackageTags>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageReleaseNotes>Added LAPACK and vector statistics routines.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -112,18 +112,23 @@ namespace Compute.Bindings
             })
             .WithParsed<Options>(o =>
             {
-                foreach (PropertyInfo prop in o.GetType().GetProperties())
+                if (string.IsNullOrEmpty(o.ModuleName))
                 {
-                    ProgramOptions.Add(prop.Name, prop.GetValue(o));
+                    Log.Error($"You must select a MKL module to create bindings for. Use the --help option to get the list of available modules.");
+                    Exit(ExitResult.INVALID_OPTIONS);
                 }
-                if (!string.IsNullOrEmpty(o.Root) && !Directory.Exists((string)ProgramOptions["Root"]))
+                if (!string.IsNullOrEmpty(o.Root) && !Directory.Exists(o.Root))
                 {
-                    Log.Error($"The library root directory specified {(string)ProgramOptions["Root"]} does not exist.");
+                    Log.Error($"The library root directory specified {o.Root} does not exist.");
                     Exit(ExitResult.INVALID_OPTIONS);
                 }
                 else if (!string.IsNullOrEmpty(o.Root))
                 {
-                    ProgramOptions.Add("RootDirectory", new DirectoryInfo((string)ProgramOptions["Root"]));
+                    ProgramOptions.Add("RootDirectory", new DirectoryInfo(o.Root));
+                }
+                foreach (PropertyInfo prop in o.GetType().GetProperties())
+                {
+                    ProgramOptions.Add(prop.Name, prop.GetValue(o));
                 }
             })
             .WithParsed<MKLOptions>(o =>
