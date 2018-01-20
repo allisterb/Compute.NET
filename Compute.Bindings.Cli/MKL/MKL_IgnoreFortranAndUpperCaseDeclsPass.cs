@@ -11,11 +11,11 @@ using CppSharp.Passes;
 
 namespace Compute.Bindings
 {
-    public class MKL_IgnoreFortranFunctionDeclsPass : TranslationUnitPass
+    public class MKL_IgnoreFortranAndUpperCaseDeclsPass : TranslationUnitPass
     {
         protected Generator G;
         protected Library Library;
-        public MKL_IgnoreFortranFunctionDeclsPass(Library lib, Generator gen) : base()
+        public MKL_IgnoreFortranAndUpperCaseDeclsPass(Library lib, Generator gen) : base()
         {
             Library = lib;
             G = gen;
@@ -28,14 +28,13 @@ namespace Compute.Bindings
                 function.ExplicitlyIgnore();
                 return false;
             }
-            if (Library.ModuleName == "lapack")
+    
+            if (function.Name.EndsWith("_") || function.Name.ToUpperInvariant() == function.Name)
             {
-                if (function.Name.EndsWith("_") || function.Name.ToUpperInvariant() == function.Name)
-                {
-                    function.ExplicitlyIgnore();
-                    return false;
-                }
+                function.ExplicitlyIgnore();
+                return false;
             }
+            
             return true;
         }
     }

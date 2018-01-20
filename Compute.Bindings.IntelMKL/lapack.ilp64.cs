@@ -22,7 +22,7 @@ namespace IntelMKL.ILP64
     [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
     public unsafe delegate long MKL_S_SELECT_FUNCTION_3(float* _0, float* _1, float* _2);
 
-    public unsafe partial class mkl_lapack
+    public unsafe partial class Lapack
     {
         public partial struct __Internal
         {

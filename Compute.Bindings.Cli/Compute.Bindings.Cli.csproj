@@ -122,7 +122,7 @@
     <Compile Include="MKL\MKLTypeMaps.cs" />
     <Compile Include="MKL\MKL_IgnoreCommonDeclsPass.cs" />
     <Compile Include="MKL\MKL_ConvertFunctionParameterDeclsPass.cs" />
-    <Compile Include="MKL\MKL_IgnoreFortanFunctionDeclsPass.cs" />
+    <Compile Include="MKL\MKL_IgnoreFortranAndUpperCaseDeclsPass.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

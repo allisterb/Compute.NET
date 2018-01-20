@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Serilog;
@@ -38,9 +39,9 @@ namespace Compute.Bindings
             {
                 OutputDirName = Directory.GetCurrentDirectory();
             }
-            if (string.IsNullOrEmpty(ClassName))
+            if (string.IsNullOrEmpty(Class))
             {
-                ClassName = ModuleName;
+                Class = ModuleName;
             }
             if (string.IsNullOrEmpty(Namespace))
             {
@@ -49,7 +50,7 @@ namespace Compute.Bindings
             
             Contract.Requires(!string.IsNullOrEmpty(ModuleName));
             Contract.Requires(!string.IsNullOrEmpty(OutputDirName));
-            Contract.Requires(!string.IsNullOrEmpty(ClassName));
+            Contract.Requires(!string.IsNullOrEmpty(Class));
             Contract.Requires(!string.IsNullOrEmpty(Namespace));
             F = Path.Combine(Path.GetFullPath(OutputDirName), ModuleName + ".cs");
 
@@ -98,36 +99,7 @@ namespace Compute.Bindings
         public virtual void Postprocess(Driver driver, ASTContext ctx)
         {
         }
-
-        public virtual bool CleanAndFixup()
-        {
-            if (File.Exists(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")))
-            {
-                File.Delete(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp"));
-                Info($"Removing unneeded file {Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")}");
-            }
-            if (File.Exists(Path.Combine(OutputDirName, "Std.cs")))
-            {
-                File.Delete(Path.Combine(OutputDirName, "Std.cs"));
-                Info($"Removing unneeded file {Path.Combine(OutputDirName, "Std.cs")}");
-            }
-
-            string f = Path.Combine(Path.GetFullPath(OutputDirName), OutputFileName);
-            if (!string.IsNullOrEmpty(OutputFileName) && F != f)
-            {
-                if (File.Exists(f))
-                {
-                    Warn($"Overwriting file {f}.");
-                    File.Delete(f);
-                }
-                File.Move(F, f);
-                F = f;
-            }
-            
-            return true;
-        }
         #endregion
-
 
         #region Properties
         public ILogger L { get; } = Log.Logger.ForContext<Library>();
@@ -141,12 +113,47 @@ namespace Compute.Bindings
         public string OutputFileName { get; internal set; }
         public string ModuleName { get; internal set; }
         public Module Module { get; internal set; }
-        public string ClassName { get; internal set; }
+        public string Class { get; internal set; }
         public string Namespace { get; internal set; }
         public bool Verbose { get; internal set; }
         #endregion
 
         #region Methods
+        public virtual bool CleanAndFixup()
+        {
+            if (File.Exists(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")))
+            {
+                File.Delete(Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp"));
+                Info($"Removing unneeded file {Path.Combine(OutputDirName, Module.OutputNamespace + "-symbols.cpp")}");
+            }
+            if (File.Exists(Path.Combine(OutputDirName, "Std.cs")))
+            {
+                File.Delete(Path.Combine(OutputDirName, "Std.cs"));
+                Info($"Removing unneeded file {Path.Combine(OutputDirName, "Std.cs")}");
+            }
+            if (!string.IsNullOrEmpty(OutputFileName))
+            {
+                string f = Path.Combine(Path.GetFullPath(OutputDirName), OutputFileName);
+                if (!string.IsNullOrEmpty(OutputFileName) && F != f)
+                {
+                    if (File.Exists(f))
+                    {
+                        Warn($"Overwriting file {f}.");
+                        File.Delete(f);
+                    }
+                    File.Move(F, f);
+                    F = f;
+                }
+            }
+            if (!string.IsNullOrEmpty(Class))
+            {
+                string s = File.ReadAllText(F);
+                s = Regex.Replace(s, @"public unsafe partial class \S+\r?$", "public unsafe partial class " + Class, RegexOptions.Multiline);
+                File.WriteAllText(F, s);
+            }
+            return true;
+        }
+
         protected void Info(string m, params object[] o) => L.Information(m, o);
         protected void Warn(string m, params object[] o) => L.Warning(m, o);
         protected void Error(string m, params object[] o) => L.Error(m, o);

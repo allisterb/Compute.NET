@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using CppSharp;
@@ -30,6 +31,8 @@ namespace Compute.Bindings
         public bool TBB { get; protected set; }
 
         public bool Blas { get; protected set; }
+        public bool Blacs { get; protected set; }
+        public bool PBlas { get; protected set; }
         public bool Vml { get; protected set; }
         public bool Lapack { get; protected set; }
         public bool Vsl { get; protected set; }
@@ -109,6 +112,16 @@ namespace Compute.Bindings
                 this.Module.Headers.Add("mkl_blas.h");    
                 Info("Creating bindings for BLAS routines...");
             }
+            else if (PBlas)
+            {
+                this.Module.Headers.Add("mkl_pblas.h");
+                Info("Creating bindings for Parallel BLAS routines...");
+            }
+            else if (Blacs)
+            {
+                this.Module.Headers.Add("mkl_blacs.h");
+                Info("Creating bindings for BLACS routines...");
+            }
             else if (Lapack)
             {
                 this.Module.Headers.Add("mkl_lapack.h");
@@ -135,7 +148,7 @@ namespace Compute.Bindings
         public override void SetupPasses(Driver driver)
         {
             base.SetupPasses(driver);
-            driver.AddTranslationUnitPass(new MKL_IgnoreFortranFunctionDeclsPass(this, driver.Generator)); 
+            driver.AddTranslationUnitPass(new MKL_IgnoreFortranAndUpperCaseDeclsPass(this, driver.Generator)); 
             driver.AddTranslationUnitPass(new MKL_ConvertFunctionParameterDeclsPass(this, driver.Generator));
             if (WithoutCommon)
             {
@@ -185,9 +198,6 @@ namespace Compute.Bindings
             return true;
         }
 
-        #endregion
-
-        #region Methods
         #endregion
     }
 }
