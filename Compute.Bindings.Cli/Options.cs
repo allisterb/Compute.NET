@@ -60,14 +60,20 @@ namespace Compute.Bindings
         [Option("ilp64", Required = false, HelpText = "Use ILP64 integer types.")]
         public bool Ilp64 { get; set; }
 
+        [Option("lp64", Required = false, HelpText = "Use LP64 integer types.")]
+        public bool Lp64 { get => !Ilp64; set => Ilp64 = !value; }
+
         [Option("sequential", Required = false, HelpText = "Use the sequential library threading model.", Default = false)]
         public bool Sequential { get; set; }
 
         [Option("tbb", Required = false, HelpText = "Use the Intel Thread Building Blocks library threading model.", Default = false)]
         public bool TBB { get; set; }
 
-        [Option("blas", Required = false, HelpText = "Generate bindings for the MKL BLAS routines. See https://software.intel.com/en-us/node/528682")]
+        [Option("blas", Required = false, HelpText = "Generate bindings for the MKL Basic Linear Algebra Subroutines (BLAS) routines. See https://software.intel.com/en-us/node/528682")]
         public bool Blas { get => ModuleName == "blas"; set => ModuleName = "blas"; }
+
+        [Option("spblas", Required = false, HelpText = "Generate bindings for the MKL Sparse BLAS routines. See https://software.intel.com/en-us/node/528682")]
+        public bool SpBlas { get => ModuleName == "spblas"; set => ModuleName = "spblas"; }
 
         [Option("blacs", Required = false, HelpText = "Generate bindings for the MKL BLACS routines. See https://software.intel.com/en-us/node/528682")]
         public bool Blacs { get => ModuleName == "blacs"; set => ModuleName = "blacs"; }
@@ -80,6 +86,9 @@ namespace Compute.Bindings
 
         [Option("lapack", Required = false, HelpText = "Generate bindings for the MKL LAPACK routines. See https://software.intel.com/en-us/node/528682")]
         public bool Lapack { get => ModuleName == "lapack"; set => ModuleName = "lapack"; }
+
+        [Option("scalapack", Required = false, HelpText = "Generate bindings for the MKL SCALAPACK routines. See https://software.intel.com/en-us/node/528682")]
+        public bool ScaLapack { get => ModuleName == "scalapack"; set => ModuleName = "scalapack"; }
 
         [Option("vsl", Required = false, HelpText = "Generate bindings for the MKL vector statistics routines. See https://software.intel.com/en-us/node/528682")]
         public bool Vsl { get => ModuleName == "vsl"; set => ModuleName = "vsl"; }

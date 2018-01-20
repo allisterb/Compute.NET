@@ -31,10 +31,12 @@ namespace Compute.Bindings
         public bool TBB { get; protected set; }
 
         public bool Blas { get; protected set; }
+        public bool SpBlas { get; protected set; }
         public bool Blacs { get; protected set; }
         public bool PBlas { get; protected set; }
         public bool Vml { get; protected set; }
         public bool Lapack { get; protected set; }
+        public bool ScaLapack { get; protected set; }
         public bool Vsl { get; protected set; }
         
         #endregion
@@ -113,6 +115,11 @@ namespace Compute.Bindings
                 this.Module.Headers.Add("mkl_blas.h");    
                 Info("Creating bindings for BLAS routines...");
             }
+            else if (SpBlas)
+            {
+                this.Module.Headers.Add("mkl_spblas.h");
+                Info("Creating bindings for Sparse BLAS routines...");
+            }
             else if (PBlas)
             {
                 this.Module.Headers.Add("mkl_pblas.h");
@@ -127,6 +134,11 @@ namespace Compute.Bindings
             {
                 this.Module.Headers.Add("mkl_lapack.h");
                 Info("Creating bindings for LAPACK routines...");
+            }
+            else if (ScaLapack)
+            {
+                this.Module.Headers.Add("mkl_scalapack.h");
+                Info("Creating bindings for SCALAPACK routines...");
             }
             else if (Vml)
             {    
@@ -159,14 +171,16 @@ namespace Compute.Bindings
         /// Do transformations that should happen before passes are processed.
         public override void Preprocess(Driver driver, ASTContext ctx)
         {
+
             
-               
         }
 
         /// Do transformations that should happen after passes are processed.
         public override void Postprocess(Driver driver, ASTContext ctx)
         {
-            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8").Concat(ctx.FindClass("MKL_Complex16")).Concat(ctx.FindClass("MKLVersion")).Concat(ctx.FindClass("VSLBRngProperties"));//VSLBRngProperties
+            IEnumerable<Class> classes = ctx.FindClass("MKL_Complex8").Concat(ctx.FindClass("MKL_Complex16")).Concat(ctx.FindClass("MKLVersion"))
+                .Concat(ctx.FindClass("VSLBRngProperties")) //mkl_vs
+                .Concat(ctx.FindClass("SparseMatrix")).Concat(ctx.FindClass("MatrixDescr")).Concat(ctx.FindClass("SparseVector")).Concat(ctx.FindClass("ReplaceOperation"));
 
             foreach (Class c in classes)
             {
