@@ -33,11 +33,5 @@ namespace Compute.Bindings
             }
             return true;
         }
-
-        public override bool VisitFieldDecl(Field field)
-        {
-            field.ExplicitlyIgnore();
-            return false;
-        }
     }
 }

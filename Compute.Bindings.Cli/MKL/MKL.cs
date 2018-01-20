@@ -85,6 +85,7 @@ namespace Compute.Bindings
             {
                 this.Module.Headers.Add("mkl_version.h");
                 this.Module.Headers.Add("mkl_service.h");
+                this.Module.Headers.Add("i_malloc.h");
             }
 
             else

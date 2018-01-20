@@ -10,7 +10,7 @@ namespace Compute.Tests.MKL
 {
     public class BlasTests
     {
-        [Fact]
+        
         public void CanAdd()
         {
             float[] a = new float[3] { 1f, 2f, 3f };

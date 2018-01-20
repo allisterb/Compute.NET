@@ -7,7 +7,7 @@
     <Authors>Allister Beharry</Authors>
     <Company />
     <Product>Compute.NET</Product>
-    <Description>Compute.NET bindings for the Intel MKL library.</Description>
+    <Description>.NET bindings for the Intel MKL library.</Description>
     <AssemblyVersion>0.1.3.0</AssemblyVersion>
     <FileVersion>0.1.3.0</FileVersion>
     <RootNamespace>IntelMKL</RootNamespace>
@@ -17,6 +17,7 @@
     <PackageTags>numeric Intel HPC</PackageTags>
     <Platforms>AnyCPU;x64</Platforms>
     <PackageReleaseNotes>Removed redundant BLAS bindings. Added PBLAS and BLACS routines.</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

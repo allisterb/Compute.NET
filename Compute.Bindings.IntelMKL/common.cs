@@ -836,34 +836,6 @@ namespace IntelMKL
             return __ret;
         }
 
-        public static int MKL_PROGRESS(ref int thread, ref int step, sbyte* stage, int lstage)
-        {
-            fixed (int* __refParamPtr0 = &thread)
-            {
-                var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &step)
-                {
-                    var __arg1 = __refParamPtr1;
-                    var __ret = __Internal.MKL_PROGRESS(__arg0, __arg1, stage, lstage);
-                    return __ret;
-                }
-            }
-        }
-
-        public static int MKL_PROGRESS_(ref int thread, ref int step, sbyte* stage, int lstage)
-        {
-            fixed (int* __refParamPtr0 = &thread)
-            {
-                var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &step)
-                {
-                    var __arg1 = __refParamPtr1;
-                    var __ret = __Internal.MKL_PROGRESS_(__arg0, __arg1, stage, lstage);
-                    return __ret;
-                }
-            }
-        }
-
         public static int MklProgress(ref int thread, ref int step, sbyte* stage, int lstage)
         {
             fixed (int* __refParamPtr0 = &thread)
@@ -873,20 +845,6 @@ namespace IntelMKL
                 {
                     var __arg1 = __refParamPtr1;
                     var __ret = __Internal.MklProgress(__arg0, __arg1, stage, lstage);
-                    return __ret;
-                }
-            }
-        }
-
-        public static int mkl_progress_(ref int thread, ref int step, sbyte* stage, int lstage)
-        {
-            fixed (int* __refParamPtr0 = &thread)
-            {
-                var __arg0 = __refParamPtr0;
-                fixed (int* __refParamPtr1 = &step)
-                {
-                    var __arg1 = __refParamPtr1;
-                    var __ret = __Internal.mkl_progress_(__arg0, __arg1, stage, lstage);
                     return __ret;
                 }
             }
@@ -1111,6 +1069,146 @@ namespace IntelMKL
         public static void MKL_Finalize()
         {
             __Internal.MKL_Finalize();
+        }
+
+        [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
+        public unsafe delegate global::System.IntPtr IMallocT(ulong size);
+
+        [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
+        public unsafe delegate global::System.IntPtr ICallocT(ulong nmemb, ulong size);
+
+        [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
+        public unsafe delegate global::System.IntPtr IReallocT(global::System.IntPtr ptr, ulong size);
+
+        [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(global::System.Runtime.InteropServices.CallingConvention.Cdecl)]
+        public unsafe delegate void IFreeT(global::System.IntPtr ptr);
+
+        public static global::IntelMKL.Service.IMallocT IMallocDll
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_malloc_dll");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IMallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IMallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_malloc_dll");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.ICallocT ICallocDll
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_calloc_dll");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.ICallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.ICallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_calloc_dll");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.IReallocT IReallocDll
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_realloc_dll");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IReallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IReallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_realloc_dll");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.IFreeT IFreeDll
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_free_dll");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IFreeT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IFreeT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_free_dll");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.IMallocT IMalloc
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_malloc");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IMallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IMallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_malloc");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.ICallocT ICalloc
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_calloc");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.ICallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.ICallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_calloc");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.IReallocT IRealloc
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_realloc");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IReallocT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IReallocT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_realloc");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
+        }
+
+        public static global::IntelMKL.Service.IFreeT IFree
+        {
+            get
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_free");
+                var __ptr0 = *__ptr;
+                return __ptr0 == IntPtr.Zero ? null : (global::IntelMKL.Service.IFreeT)Marshal.GetDelegateForFunctionPointer(__ptr0, typeof(global::IntelMKL.Service.IFreeT));
+            }
+
+            set
+            {
+                var __ptr = (global::System.IntPtr*)CppSharp.SymbolResolver.ResolveSymbol("mkl_rt", "i_free");
+                *__ptr = value == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(value);
+            }
         }
     }
 }
