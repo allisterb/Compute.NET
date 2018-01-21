@@ -103,7 +103,8 @@ With the packages installed you can use the MKL BLAS or vector math or other rou
             } 
             CBlas.Ssymm(layout, side, uplo, m, n, alpha, ref a[0], lda, ref b[0], ldb, beta, ref c[0], ldc);
         }
-    }```
+    }
+```
 
 Enums like `CBLAS_UPLO` are generated from the CBLAS header file. You pass `double[]` and `float[]` arrays to the BLAS functions using a `ref` alias to the first element of the array which is converted to a pointer and passed to the native function. You can use either LP64 or ILP64 array indexing depending on the namespace you import. 
 
