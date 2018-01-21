@@ -31,6 +31,7 @@ namespace Compute.Bindings
         public bool TBB { get; protected set; }
 
         public bool Blas { get; protected set; }
+        public bool CBlas { get; protected set; }
         public bool SpBlas { get; protected set; }
         public bool Blacs { get; protected set; }
         public bool PBlas { get; protected set; }
@@ -115,6 +116,11 @@ namespace Compute.Bindings
                 this.Module.Headers.Add("mkl_blas.h");    
                 Info("Creating bindings for BLAS routines...");
             }
+            else if (CBlas)
+            {
+                this.Module.Headers.Add("mkl_cblas.h");
+                Info("Creating bindings for CBLAS routines...");
+            }
             else if (SpBlas)
             {
                 this.Module.Headers.Add("mkl_spblas.h");
@@ -166,6 +172,10 @@ namespace Compute.Bindings
             if (WithoutCommon)
             {
                 driver.AddTranslationUnitPass(new MKL_IgnoreCommonDeclsPass(this, driver.Generator));
+            }
+            if (CBlas)
+            {
+                driver.AddTranslationUnitPass(new MKL_RemoveCBlasFunctionPrefixPass(this, driver.Generator));
             }
         }
         /// Do transformations that should happen before passes are processed.

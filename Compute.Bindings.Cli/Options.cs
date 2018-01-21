@@ -72,6 +72,9 @@ namespace Compute.Bindings
         [Option("blas", Required = false, HelpText = "Generate bindings for the MKL Basic Linear Algebra Subroutines (BLAS) routines. See https://software.intel.com/en-us/node/528682")]
         public bool Blas { get => ModuleName == "blas"; set => ModuleName = "blas"; }
 
+        [Option("cblas", Required = false, HelpText = "Generate bindings for the MKL C interface to BLAS. See https://software.intel.com/en-us/node/528682")]
+        public bool CBlas { get => ModuleName == "cblas"; set => ModuleName = "cblas"; }
+
         [Option("spblas", Required = false, HelpText = "Generate bindings for the MKL Sparse BLAS routines. See https://software.intel.com/en-us/node/528682")]
         public bool SpBlas { get => ModuleName == "spblas"; set => ModuleName = "spblas"; }
 
