@@ -12,7 +12,8 @@
     <AssemblyVersion>2018.1.156.1</AssemblyVersion>
     <FileVersion>2018.1.156.1</FileVersion>
     <NuspecFile>Compute.Winx64.IntelMKL.nuspec</NuspecFile>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Platforms>x64</Platforms>
+    <PackageIconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,6 +33,7 @@
   <ItemGroup>
     <None Update="native\**\*.dll">
       <Link>%(FileName)%(Extension)</Link>
+      <Visible>false</Visible>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Pack>false</Pack>
     </None>  

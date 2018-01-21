@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Compute.Winx64.CUDA</id>
+    <version>9.1.0</version>
+    <authors>Allister Beharry</authors>
+    <owners>Allister Beharry</owners>
+    <copyright>NVIDIA CUDA Toolkit is Copyright © 2018 NVIDIA Corporation</copyright>
+    <licenseUrl>>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.CUDA/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>https://github.com/allisterb/Compute.NET/</projectUrl>
+    <iconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</iconUrl>
+    <summary>NVIDIA CUDA Toolkit redistributable native Windows x64 dependencies for use with the Compute.Bindings.CUDA library</summary>
+    <description>NVIDIA CUDA Toolkit redistributable native Windows x64 dependencies for use with the Compute.Bindings.CUDA package. The DLL files will be automatically copied to your project output directory.</description>
+    <releaseNotes>See https://software.intel.com/en-us/articles/intel-math-kernel-library-intel-mkl-2018-release-notes</releaseNotes>
+    <tags>numerical NVIDIA CUDA GPU HPC</tags>
+  </metadata>
+  <files>
+    <file src="native\**\*.dll" target="build\native\" />
+    <file src="Compute.Winx64.CUDA.targets" target="build\Compute.Winx64.CUDA.targets" />
+  </files>
+</package>

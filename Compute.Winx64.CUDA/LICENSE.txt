@@ -1,0 +1,117 @@
+﻿2. CUDA Supplement to Software License Agreement
+Release date: March 24, 2016
+The terms set forth in this CUDA Supplement (“Supplement”) govern your use of the NVIDIA Licensed Software within the CUDA family of software products, namely the CUDA Toolkit and associated drivers, sample source code and the CUDA Nsight Visual Studio Edition (collectively, the “CUDA Licensed Software”) under the terms of your software license agreement (“SLA”) as modified by this Supplement. This Supplement is an exhibit to the SLA and is hereby incorporated as an integral part thereto. Capitalized terms used but not defined herein shall have the meaning assigned to them in the SLA. In the event of conflict between the terms in this Supplement and the terms in the SLA, this Supplement shall control.
+
+2.1. Sample Source Code Modification, Ownership and Distribution
+Subject to the terms of the SLA and this Supplement, NVIDIA hereby grants you a non-exclusive, non-transferable license, without the right to sublicense, during the applicable license term unless earlier terminated pursuant to the SLA, to have Authorized Users modify and create derivative works of CUDA Licensed Software that constitutes sample source code, when provided to you by NVIDIA in source code form. You hold all rights, title and interest in and to your modifications and derivative works of the sample source code software that you create as permitted hereunder (collective, Derivatives”), subject to NVIDIA’s underlying Intellectual Property Rights in and to the CUDA Licensed Software; provided, however that you grant NVIDIA and its Affiliates an irrevocable, perpetual, nonexclusive, worldwide, royalty-free paid-up license to make, have made, use, have used, reproduce, license, distribute, sublicense, transfer and otherwise commercialize Derivatives including (without limitation) with the CUDA Licensed Software or other NVIDIA products, technologies or materials. You may distribute the sample source code as delivered by NVIDIA and/or your Derivatives, provided that all NVIDIA copyright notices and trademarks are maintained and used properly and the sample source code includes the following notice: “This software contains source code provided by NVIDIA Corporation.”
+
+2.2. CUDA Toolkit Distribution
+Subject to the terms of the SLA and this Supplement, NVIDIA hereby grants you a non-exclusive, non-transferable license during the applicable license term unless earlier terminated pursuant to the SLA, to distribute the CUDA Licensed Software identified in Appendix A to this Supplement when delivered to you as part of the CUDA Toolkit in source code form or binary form (but not when provided to you as part of a hardware product), subject to the following: (a) such distribution is solely in binary form to your licensees (“Customers”) only as a component of your own software products having additional material functionality beyond the redistributable CUDA Toolkit Licensed Software (each, a “Licensee Application"); and (b) you shall design a Licensee Application such that the distributable software files are installed only in a private (non-shared) directory location that is used only by the Licensee Application. Subject to the terms and conditions of the SLA and this Supplement, you may further authorize Customers to redistribute the CUDA Toolkit Licensed Software as incorporated into a Licensee Application, solely in binary form, provided, however, that you shall require in your agreements with your Customers that their distributions be on terms at least as restrictive as those applicable for your use of the CUDA Toolkit Licensed Software within a Licensee Application. The expiration or termination of your licenses to the CUDA Toolkit Licensed Software under the SLA and this Supplement will not affect your previous CUDA Toolkit distributions in compliance with the SLA and this Supplement.
+
+The above distributions are subject to the following: (a) all distributions by you or your distribution channels must be consistent with the terms of the AGREEMENT; (b) the distributed CUDA License Software must include valid copyright notices indicating NVIDIA’s ownership of the Licensed Software and (if permitted) modifications; and (c) you must enter into enforceable agreements that pass down terms consistent with the terms set forth in the AGREEMENT for use of the distributable CUDA License Software, including (without limitation) terms relating to the license grant and license restrictions, confidentiality and protection of NVIDIA’s Intellectual Property Rights in and to the CUDA Licensed Software. You are liable for the distribution and use of CUDA Licensed Software if you failed to comply with the distribution requirements of this Supplement. You agree to notify NVIDIA in writing of any known or suspected distribution or use of the CUDA Licensed Software not in compliance with the terms of the AGREEMENT, and to enforce the terms of your agreements with respect to CUDA Licensed Software you distributed.
+
+2.3. Operating Systems
+CUDA Licensed Software designed exclusively for use on the Linux or FreeBSD operating systems, or other operating systems derived from the source code to these operating systems, may be copied and redistributed, provided that the object code files thereof are not modified in any way (except for unzipping of compressed files).
+
+2.4. License Duration
+Each CUDA Licensed Software is licensed to you for an initial duration of two years starting from the date of delivery or download. The licenses granted will automatically renew for successive one year periods, provided that NVIDIA reserves the right to terminate licenses upon ninety days (90) days written notice to you prior to the commencement of a renewal year in addition to the termination rights set forth in the SLA.
+
+2.5. Audit
+During the term of the AGREEMENT and for three (3) years thereafter, you will maintain all usual and proper books and records of account relating to the CUDA Licensed Software provided under the AGREEMENT. During such period and upon written notice to you, NVIDIA or its authorized third party auditors subject to confidentiality obligations will have the right to inspect and audit your Enterprise books and records for the purpose of confirming compliance with the terms of the AGREEMENT. Any such inspection and audit will be conducted during regular business hours and no more frequently than annually unless non-compliance was previously found. If such an inspection and audit reveals a material non-conformance with the terms of the AGREEMENT, then you will pay NVIDIA’s reasonable costs of conducting the inspection and audit. Further, you agree that the party delivering the CUDA Licensed Software to you may collect and disclose to NVIDIA information for NVIDIA to verify your compliance with the terms of the AGREEMENT including (without limitation) information regarding your use of the CUDA Licensed Software.
+
+2.6. Expiration and Termination of this Supplement
+Your failure to comply with the terms of this Supplement is ground for termination for breach by NVIDIA under the SLA. This Supplement will automatically expire or terminate upon the expiration or termination of your rights to CUDA Licensed Software under the SLA or this Supplement.
+
+2.7. Attachment A
+Redistributable Software
+In connection with Section 1.2.1.1 of this Agreement, the following CUDA Toolkit files may be distributed with Licensee Applications developed by you, including certain variations of these files that have version number or architecture specific information embedded in the file name - as an example only, for release version 6.0 of the 64-bit Windows software, the file cudart64_60.dll is redistributable.
+
+Component : CUDA Runtime
+  Windows : cudart.dll, cudart_static.lib, cudadevrt.lib
+  Mac OSX : libcudart.dylib, libcudart_static.a, libcudadevrt.a
+  Linux   : libcudart.so, libcudart_static.a, libcudadevrt.a
+  Android : libcudart.so, libcudart_static.a, libcudadevrt.a
+
+Component : CUDA FFT Library
+  Windows : cufft.dll, cufftw.dll, cufft.lib, cufftw.lib
+  Mac OSX : libcufft.dylib, libcufft_static.a, libcufftw.dylib, libcufftw_static.a
+  Linux   : libcufft.so, libcufft_static.a, libcufftw.so, libcufftw_static.a
+  Android : libcufft.so, libcufft_static.a, libcufftw.so, libcufftw_static.a
+
+Component : CUDA BLAS Library
+  Windows : cublas.dll, cublas_device.lib
+  Mac OSX : libcublas.dylib, libcublas_static.a, libcublas_device.a
+  Linux   : libcublas.so, libcublas_static.a, libcublas_device.a
+  Android : libcublas.so, libcublas_static.a, libcublas_device.a
+
+Component : NVIDIA "Drop-in" BLAS Library
+  Windows : nvblas.dll
+  Mac OSX : libnvblas.dylib
+  Linux   : libnvblas.so
+
+Component : CUDA Sparse Matrix Library
+  Windows : cusparse.dll, cusparse.lib
+  Mac OSX : libcusparse.dylib, libcusparse_static.a
+  Linux   : libcusparse.so, libcusparse_static.a
+  Android : libcusparse.so, libcusparse_static.a
+
+Component : CUDA Linear Solver Library
+  Windows : cusolver.dll, cusolver.lib
+  Mac OSX : libcusolver.dylib, libcusolver_static.a
+  Linux   : libcusolver.so, libcusolver_static.a
+  Android : libcusolver.so, libcusolver_static.a
+
+Component : CUDA Random Number Generation Library
+  Windows : curand.dll, curand.lib
+  Mac OSX : libcurand.dylib, libcurand_static.a
+  Linux   : libcurand.so, libcurand_static.a
+  Android : libcurand.so, libcurand_static.a
+
+Component : CUDA Accelerated Graph Library
+  Windows : nvgraph.dll, nvgraph.lib
+  Mac OSX : libnvgraph.dylib, libnvgraph_static.a
+  Linux   : libnvgraph.so, libnvgraph_static.a
+  Android : libnvgraph.so, libnvgraph_static.a
+
+
+Component : NVIDIA Performance Primitives Library
+  Windows : nppc.dll, nppc.lib, nppial.dll, nppial.lib, nppicc.dll, nppicc.lib, nppicom.dll, nppicom.lib, nppidei.dll, nppidei.lib, nppif.dll, nppif.lib, nppig.dll, nppig.lib, nppim.dll, nppim.lib, nppist.dll, nppist.lib, nppisu.dll, nppisu.lib, nppitc.dll, nppitc.lib, npps.dll, npps.lib
+  Mac OSX : libnppc.dylib, libnppc_static.a, libnppial.dylib, libnppial_static.a, libnppicc.dylib, libnppicc_static.a, libnppicom.dylib, libnppicom_static.a, libnppidei.dylib, libnppidei_static.a, libnppif.dylib, libnppif_static.a, libnppig.dylib, libnppig_static.a, libnppim.dylib, libnppim_static.a, libnppist.dylib, libnppist_static.a, libnppisu.dylib, libnppisu_static.a, libnppitc.dylib, libnppitc_static.a, libnpps.dylib, libnpps_static.a
+  Linux   : libnppc.so, libnppc_static.a, libnppial.so, libnppial_static.a, libnppicc.so, libnppicc_static.a, libnppicom.so, libnppicom_static.a, libnppidei.so, libnppidei_static.a, libnppif.so, libnppif_static.a, libnppig.so, libnppig_static.a, libnppim.so, libnppim_static.a, libnppist.so, libnppist_static.a, libnppisu.so, libnppisu_static.a, libnppitc.so, libnppitc_static.a, libnpps.so, libnpps_static.a
+  Android : libnppc.so, libnppc_static.a, libnppial.so, libnppial_static.a, libnppicc.so, libnppicc_static.a, libnppicom.so, libnppicom_static.a, libnppidei.so, libnppidei_static.a, libnppif.so, libnppif_static.a, libnppig.so, libnppig_static.a, libnppim.so, libnppim_static.a, libnppist.so, libnppist_static.a, libnppisu.so, libnppisu_static.a, libnppitc.so, libnppitc_static.a, libnpps.so, libnpps_static.a
+
+Component : Internal common library required for statically linking to cuBLAS, cuSPARSE, cuFFT, cuRAND and NPP
+  Mac OSX : libculibos.a
+  Linux   : libculibos.a
+
+Component : NVIDIA Runtime Compilation Library
+  Windows : nvrtc.dll, nvrtc-builtins.dll
+  Mac OSX : libnvrtc.dylib, libnvrtc-builtins.dylib
+  Linux   : libnvrtc.so, libnvrtc-builtins.so
+
+Component : NVIDIA Optimizing Compiler Library
+  Windows : nvvm.dll
+  Mac OSX : libnvvm.dylib
+  Linux   : libnvvm.so
+
+Component : NVIDIA Common Device Math Functions Library
+  Windows : libdevice.10.bc
+  Mac OSX : libdevice.10.bc
+  Linux   : libdevice.10.bc
+
+Component : CUDA Occupancy Calculation Header Library
+  All     : cuda_occupancy.h
+
+Component : CUDA Profiling Tools Interface (CUPTI) Library
+  Windows : cupti.dll
+  Mac OSX : libcupti.dylib
+  Linux   : libcupti.so
+
+Component : NVIDIA Tools Extension Library
+  Windows : nvToolsExt.dll, nvToolsExt.lib
+  Mac OSX : libnvToolsExt.dylib
+  Linux   : libnvToolsExt.so
+      
+
+
+Read more at: http://docs.nvidia.com/cuda/eula/index.html#ixzz54qdsn0xC 

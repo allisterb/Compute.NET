@@ -5,11 +5,12 @@
     <version>2018.1.156.1</version>
     <authors>Allister Beharry</authors>
     <owners>Allister Beharry</owners>
-    <copyright>Copyright © 2017 Intel Corporation</copyright>
+    <copyright>Intel Math Kernel Library is Copyright © 2018 Intel Corporation</copyright>
     <licenseUrl>https://raw.githubusercontent.com/allisterb/Compute.NET/master/Compute.Winx64.IntelMKL/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/allisterb/Compute.NET/</projectUrl>
+    <iconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <summary>Intel Math Kernel Library redistributable native Windows x64 dependencies</summary>
+    <summary>Intel Math Kernel Library redistributable native Windows x64 dependencies for use with the Compute.Bindings.IntelMKL library</summary>
     <description>Intel Math Kernel Library redistributable native Windows x64 dependencies from the Compute.NET project. The DLL files will be automatically copied to your project output directory.</description>
     <releaseNotes>See https://software.intel.com/en-us/articles/intel-math-kernel-library-intel-mkl-2018-release-notes</releaseNotes>
     <tags>numerical Intel HPC</tags>

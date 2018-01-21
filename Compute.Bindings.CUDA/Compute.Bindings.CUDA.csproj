@@ -6,13 +6,34 @@
     <Version>0.2.0</Version>
     <Authors>Allister Beharry</Authors>
     <Company />
-    <Product>Compute.Bindings</Product>
+    <Product>Compute.NET</Product>
     <Description>.NET bindings for the NVIDIA CUDA toolkit</Description>
     <AssemblyVersion>0.2.0.0</AssemblyVersion>
-    <FileVersion>0.0.0.0</FileVersion>
+    <FileVersion>0.2.0.0</FileVersion>
+    <PackageIconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/allisterb/Compute.NET/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/allisterb/Compute.NET</RepositoryUrl>
+    <PackageTags>numerical NVIDIA CUDA HPC</PackageTags>
+    <PackageLicenseUrl>https://github.com/allisterb/Compute.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>..\x64\Release</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>..\x64\Release</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\x64\Release</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutputPath>..\x64\Release</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 

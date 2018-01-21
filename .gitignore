@@ -262,3 +262,4 @@ __pycache__/
 /Compute.Winx64.IntelMKL/output
 /Compute.Winx64.IntelMKL/native
 /build.txt
+/Compute.Winx64.CUDA/native
