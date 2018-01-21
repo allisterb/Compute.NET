@@ -2,20 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Platforms>x64</Platforms>
-    <Version>9.1</Version>
+    <Version>9.1.0.0</Version>
     <Authors>Allister Beharry</Authors>
     <Product>Compute.NET</Product>
     <Description>NVIDIA CUDA Toolkit redistributable x64 binaries for Windows.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.CUDA/LICENSE.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/allisterb/Compute.NET</PackageProjectUrl>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
     <FileVersion>9.1.0.0</FileVersion>
     <NuspecFile>Compute.Winx64.CUDA.nuspec</NuspecFile>
     <Platforms>x64</Platforms>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -29,7 +24,6 @@
   <ItemGroup>
     <None Update="native\**\*.dll">
       <Link>%(FileName)%(Extension)</Link>
-      <Visible>false</Visible>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Pack>false</Pack>
     </None>

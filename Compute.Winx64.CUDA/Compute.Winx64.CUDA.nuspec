@@ -6,7 +6,7 @@
     <authors>Allister Beharry</authors>
     <owners>Allister Beharry</owners>
     <copyright>NVIDIA CUDA Toolkit is Copyright © 2018 NVIDIA Corporation</copyright>
-    <licenseUrl>>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.CUDA/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/allisterb/Compute.NET/blob/master/Compute.Winx64.CUDA/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/allisterb/Compute.NET/</projectUrl>
     <iconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</iconUrl>
