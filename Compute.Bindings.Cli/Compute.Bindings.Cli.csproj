@@ -117,12 +117,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACML\ACML.cs" />
+    <Compile Include="CUDA\CUDA.cs" />
+    <Compile Include="MKL\MKL_RemoveCBlasFunctionPrefixPass.cs" />
+    <Compile Include="TranslationUnitPasses\GetAllClassDeclsPass.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="MKL\MKL.cs" />
     <Compile Include="MKL\MKLTypeMaps.cs" />
     <Compile Include="MKL\MKL_IgnoreCommonDeclsPass.cs" />
-    <Compile Include="MKL\MKL_ConvertFunctionParameterDeclsPass.cs" />
-    <Compile Include="MKL\MKL_RemoveCBlasFunctionPrefixPass.cs" />
+    <Compile Include="TranslationUnitPasses\ConvertFunctionParameterDeclsPass.cs" />
+    <Compile Include="CUDA\CUDA_RemoveCBlasFunctionPrefixPass.cs" />
     <Compile Include="MKL\MKL_IgnoreFortranAndUpperCaseDeclsPass.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />

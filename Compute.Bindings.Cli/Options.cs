@@ -99,4 +99,18 @@ namespace Compute.Bindings
         [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
         public bool WithoutCommon { get; set; }
     }
+
+    [Verb("cuda", HelpText = "Generate bindings for the nVidia CUDA libraries.")]
+    class CUDAOptions : Options
+    {
+        [Option("32bit", Required = false, HelpText = "Use the 32-bit versions of the CUDAlibrary. By default the x86_64 version is used.")]
+        public bool Use32bit
+        {
+            get; set;
+        }
+
+        [Option("cublas", Required = false, HelpText = "Generate bindings for the NVIDIA cuBLAS routines. See https://developer.nvidia.com/gpu-accelerated-libraries")]
+        public bool cuBlas { get => ModuleName == "cublas"; set => ModuleName = "cublas"; }
+
+    }
 }

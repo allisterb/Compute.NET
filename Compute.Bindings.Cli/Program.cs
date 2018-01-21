@@ -117,6 +117,7 @@ namespace Compute.Bindings
                     Log.Error($"You must select a MKL module to create bindings for. Use the --help option to get the list of available modules.");
                     Exit(ExitResult.INVALID_OPTIONS);
                 }
+
                 if (!string.IsNullOrEmpty(o.Root) && !Directory.Exists(o.Root))
                 {
                     Log.Error($"The library root directory specified {o.Root} does not exist.");
@@ -154,6 +155,40 @@ namespace Compute.Bindings
                     }
                 }
                 ProgramLibrary = new MKL(ProgramOptions);
+                ConsoleDriver.Run(ProgramLibrary);
+                if (ProgramLibrary.CleanAndFixup())
+                {
+                    Exit(ExitResult.SUCCESS);
+                }
+                else
+                {
+                    Exit(ExitResult.ERROR_DURING_CLEANUP);
+                }
+
+            })
+            .WithParsed<CUDAOptions>(o =>
+            {
+                if (!ProgramOptions.ContainsKey("RootDirectory"))
+                {
+                    string e = Environment.GetEnvironmentVariable("CUDA_PATH");
+                    if (string.IsNullOrEmpty(e))
+                    {
+                        L.Error("The --root option was not specified and the CUDA_PATH environment variable was not found.");
+                        Exit(ExitResult.INVALID_OPTIONS);
+                    }
+                    else if (!Directory.Exists(e))
+                    {
+                        L.Error("The --root option was not specified and the directory specified by the CUDA_PATH environment variable does not exist.");
+                        Exit(ExitResult.INVALID_OPTIONS);
+                        ProgramOptions.Add("Root", e);
+                    }
+                    else
+                    {
+                        ProgramOptions.Add("RootDirectory", new DirectoryInfo(e));
+
+                    }
+                }
+                ProgramLibrary = new CUDA(ProgramOptions);
                 ConsoleDriver.Run(ProgramLibrary);
                 if (ProgramLibrary.CleanAndFixup())
                 {

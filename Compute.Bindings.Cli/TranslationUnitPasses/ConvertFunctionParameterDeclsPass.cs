@@ -11,11 +11,11 @@ using CppSharp.Passes;
 
 namespace Compute.Bindings
 {
-    public class MKL_ConvertFunctionParameterDeclsPass : TranslationUnitPass
+    public class ConvertFunctionParameterDeclsPass : TranslationUnitPass
     {
         protected Generator G;
         protected Library Library;
-        public MKL_ConvertFunctionParameterDeclsPass(Library lib, Generator gen) : base()
+        public ConvertFunctionParameterDeclsPass(Library lib, Generator gen) : base()
         {
             G = gen;
             Library = lib;
