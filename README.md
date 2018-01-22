@@ -4,10 +4,10 @@
 Get the latest release from the Compute.NET [package feed](https://www.myget.org/feed/Packages/computedotnet).
 
 ## About
-Compute.NET provides auto-generated bindings for native numerical computing libraries like [Intel Math Kernel Library](https://software.intel.com/en-us/mkl), [AMD Core Math Library](https://developer.amd.com/tools-and-sdks/archive/acml-downloads-resources/) (and its successors), AMD [clBLAS](https://gpuopen.com/compute-product/clblas/), cl* and others. The bindings are auto-generated from the library's C headers using the excellent [CppSharp](https:/github.com/Mono/CppSharp) library. The generator is a CLI program that be can used to generate individual modules of each library as well as customize key aspects of the generated code, such as the use of .NET structs instead of classes for complex data types, and marshalling array parameters in native code functions (either as managed arrays or pointers.) 
+Compute.NET provides auto-generated bindings for native numerical computing libraries like [Intel Math Kernel Library](https://software.intel.com/en-us/mkl), [AMD Core Math Library](https://developer.amd.com/tools-and-sdks/archive/acml-downloads-resources/) (and its successors), NVIDIA [CUDA](https://developer.nvidia.com/about-cuda) AMD [clBLAS](https://gpuopen.com/compute-product/clblas/), cl* and others. The bindings are auto-generated from the library's C headers using the excellent [CppSharp](https:/github.com/Mono/CppSharp) library. The generator is a CLI program that be can used to generate individual modules of each library as well as customize key aspects of the generated code, such as the use of .NET structs instead of classes for complex data types, and marshalling array parameters in native code functions (either as managed arrays or pointers.) 
 
 ## Status
-* CLI Bindings Generator: Works on Windows for Intel Math Kernel Library.
+* CLI Bindings Generator: Works on Windows.
 
 * Bindings: 
 	* Compute.Bindings.IntelMKL [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Bindings.IntelMKL) available on Myget [feed](https://www.myget.org/F/computedotnet/api/v2). This library is not Windows-specific but I haven't tested it on Linux or other platforms yet. The following modules are available:
@@ -15,10 +15,12 @@ Compute.NET provides auto-generated bindings for native numerical computing libr
 		* LAPACK and SCALAPACK
 		* VML
 		* VSL
+	* Compute.Bindings.CUDA [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Bindings.CUDA) available on [NuGet](https://www.nuget.org/packages/Compute.Bindings.CUDA/) and [MyGet](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Bindings.CUDA). This library is not Windows-specific but I haven't tested it on Linux or other platforms yet. The entire runtime API is bound together with the following modules:
+		* cuBLAS
 	
-
 * Native Library Packages: 
-	* Compute.Winx64.IntelMKL [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.IntelMKL) available on MyGet [feed](https://www.myget.org/F/computedotnet/api/v2).
+	* Compute.Winx64.IntelMKL [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.CUDA) available on MyGet [feed](https://www.myget.org/F/computedotnet/api/v2).
+	* Compute.Winx64.CUDA package available on [MyGet](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.CUDA) and [NuGet](https://www.nuget.org/packages/Compute.Winx64.CUDA/).
  
 ## Usage
 
