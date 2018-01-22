@@ -25,8 +25,6 @@ namespace Compute.Bindings
 
         #region Properties
         public bool Ilp64 { get; protected set; }
-        public bool WithoutCommon { get; protected set; }
-
         public bool Sequential { get; protected set; }
         public bool TBB { get; protected set; }
 

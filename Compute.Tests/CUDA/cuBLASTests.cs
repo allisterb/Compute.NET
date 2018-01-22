@@ -15,11 +15,12 @@ namespace Compute.Tests
         }
 
         [Fact(DisplayName = "Can get the version")]
-        public void CanAdd()
+        public void CanGetVersion()
         {
             int v = 0;
             cuBlas.GetVersion(ref v);
             Assert.True(v > 9000);
+            //CudaArray a = f
         }
     }
 }

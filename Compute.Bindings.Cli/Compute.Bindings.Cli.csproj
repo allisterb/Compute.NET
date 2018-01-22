@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="ACML\ACML.cs" />
     <Compile Include="CUDA\CUDA.cs" />
+    <Compile Include="CUDA\CUDA_IgnoreCommonClassesPass.cs" />
     <Compile Include="MKL\MKL_RemoveCBlasFunctionPrefixPass.cs" />
     <Compile Include="TranslationUnitPasses\GetAllClassDeclsPass.cs" />
     <Compile Include="Library.cs" />

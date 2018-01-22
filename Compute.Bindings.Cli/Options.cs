@@ -50,6 +50,9 @@ namespace Compute.Bindings
         [Option('n', "namespace", Required = false, HelpText = "Specify the namespace that the bindings class will belong to.")]
         public string Namespace { get; set; }
 
+        [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
+        public bool WithoutCommon { get; set; }
+
         [Option('v', "verbose", Required = false, HelpText = "Enable verbose output from CppSharp.", Default = false)]
         public bool Verbose { get; set; }
     }
@@ -95,9 +98,6 @@ namespace Compute.Bindings
 
         [Option("vsl", Required = false, HelpText = "Generate bindings for the MKL vector statistics routines. See https://software.intel.com/en-us/node/528682")]
         public bool Vsl { get => ModuleName == "vsl"; set => ModuleName = "vsl"; }
-
-        [Option("without-common", Required = false, HelpText = "Do not generate bindings for common MKL data structures and functions", Default = false)]
-        public bool WithoutCommon { get; set; }
     }
 
     [Verb("cuda", HelpText = "Generate bindings for the nVidia CUDA libraries.")]

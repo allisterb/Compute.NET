@@ -2524,5 +2524,4951 @@ namespace CUDA
         }
     }
 
-    
+    public unsafe partial class cuBlasApi
+    {
+        public partial struct __Internal
+        {
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCreate_v2")]
+            internal static extern global::CUDA.CublasStatusT CreateV2(global::System.IntPtr handle);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDestroy_v2")]
+            internal static extern global::CUDA.CublasStatusT DestroyV2(global::System.IntPtr handle);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetVersion_v2")]
+            internal static extern global::CUDA.CublasStatusT GetVersionV2(global::System.IntPtr handle, int* version);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetProperty")]
+            internal static extern global::CUDA.CublasStatusT GetProperty(global::CUDA.LibraryPropertyTypeT type, int* value);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetStream_v2")]
+            internal static extern global::CUDA.CublasStatusT SetStreamV2(global::System.IntPtr handle, global::System.IntPtr streamId);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetStream_v2")]
+            internal static extern global::CUDA.CublasStatusT GetStreamV2(global::System.IntPtr handle, global::System.IntPtr streamId);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetPointerMode_v2")]
+            internal static extern global::CUDA.CublasStatusT GetPointerModeV2(global::System.IntPtr handle, global::CUDA.CublasPointerModeT* mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetPointerMode_v2")]
+            internal static extern global::CUDA.CublasStatusT SetPointerModeV2(global::System.IntPtr handle, global::CUDA.CublasPointerModeT mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetAtomicsMode")]
+            internal static extern global::CUDA.CublasStatusT GetAtomicsMode(global::System.IntPtr handle, global::CUDA.CublasAtomicsModeT* mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetAtomicsMode")]
+            internal static extern global::CUDA.CublasStatusT SetAtomicsMode(global::System.IntPtr handle, global::CUDA.CublasAtomicsModeT mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetMathMode")]
+            internal static extern global::CUDA.CublasStatusT GetMathMode(global::System.IntPtr handle, global::CUDA.CublasMathT* mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetMathMode")]
+            internal static extern global::CUDA.CublasStatusT SetMathMode(global::System.IntPtr handle, global::CUDA.CublasMathT mode);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetVector")]
+            internal static extern global::CUDA.CublasStatusT SetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr devicePtr, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetVector")]
+            internal static extern global::CUDA.CublasStatusT GetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetMatrix")]
+            internal static extern global::CUDA.CublasStatusT SetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetMatrix")]
+            internal static extern global::CUDA.CublasStatusT GetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetVectorAsync")]
+            internal static extern global::CUDA.CublasStatusT SetVectorAsync(int n, int elemSize, global::System.IntPtr hostPtr, int incx, global::System.IntPtr devicePtr, int incy, global::System.IntPtr stream);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetVectorAsync")]
+            internal static extern global::CUDA.CublasStatusT GetVectorAsync(int n, int elemSize, global::System.IntPtr devicePtr, int incx, global::System.IntPtr hostPtr, int incy, global::System.IntPtr stream);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSetMatrixAsync")]
+            internal static extern global::CUDA.CublasStatusT SetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr stream);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGetMatrixAsync")]
+            internal static extern global::CUDA.CublasStatusT GetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr stream);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasXerbla")]
+            internal static extern void Xerbla([MarshalAs(UnmanagedType.LPStr)] string srName, int info);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasNrm2Ex")]
+            internal static extern global::CUDA.CublasStatusT Nrm2Ex(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSnrm2_v2")]
+            internal static extern global::CUDA.CublasStatusT Snrm2V2(global::System.IntPtr handle, int n, float* x, int incx, float* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDnrm2_v2")]
+            internal static extern global::CUDA.CublasStatusT Dnrm2V2(global::System.IntPtr handle, int n, double* x, int incx, double* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasScnrm2_v2")]
+            internal static extern global::CUDA.CublasStatusT Scnrm2V2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, float* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDznrm2_v2")]
+            internal static extern global::CUDA.CublasStatusT Dznrm2V2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, double* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDotEx")]
+            internal static extern global::CUDA.CublasStatusT DotEx(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDotcEx")]
+            internal static extern global::CUDA.CublasStatusT DotcEx(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSdot_v2")]
+            internal static extern global::CUDA.CublasStatusT SdotV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDdot_v2")]
+            internal static extern global::CUDA.CublasStatusT DdotV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCdotu_v2")]
+            internal static extern global::CUDA.CublasStatusT CdotuV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCdotc_v2")]
+            internal static extern global::CUDA.CublasStatusT CdotcV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZdotu_v2")]
+            internal static extern global::CUDA.CublasStatusT ZdotuV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZdotc_v2")]
+            internal static extern global::CUDA.CublasStatusT ZdotcV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasScalEx")]
+            internal static extern global::CUDA.CublasStatusT ScalEx(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::CUDA.CudaDataTypeT executionType);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSscal_v2")]
+            internal static extern global::CUDA.CublasStatusT SscalV2(global::System.IntPtr handle, int n, float* alpha, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDscal_v2")]
+            internal static extern global::CUDA.CublasStatusT DscalV2(global::System.IntPtr handle, int n, double* alpha, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCscal_v2")]
+            internal static extern global::CUDA.CublasStatusT CscalV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsscal_v2")]
+            internal static extern global::CUDA.CublasStatusT CsscalV2(global::System.IntPtr handle, int n, float* alpha, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZscal_v2")]
+            internal static extern global::CUDA.CublasStatusT ZscalV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZdscal_v2")]
+            internal static extern global::CUDA.CublasStatusT ZdscalV2(global::System.IntPtr handle, int n, double* alpha, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasAxpyEx")]
+            internal static extern global::CUDA.CublasStatusT AxpyEx(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::CUDA.CudaDataTypeT executiontype);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSaxpy_v2")]
+            internal static extern global::CUDA.CublasStatusT SaxpyV2(global::System.IntPtr handle, int n, float* alpha, float* x, int incx, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDaxpy_v2")]
+            internal static extern global::CUDA.CublasStatusT DaxpyV2(global::System.IntPtr handle, int n, double* alpha, double* x, int incx, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCaxpy_v2")]
+            internal static extern global::CUDA.CublasStatusT CaxpyV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZaxpy_v2")]
+            internal static extern global::CUDA.CublasStatusT ZaxpyV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasScopy_v2")]
+            internal static extern global::CUDA.CublasStatusT ScopyV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDcopy_v2")]
+            internal static extern global::CUDA.CublasStatusT DcopyV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCcopy_v2")]
+            internal static extern global::CUDA.CublasStatusT CcopyV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZcopy_v2")]
+            internal static extern global::CUDA.CublasStatusT ZcopyV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSswap_v2")]
+            internal static extern global::CUDA.CublasStatusT SswapV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDswap_v2")]
+            internal static extern global::CUDA.CublasStatusT DswapV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCswap_v2")]
+            internal static extern global::CUDA.CublasStatusT CswapV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZswap_v2")]
+            internal static extern global::CUDA.CublasStatusT ZswapV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIsamax_v2")]
+            internal static extern global::CUDA.CublasStatusT IsamaxV2(global::System.IntPtr handle, int n, float* x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIdamax_v2")]
+            internal static extern global::CUDA.CublasStatusT IdamaxV2(global::System.IntPtr handle, int n, double* x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIcamax_v2")]
+            internal static extern global::CUDA.CublasStatusT IcamaxV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIzamax_v2")]
+            internal static extern global::CUDA.CublasStatusT IzamaxV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIsamin_v2")]
+            internal static extern global::CUDA.CublasStatusT IsaminV2(global::System.IntPtr handle, int n, float* x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIdamin_v2")]
+            internal static extern global::CUDA.CublasStatusT IdaminV2(global::System.IntPtr handle, int n, double* x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIcamin_v2")]
+            internal static extern global::CUDA.CublasStatusT IcaminV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasIzamin_v2")]
+            internal static extern global::CUDA.CublasStatusT IzaminV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSasum_v2")]
+            internal static extern global::CUDA.CublasStatusT SasumV2(global::System.IntPtr handle, int n, float* x, int incx, float* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDasum_v2")]
+            internal static extern global::CUDA.CublasStatusT DasumV2(global::System.IntPtr handle, int n, double* x, int incx, double* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasScasum_v2")]
+            internal static extern global::CUDA.CublasStatusT ScasumV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, float* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDzasum_v2")]
+            internal static extern global::CUDA.CublasStatusT DzasumV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, double* result);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSrot_v2")]
+            internal static extern global::CUDA.CublasStatusT SrotV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* c, float* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDrot_v2")]
+            internal static extern global::CUDA.CublasStatusT DrotV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* c, double* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCrot_v2")]
+            internal static extern global::CUDA.CublasStatusT CrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float* c, global::System.IntPtr s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsrot_v2")]
+            internal static extern global::CUDA.CublasStatusT CsrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float* c, float* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZrot_v2")]
+            internal static extern global::CUDA.CublasStatusT ZrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double* c, global::System.IntPtr s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZdrot_v2")]
+            internal static extern global::CUDA.CublasStatusT ZdrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double* c, double* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSrotg_v2")]
+            internal static extern global::CUDA.CublasStatusT SrotgV2(global::System.IntPtr handle, float* a, float* b, float* c, float* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDrotg_v2")]
+            internal static extern global::CUDA.CublasStatusT DrotgV2(global::System.IntPtr handle, double* a, double* b, double* c, double* s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCrotg_v2")]
+            internal static extern global::CUDA.CublasStatusT CrotgV2(global::System.IntPtr handle, global::System.IntPtr a, global::System.IntPtr b, float* c, global::System.IntPtr s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZrotg_v2")]
+            internal static extern global::CUDA.CublasStatusT ZrotgV2(global::System.IntPtr handle, global::System.IntPtr a, global::System.IntPtr b, double* c, global::System.IntPtr s);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSrotm_v2")]
+            internal static extern global::CUDA.CublasStatusT SrotmV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* param);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDrotm_v2")]
+            internal static extern global::CUDA.CublasStatusT DrotmV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* param);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSrotmg_v2")]
+            internal static extern global::CUDA.CublasStatusT SrotmgV2(global::System.IntPtr handle, float* d1, float* d2, float* x1, float* y1, float* param);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDrotmg_v2")]
+            internal static extern global::CUDA.CublasStatusT DrotmgV2(global::System.IntPtr handle, double* d1, double* d2, double* x1, double* y1, double* param);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgemv_v2")]
+            internal static extern global::CUDA.CublasStatusT SgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgemv_v2")]
+            internal static extern global::CUDA.CublasStatusT DgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemv_v2")]
+            internal static extern global::CUDA.CublasStatusT CgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgemv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT SgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT CgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrmv_v2")]
+            internal static extern global::CUDA.CublasStatusT StrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* A, int lda, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* A, int lda, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrmv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT StbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, float* A, int lda, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, double* A, int lda, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT StpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* AP, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* AP, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrsv_v2")]
+            internal static extern global::CUDA.CublasStatusT StrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* A, int lda, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrsv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* A, int lda, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrsv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrsv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStpsv_v2")]
+            internal static extern global::CUDA.CublasStatusT StpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* AP, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtpsv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* AP, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtpsv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtpsv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStbsv_v2")]
+            internal static extern global::CUDA.CublasStatusT StbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, float* A, int lda, float* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtbsv_v2")]
+            internal static extern global::CUDA.CublasStatusT DtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, double* A, int lda, double* x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtbsv_v2")]
+            internal static extern global::CUDA.CublasStatusT CtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtbsv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsymv_v2")]
+            internal static extern global::CUDA.CublasStatusT SsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsymv_v2")]
+            internal static extern global::CUDA.CublasStatusT DsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsymv_v2")]
+            internal static extern global::CUDA.CublasStatusT CsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsymv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChemv_v2")]
+            internal static extern global::CUDA.CublasStatusT ChemvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhemv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZhemvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT SsbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DsbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ChbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhbmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZhbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSspmv_v2")]
+            internal static extern global::CUDA.CublasStatusT SspmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* AP, float* x, int incx, float* beta, float* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDspmv_v2")]
+            internal static extern global::CUDA.CublasStatusT DspmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* AP, double* x, int incx, double* beta, double* y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ChpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhpmv_v2")]
+            internal static extern global::CUDA.CublasStatusT ZhpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSger_v2")]
+            internal static extern global::CUDA.CublasStatusT SgerV2(global::System.IntPtr handle, int m, int n, float* alpha, float* x, int incx, float* y, int incy, float* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDger_v2")]
+            internal static extern global::CUDA.CublasStatusT DgerV2(global::System.IntPtr handle, int m, int n, double* alpha, double* x, int incx, double* y, int incy, double* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgeru_v2")]
+            internal static extern global::CUDA.CublasStatusT CgeruV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgerc_v2")]
+            internal static extern global::CUDA.CublasStatusT CgercV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgeru_v2")]
+            internal static extern global::CUDA.CublasStatusT ZgeruV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgerc_v2")]
+            internal static extern global::CUDA.CublasStatusT ZgercV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsyr_v2")]
+            internal static extern global::CUDA.CublasStatusT SsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsyr_v2")]
+            internal static extern global::CUDA.CublasStatusT DsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyr_v2")]
+            internal static extern global::CUDA.CublasStatusT CsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsyr_v2")]
+            internal static extern global::CUDA.CublasStatusT ZsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCher_v2")]
+            internal static extern global::CUDA.CublasStatusT CherV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZher_v2")]
+            internal static extern global::CUDA.CublasStatusT ZherV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSspr_v2")]
+            internal static extern global::CUDA.CublasStatusT SsprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDspr_v2")]
+            internal static extern global::CUDA.CublasStatusT DsprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChpr_v2")]
+            internal static extern global::CUDA.CublasStatusT ChprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhpr_v2")]
+            internal static extern global::CUDA.CublasStatusT ZhprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsyr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Ssyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* y, int incy, float* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsyr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Dsyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* y, int incy, double* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Csyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsyr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Zsyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCher2_v2")]
+            internal static extern global::CUDA.CublasStatusT Cher2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZher2_v2")]
+            internal static extern global::CUDA.CublasStatusT Zher2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSspr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Sspr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* y, int incy, float* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDspr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Dspr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* y, int incy, double* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChpr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Chpr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhpr2_v2")]
+            internal static extern global::CUDA.CublasStatusT Zhpr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgemm_v2")]
+            internal static extern global::CUDA.CublasStatusT SgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgemm_v2")]
+            internal static extern global::CUDA.CublasStatusT DgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemm_v2")]
+            internal static extern global::CUDA.CublasStatusT CgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemm3m")]
+            internal static extern global::CUDA.CublasStatusT Cgemm3m(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemm3mEx")]
+            internal static extern global::CUDA.CublasStatusT Cgemm3mEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgemm_v2")]
+            internal static extern global::CUDA.CublasStatusT ZgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgemm3m")]
+            internal static extern global::CUDA.CublasStatusT Zgemm3m(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasHgemm")]
+            internal static extern global::CUDA.CublasStatusT Hgemm(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgemmEx")]
+            internal static extern global::CUDA.CublasStatusT SgemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGemmEx")]
+            internal static extern global::CUDA.CublasStatusT GemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemmEx")]
+            internal static extern global::CUDA.CublasStatusT CgemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasUint8gemmBias")]
+            internal static extern global::CUDA.CublasStatusT Uint8gemmBias(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, global::CUDA.CublasOperationT transc, int m, int n, int k, byte* A, int A_bias, int lda, byte* B, int B_bias, int ldb, byte* C, int C_bias, int ldc, int C_mult, int C_shift);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsyrk_v2")]
+            internal static extern global::CUDA.CublasStatusT SsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* beta, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsyrk_v2")]
+            internal static extern global::CUDA.CublasStatusT DsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* beta, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyrk_v2")]
+            internal static extern global::CUDA.CublasStatusT CsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsyrk_v2")]
+            internal static extern global::CUDA.CublasStatusT ZsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyrkEx")]
+            internal static extern global::CUDA.CublasStatusT CsyrkEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyrk3mEx")]
+            internal static extern global::CUDA.CublasStatusT Csyrk3mEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCherk_v2")]
+            internal static extern global::CUDA.CublasStatusT CherkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, int lda, float* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZherk_v2")]
+            internal static extern global::CUDA.CublasStatusT ZherkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, global::System.IntPtr A, int lda, double* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCherkEx")]
+            internal static extern global::CUDA.CublasStatusT CherkEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCherk3mEx")]
+            internal static extern global::CUDA.CublasStatusT Cherk3mEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsyr2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Ssyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsyr2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Dsyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyr2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Csyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsyr2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Zsyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCher2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Cher2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, float* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZher2k_v2")]
+            internal static extern global::CUDA.CublasStatusT Zher2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, double* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsyrkx")]
+            internal static extern global::CUDA.CublasStatusT Ssyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsyrkx")]
+            internal static extern global::CUDA.CublasStatusT Dsyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsyrkx")]
+            internal static extern global::CUDA.CublasStatusT Csyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsyrkx")]
+            internal static extern global::CUDA.CublasStatusT Zsyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCherkx")]
+            internal static extern global::CUDA.CublasStatusT Cherkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, float* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZherkx")]
+            internal static extern global::CUDA.CublasStatusT Zherkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, double* beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSsymm_v2")]
+            internal static extern global::CUDA.CublasStatusT SsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDsymm_v2")]
+            internal static extern global::CUDA.CublasStatusT DsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCsymm_v2")]
+            internal static extern global::CUDA.CublasStatusT CsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZsymm_v2")]
+            internal static extern global::CUDA.CublasStatusT ZsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasChemm_v2")]
+            internal static extern global::CUDA.CublasStatusT ChemmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZhemm_v2")]
+            internal static extern global::CUDA.CublasStatusT ZhemmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrsm_v2")]
+            internal static extern global::CUDA.CublasStatusT StrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float* A, int lda, float* B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrsm_v2")]
+            internal static extern global::CUDA.CublasStatusT DtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double* A, int lda, double* B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrsm_v2")]
+            internal static extern global::CUDA.CublasStatusT CtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrsm_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrmm_v2")]
+            internal static extern global::CUDA.CublasStatusT StrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float* A, int lda, float* B, int ldb, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrmm_v2")]
+            internal static extern global::CUDA.CublasStatusT DtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double* A, int lda, double* B, int ldb, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrmm_v2")]
+            internal static extern global::CUDA.CublasStatusT CtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrmm_v2")]
+            internal static extern global::CUDA.CublasStatusT ZtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasHgemmBatched")]
+            internal static extern global::CUDA.CublasStatusT HgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgemmBatched")]
+            internal static extern global::CUDA.CublasStatusT SgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float** Aarray, int lda, float** Barray, int ldb, float* beta, float** Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgemmBatched")]
+            internal static extern global::CUDA.CublasStatusT DgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double** Aarray, int lda, double** Barray, int ldb, double* beta, double** Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemmBatched")]
+            internal static extern global::CUDA.CublasStatusT CgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemm3mBatched")]
+            internal static extern global::CUDA.CublasStatusT Cgemm3mBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgemmBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGemmBatchedEx")]
+            internal static extern global::CUDA.CublasStatusT GemmBatchedEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, void** Aarray, global::CUDA.CudaDataTypeT Atype, int lda, void** Barray, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, void** Carray, global::CUDA.CudaDataTypeT Ctype, int ldc, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasGemmStridedBatchedEx")]
+            internal static extern global::CUDA.CublasStatusT GemmStridedBatchedEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, long strideA, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, long strideC, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgemmStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT SgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float* A, int lda, long strideA, float* B, int ldb, long strideB, float* beta, float* C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgemmStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT DgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double* A, int lda, long strideA, double* B, int ldb, long strideB, double* beta, double* C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemmStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT CgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgemm3mStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT Cgemm3mStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgemmStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasHgemmStridedBatched")]
+            internal static extern global::CUDA.CublasStatusT HgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgeam")]
+            internal static extern global::CUDA.CublasStatusT Sgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, float* alpha, float* A, int lda, float* beta, float* B, int ldb, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgeam")]
+            internal static extern global::CUDA.CublasStatusT Dgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, double* alpha, double* A, int lda, double* beta, double* B, int ldb, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgeam")]
+            internal static extern global::CUDA.CublasStatusT Cgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgeam")]
+            internal static extern global::CUDA.CublasStatusT Zgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgetrfBatched")]
+            internal static extern global::CUDA.CublasStatusT SgetrfBatched(global::System.IntPtr handle, int n, float** A, int lda, int* P, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgetrfBatched")]
+            internal static extern global::CUDA.CublasStatusT DgetrfBatched(global::System.IntPtr handle, int n, double** A, int lda, int* P, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgetrfBatched")]
+            internal static extern global::CUDA.CublasStatusT CgetrfBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgetrfBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgetrfBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgetriBatched")]
+            internal static extern global::CUDA.CublasStatusT SgetriBatched(global::System.IntPtr handle, int n, float** A, int lda, int* P, float** C, int ldc, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgetriBatched")]
+            internal static extern global::CUDA.CublasStatusT DgetriBatched(global::System.IntPtr handle, int n, double** A, int lda, int* P, double** C, int ldc, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgetriBatched")]
+            internal static extern global::CUDA.CublasStatusT CgetriBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, global::System.IntPtr C, int ldc, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgetriBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgetriBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, global::System.IntPtr C, int ldc, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgetrsBatched")]
+            internal static extern global::CUDA.CublasStatusT SgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, float** Aarray, int lda, int* devIpiv, float** Barray, int ldb, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgetrsBatched")]
+            internal static extern global::CUDA.CublasStatusT DgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, double** Aarray, int lda, int* devIpiv, double** Barray, int ldb, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgetrsBatched")]
+            internal static extern global::CUDA.CublasStatusT CgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::System.IntPtr Aarray, int lda, int* devIpiv, global::System.IntPtr Barray, int ldb, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgetrsBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::System.IntPtr Aarray, int lda, int* devIpiv, global::System.IntPtr Barray, int ldb, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrsmBatched")]
+            internal static extern global::CUDA.CublasStatusT StrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float** A, int lda, float** B, int ldb, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrsmBatched")]
+            internal static extern global::CUDA.CublasStatusT DtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double** A, int lda, double** B, int ldb, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrsmBatched")]
+            internal static extern global::CUDA.CublasStatusT CtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrsmBatched")]
+            internal static extern global::CUDA.CublasStatusT ZtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, int batchCount);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSmatinvBatched")]
+            internal static extern global::CUDA.CublasStatusT SmatinvBatched(global::System.IntPtr handle, int n, float** A, int lda, float** Ainv, int lda_inv, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDmatinvBatched")]
+            internal static extern global::CUDA.CublasStatusT DmatinvBatched(global::System.IntPtr handle, int n, double** A, int lda, double** Ainv, int lda_inv, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCmatinvBatched")]
+            internal static extern global::CUDA.CublasStatusT CmatinvBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, global::System.IntPtr Ainv, int lda_inv, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZmatinvBatched")]
+            internal static extern global::CUDA.CublasStatusT ZmatinvBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, global::System.IntPtr Ainv, int lda_inv, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgeqrfBatched")]
+            internal static extern global::CUDA.CublasStatusT SgeqrfBatched(global::System.IntPtr handle, int m, int n, float** Aarray, int lda, float** TauArray, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgeqrfBatched")]
+            internal static extern global::CUDA.CublasStatusT DgeqrfBatched(global::System.IntPtr handle, int m, int n, double** Aarray, int lda, double** TauArray, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgeqrfBatched")]
+            internal static extern global::CUDA.CublasStatusT CgeqrfBatched(global::System.IntPtr handle, int m, int n, global::System.IntPtr Aarray, int lda, global::System.IntPtr TauArray, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgeqrfBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgeqrfBatched(global::System.IntPtr handle, int m, int n, global::System.IntPtr Aarray, int lda, global::System.IntPtr TauArray, int* info, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSgelsBatched")]
+            internal static extern global::CUDA.CublasStatusT SgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, float** Aarray, int lda, float** Carray, int ldc, int* info, int* devInfoArray, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDgelsBatched")]
+            internal static extern global::CUDA.CublasStatusT DgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, double** Aarray, int lda, double** Carray, int ldc, int* info, int* devInfoArray, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCgelsBatched")]
+            internal static extern global::CUDA.CublasStatusT CgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::System.IntPtr Aarray, int lda, global::System.IntPtr Carray, int ldc, int* info, int* devInfoArray, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZgelsBatched")]
+            internal static extern global::CUDA.CublasStatusT ZgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::System.IntPtr Aarray, int lda, global::System.IntPtr Carray, int ldc, int* info, int* devInfoArray, int batchSize);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasSdgmm")]
+            internal static extern global::CUDA.CublasStatusT Sdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, float* A, int lda, float* x, int incx, float* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDdgmm")]
+            internal static extern global::CUDA.CublasStatusT Ddgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, double* A, int lda, double* x, int incx, double* C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCdgmm")]
+            internal static extern global::CUDA.CublasStatusT Cdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZdgmm")]
+            internal static extern global::CUDA.CublasStatusT Zdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr C, int ldc);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStpttr")]
+            internal static extern global::CUDA.CublasStatusT Stpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* AP, float* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtpttr")]
+            internal static extern global::CUDA.CublasStatusT Dtpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* AP, double* A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtpttr")]
+            internal static extern global::CUDA.CublasStatusT Ctpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr AP, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtpttr")]
+            internal static extern global::CUDA.CublasStatusT Ztpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr AP, global::System.IntPtr A, int lda);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasStrttp")]
+            internal static extern global::CUDA.CublasStatusT Strttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* A, int lda, float* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasDtrttp")]
+            internal static extern global::CUDA.CublasStatusT Dtrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* A, int lda, double* AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasCtrttp")]
+            internal static extern global::CUDA.CublasStatusT Ctrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr A, int lda, global::System.IntPtr AP);
+
+            [SuppressUnmanagedCodeSecurity]
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+                EntryPoint = "cublasZtrttp")]
+            internal static extern global::CUDA.CublasStatusT Ztrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr A, int lda, global::System.IntPtr AP);
+        }
+
+        public static global::CUDA.CublasStatusT CreateV2(global::CUDA.CublasContext handle)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.CreateV2(__arg0);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT DestroyV2(global::CUDA.CublasContext handle)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.DestroyV2(__arg0);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetVersionV2(global::CUDA.CublasContext handle, ref int version)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr1 = &version)
+            {
+                var __arg1 = __refParamPtr1;
+                var __ret = __Internal.GetVersionV2(__arg0, __arg1);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT GetProperty(global::CUDA.LibraryPropertyTypeT type, ref int value)
+        {
+            fixed (int* __refParamPtr1 = &value)
+            {
+                var __arg1 = __refParamPtr1;
+                var __ret = __Internal.GetProperty(type, __arg1);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SetStreamV2(global::CUDA.CublasContext handle, global::CUDA.CUstreamSt streamId)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg1 = ReferenceEquals(streamId, null) ? global::System.IntPtr.Zero : streamId.__Instance;
+            var __ret = __Internal.SetStreamV2(__arg0, __arg1);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetStreamV2(global::CUDA.CublasContext handle, global::CUDA.CUstreamSt streamId)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg1 = ReferenceEquals(streamId, null) ? global::System.IntPtr.Zero : streamId.__Instance;
+            var __ret = __Internal.GetStreamV2(__arg0, __arg1);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetPointerModeV2(global::CUDA.CublasContext handle, global::CUDA.CublasPointerModeT* mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GetPointerModeV2(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetPointerModeV2(global::CUDA.CublasContext handle, global::CUDA.CublasPointerModeT mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.SetPointerModeV2(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetAtomicsMode(global::CUDA.CublasContext handle, global::CUDA.CublasAtomicsModeT* mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GetAtomicsMode(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetAtomicsMode(global::CUDA.CublasContext handle, global::CUDA.CublasAtomicsModeT mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.SetAtomicsMode(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetMathMode(global::CUDA.CublasContext handle, global::CUDA.CublasMathT* mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GetMathMode(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetMathMode(global::CUDA.CublasContext handle, global::CUDA.CublasMathT mode)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.SetMathMode(__arg0, mode);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr devicePtr, int incy)
+        {
+            var __ret = __Internal.SetVector(n, elemSize, x, incx, devicePtr, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy)
+        {
+            var __ret = __Internal.GetVector(n, elemSize, x, incx, y, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb)
+        {
+            var __ret = __Internal.SetMatrix(rows, cols, elemSize, A, lda, B, ldb);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb)
+        {
+            var __ret = __Internal.GetMatrix(rows, cols, elemSize, A, lda, B, ldb);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetVectorAsync(int n, int elemSize, global::System.IntPtr hostPtr, int incx, global::System.IntPtr devicePtr, int incy, global::CUDA.CUstreamSt stream)
+        {
+            var __arg6 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
+            var __ret = __Internal.SetVectorAsync(n, elemSize, hostPtr, incx, devicePtr, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetVectorAsync(int n, int elemSize, global::System.IntPtr devicePtr, int incx, global::System.IntPtr hostPtr, int incy, global::CUDA.CUstreamSt stream)
+        {
+            var __arg6 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
+            var __ret = __Internal.GetVectorAsync(n, elemSize, devicePtr, incx, hostPtr, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.CUstreamSt stream)
+        {
+            var __arg7 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
+            var __ret = __Internal.SetMatrixAsync(rows, cols, elemSize, A, lda, B, ldb, __arg7);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.CUstreamSt stream)
+        {
+            var __arg7 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
+            var __ret = __Internal.GetMatrixAsync(rows, cols, elemSize, A, lda, B, ldb, __arg7);
+            return __ret;
+        }
+
+        public static void Xerbla(string srName, int info)
+        {
+            __Internal.Xerbla(srName, info);
+        }
+
+        public static global::CUDA.CublasStatusT Nrm2Ex(global::CUDA.CublasContext handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.Nrm2Ex(__arg0, n, x, xType, incx, result, resultType, executionType);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Snrm2V2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.Snrm2V2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dnrm2V2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.Dnrm2V2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Scnrm2V2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, ref float result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (float* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.Scnrm2V2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dznrm2V2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, ref double result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (double* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.Dznrm2V2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DotEx(global::CUDA.CublasContext handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.DotEx(__arg0, n, x, xType, incx, y, yType, incy, result, resultType, executionType);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT DotcEx(global::CUDA.CublasContext handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.DotcEx(__arg0, n, x, xType, incx, y, yType, incy, result, resultType, executionType);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SdotV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float y, int incy, ref float result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &result)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.SdotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DdotV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double y, int incy, ref double result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &result)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.DdotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CdotuV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg6 = ReferenceEquals(result, null) ? global::System.IntPtr.Zero : result.__Instance;
+            var __ret = __Internal.CdotuV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CdotcV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg6 = ReferenceEquals(result, null) ? global::System.IntPtr.Zero : result.__Instance;
+            var __ret = __Internal.CdotcV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZdotuV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg6 = ReferenceEquals(result, null) ? global::System.IntPtr.Zero : result.__Instance;
+            var __ret = __Internal.ZdotuV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZdotcV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg6 = ReferenceEquals(result, null) ? global::System.IntPtr.Zero : result.__Instance;
+            var __ret = __Internal.ZdotcV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ScalEx(global::CUDA.CublasContext handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::CUDA.CudaDataTypeT executionType)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.ScalEx(__arg0, n, alpha, alphaType, x, xType, incx, executionType);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SscalV2(global::CUDA.CublasContext handle, int n, ref float alpha, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr3 = &x)
+                {
+                    var __arg3 = __refParamPtr3;
+                    var __ret = __Internal.SscalV2(__arg0, n, __arg2, __arg3, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DscalV2(global::CUDA.CublasContext handle, int n, ref double alpha, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr3 = &x)
+                {
+                    var __arg3 = __refParamPtr3;
+                    var __ret = __Internal.DscalV2(__arg0, n, __arg2, __arg3, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CscalV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CscalV2(__arg0, n, __arg2, __arg3, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CsscalV2(global::CUDA.CublasContext handle, int n, ref float alpha, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __ret = __Internal.CsscalV2(__arg0, n, __arg2, __arg3, incx);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZscalV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZscalV2(__arg0, n, __arg2, __arg3, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZdscalV2(global::CUDA.CublasContext handle, int n, ref double alpha, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __ret = __Internal.ZdscalV2(__arg0, n, __arg2, __arg3, incx);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT AxpyEx(global::CUDA.CublasContext handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::CUDA.CudaDataTypeT executiontype)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.AxpyEx(__arg0, n, alpha, alphaType, x, xType, incx, y, yType, incy, executiontype);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SaxpyV2(global::CUDA.CublasContext handle, int n, ref float alpha, ref float x, int incx, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr3 = &x)
+                {
+                    var __arg3 = __refParamPtr3;
+                    fixed (float* __refParamPtr5 = &y)
+                    {
+                        var __arg5 = __refParamPtr5;
+                        var __ret = __Internal.SaxpyV2(__arg0, n, __arg2, __arg3, incx, __arg5, incy);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DaxpyV2(global::CUDA.CublasContext handle, int n, ref double alpha, ref double x, int incx, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &alpha)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr3 = &x)
+                {
+                    var __arg3 = __refParamPtr3;
+                    fixed (double* __refParamPtr5 = &y)
+                    {
+                        var __arg5 = __refParamPtr5;
+                        var __ret = __Internal.DaxpyV2(__arg0, n, __arg2, __arg3, incx, __arg5, incy);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CaxpyV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg5 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CaxpyV2(__arg0, n, __arg2, __arg3, incx, __arg5, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZaxpyV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg3 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg5 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZaxpyV2(__arg0, n, __arg2, __arg3, incx, __arg5, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ScopyV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.ScopyV2(__arg0, n, __arg2, incx, __arg4, incy);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DcopyV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.DcopyV2(__arg0, n, __arg2, incx, __arg4, incy);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CcopyV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CcopyV2(__arg0, n, __arg2, incx, __arg4, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZcopyV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZcopyV2(__arg0, n, __arg2, incx, __arg4, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SswapV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.SswapV2(__arg0, n, __arg2, incx, __arg4, incy);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DswapV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.DswapV2(__arg0, n, __arg2, incx, __arg4, incy);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CswapV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CswapV2(__arg0, n, __arg2, incx, __arg4, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZswapV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZswapV2(__arg0, n, __arg2, incx, __arg4, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT IsamaxV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (int* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.IsamaxV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IdamaxV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (int* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.IdamaxV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IcamaxV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (int* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.IcamaxV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IzamaxV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (int* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.IzamaxV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IsaminV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (int* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.IsaminV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IdaminV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (int* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.IdaminV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IcaminV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (int* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.IcaminV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT IzaminV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, ref int result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (int* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.IzaminV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SasumV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.SasumV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DasumV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &result)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.DasumV2(__arg0, n, __arg2, incx, __arg4);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ScasumV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, ref float result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (float* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.ScasumV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DzasumV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, ref double result)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            fixed (double* __refParamPtr4 = &result)
+            {
+                var __arg4 = __refParamPtr4;
+                var __ret = __Internal.DzasumV2(__arg0, n, __arg2, incx, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SrotV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float y, int incy, ref float c, ref float s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &c)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (float* __refParamPtr7 = &s)
+                        {
+                            var __arg7 = __refParamPtr7;
+                            var __ret = __Internal.SrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DrotV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double y, int incy, ref double c, ref double s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &c)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (double* __refParamPtr7 = &s)
+                        {
+                            var __arg7 = __refParamPtr7;
+                            var __ret = __Internal.DrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CrotV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, ref float c, global::CUDA.Float2 s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            fixed (float* __refParamPtr6 = &c)
+            {
+                var __arg6 = __refParamPtr6;
+                var __arg7 = ReferenceEquals(s, null) ? global::System.IntPtr.Zero : s.__Instance;
+                var __ret = __Internal.CrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CsrotV2(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, ref float c, ref float s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            fixed (float* __refParamPtr6 = &c)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr7 = &s)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.CsrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZrotV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, ref double c, global::CUDA.Double2 s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            fixed (double* __refParamPtr6 = &c)
+            {
+                var __arg6 = __refParamPtr6;
+                var __arg7 = ReferenceEquals(s, null) ? global::System.IntPtr.Zero : s.__Instance;
+                var __ret = __Internal.ZrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZdrotV2(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, ref double c, ref double s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg4 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            fixed (double* __refParamPtr6 = &c)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr7 = &s)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.ZdrotV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6, __arg7);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SrotgV2(global::CUDA.CublasContext handle, ref float a, ref float b, ref float c, ref float s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr1 = &a)
+            {
+                var __arg1 = __refParamPtr1;
+                fixed (float* __refParamPtr2 = &b)
+                {
+                    var __arg2 = __refParamPtr2;
+                    fixed (float* __refParamPtr3 = &c)
+                    {
+                        var __arg3 = __refParamPtr3;
+                        fixed (float* __refParamPtr4 = &s)
+                        {
+                            var __arg4 = __refParamPtr4;
+                            var __ret = __Internal.SrotgV2(__arg0, __arg1, __arg2, __arg3, __arg4);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DrotgV2(global::CUDA.CublasContext handle, ref double a, ref double b, ref double c, ref double s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr1 = &a)
+            {
+                var __arg1 = __refParamPtr1;
+                fixed (double* __refParamPtr2 = &b)
+                {
+                    var __arg2 = __refParamPtr2;
+                    fixed (double* __refParamPtr3 = &c)
+                    {
+                        var __arg3 = __refParamPtr3;
+                        fixed (double* __refParamPtr4 = &s)
+                        {
+                            var __arg4 = __refParamPtr4;
+                            var __ret = __Internal.DrotgV2(__arg0, __arg1, __arg2, __arg3, __arg4);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CrotgV2(global::CUDA.CublasContext handle, global::CUDA.Float2 a, global::CUDA.Float2 b, ref float c, global::CUDA.Float2 s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg1 = ReferenceEquals(a, null) ? global::System.IntPtr.Zero : a.__Instance;
+            var __arg2 = ReferenceEquals(b, null) ? global::System.IntPtr.Zero : b.__Instance;
+            fixed (float* __refParamPtr3 = &c)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(s, null) ? global::System.IntPtr.Zero : s.__Instance;
+                var __ret = __Internal.CrotgV2(__arg0, __arg1, __arg2, __arg3, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZrotgV2(global::CUDA.CublasContext handle, global::CUDA.Double2 a, global::CUDA.Double2 b, ref double c, global::CUDA.Double2 s)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg1 = ReferenceEquals(a, null) ? global::System.IntPtr.Zero : a.__Instance;
+            var __arg2 = ReferenceEquals(b, null) ? global::System.IntPtr.Zero : b.__Instance;
+            fixed (double* __refParamPtr3 = &c)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(s, null) ? global::System.IntPtr.Zero : s.__Instance;
+                var __ret = __Internal.ZrotgV2(__arg0, __arg1, __arg2, __arg3, __arg4);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SrotmV2(global::CUDA.CublasContext handle, int n, ref float x, int incx, ref float y, int incy, ref float param)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (float* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &param)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.SrotmV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DrotmV2(global::CUDA.CublasContext handle, int n, ref double x, int incx, ref double y, int incy, ref double param)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr2 = &x)
+            {
+                var __arg2 = __refParamPtr2;
+                fixed (double* __refParamPtr4 = &y)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &param)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.DrotmV2(__arg0, n, __arg2, incx, __arg4, incy, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SrotmgV2(global::CUDA.CublasContext handle, ref float d1, ref float d2, ref float x1, ref float y1, ref float param)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr1 = &d1)
+            {
+                var __arg1 = __refParamPtr1;
+                fixed (float* __refParamPtr2 = &d2)
+                {
+                    var __arg2 = __refParamPtr2;
+                    fixed (float* __refParamPtr3 = &x1)
+                    {
+                        var __arg3 = __refParamPtr3;
+                        fixed (float* __refParamPtr4 = &y1)
+                        {
+                            var __arg4 = __refParamPtr4;
+                            fixed (float* __refParamPtr5 = &param)
+                            {
+                                var __arg5 = __refParamPtr5;
+                                var __ret = __Internal.SrotmgV2(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DrotmgV2(global::CUDA.CublasContext handle, ref double d1, ref double d2, ref double x1, ref double y1, ref double param)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr1 = &d1)
+            {
+                var __arg1 = __refParamPtr1;
+                fixed (double* __refParamPtr2 = &d2)
+                {
+                    var __arg2 = __refParamPtr2;
+                    fixed (double* __refParamPtr3 = &x1)
+                    {
+                        var __arg3 = __refParamPtr3;
+                        fixed (double* __refParamPtr4 = &y1)
+                        {
+                            var __arg4 = __refParamPtr4;
+                            fixed (double* __refParamPtr5 = &param)
+                            {
+                                var __arg5 = __refParamPtr5;
+                                var __ret = __Internal.DrotmgV2(__arg0, __arg1, __arg2, __arg3, __arg4, __arg5);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SgemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, ref float alpha, ref float A, int lda, ref float x, int incx, ref float beta, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr4 = &alpha)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (float* __refParamPtr5 = &A)
+                {
+                    var __arg5 = __refParamPtr5;
+                    fixed (float* __refParamPtr7 = &x)
+                    {
+                        var __arg7 = __refParamPtr7;
+                        fixed (float* __refParamPtr9 = &beta)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (float* __refParamPtr10 = &y)
+                            {
+                                var __arg10 = __refParamPtr10;
+                                var __ret = __Internal.SgemvV2(__arg0, trans, m, n, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, ref double alpha, ref double A, int lda, ref double x, int incx, ref double beta, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr4 = &alpha)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (double* __refParamPtr5 = &A)
+                {
+                    var __arg5 = __refParamPtr5;
+                    fixed (double* __refParamPtr7 = &x)
+                    {
+                        var __arg7 = __refParamPtr7;
+                        fixed (double* __refParamPtr9 = &beta)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (double* __refParamPtr10 = &y)
+                            {
+                                var __arg10 = __refParamPtr10;
+                                var __ret = __Internal.DgemvV2(__arg0, trans, m, n, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg10 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CgemvV2(__arg0, trans, m, n, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg10 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZgemvV2(__arg0, trans, m, n, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, ref float alpha, ref float A, int lda, ref float x, int incx, ref float beta, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (float* __refParamPtr9 = &x)
+                    {
+                        var __arg9 = __refParamPtr9;
+                        fixed (float* __refParamPtr11 = &beta)
+                        {
+                            var __arg11 = __refParamPtr11;
+                            fixed (float* __refParamPtr12 = &y)
+                            {
+                                var __arg12 = __refParamPtr12;
+                                var __ret = __Internal.SgbmvV2(__arg0, trans, m, n, kl, ku, __arg6, __arg7, lda, __arg9, incx, __arg11, __arg12, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, ref double alpha, ref double A, int lda, ref double x, int incx, ref double beta, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (double* __refParamPtr9 = &x)
+                    {
+                        var __arg9 = __refParamPtr9;
+                        fixed (double* __refParamPtr11 = &beta)
+                        {
+                            var __arg11 = __refParamPtr11;
+                            fixed (double* __refParamPtr12 = &y)
+                            {
+                                var __arg12 = __refParamPtr12;
+                                var __ret = __Internal.DgbmvV2(__arg0, trans, m, n, kl, ku, __arg6, __arg7, lda, __arg9, incx, __arg11, __arg12, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CgbmvV2(__arg0, trans, m, n, kl, ku, __arg6, __arg7, lda, __arg9, incx, __arg11, __arg12, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZgbmvV2(__arg0, trans, m, n, kl, ku, __arg6, __arg7, lda, __arg9, incx, __arg11, __arg12, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StrmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref float A, int lda, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &A)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr7 = &x)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.StrmvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtrmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref double A, int lda, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &A)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr7 = &x)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.DtrmvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtrmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtrmvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtrmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtrmvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, ref float A, int lda, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &A)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr8 = &x)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __ret = __Internal.StbmvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, ref double A, int lda, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &A)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr8 = &x)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __ret = __Internal.DtbmvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtbmvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtbmvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref float AP, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &AP)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    var __ret = __Internal.StpmvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref double AP, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &AP)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    var __ret = __Internal.DtpmvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Float2 AP, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtpmvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Double2 AP, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtpmvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StrsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref float A, int lda, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &A)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr7 = &x)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.StrsvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtrsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref double A, int lda, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &A)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr7 = &x)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.DtrsvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtrsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtrsvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtrsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtrsvV2(__arg0, uplo, trans, diag, n, __arg5, lda, __arg7, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StpsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref float AP, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &AP)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    var __ret = __Internal.StpsvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtpsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, ref double AP, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &AP)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    var __ret = __Internal.DtpsvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtpsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Float2 AP, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtpsvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtpsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::CUDA.Double2 AP, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtpsvV2(__arg0, uplo, trans, diag, n, __arg5, __arg6, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StbsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, ref float A, int lda, ref float x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &A)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr8 = &x)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __ret = __Internal.StbsvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtbsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, ref double A, int lda, ref double x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &A)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr8 = &x)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __ret = __Internal.DtbsvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtbsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.CtbsvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtbsvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __ret = __Internal.ZtbsvV2(__arg0, uplo, trans, diag, n, k, __arg6, lda, __arg8, incx);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SsymvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float A, int lda, ref float x, int incx, ref float beta, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &A)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &x)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (float* __refParamPtr8 = &beta)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            fixed (float* __refParamPtr9 = &y)
+                            {
+                                var __arg9 = __refParamPtr9;
+                                var __ret = __Internal.SsymvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsymvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double A, int lda, ref double x, int incx, ref double beta, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &A)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &x)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (double* __refParamPtr8 = &beta)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            fixed (double* __refParamPtr9 = &y)
+                            {
+                                var __arg9 = __refParamPtr9;
+                                var __ret = __Internal.DsymvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CsymvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.CsymvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZsymvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZsymvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ChemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ChemvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZhemvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZhemvV2(__arg0, uplo, n, __arg3, __arg4, lda, __arg6, incx, __arg8, __arg9, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SsbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, int k, ref float alpha, ref float A, int lda, ref float x, int incx, ref float beta, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr4 = &alpha)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (float* __refParamPtr5 = &A)
+                {
+                    var __arg5 = __refParamPtr5;
+                    fixed (float* __refParamPtr7 = &x)
+                    {
+                        var __arg7 = __refParamPtr7;
+                        fixed (float* __refParamPtr9 = &beta)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (float* __refParamPtr10 = &y)
+                            {
+                                var __arg10 = __refParamPtr10;
+                                var __ret = __Internal.SsbmvV2(__arg0, uplo, n, k, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, int k, ref double alpha, ref double A, int lda, ref double x, int incx, ref double beta, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr4 = &alpha)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (double* __refParamPtr5 = &A)
+                {
+                    var __arg5 = __refParamPtr5;
+                    fixed (double* __refParamPtr7 = &x)
+                    {
+                        var __arg7 = __refParamPtr7;
+                        fixed (double* __refParamPtr9 = &beta)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (double* __refParamPtr10 = &y)
+                            {
+                                var __arg10 = __refParamPtr10;
+                                var __ret = __Internal.DsbmvV2(__arg0, uplo, n, k, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ChbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg10 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ChbmvV2(__arg0, uplo, n, k, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZhbmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg5 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg7 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg10 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZhbmvV2(__arg0, uplo, n, k, __arg4, __arg5, lda, __arg7, incx, __arg9, __arg10, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SspmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float AP, ref float x, int incx, ref float beta, ref float y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &AP)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr5 = &x)
+                    {
+                        var __arg5 = __refParamPtr5;
+                        fixed (float* __refParamPtr7 = &beta)
+                        {
+                            var __arg7 = __refParamPtr7;
+                            fixed (float* __refParamPtr8 = &y)
+                            {
+                                var __arg8 = __refParamPtr8;
+                                var __ret = __Internal.SspmvV2(__arg0, uplo, n, __arg3, __arg4, __arg5, incx, __arg7, __arg8, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DspmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double AP, ref double x, int incx, ref double beta, ref double y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &AP)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr5 = &x)
+                    {
+                        var __arg5 = __refParamPtr5;
+                        fixed (double* __refParamPtr7 = &beta)
+                        {
+                            var __arg7 = __refParamPtr7;
+                            fixed (double* __refParamPtr8 = &y)
+                            {
+                                var __arg8 = __refParamPtr8;
+                                var __ret = __Internal.DspmvV2(__arg0, uplo, n, __arg3, __arg4, __arg5, incx, __arg7, __arg8, incy);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ChpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 AP, global::CUDA.Float2 x, int incx, global::CUDA.Float2 beta, global::CUDA.Float2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg5 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg7 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg8 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ChpmvV2(__arg0, uplo, n, __arg3, __arg4, __arg5, incx, __arg7, __arg8, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZhpmvV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 AP, global::CUDA.Double2 x, int incx, global::CUDA.Double2 beta, global::CUDA.Double2 y, int incy)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg5 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg7 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg8 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __ret = __Internal.ZhpmvV2(__arg0, uplo, n, __arg3, __arg4, __arg5, incx, __arg7, __arg8, incy);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgerV2(global::CUDA.CublasContext handle, int m, int n, ref float alpha, ref float x, int incx, ref float y, int incy, ref float A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (float* __refParamPtr8 = &A)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.SgerV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgerV2(global::CUDA.CublasContext handle, int m, int n, ref double alpha, ref double x, int incx, ref double y, int incy, ref double A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (double* __refParamPtr8 = &A)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.DgerV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgeruV2(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.CgeruV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CgercV2(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.CgercV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgeruV2(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.ZgeruV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgercV2(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.ZgercV2(__arg0, m, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SsyrV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float x, int incx, ref float A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &A)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.SsyrV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsyrV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double x, int incx, ref double A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &A)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.DsyrV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CsyrV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.CsyrV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZsyrV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.ZsyrV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CherV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+                var __ret = __Internal.CherV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZherV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+                var __ret = __Internal.ZherV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, lda);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SsprV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float x, int incx, ref float AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &AP)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.SsprV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsprV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double x, int incx, ref double AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &AP)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        var __ret = __Internal.DsprV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ChprV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __arg6 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+                var __ret = __Internal.ChprV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZhprV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+                var __arg6 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+                var __ret = __Internal.ZhprV2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ssyr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float x, int incx, ref float y, int incy, ref float A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (float* __refParamPtr8 = &A)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.Ssyr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dsyr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double x, int incx, ref double y, int incy, ref double A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (double* __refParamPtr8 = &A)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.Dsyr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Csyr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Csyr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zsyr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Zsyr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cher2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Cher2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zher2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Zher2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Sspr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float alpha, ref float x, int incx, ref float y, int incy, ref float AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (float* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (float* __refParamPtr8 = &AP)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.Sspr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dspr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double alpha, ref double x, int incx, ref double y, int incy, ref double AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &alpha)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &x)
+                {
+                    var __arg4 = __refParamPtr4;
+                    fixed (double* __refParamPtr6 = &y)
+                    {
+                        var __arg6 = __refParamPtr6;
+                        fixed (double* __refParamPtr8 = &AP)
+                        {
+                            var __arg8 = __refParamPtr8;
+                            var __ret = __Internal.Dspr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Chpr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 x, int incx, global::CUDA.Float2 y, int incy, global::CUDA.Float2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __ret = __Internal.Chpr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zhpr2V2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 x, int incx, global::CUDA.Double2 y, int incy, global::CUDA.Double2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg4 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg6 = ReferenceEquals(y, null) ? global::System.IntPtr.Zero : y.__Instance;
+            var __arg8 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __ret = __Internal.Zhpr2V2(__arg0, uplo, n, __arg3, __arg4, incx, __arg6, incy, __arg8);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref float alpha, ref float A, int lda, ref float B, int ldb, ref float beta, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (float* __refParamPtr9 = &B)
+                    {
+                        var __arg9 = __refParamPtr9;
+                        fixed (float* __refParamPtr11 = &beta)
+                        {
+                            var __arg11 = __refParamPtr11;
+                            fixed (float* __refParamPtr12 = &C)
+                            {
+                                var __arg12 = __refParamPtr12;
+                                var __ret = __Internal.SgemmV2(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref double alpha, ref double A, int lda, ref double B, int ldb, ref double beta, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (double* __refParamPtr9 = &B)
+                    {
+                        var __arg9 = __refParamPtr9;
+                        fixed (double* __refParamPtr11 = &beta)
+                        {
+                            var __arg11 = __refParamPtr11;
+                            fixed (double* __refParamPtr12 = &C)
+                            {
+                                var __arg12 = __refParamPtr12;
+                                var __ret = __Internal.DgemmV2(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.CgemmV2(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cgemm3m(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Cgemm3m(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cgemm3mEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::CUDA.Float2 beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __ret = __Internal.Cgemm3mEx(__arg0, transa, transb, m, n, k, __arg6, A, Atype, lda, B, Btype, ldb, __arg13, C, Ctype, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZgemmV2(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zgemm3m(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Zgemm3m(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Hgemm(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Half alpha, global::CUDA.Half A, int lda, global::CUDA.Half B, int ldb, global::CUDA.Half beta, global::CUDA.Half C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Hgemm(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgemmEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref float alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, ref float beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr13 = &beta)
+                {
+                    var __arg13 = __refParamPtr13;
+                    var __ret = __Internal.SgemmEx(__arg0, transa, transb, m, n, k, __arg6, A, Atype, lda, B, Btype, ldb, __arg13, C, Ctype, ldc);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT GemmEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GemmEx(__arg0, transa, transb, m, n, k, alpha, A, Atype, lda, B, Btype, ldb, beta, C, Ctype, ldc, computeType, algo);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CgemmEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::CUDA.Float2 beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __ret = __Internal.CgemmEx(__arg0, transa, transb, m, n, k, __arg6, A, Atype, lda, B, Btype, ldb, __arg13, C, Ctype, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Uint8gemmBias(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, global::CUDA.CublasOperationT transc, int m, int n, int k, byte* A, int A_bias, int lda, byte* B, int B_bias, int ldb, byte* C, int C_bias, int ldc, int C_mult, int C_shift)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.Uint8gemmBias(__arg0, transa, transb, transc, m, n, k, A, A_bias, lda, B, B_bias, ldb, C, C_bias, ldc, C_mult, C_shift);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SsyrkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, ref float A, int lda, ref float beta, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &beta)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (float* __refParamPtr9 = &C)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            var __ret = __Internal.SsyrkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsyrkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref double alpha, ref double A, int lda, ref double beta, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &beta)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (double* __refParamPtr9 = &C)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            var __ret = __Internal.DsyrkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CsyrkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.CsyrkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZsyrkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZsyrkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CsyrkEx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::CUDA.Float2 beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __ret = __Internal.CsyrkEx(__arg0, uplo, trans, n, k, __arg5, A, Atype, lda, __arg9, C, Ctype, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Csyrk3mEx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::CUDA.Float2 beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg9 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __ret = __Internal.Csyrk3mEx(__arg0, uplo, trans, n, k, __arg5, A, Atype, lda, __arg9, C, Ctype, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT CherkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, global::CUDA.Float2 A, int lda, ref float beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+                fixed (float* __refParamPtr8 = &beta)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __arg9 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                    var __ret = __Internal.CherkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZherkV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref double alpha, global::CUDA.Double2 A, int lda, ref double beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+                fixed (double* __refParamPtr8 = &beta)
+                {
+                    var __arg8 = __refParamPtr8;
+                    var __arg9 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                    var __ret = __Internal.ZherkV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, __arg9, ldc);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CherkEx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, ref float beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr9 = &beta)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.CherkEx(__arg0, uplo, trans, n, k, __arg5, A, Atype, lda, __arg9, C, Ctype, ldc);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Cherk3mEx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, ref float beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr9 = &beta)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.Cherk3mEx(__arg0, uplo, trans, n, k, __arg5, A, Atype, lda, __arg9, C, Ctype, ldc);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ssyr2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, ref float A, int lda, ref float B, int ldb, ref float beta, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (float* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (float* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Ssyr2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dsyr2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref double alpha, ref double A, int lda, ref double B, int ldb, ref double beta, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (double* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (double* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Dsyr2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Csyr2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Csyr2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zsyr2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Zsyr2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cher2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, ref float beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            fixed (float* __refParamPtr10 = &beta)
+            {
+                var __arg10 = __refParamPtr10;
+                var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                var __ret = __Internal.Cher2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Zher2kV2(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, ref double beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            fixed (double* __refParamPtr10 = &beta)
+            {
+                var __arg10 = __refParamPtr10;
+                var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                var __ret = __Internal.Zher2kV2(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ssyrkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref float alpha, ref float A, int lda, ref float B, int ldb, ref float beta, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (float* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (float* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Ssyrkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dsyrkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, ref double alpha, ref double A, int lda, ref double B, int ldb, ref double beta, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (double* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (double* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Dsyrkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Csyrkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Csyrkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zsyrkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Zsyrkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cherkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, ref float beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            fixed (float* __refParamPtr10 = &beta)
+            {
+                var __arg10 = __refParamPtr10;
+                var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                var __ret = __Internal.Cherkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Zherkx(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, ref double beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            fixed (double* __refParamPtr10 = &beta)
+            {
+                var __arg10 = __refParamPtr10;
+                var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                var __ret = __Internal.Zherkx(__arg0, uplo, trans, n, k, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SsymmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, ref float alpha, ref float A, int lda, ref float B, int ldb, ref float beta, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (float* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (float* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.SsymmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DsymmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, ref double alpha, ref double A, int lda, ref double B, int ldb, ref double beta, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &B)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (double* __refParamPtr10 = &beta)
+                        {
+                            var __arg10 = __refParamPtr10;
+                            fixed (double* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.DsymmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CsymmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.CsymmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZsymmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZsymmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ChemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ChemmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZhemmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg10 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZhemmV2(__arg0, side, uplo, m, n, __arg5, __arg6, lda, __arg8, ldb, __arg10, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StrsmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref float alpha, ref float A, int lda, ref float B, int ldb)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                fixed (float* __refParamPtr8 = &A)
+                {
+                    var __arg8 = __refParamPtr8;
+                    fixed (float* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        var __ret = __Internal.StrsmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtrsmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref double alpha, ref double A, int lda, ref double B, int ldb)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                fixed (double* __refParamPtr8 = &A)
+                {
+                    var __arg8 = __refParamPtr8;
+                    fixed (double* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        var __ret = __Internal.DtrsmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtrsmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __ret = __Internal.CtrsmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtrsmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __ret = __Internal.ZtrsmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT StrmmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref float alpha, ref float A, int lda, ref float B, int ldb, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                fixed (float* __refParamPtr8 = &A)
+                {
+                    var __arg8 = __refParamPtr8;
+                    fixed (float* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        fixed (float* __refParamPtr12 = &C)
+                        {
+                            var __arg12 = __refParamPtr12;
+                            var __ret = __Internal.StrmmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, __arg12, ldc);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtrmmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref double alpha, ref double A, int lda, ref double B, int ldb, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                fixed (double* __refParamPtr8 = &A)
+                {
+                    var __arg8 = __refParamPtr8;
+                    fixed (double* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        fixed (double* __refParamPtr12 = &C)
+                        {
+                            var __arg12 = __refParamPtr12;
+                            var __ret = __Internal.DtrmmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, __arg12, ldc);
+                            return __ret;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtrmmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.CtrmmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtrmmV2(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg12 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZtrmmV2(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, __arg12, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT HgemmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Half alpha, global::CUDA.Half Aarray, int lda, global::CUDA.Half Barray, int ldb, global::CUDA.Half beta, global::CUDA.Half Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg9 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            var __ret = __Internal.HgemmBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgemmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref float alpha, float** Aarray, int lda, float** Barray, int ldb, ref float beta, float** Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr11 = &beta)
+                {
+                    var __arg11 = __refParamPtr11;
+                    var __ret = __Internal.SgemmBatched(__arg0, transa, transb, m, n, k, __arg6, Aarray, lda, Barray, ldb, __arg11, Carray, ldc, batchCount);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgemmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref double alpha, double** Aarray, int lda, double** Barray, int ldb, ref double beta, double** Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr11 = &beta)
+                {
+                    var __arg11 = __refParamPtr11;
+                    var __ret = __Internal.DgemmBatched(__arg0, transa, transb, m, n, k, __arg6, Aarray, lda, Barray, ldb, __arg11, Carray, ldc, batchCount);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgemmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 Aarray, int lda, global::CUDA.Float2 Barray, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg9 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            var __ret = __Internal.CgemmBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cgemm3mBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 Aarray, int lda, global::CUDA.Float2 Barray, int ldb, global::CUDA.Float2 beta, global::CUDA.Float2 Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg9 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            var __ret = __Internal.Cgemm3mBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgemmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 Aarray, int lda, global::CUDA.Double2 Barray, int ldb, global::CUDA.Double2 beta, global::CUDA.Double2 Carray, int ldc, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg9 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+            var __arg11 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg12 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            var __ret = __Internal.ZgemmBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, __arg9, ldb, __arg11, __arg12, ldc, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GemmBatchedEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, void** Aarray, global::CUDA.CudaDataTypeT Atype, int lda, void** Barray, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, void** Carray, global::CUDA.CudaDataTypeT Ctype, int ldc, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GemmBatchedEx(__arg0, transa, transb, m, n, k, alpha, Aarray, Atype, lda, Barray, Btype, ldb, beta, Carray, Ctype, ldc, batchCount, computeType, algo);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT GemmStridedBatchedEx(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, long strideA, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, long strideC, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __ret = __Internal.GemmStridedBatchedEx(__arg0, transa, transb, m, n, k, alpha, A, Atype, lda, strideA, B, Btype, ldb, strideB, beta, C, Ctype, ldc, strideC, batchCount, computeType, algo);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgemmStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref float alpha, ref float A, int lda, long strideA, ref float B, int ldb, long strideB, ref float beta, ref float C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (float* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (float* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        fixed (float* __refParamPtr13 = &beta)
+                        {
+                            var __arg13 = __refParamPtr13;
+                            fixed (float* __refParamPtr14 = &C)
+                            {
+                                var __arg14 = __refParamPtr14;
+                                var __ret = __Internal.SgemmStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgemmStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, ref double alpha, ref double A, int lda, long strideA, ref double B, int ldb, long strideB, ref double beta, ref double C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr6 = &alpha)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (double* __refParamPtr7 = &A)
+                {
+                    var __arg7 = __refParamPtr7;
+                    fixed (double* __refParamPtr10 = &B)
+                    {
+                        var __arg10 = __refParamPtr10;
+                        fixed (double* __refParamPtr13 = &beta)
+                        {
+                            var __arg13 = __refParamPtr13;
+                            fixed (double* __refParamPtr14 = &C)
+                            {
+                                var __arg14 = __refParamPtr14;
+                                var __ret = __Internal.DgemmStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgemmStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, long strideA, global::CUDA.Float2 B, int ldb, long strideB, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg14 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.CgemmStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Cgemm3mStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, long strideA, global::CUDA.Float2 B, int ldb, long strideB, global::CUDA.Float2 beta, global::CUDA.Float2 C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg14 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Cgemm3mStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZgemmStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, long strideA, global::CUDA.Double2 B, int ldb, long strideB, global::CUDA.Double2 beta, global::CUDA.Double2 C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg14 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.ZgemmStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT HgemmStridedBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::CUDA.Half alpha, global::CUDA.Half A, int lda, long strideA, global::CUDA.Half B, int ldb, long strideB, global::CUDA.Half beta, global::CUDA.Half C, int ldc, long strideC, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg6 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg7 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg13 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg14 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.HgemmStridedBatched(__arg0, transa, transb, m, n, k, __arg6, __arg7, lda, strideA, __arg10, ldb, strideB, __arg13, __arg14, ldc, strideC, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Sgeam(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, ref float alpha, ref float A, int lda, ref float beta, ref float B, int ldb, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (float* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &beta)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (float* __refParamPtr9 = &B)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (float* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Sgeam(__arg0, transa, transb, m, n, __arg5, __arg6, lda, __arg8, __arg9, ldb, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dgeam(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, ref double alpha, ref double A, int lda, ref double beta, ref double B, int ldb, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr5 = &alpha)
+            {
+                var __arg5 = __refParamPtr5;
+                fixed (double* __refParamPtr6 = &A)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &beta)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        fixed (double* __refParamPtr9 = &B)
+                        {
+                            var __arg9 = __refParamPtr9;
+                            fixed (double* __refParamPtr11 = &C)
+                            {
+                                var __arg11 = __refParamPtr11;
+                                var __ret = __Internal.Dgeam(__arg0, transa, transb, m, n, __arg5, __arg6, lda, __arg8, __arg9, ldb, __arg11, ldc);
+                                return __ret;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Cgeam(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 beta, global::CUDA.Float2 B, int ldb, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Cgeam(__arg0, transa, transb, m, n, __arg5, __arg6, lda, __arg8, __arg9, ldb, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zgeam(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 beta, global::CUDA.Double2 B, int ldb, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg6 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg8 = ReferenceEquals(beta, null) ? global::System.IntPtr.Zero : beta.__Instance;
+            var __arg9 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __arg11 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Zgeam(__arg0, transa, transb, m, n, __arg5, __arg6, lda, __arg8, __arg9, ldb, __arg11, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SgetrfBatched(global::CUDA.CublasContext handle, int n, float** A, int lda, ref int P, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr5 = &info)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.SgetrfBatched(__arg0, n, A, lda, __arg4, __arg5, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgetrfBatched(global::CUDA.CublasContext handle, int n, double** A, int lda, ref int P, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr5 = &info)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.DgetrfBatched(__arg0, n, A, lda, __arg4, __arg5, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgetrfBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 A, int lda, ref int P, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr5 = &info)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.CgetrfBatched(__arg0, n, __arg2, lda, __arg4, __arg5, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZgetrfBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 A, int lda, ref int P, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr5 = &info)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.ZgetrfBatched(__arg0, n, __arg2, lda, __arg4, __arg5, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SgetriBatched(global::CUDA.CublasContext handle, int n, float** A, int lda, ref int P, float** C, int ldc, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr7 = &info)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.SgetriBatched(__arg0, n, A, lda, __arg4, C, ldc, __arg7, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgetriBatched(global::CUDA.CublasContext handle, int n, double** A, int lda, ref int P, double** C, int ldc, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (int* __refParamPtr7 = &info)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.DgetriBatched(__arg0, n, A, lda, __arg4, C, ldc, __arg7, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgetriBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 A, int lda, ref int P, global::CUDA.Float2 C, int ldc, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                var __arg5 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                fixed (int* __refParamPtr7 = &info)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.CgetriBatched(__arg0, n, __arg2, lda, __arg4, __arg5, ldc, __arg7, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZgetriBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 A, int lda, ref int P, global::CUDA.Double2 C, int ldc, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            fixed (int* __refParamPtr4 = &P)
+            {
+                var __arg4 = __refParamPtr4;
+                var __arg5 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+                fixed (int* __refParamPtr7 = &info)
+                {
+                    var __arg7 = __refParamPtr7;
+                    var __ret = __Internal.ZgetriBatched(__arg0, n, __arg2, lda, __arg4, __arg5, ldc, __arg7, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SgetrsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int n, int nrhs, float** Aarray, int lda, ref int devIpiv, float** Barray, int ldb, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &devIpiv)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (int* __refParamPtr9 = &info)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.SgetrsBatched(__arg0, trans, n, nrhs, Aarray, lda, __arg6, Barray, ldb, __arg9, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgetrsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int n, int nrhs, double** Aarray, int lda, ref int devIpiv, double** Barray, int ldb, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &devIpiv)
+            {
+                var __arg6 = __refParamPtr6;
+                fixed (int* __refParamPtr9 = &info)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.DgetrsBatched(__arg0, trans, n, nrhs, Aarray, lda, __arg6, Barray, ldb, __arg9, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgetrsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::CUDA.Float2 Aarray, int lda, ref int devIpiv, global::CUDA.Float2 Barray, int ldb, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            fixed (int* __refParamPtr6 = &devIpiv)
+            {
+                var __arg6 = __refParamPtr6;
+                var __arg7 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+                fixed (int* __refParamPtr9 = &info)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.CgetrsBatched(__arg0, trans, n, nrhs, __arg4, lda, __arg6, __arg7, ldb, __arg9, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZgetrsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::CUDA.Double2 Aarray, int lda, ref int devIpiv, global::CUDA.Double2 Barray, int ldb, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            fixed (int* __refParamPtr6 = &devIpiv)
+            {
+                var __arg6 = __refParamPtr6;
+                var __arg7 = ReferenceEquals(Barray, null) ? global::System.IntPtr.Zero : Barray.__Instance;
+                fixed (int* __refParamPtr9 = &info)
+                {
+                    var __arg9 = __refParamPtr9;
+                    var __ret = __Internal.ZgetrsBatched(__arg0, trans, n, nrhs, __arg4, lda, __arg6, __arg7, ldb, __arg9, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT StrsmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref float alpha, float** A, int lda, float** B, int ldb, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                var __ret = __Internal.StrsmBatched(__arg0, side, uplo, trans, diag, m, n, __arg7, A, lda, B, ldb, batchCount);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DtrsmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, ref double alpha, double** A, int lda, double** B, int ldb, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr7 = &alpha)
+            {
+                var __arg7 = __refParamPtr7;
+                var __ret = __Internal.DtrsmBatched(__arg0, side, uplo, trans, diag, m, n, __arg7, A, lda, B, ldb, batchCount);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CtrsmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Float2 alpha, global::CUDA.Float2 A, int lda, global::CUDA.Float2 B, int ldb, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __ret = __Internal.CtrsmBatched(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT ZtrsmBatched(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::CUDA.Double2 alpha, global::CUDA.Double2 A, int lda, global::CUDA.Double2 B, int ldb, int batchCount)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg7 = ReferenceEquals(alpha, null) ? global::System.IntPtr.Zero : alpha.__Instance;
+            var __arg8 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg10 = ReferenceEquals(B, null) ? global::System.IntPtr.Zero : B.__Instance;
+            var __ret = __Internal.ZtrsmBatched(__arg0, side, uplo, trans, diag, m, n, __arg7, __arg8, lda, __arg10, ldb, batchCount);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT SmatinvBatched(global::CUDA.CublasContext handle, int n, float** A, int lda, float** Ainv, int lda_inv, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.SmatinvBatched(__arg0, n, A, lda, Ainv, lda_inv, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DmatinvBatched(global::CUDA.CublasContext handle, int n, double** A, int lda, double** Ainv, int lda_inv, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.DmatinvBatched(__arg0, n, A, lda, Ainv, lda_inv, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CmatinvBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Float2 A, int lda, global::CUDA.Float2 Ainv, int lda_inv, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg4 = ReferenceEquals(Ainv, null) ? global::System.IntPtr.Zero : Ainv.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.CmatinvBatched(__arg0, n, __arg2, lda, __arg4, lda_inv, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZmatinvBatched(global::CUDA.CublasContext handle, int n, global::CUDA.Double2 A, int lda, global::CUDA.Double2 Ainv, int lda_inv, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg2 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg4 = ReferenceEquals(Ainv, null) ? global::System.IntPtr.Zero : Ainv.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.ZmatinvBatched(__arg0, n, __arg2, lda, __arg4, lda_inv, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SgeqrfBatched(global::CUDA.CublasContext handle, int m, int n, float** Aarray, int lda, float** TauArray, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.SgeqrfBatched(__arg0, m, n, Aarray, lda, TauArray, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgeqrfBatched(global::CUDA.CublasContext handle, int m, int n, double** Aarray, int lda, double** TauArray, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.DgeqrfBatched(__arg0, m, n, Aarray, lda, TauArray, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgeqrfBatched(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Float2 Aarray, int lda, global::CUDA.Float2 TauArray, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg5 = ReferenceEquals(TauArray, null) ? global::System.IntPtr.Zero : TauArray.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.CgeqrfBatched(__arg0, m, n, __arg3, lda, __arg5, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZgeqrfBatched(global::CUDA.CublasContext handle, int m, int n, global::CUDA.Double2 Aarray, int lda, global::CUDA.Double2 TauArray, ref int info, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg5 = ReferenceEquals(TauArray, null) ? global::System.IntPtr.Zero : TauArray.__Instance;
+            fixed (int* __refParamPtr6 = &info)
+            {
+                var __arg6 = __refParamPtr6;
+                var __ret = __Internal.ZgeqrfBatched(__arg0, m, n, __arg3, lda, __arg5, __arg6, batchSize);
+                return __ret;
+            }
+        }
+
+        public static global::CUDA.CublasStatusT SgelsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, float** Aarray, int lda, float** Carray, int ldc, ref int info, ref int devInfoArray, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr9 = &info)
+            {
+                var __arg9 = __refParamPtr9;
+                fixed (int* __refParamPtr10 = &devInfoArray)
+                {
+                    var __arg10 = __refParamPtr10;
+                    var __ret = __Internal.SgelsBatched(__arg0, trans, m, n, nrhs, Aarray, lda, Carray, ldc, __arg9, __arg10, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT DgelsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, double** Aarray, int lda, double** Carray, int ldc, ref int info, ref int devInfoArray, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (int* __refParamPtr9 = &info)
+            {
+                var __arg9 = __refParamPtr9;
+                fixed (int* __refParamPtr10 = &devInfoArray)
+                {
+                    var __arg10 = __refParamPtr10;
+                    var __ret = __Internal.DgelsBatched(__arg0, trans, m, n, nrhs, Aarray, lda, Carray, ldc, __arg9, __arg10, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT CgelsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::CUDA.Float2 Aarray, int lda, global::CUDA.Float2 Carray, int ldc, ref int info, ref int devInfoArray, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg7 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            fixed (int* __refParamPtr9 = &info)
+            {
+                var __arg9 = __refParamPtr9;
+                fixed (int* __refParamPtr10 = &devInfoArray)
+                {
+                    var __arg10 = __refParamPtr10;
+                    var __ret = __Internal.CgelsBatched(__arg0, trans, m, n, nrhs, __arg5, lda, __arg7, ldc, __arg9, __arg10, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT ZgelsBatched(global::CUDA.CublasContext handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::CUDA.Double2 Aarray, int lda, global::CUDA.Double2 Carray, int ldc, ref int info, ref int devInfoArray, int batchSize)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg5 = ReferenceEquals(Aarray, null) ? global::System.IntPtr.Zero : Aarray.__Instance;
+            var __arg7 = ReferenceEquals(Carray, null) ? global::System.IntPtr.Zero : Carray.__Instance;
+            fixed (int* __refParamPtr9 = &info)
+            {
+                var __arg9 = __refParamPtr9;
+                fixed (int* __refParamPtr10 = &devInfoArray)
+                {
+                    var __arg10 = __refParamPtr10;
+                    var __ret = __Internal.ZgelsBatched(__arg0, trans, m, n, nrhs, __arg5, lda, __arg7, ldc, __arg9, __arg10, batchSize);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Sdgmm(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT mode, int m, int n, ref float A, int lda, ref float x, int incx, ref float C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr4 = &A)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (float* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (float* __refParamPtr8 = &C)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        var __ret = __Internal.Sdgmm(__arg0, mode, m, n, __arg4, lda, __arg6, incx, __arg8, ldc);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ddgmm(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT mode, int m, int n, ref double A, int lda, ref double x, int incx, ref double C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr4 = &A)
+            {
+                var __arg4 = __refParamPtr4;
+                fixed (double* __refParamPtr6 = &x)
+                {
+                    var __arg6 = __refParamPtr6;
+                    fixed (double* __refParamPtr8 = &C)
+                    {
+                        var __arg8 = __refParamPtr8;
+                        var __ret = __Internal.Ddgmm(__arg0, mode, m, n, __arg4, lda, __arg6, incx, __arg8, ldc);
+                        return __ret;
+                    }
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Cdgmm(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT mode, int m, int n, global::CUDA.Float2 A, int lda, global::CUDA.Float2 x, int incx, global::CUDA.Float2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Cdgmm(__arg0, mode, m, n, __arg4, lda, __arg6, incx, __arg8, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Zdgmm(global::CUDA.CublasContext handle, global::CUDA.CublasSideModeT mode, int m, int n, global::CUDA.Double2 A, int lda, global::CUDA.Double2 x, int incx, global::CUDA.Double2 C, int ldc)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg6 = ReferenceEquals(x, null) ? global::System.IntPtr.Zero : x.__Instance;
+            var __arg8 = ReferenceEquals(C, null) ? global::System.IntPtr.Zero : C.__Instance;
+            var __ret = __Internal.Zdgmm(__arg0, mode, m, n, __arg4, lda, __arg6, incx, __arg8, ldc);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Stpttr(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float AP, ref float A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &AP)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr4 = &A)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.Stpttr(__arg0, uplo, n, __arg3, __arg4, lda);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dtpttr(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double AP, ref double A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &AP)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr4 = &A)
+                {
+                    var __arg4 = __refParamPtr4;
+                    var __ret = __Internal.Dtpttr(__arg0, uplo, n, __arg3, __arg4, lda);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ctpttr(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 AP, global::CUDA.Float2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Ctpttr(__arg0, uplo, n, __arg3, __arg4, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Ztpttr(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 AP, global::CUDA.Double2 A, int lda)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __arg4 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __ret = __Internal.Ztpttr(__arg0, uplo, n, __arg3, __arg4, lda);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Strttp(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref float A, int lda, ref float AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (float* __refParamPtr3 = &A)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (float* __refParamPtr5 = &AP)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.Strttp(__arg0, uplo, n, __arg3, lda, __arg5);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Dtrttp(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, ref double A, int lda, ref double AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            fixed (double* __refParamPtr3 = &A)
+            {
+                var __arg3 = __refParamPtr3;
+                fixed (double* __refParamPtr5 = &AP)
+                {
+                    var __arg5 = __refParamPtr5;
+                    var __ret = __Internal.Dtrttp(__arg0, uplo, n, __arg3, lda, __arg5);
+                    return __ret;
+                }
+            }
+        }
+
+        public static global::CUDA.CublasStatusT Ctrttp(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Float2 A, int lda, global::CUDA.Float2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __ret = __Internal.Ctrttp(__arg0, uplo, n, __arg3, lda, __arg5);
+            return __ret;
+        }
+
+        public static global::CUDA.CublasStatusT Ztrttp(global::CUDA.CublasContext handle, global::CUDA.CublasFillModeT uplo, int n, global::CUDA.Double2 A, int lda, global::CUDA.Double2 AP)
+        {
+            var __arg0 = ReferenceEquals(handle, null) ? global::System.IntPtr.Zero : handle.__Instance;
+            var __arg3 = ReferenceEquals(A, null) ? global::System.IntPtr.Zero : A.__Instance;
+            var __arg5 = ReferenceEquals(AP, null) ? global::System.IntPtr.Zero : AP.__Instance;
+            var __ret = __Internal.Ztrttp(__arg0, uplo, n, __arg3, lda, __arg5);
+            return __ret;
+        }
+    }
+
+
 }

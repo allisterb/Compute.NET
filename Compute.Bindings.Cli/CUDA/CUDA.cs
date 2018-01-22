@@ -66,12 +66,15 @@ namespace Compute.Bindings
         public override void SetupPasses(Driver driver)
         {
             base.SetupPasses(driver);
+            if (WithoutCommon)
+            {
+                driver.AddTranslationUnitPass(new CUDA_IgnoreCommonClassesPass(this, driver.Generator));
+            }
+
             if (cuBlas)
             {
                 driver.AddTranslationUnitPass(new CUDA_RemoveCuBlasFunctionPrefixPass(this, driver.Generator));
-            }
-             
-            
+            }            
         }
         /// Do transformations that should happen before passes are processed.
         public override void Preprocess(Driver driver, ASTContext ctx)
@@ -83,12 +86,21 @@ namespace Compute.Bindings
         /// Do transformations that should happen after passes are processed.
         public override void Postprocess(Driver driver, ASTContext ctx)
         {
+         
             foreach (string s in ClassDecls)
             {
                 IEnumerable<Class> classes = ctx.FindClass(s);
                 foreach (Class c in classes)
                 {
-                    ctx.SetClassAsValueType(c.Name);
+                    if (WithoutCommon && !c.Name.Contains(Class))
+                    {
+                        ctx.IgnoreClassWithName(c.Name);
+                    }
+                    else
+                    {
+                        ctx.SetClassAsValueType(c.Name);
+                    }
+                    
                 }
             }
         }
@@ -108,6 +120,10 @@ namespace Compute.Bindings
             if (s.Contains("DllImport(\"cublas\""))
             {
                 sb.Replace("DllImport(\"cublas\"", "DllImport(\"cublas64_91\"");
+            }
+            if (s.Contains("DllImport(\"cudart\""))
+            {
+                sb.Replace("DllImport(\"cudart\"", "DllImport(\"cudart64_91\"");
             }
             File.WriteAllText(F, sb.ToString());
             return true;

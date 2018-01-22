@@ -60,13 +60,13 @@ namespace Compute.Bindings
             Info($"Using {Path.GetFullPath(OutputDirName)} as output directory.");
             Info($"Using {Namespace} as library namespace.");
             
-            if (File.Exists(Path.Combine(R, ModuleName + ".cs")))
+            if (File.Exists(F))
             {
-                Warn($"Module file {Path.Combine(R, ModuleName + ".cs")} will be overwritten.");
+                Warn($"Module file {F} will be overwritten.");
             }
             else
             {
-                Info($"Module file is {Path.Combine(R, ModuleName + ".cs")}.");
+                Info($"Module file is {F}.");
             }
         }
         #endregion
@@ -118,6 +118,7 @@ namespace Compute.Bindings
         public Module Module { get; internal set; }
         public string Class { get; internal set; }
         public string Namespace { get; internal set; }
+        public bool WithoutCommon { get; protected set; }
         public bool Verbose { get; internal set; }
         #endregion
 
