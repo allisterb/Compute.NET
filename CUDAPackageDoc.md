@@ -1,0 +1,3 @@
+Compute.NET provides auto-generated bindings for native numerical computing libraries. If you need the native MKL dependencies:
+1. Add the Compute.NET package feed to your NuGet package sources: https://www.myget.org/F/computedotnet/api/v2
+2. Install the native library [package](https://www.myget.org/feed/computedotnet/package/nuget/Compute.Winx64.IntelMKL) into your project: `Install-Package Compute.Winx64.IntelMKL`.

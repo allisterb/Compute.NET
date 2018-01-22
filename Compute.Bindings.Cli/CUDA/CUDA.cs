@@ -52,14 +52,13 @@ namespace Compute.Bindings
                 {
                     this.Module.Libraries.Add(s);
                 }
- 
-                this.Module.SharedLibraryName = "cublas";
             }
             else throw new PlatformNotSupportedException("Non-Windows platforms not currently supported.");
 
             if (cuBlas)
             {
                 this.Module.Headers.Add("cublas.h");
+                this.Module.SharedLibraryName = "cublas64_91";
                 Info("Creating bindings for cuBLAS routines...");
             }
         }
@@ -105,6 +104,10 @@ namespace Compute.Bindings
             if (s.Contains($"return ((global::{this.Namespace}.CudaLaunchParams.__Internal*) __Instance)->args;"))
             {
                 sb.Replace($"return ((global::{this.Namespace}.CudaLaunchParams.__Internal*) __Instance)->args;", $"return (void**) ((global::{this.Namespace}.CudaLaunchParams.__Internal*) __Instance)->args;");
+            }
+            if (s.Contains("DllImport(\"cublas\""))
+            {
+                sb.Replace("DllImport(\"cublas\"", "DllImport(\"cublas64_91\"");
             }
             File.WriteAllText(F, sb.ToString());
             return true;

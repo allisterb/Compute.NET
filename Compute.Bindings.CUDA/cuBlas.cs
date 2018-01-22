@@ -15,787 +15,787 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasInit")]
             internal static extern global::CUDA.CublasStatusT Init();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasShutdown")]
             internal static extern global::CUDA.CublasStatusT Shutdown();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetError")]
             internal static extern global::CUDA.CublasStatusT GetError();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetVersion")]
             internal static extern global::CUDA.CublasStatusT GetVersion(int* version);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasAlloc")]
             internal static extern global::CUDA.CublasStatusT Alloc(int n, int elemSize, void** devicePtr);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasFree")]
             internal static extern global::CUDA.CublasStatusT Free(global::System.IntPtr devicePtr);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetKernelStream")]
             internal static extern global::CUDA.CublasStatusT SetKernelStream(global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSnrm2")]
             internal static extern float Snrm2(int n, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDnrm2")]
             internal static extern double Dnrm2(int n, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScnrm2")]
             internal static extern float Scnrm2(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDznrm2")]
             internal static extern double Dznrm2(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSdot")]
             internal static extern float Sdot(int n, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDdot")]
             internal static extern double Ddot(int n, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCdotu")]
             internal static extern global::CUDA.Float2.__Internal Cdotu(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCdotc")]
             internal static extern global::CUDA.Float2.__Internal Cdotc(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdotu")]
             internal static extern void Zdotu(global::System.IntPtr @return, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdotc")]
             internal static extern void Zdotc(global::System.IntPtr @return, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSscal")]
             internal static extern void Sscal(int n, float alpha, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDscal")]
             internal static extern void Dscal(int n, double alpha, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCscal")]
             internal static extern void Cscal(int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZscal")]
             internal static extern void Zscal(int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsscal")]
             internal static extern void Csscal(int n, float alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdscal")]
             internal static extern void Zdscal(int n, double alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSaxpy")]
             internal static extern void Saxpy(int n, float alpha, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDaxpy")]
             internal static extern void Daxpy(int n, double alpha, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCaxpy")]
             internal static extern void Caxpy(int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZaxpy")]
             internal static extern void Zaxpy(int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScopy")]
             internal static extern void Scopy(int n, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDcopy")]
             internal static extern void Dcopy(int n, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCcopy")]
             internal static extern void Ccopy(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZcopy")]
             internal static extern void Zcopy(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSswap")]
             internal static extern void Sswap(int n, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDswap")]
             internal static extern void Dswap(int n, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCswap")]
             internal static extern void Cswap(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZswap")]
             internal static extern void Zswap(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIsamax")]
             internal static extern int Isamax(int n, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIdamax")]
             internal static extern int Idamax(int n, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIcamax")]
             internal static extern int Icamax(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIzamax")]
             internal static extern int Izamax(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIsamin")]
             internal static extern int Isamin(int n, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIdamin")]
             internal static extern int Idamin(int n, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIcamin")]
             internal static extern int Icamin(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIzamin")]
             internal static extern int Izamin(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSasum")]
             internal static extern float Sasum(int n, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDasum")]
             internal static extern double Dasum(int n, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScasum")]
             internal static extern float Scasum(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDzasum")]
             internal static extern double Dzasum(int n, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrot")]
             internal static extern void Srot(int n, float* x, int incx, float* y, int incy, float sc, float ss);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrot")]
             internal static extern void Drot(int n, double* x, int incx, double* y, int incy, double sc, double ss);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCrot")]
             internal static extern void Crot(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float c, global::CUDA.Float2.__Internal s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZrot")]
             internal static extern void Zrot(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double sc, global::CUDA.Double2.__Internal cs);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsrot")]
             internal static extern void Csrot(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float c, float s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdrot")]
             internal static extern void Zdrot(int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double c, double s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotg")]
             internal static extern void Srotg(float* sa, float* sb, float* sc, float* ss);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotg")]
             internal static extern void Drotg(double* sa, double* sb, double* sc, double* ss);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCrotg")]
             internal static extern void Crotg(global::System.IntPtr ca, global::CUDA.Float2.__Internal cb, float* sc, global::System.IntPtr cs);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZrotg")]
             internal static extern void Zrotg(global::System.IntPtr ca, global::CUDA.Double2.__Internal cb, double* sc, global::System.IntPtr cs);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotm")]
             internal static extern void Srotm(int n, float* x, int incx, float* y, int incy, float* sparam);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotm")]
             internal static extern void Drotm(int n, double* x, int incx, double* y, int incy, double* sparam);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotmg")]
             internal static extern void Srotmg(float* sd1, float* sd2, float* sx1, float* sy1, float* sparam);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotmg")]
             internal static extern void Drotmg(double* sd1, double* sd2, double* sx1, double* sy1, double* sparam);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemv")]
             internal static extern void Sgemv(sbyte trans, int m, int n, float alpha, float* A, int lda, float* x, int incx, float beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemv")]
             internal static extern void Dgemv(sbyte trans, int m, int n, double alpha, double* A, int lda, double* x, int incx, double beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemv")]
             internal static extern void Cgemv(sbyte trans, int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Float2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemv")]
             internal static extern void Zgemv(sbyte trans, int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Double2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgbmv")]
             internal static extern void Sgbmv(sbyte trans, int m, int n, int kl, int ku, float alpha, float* A, int lda, float* x, int incx, float beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgbmv")]
             internal static extern void Dgbmv(sbyte trans, int m, int n, int kl, int ku, double alpha, double* A, int lda, double* x, int incx, double beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgbmv")]
             internal static extern void Cgbmv(sbyte trans, int m, int n, int kl, int ku, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Float2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgbmv")]
             internal static extern void Zgbmv(sbyte trans, int m, int n, int kl, int ku, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Double2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrmv")]
             internal static extern void Strmv(sbyte uplo, sbyte trans, sbyte diag, int n, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrmv")]
             internal static extern void Dtrmv(sbyte uplo, sbyte trans, sbyte diag, int n, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrmv")]
             internal static extern void Ctrmv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrmv")]
             internal static extern void Ztrmv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStbmv")]
             internal static extern void Stbmv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtbmv")]
             internal static extern void Dtbmv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtbmv")]
             internal static extern void Ctbmv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtbmv")]
             internal static extern void Ztbmv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStpmv")]
             internal static extern void Stpmv(sbyte uplo, sbyte trans, sbyte diag, int n, float* AP, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtpmv")]
             internal static extern void Dtpmv(sbyte uplo, sbyte trans, sbyte diag, int n, double* AP, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtpmv")]
             internal static extern void Ctpmv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtpmv")]
             internal static extern void Ztpmv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrsv")]
             internal static extern void Strsv(sbyte uplo, sbyte trans, sbyte diag, int n, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrsv")]
             internal static extern void Dtrsv(sbyte uplo, sbyte trans, sbyte diag, int n, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrsv")]
             internal static extern void Ctrsv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrsv")]
             internal static extern void Ztrsv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStpsv")]
             internal static extern void Stpsv(sbyte uplo, sbyte trans, sbyte diag, int n, float* AP, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtpsv")]
             internal static extern void Dtpsv(sbyte uplo, sbyte trans, sbyte diag, int n, double* AP, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtpsv")]
             internal static extern void Ctpsv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtpsv")]
             internal static extern void Ztpsv(sbyte uplo, sbyte trans, sbyte diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStbsv")]
             internal static extern void Stbsv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtbsv")]
             internal static extern void Dtbsv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtbsv")]
             internal static extern void Ctbsv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtbsv")]
             internal static extern void Ztbsv(sbyte uplo, sbyte trans, sbyte diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsymv")]
             internal static extern void Ssymv(sbyte uplo, int n, float alpha, float* A, int lda, float* x, int incx, float beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsymv")]
             internal static extern void Dsymv(sbyte uplo, int n, double alpha, double* A, int lda, double* x, int incx, double beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChemv")]
             internal static extern void Chemv(sbyte uplo, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Float2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhemv")]
             internal static extern void Zhemv(sbyte uplo, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Double2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsbmv")]
             internal static extern void Ssbmv(sbyte uplo, int n, int k, float alpha, float* A, int lda, float* x, int incx, float beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsbmv")]
             internal static extern void Dsbmv(sbyte uplo, int n, int k, double alpha, double* A, int lda, double* x, int incx, double beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChbmv")]
             internal static extern void Chbmv(sbyte uplo, int n, int k, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Float2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhbmv")]
             internal static extern void Zhbmv(sbyte uplo, int n, int k, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::CUDA.Double2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspmv")]
             internal static extern void Sspmv(sbyte uplo, int n, float alpha, float* AP, float* x, int incx, float beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspmv")]
             internal static extern void Dspmv(sbyte uplo, int n, double alpha, double* AP, double* x, int incx, double beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpmv")]
             internal static extern void Chpmv(sbyte uplo, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::CUDA.Float2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpmv")]
             internal static extern void Zhpmv(sbyte uplo, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::CUDA.Double2.__Internal beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSger")]
             internal static extern void Sger(int m, int n, float alpha, float* x, int incx, float* y, int incy, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDger")]
             internal static extern void Dger(int m, int n, double alpha, double* x, int incx, double* y, int incy, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgeru")]
             internal static extern void Cgeru(int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgerc")]
             internal static extern void Cgerc(int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgeru")]
             internal static extern void Zgeru(int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgerc")]
             internal static extern void Zgerc(int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr")]
             internal static extern void Ssyr(sbyte uplo, int n, float alpha, float* x, int incx, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr")]
             internal static extern void Dsyr(sbyte uplo, int n, double alpha, double* x, int incx, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher")]
             internal static extern void Cher(sbyte uplo, int n, float alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher")]
             internal static extern void Zher(sbyte uplo, int n, double alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspr")]
             internal static extern void Sspr(sbyte uplo, int n, float alpha, float* x, int incx, float* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspr")]
             internal static extern void Dspr(sbyte uplo, int n, double alpha, double* x, int incx, double* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpr")]
             internal static extern void Chpr(sbyte uplo, int n, float alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpr")]
             internal static extern void Zhpr(sbyte uplo, int n, double alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr2")]
             internal static extern void Ssyr2(sbyte uplo, int n, float alpha, float* x, int incx, float* y, int incy, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr2")]
             internal static extern void Dsyr2(sbyte uplo, int n, double alpha, double* x, int incx, double* y, int incy, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher2")]
             internal static extern void Cher2(sbyte uplo, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher2")]
             internal static extern void Zher2(sbyte uplo, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspr2")]
             internal static extern void Sspr2(sbyte uplo, int n, float alpha, float* x, int incx, float* y, int incy, float* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspr2")]
             internal static extern void Dspr2(sbyte uplo, int n, double alpha, double* x, int incx, double* y, int incy, double* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpr2")]
             internal static extern void Chpr2(sbyte uplo, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpr2")]
             internal static extern void Zhpr2(sbyte uplo, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemm")]
             internal static extern void Sgemm(sbyte transa, sbyte transb, int m, int n, int k, float alpha, float* A, int lda, float* B, int ldb, float beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemm")]
             internal static extern void Dgemm(sbyte transa, sbyte transb, int m, int n, int k, double alpha, double* A, int lda, double* B, int ldb, double beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm")]
             internal static extern void Cgemm(sbyte transa, sbyte transb, int m, int n, int k, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Float2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemm")]
             internal static extern void Zgemm(sbyte transa, sbyte transb, int m, int n, int k, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Double2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyrk")]
             internal static extern void Ssyrk(sbyte uplo, sbyte trans, int n, int k, float alpha, float* A, int lda, float beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyrk")]
             internal static extern void Dsyrk(sbyte uplo, sbyte trans, int n, int k, double alpha, double* A, int lda, double beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyrk")]
             internal static extern void Csyrk(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::CUDA.Float2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyrk")]
             internal static extern void Zsyrk(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::CUDA.Double2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCherk")]
             internal static extern void Cherk(sbyte uplo, sbyte trans, int n, int k, float alpha, global::System.IntPtr A, int lda, float beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZherk")]
             internal static extern void Zherk(sbyte uplo, sbyte trans, int n, int k, double alpha, global::System.IntPtr A, int lda, double beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr2k")]
             internal static extern void Ssyr2k(sbyte uplo, sbyte trans, int n, int k, float alpha, float* A, int lda, float* B, int ldb, float beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr2k")]
             internal static extern void Dsyr2k(sbyte uplo, sbyte trans, int n, int k, double alpha, double* A, int lda, double* B, int ldb, double beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyr2k")]
             internal static extern void Csyr2k(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Float2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyr2k")]
             internal static extern void Zsyr2k(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Double2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher2k")]
             internal static extern void Cher2k(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, float beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher2k")]
             internal static extern void Zher2k(sbyte uplo, sbyte trans, int n, int k, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, double beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsymm")]
             internal static extern void Ssymm(sbyte side, sbyte uplo, int m, int n, float alpha, float* A, int lda, float* B, int ldb, float beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsymm")]
             internal static extern void Dsymm(sbyte side, sbyte uplo, int m, int n, double alpha, double* A, int lda, double* B, int ldb, double beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsymm")]
             internal static extern void Csymm(sbyte side, sbyte uplo, int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Float2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsymm")]
             internal static extern void Zsymm(sbyte side, sbyte uplo, int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Double2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChemm")]
             internal static extern void Chemm(sbyte side, sbyte uplo, int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Float2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhemm")]
             internal static extern void Zhemm(sbyte side, sbyte uplo, int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::CUDA.Double2.__Internal beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrsm")]
             internal static extern void Strsm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, float alpha, float* A, int lda, float* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrsm")]
             internal static extern void Dtrsm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, double alpha, double* A, int lda, double* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrsm")]
             internal static extern void Ctrsm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrsm")]
             internal static extern void Ztrsm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrmm")]
             internal static extern void Strmm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, float alpha, float* A, int lda, float* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrmm")]
             internal static extern void Dtrmm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, double alpha, double* A, int lda, double* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrmm")]
             internal static extern void Ctrmm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, global::CUDA.Float2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrmm")]
             internal static extern void Ztrmm(sbyte side, sbyte uplo, sbyte transa, sbyte diag, int m, int n, global::CUDA.Double2.__Internal alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
         }
@@ -2529,12 +2529,12 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaEventCreate@@YA?AW4cudaError@@PEAPEAUCUevent_st@@I@Z")]
             internal static extern global::CUDA.CudaError CudaEventCreate(global::System.IntPtr @event, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaMallocHost@@YA?AW4cudaError@@PEAPEAX_KI@Z")]
             internal static extern global::CUDA.CudaError CudaMallocHost(void** ptr, ulong size, uint flags);
         }
@@ -2654,7 +2654,7 @@ namespace CUDA
             internal sbyte x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0char1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -2752,7 +2752,7 @@ namespace CUDA
             internal byte x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uchar1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -2853,7 +2853,7 @@ namespace CUDA
             internal sbyte y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0char2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -2967,7 +2967,7 @@ namespace CUDA
             internal byte y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uchar2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3084,7 +3084,7 @@ namespace CUDA
             internal sbyte z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0char3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3214,7 +3214,7 @@ namespace CUDA
             internal byte z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uchar3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3347,7 +3347,7 @@ namespace CUDA
             internal sbyte w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0char4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3493,7 +3493,7 @@ namespace CUDA
             internal byte w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uchar4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3630,7 +3630,7 @@ namespace CUDA
             internal short x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0short1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3728,7 +3728,7 @@ namespace CUDA
             internal ushort x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ushort1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3829,7 +3829,7 @@ namespace CUDA
             internal short y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0short2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -3943,7 +3943,7 @@ namespace CUDA
             internal ushort y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ushort2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4060,7 +4060,7 @@ namespace CUDA
             internal short z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0short3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4190,7 +4190,7 @@ namespace CUDA
             internal ushort z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ushort3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4323,7 +4323,7 @@ namespace CUDA
             internal short w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0short4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4469,7 +4469,7 @@ namespace CUDA
             internal ushort w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ushort4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4606,7 +4606,7 @@ namespace CUDA
             internal int x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0int1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4704,7 +4704,7 @@ namespace CUDA
             internal uint x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uint1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4805,7 +4805,7 @@ namespace CUDA
             internal int y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0int2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -4919,7 +4919,7 @@ namespace CUDA
             internal uint y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uint2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5036,7 +5036,7 @@ namespace CUDA
             internal int z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0int3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5166,7 +5166,7 @@ namespace CUDA
             internal uint z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uint3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5299,7 +5299,7 @@ namespace CUDA
             internal int w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0int4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5445,7 +5445,7 @@ namespace CUDA
             internal uint w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0uint4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5582,7 +5582,7 @@ namespace CUDA
             internal int x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0long1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5680,7 +5680,7 @@ namespace CUDA
             internal uint x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulong1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5781,7 +5781,7 @@ namespace CUDA
             internal int y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0long2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -5895,7 +5895,7 @@ namespace CUDA
             internal uint y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulong2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6012,7 +6012,7 @@ namespace CUDA
             internal int z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0long3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6142,7 +6142,7 @@ namespace CUDA
             internal uint z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulong3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6275,7 +6275,7 @@ namespace CUDA
             internal int w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0long4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6421,7 +6421,7 @@ namespace CUDA
             internal uint w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulong4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6558,7 +6558,7 @@ namespace CUDA
             internal float x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0float1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6659,7 +6659,7 @@ namespace CUDA
             internal float y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0float2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6776,7 +6776,7 @@ namespace CUDA
             internal float z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0float3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -6909,7 +6909,7 @@ namespace CUDA
             internal float w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0float4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7046,7 +7046,7 @@ namespace CUDA
             internal long x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0longlong1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7144,7 +7144,7 @@ namespace CUDA
             internal ulong x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulonglong1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7245,7 +7245,7 @@ namespace CUDA
             internal long y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0longlong2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7359,7 +7359,7 @@ namespace CUDA
             internal ulong y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulonglong2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7476,7 +7476,7 @@ namespace CUDA
             internal long z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0longlong3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7606,7 +7606,7 @@ namespace CUDA
             internal ulong z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulonglong3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7739,7 +7739,7 @@ namespace CUDA
             internal long w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0longlong4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -7885,7 +7885,7 @@ namespace CUDA
             internal ulong w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0ulonglong4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -8022,7 +8022,7 @@ namespace CUDA
             internal double x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0double1@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -8123,7 +8123,7 @@ namespace CUDA
             internal double y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0double2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -8240,7 +8240,7 @@ namespace CUDA
             internal double z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0double3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -8373,7 +8373,7 @@ namespace CUDA
             internal double w;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0double4@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -8523,22 +8523,22 @@ namespace CUDA
             internal uint z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0dim3@@QEAA@III@Z")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, uint vx, uint vy, uint vz);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0dim3@@QEAA@Uuint3@@@Z")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, global::CUDA.Uint3.__Internal v);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0dim3@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??Bdim3@@QEAA?AUuint3@@XZ")]
             internal static extern void OperatorConversion(global::System.IntPtr instance, global::System.IntPtr @return);
         }
@@ -9710,7 +9710,7 @@ namespace CUDA
             internal global::CUDA.CudaChannelFormatKind f;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaChannelFormatDesc@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -9965,7 +9965,7 @@ namespace CUDA
             internal ulong ysize;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaPitchedPtr@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -10110,7 +10110,7 @@ namespace CUDA
             internal ulong depth;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaExtent@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -10242,7 +10242,7 @@ namespace CUDA
             internal ulong z;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaPos@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -10388,7 +10388,7 @@ namespace CUDA
             internal global::CUDA.CudaMemcpyKind kind;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaMemcpy3DParms@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -10612,7 +10612,7 @@ namespace CUDA
             internal global::CUDA.CudaExtent.__Internal extent;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaMemcpy3DPeerParms@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -10876,7 +10876,7 @@ namespace CUDA
             internal global::CUDA.CudaResourceDesc._.__Internal res;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaResourceDesc@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -11073,7 +11073,7 @@ namespace CUDA
             internal uint lastLayer;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaResourceViewDesc@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -11275,7 +11275,7 @@ namespace CUDA
             internal int isManaged;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaPointerAttributes@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -11453,7 +11453,7 @@ namespace CUDA
             internal int preferredShmemCarveout;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaFuncAttributes@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -11879,7 +11879,7 @@ namespace CUDA
             internal ulong sharedMemPerBlockOptin;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaDeviceProp@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -13075,7 +13075,7 @@ namespace CUDA
             internal fixed sbyte reserved[64];
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaIpcEventHandle_st@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -13185,7 +13185,7 @@ namespace CUDA
             internal fixed sbyte reserved[64];
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaIpcMemHandle_st@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -13451,12 +13451,12 @@ namespace CUDA
             internal global::System.IntPtr stream;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaLaunchParams@@QEAA@XZ")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaLaunchParams@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -13647,7 +13647,7 @@ namespace CUDA
             internal global::CUDA.CudaChannelFormatDesc.__Internal channelDesc;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0surfaceReference@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -13808,7 +13808,7 @@ namespace CUDA
             internal fixed int __cudaReserved[15];
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0textureReference@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -14065,7 +14065,7 @@ namespace CUDA
             internal float maxMipmapLevelClamp;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0cudaTextureDesc@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -14287,202 +14287,202 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaCreateChannelDescHalf@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDescHalf(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaCreateChannelDescHalf1@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDescHalf1(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaCreateChannelDescHalf2@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDescHalf2(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cudaCreateChannelDescHalf4@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDescHalf4(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@C@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@E@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc1(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uchar1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc2(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuchar1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc3(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uchar2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc4(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuchar2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc5(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uchar4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc6(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuchar4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc7(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@F@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc8(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@G@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc9(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ushort1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc10(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uushort1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc11(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ushort2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc12(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uushort2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc13(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ushort4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc14(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uushort4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc15(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@H@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc16(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@I@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc17(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uint1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc18(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuint1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc19(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uint2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc20(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuint2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc21(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uint4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc22(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uuint4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc23(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@J@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc24(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@K@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc25(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ulong1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc26(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uulong1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc27(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ulong2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc28(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uulong2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc29(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ulong4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc30(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Uulong4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc31(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@M@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc32(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ufloat1@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc33(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ufloat2@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc34(global::System.IntPtr @return);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??$cudaCreateChannelDesc@Ufloat4@@@@YA?AUcudaChannelFormatDesc@@XZ")]
             internal static extern void CudaCreateChannelDesc35(global::System.IntPtr @return);
         }
@@ -21522,17 +21522,17 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cudaPitchedPtr@@YA?AUcudaPitchedPtr@@PEAX_K11@Z")]
             internal static extern void MakeCudaPitchedPtr(global::System.IntPtr @return, global::System.IntPtr d, ulong p, ulong xsz, ulong ysz);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cudaPos@@YA?AUcudaPos@@_K00@Z")]
             internal static extern void MakeCudaPos(global::System.IntPtr @return, ulong x, ulong y, ulong z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cudaExtent@@YA?AUcudaExtent@@_K00@Z")]
             internal static extern void MakeCudaExtent(global::System.IntPtr @return, ulong w, ulong h, ulong d);
         }
@@ -21592,242 +21592,242 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char1@@YA?AUchar1@@C@Z")]
             internal static extern global::CUDA.Char1.__Internal MakeChar1(sbyte x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar1@@YA?AUuchar1@@E@Z")]
             internal static extern global::CUDA.Uchar1.__Internal MakeUchar1(byte x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char2@@YA?AUchar2@@CC@Z")]
             internal static extern global::CUDA.Char2.__Internal MakeChar2(sbyte x, sbyte y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar2@@YA?AUuchar2@@EE@Z")]
             internal static extern global::CUDA.Uchar2.__Internal MakeUchar2(byte x, byte y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char3@@YA?AUchar3@@CCC@Z")]
             internal static extern void MakeChar3(global::System.IntPtr @return, sbyte x, sbyte y, sbyte z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar3@@YA?AUuchar3@@EEE@Z")]
             internal static extern void MakeUchar3(global::System.IntPtr @return, byte x, byte y, byte z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char4@@YA?AUchar4@@CCCC@Z")]
             internal static extern global::CUDA.Char4.__Internal MakeChar4(sbyte x, sbyte y, sbyte z, sbyte w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar4@@YA?AUuchar4@@EEEE@Z")]
             internal static extern global::CUDA.Uchar4.__Internal MakeUchar4(byte x, byte y, byte z, byte w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short1@@YA?AUshort1@@F@Z")]
             internal static extern global::CUDA.Short1.__Internal MakeShort1(short x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort1@@YA?AUushort1@@G@Z")]
             internal static extern global::CUDA.Ushort1.__Internal MakeUshort1(ushort x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short2@@YA?AUshort2@@FF@Z")]
             internal static extern global::CUDA.Short2.__Internal MakeShort2(short x, short y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort2@@YA?AUushort2@@GG@Z")]
             internal static extern global::CUDA.Ushort2.__Internal MakeUshort2(ushort x, ushort y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short3@@YA?AUshort3@@FFF@Z")]
             internal static extern void MakeShort3(global::System.IntPtr @return, short x, short y, short z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort3@@YA?AUushort3@@GGG@Z")]
             internal static extern void MakeUshort3(global::System.IntPtr @return, ushort x, ushort y, ushort z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short4@@YA?AUshort4@@FFFF@Z")]
             internal static extern global::CUDA.Short4.__Internal MakeShort4(short x, short y, short z, short w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort4@@YA?AUushort4@@GGGG@Z")]
             internal static extern global::CUDA.Ushort4.__Internal MakeUshort4(ushort x, ushort y, ushort z, ushort w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int1@@YA?AUint1@@H@Z")]
             internal static extern global::CUDA.Int1.__Internal MakeInt1(int x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint1@@YA?AUuint1@@I@Z")]
             internal static extern global::CUDA.Uint1.__Internal MakeUint1(uint x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int2@@YA?AUint2@@HH@Z")]
             internal static extern global::CUDA.Int2.__Internal MakeInt2(int x, int y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint2@@YA?AUuint2@@II@Z")]
             internal static extern global::CUDA.Uint2.__Internal MakeUint2(uint x, uint y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int3@@YA?AUint3@@HHH@Z")]
             internal static extern void MakeInt3(global::System.IntPtr @return, int x, int y, int z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint3@@YA?AUuint3@@III@Z")]
             internal static extern void MakeUint3(global::System.IntPtr @return, uint x, uint y, uint z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int4@@YA?AUint4@@HHHH@Z")]
             internal static extern void MakeInt4(global::System.IntPtr @return, int x, int y, int z, int w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint4@@YA?AUuint4@@IIII@Z")]
             internal static extern void MakeUint4(global::System.IntPtr @return, uint x, uint y, uint z, uint w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long1@@YA?AUlong1@@J@Z")]
             internal static extern global::CUDA.Long1.__Internal MakeLong1(int x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong1@@YA?AUulong1@@K@Z")]
             internal static extern global::CUDA.Ulong1.__Internal MakeUlong1(uint x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long2@@YA?AUlong2@@JJ@Z")]
             internal static extern global::CUDA.Long2.__Internal MakeLong2(int x, int y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong2@@YA?AUulong2@@KK@Z")]
             internal static extern global::CUDA.Ulong2.__Internal MakeUlong2(uint x, uint y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long3@@YA?AUlong3@@JJJ@Z")]
             internal static extern void MakeLong3(global::System.IntPtr @return, int x, int y, int z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong3@@YA?AUulong3@@KKK@Z")]
             internal static extern void MakeUlong3(global::System.IntPtr @return, uint x, uint y, uint z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long4@@YA?AUlong4@@JJJJ@Z")]
             internal static extern void MakeLong4(global::System.IntPtr @return, int x, int y, int z, int w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong4@@YA?AUulong4@@KKKK@Z")]
             internal static extern void MakeUlong4(global::System.IntPtr @return, uint x, uint y, uint z, uint w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float1@@YA?AUfloat1@@M@Z")]
             internal static extern global::CUDA.Float1.__Internal MakeFloat1(float x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float2@@YA?AUfloat2@@MM@Z")]
             internal static extern global::CUDA.Float2.__Internal MakeFloat2(float x, float y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float3@@YA?AUfloat3@@MMM@Z")]
             internal static extern void MakeFloat3(global::System.IntPtr @return, float x, float y, float z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float4@@YA?AUfloat4@@MMMM@Z")]
             internal static extern void MakeFloat4(global::System.IntPtr @return, float x, float y, float z, float w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong1@@YA?AUlonglong1@@_J@Z")]
             internal static extern global::CUDA.Longlong1.__Internal MakeLonglong1(long x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong1@@YA?AUulonglong1@@_K@Z")]
             internal static extern global::CUDA.Ulonglong1.__Internal MakeUlonglong1(ulong x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong2@@YA?AUlonglong2@@_J0@Z")]
             internal static extern void MakeLonglong2(global::System.IntPtr @return, long x, long y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong2@@YA?AUulonglong2@@_K0@Z")]
             internal static extern void MakeUlonglong2(global::System.IntPtr @return, ulong x, ulong y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong3@@YA?AUlonglong3@@_J00@Z")]
             internal static extern void MakeLonglong3(global::System.IntPtr @return, long x, long y, long z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong3@@YA?AUulonglong3@@_K00@Z")]
             internal static extern void MakeUlonglong3(global::System.IntPtr @return, ulong x, ulong y, ulong z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong4@@YA?AUlonglong4@@_J000@Z")]
             internal static extern void MakeLonglong4(global::System.IntPtr @return, long x, long y, long z, long w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong4@@YA?AUulonglong4@@_K000@Z")]
             internal static extern void MakeUlonglong4(global::System.IntPtr @return, ulong x, ulong y, ulong z, ulong w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double1@@YA?AUdouble1@@N@Z")]
             internal static extern global::CUDA.Double1.__Internal MakeDouble1(double x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double2@@YA?AUdouble2@@NN@Z")]
             internal static extern void MakeDouble2(global::System.IntPtr @return, double x, double y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double3@@YA?AUdouble3@@NNN@Z")]
             internal static extern void MakeDouble3(global::System.IntPtr @return, double x, double y, double z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double4@@YA?AUdouble4@@NNNN@Z")]
             internal static extern void MakeDouble4(global::System.IntPtr @return, double x, double y, double z, double w);
         }
@@ -22156,242 +22156,242 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char1@@YA?AUchar1@@C@Z")]
             internal static extern global::CUDA.Char1.__Internal MakeChar11(sbyte x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar1@@YA?AUuchar1@@E@Z")]
             internal static extern global::CUDA.Uchar1.__Internal MakeUchar11(byte x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char2@@YA?AUchar2@@CC@Z")]
             internal static extern global::CUDA.Char2.__Internal MakeChar21(sbyte x, sbyte y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar2@@YA?AUuchar2@@EE@Z")]
             internal static extern global::CUDA.Uchar2.__Internal MakeUchar21(byte x, byte y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char3@@YA?AUchar3@@CCC@Z")]
             internal static extern void MakeChar31(global::System.IntPtr @return, sbyte x, sbyte y, sbyte z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar3@@YA?AUuchar3@@EEE@Z")]
             internal static extern void MakeUchar31(global::System.IntPtr @return, byte x, byte y, byte z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_char4@@YA?AUchar4@@CCCC@Z")]
             internal static extern global::CUDA.Char4.__Internal MakeChar41(sbyte x, sbyte y, sbyte z, sbyte w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uchar4@@YA?AUuchar4@@EEEE@Z")]
             internal static extern global::CUDA.Uchar4.__Internal MakeUchar41(byte x, byte y, byte z, byte w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short1@@YA?AUshort1@@F@Z")]
             internal static extern global::CUDA.Short1.__Internal MakeShort11(short x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort1@@YA?AUushort1@@G@Z")]
             internal static extern global::CUDA.Ushort1.__Internal MakeUshort11(ushort x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short2@@YA?AUshort2@@FF@Z")]
             internal static extern global::CUDA.Short2.__Internal MakeShort21(short x, short y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort2@@YA?AUushort2@@GG@Z")]
             internal static extern global::CUDA.Ushort2.__Internal MakeUshort21(ushort x, ushort y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short3@@YA?AUshort3@@FFF@Z")]
             internal static extern void MakeShort31(global::System.IntPtr @return, short x, short y, short z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort3@@YA?AUushort3@@GGG@Z")]
             internal static extern void MakeUshort31(global::System.IntPtr @return, ushort x, ushort y, ushort z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_short4@@YA?AUshort4@@FFFF@Z")]
             internal static extern global::CUDA.Short4.__Internal MakeShort41(short x, short y, short z, short w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ushort4@@YA?AUushort4@@GGGG@Z")]
             internal static extern global::CUDA.Ushort4.__Internal MakeUshort41(ushort x, ushort y, ushort z, ushort w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int1@@YA?AUint1@@H@Z")]
             internal static extern global::CUDA.Int1.__Internal MakeInt11(int x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint1@@YA?AUuint1@@I@Z")]
             internal static extern global::CUDA.Uint1.__Internal MakeUint11(uint x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int2@@YA?AUint2@@HH@Z")]
             internal static extern global::CUDA.Int2.__Internal MakeInt21(int x, int y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint2@@YA?AUuint2@@II@Z")]
             internal static extern global::CUDA.Uint2.__Internal MakeUint21(uint x, uint y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int3@@YA?AUint3@@HHH@Z")]
             internal static extern void MakeInt31(global::System.IntPtr @return, int x, int y, int z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint3@@YA?AUuint3@@III@Z")]
             internal static extern void MakeUint31(global::System.IntPtr @return, uint x, uint y, uint z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_int4@@YA?AUint4@@HHHH@Z")]
             internal static extern void MakeInt41(global::System.IntPtr @return, int x, int y, int z, int w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_uint4@@YA?AUuint4@@IIII@Z")]
             internal static extern void MakeUint41(global::System.IntPtr @return, uint x, uint y, uint z, uint w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long1@@YA?AUlong1@@J@Z")]
             internal static extern global::CUDA.Long1.__Internal MakeLong11(int x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong1@@YA?AUulong1@@K@Z")]
             internal static extern global::CUDA.Ulong1.__Internal MakeUlong11(uint x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long2@@YA?AUlong2@@JJ@Z")]
             internal static extern global::CUDA.Long2.__Internal MakeLong21(int x, int y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong2@@YA?AUulong2@@KK@Z")]
             internal static extern global::CUDA.Ulong2.__Internal MakeUlong21(uint x, uint y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long3@@YA?AUlong3@@JJJ@Z")]
             internal static extern void MakeLong31(global::System.IntPtr @return, int x, int y, int z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong3@@YA?AUulong3@@KKK@Z")]
             internal static extern void MakeUlong31(global::System.IntPtr @return, uint x, uint y, uint z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_long4@@YA?AUlong4@@JJJJ@Z")]
             internal static extern void MakeLong41(global::System.IntPtr @return, int x, int y, int z, int w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulong4@@YA?AUulong4@@KKKK@Z")]
             internal static extern void MakeUlong41(global::System.IntPtr @return, uint x, uint y, uint z, uint w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float1@@YA?AUfloat1@@M@Z")]
             internal static extern global::CUDA.Float1.__Internal MakeFloat11(float x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float2@@YA?AUfloat2@@MM@Z")]
             internal static extern global::CUDA.Float2.__Internal MakeFloat21(float x, float y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float3@@YA?AUfloat3@@MMM@Z")]
             internal static extern void MakeFloat31(global::System.IntPtr @return, float x, float y, float z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_float4@@YA?AUfloat4@@MMMM@Z")]
             internal static extern void MakeFloat41(global::System.IntPtr @return, float x, float y, float z, float w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong1@@YA?AUlonglong1@@_J@Z")]
             internal static extern global::CUDA.Longlong1.__Internal MakeLonglong11(long x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong1@@YA?AUulonglong1@@_K@Z")]
             internal static extern global::CUDA.Ulonglong1.__Internal MakeUlonglong11(ulong x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong2@@YA?AUlonglong2@@_J0@Z")]
             internal static extern void MakeLonglong21(global::System.IntPtr @return, long x, long y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong2@@YA?AUulonglong2@@_K0@Z")]
             internal static extern void MakeUlonglong21(global::System.IntPtr @return, ulong x, ulong y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong3@@YA?AUlonglong3@@_J00@Z")]
             internal static extern void MakeLonglong31(global::System.IntPtr @return, long x, long y, long z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong3@@YA?AUulonglong3@@_K00@Z")]
             internal static extern void MakeUlonglong31(global::System.IntPtr @return, ulong x, ulong y, ulong z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_longlong4@@YA?AUlonglong4@@_J000@Z")]
             internal static extern void MakeLonglong41(global::System.IntPtr @return, long x, long y, long z, long w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_ulonglong4@@YA?AUulonglong4@@_K000@Z")]
             internal static extern void MakeUlonglong41(global::System.IntPtr @return, ulong x, ulong y, ulong z, ulong w);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double1@@YA?AUdouble1@@N@Z")]
             internal static extern global::CUDA.Double1.__Internal MakeDouble11(double x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double2@@YA?AUdouble2@@NN@Z")]
             internal static extern void MakeDouble21(global::System.IntPtr @return, double x, double y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double3@@YA?AUdouble3@@NNN@Z")]
             internal static extern void MakeDouble31(global::System.IntPtr @return, double x, double y, double z);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_double4@@YA?AUdouble4@@NNNN@Z")]
             internal static extern void MakeDouble41(global::System.IntPtr @return, double x, double y, double z, double w);
         }
@@ -22855,1292 +22855,1292 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCreate_v2")]
             internal static extern global::CUDA.CublasStatusT CreateV2(global::System.IntPtr handle);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDestroy_v2")]
             internal static extern global::CUDA.CublasStatusT DestroyV2(global::System.IntPtr handle);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetVersion_v2")]
             internal static extern global::CUDA.CublasStatusT GetVersionV2(global::System.IntPtr handle, int* version);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetProperty")]
             internal static extern global::CUDA.CublasStatusT GetProperty(global::CUDA.LibraryPropertyTypeT type, int* value);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetStream_v2")]
             internal static extern global::CUDA.CublasStatusT SetStreamV2(global::System.IntPtr handle, global::System.IntPtr streamId);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetStream_v2")]
             internal static extern global::CUDA.CublasStatusT GetStreamV2(global::System.IntPtr handle, global::System.IntPtr streamId);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetPointerMode_v2")]
             internal static extern global::CUDA.CublasStatusT GetPointerModeV2(global::System.IntPtr handle, global::CUDA.CublasPointerModeT* mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetPointerMode_v2")]
             internal static extern global::CUDA.CublasStatusT SetPointerModeV2(global::System.IntPtr handle, global::CUDA.CublasPointerModeT mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetAtomicsMode")]
             internal static extern global::CUDA.CublasStatusT GetAtomicsMode(global::System.IntPtr handle, global::CUDA.CublasAtomicsModeT* mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetAtomicsMode")]
             internal static extern global::CUDA.CublasStatusT SetAtomicsMode(global::System.IntPtr handle, global::CUDA.CublasAtomicsModeT mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetMathMode")]
             internal static extern global::CUDA.CublasStatusT GetMathMode(global::System.IntPtr handle, global::CUDA.CublasMathT* mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetMathMode")]
             internal static extern global::CUDA.CublasStatusT SetMathMode(global::System.IntPtr handle, global::CUDA.CublasMathT mode);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetVector")]
             internal static extern global::CUDA.CublasStatusT SetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr devicePtr, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetVector")]
             internal static extern global::CUDA.CublasStatusT GetVector(int n, int elemSize, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetMatrix")]
             internal static extern global::CUDA.CublasStatusT SetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetMatrix")]
             internal static extern global::CUDA.CublasStatusT GetMatrix(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetVectorAsync")]
             internal static extern global::CUDA.CublasStatusT SetVectorAsync(int n, int elemSize, global::System.IntPtr hostPtr, int incx, global::System.IntPtr devicePtr, int incy, global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetVectorAsync")]
             internal static extern global::CUDA.CublasStatusT GetVectorAsync(int n, int elemSize, global::System.IntPtr devicePtr, int incx, global::System.IntPtr hostPtr, int incy, global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSetMatrixAsync")]
             internal static extern global::CUDA.CublasStatusT SetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGetMatrixAsync")]
             internal static extern global::CUDA.CublasStatusT GetMatrixAsync(int rows, int cols, int elemSize, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasXerbla")]
             internal static extern void Xerbla([MarshalAs(UnmanagedType.LPStr)] string srName, int info);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasNrm2Ex")]
             internal static extern global::CUDA.CublasStatusT Nrm2Ex(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSnrm2_v2")]
             internal static extern global::CUDA.CublasStatusT Snrm2V2(global::System.IntPtr handle, int n, float* x, int incx, float* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDnrm2_v2")]
             internal static extern global::CUDA.CublasStatusT Dnrm2V2(global::System.IntPtr handle, int n, double* x, int incx, double* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScnrm2_v2")]
             internal static extern global::CUDA.CublasStatusT Scnrm2V2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, float* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDznrm2_v2")]
             internal static extern global::CUDA.CublasStatusT Dznrm2V2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, double* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDotEx")]
             internal static extern global::CUDA.CublasStatusT DotEx(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDotcEx")]
             internal static extern global::CUDA.CublasStatusT DotcEx(global::System.IntPtr handle, int n, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::System.IntPtr result, global::CUDA.CudaDataTypeT resultType, global::CUDA.CudaDataTypeT executionType);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSdot_v2")]
             internal static extern global::CUDA.CublasStatusT SdotV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDdot_v2")]
             internal static extern global::CUDA.CublasStatusT DdotV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCdotu_v2")]
             internal static extern global::CUDA.CublasStatusT CdotuV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCdotc_v2")]
             internal static extern global::CUDA.CublasStatusT CdotcV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdotu_v2")]
             internal static extern global::CUDA.CublasStatusT ZdotuV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdotc_v2")]
             internal static extern global::CUDA.CublasStatusT ZdotcV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScalEx")]
             internal static extern global::CUDA.CublasStatusT ScalEx(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::CUDA.CudaDataTypeT executionType);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSscal_v2")]
             internal static extern global::CUDA.CublasStatusT SscalV2(global::System.IntPtr handle, int n, float* alpha, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDscal_v2")]
             internal static extern global::CUDA.CublasStatusT DscalV2(global::System.IntPtr handle, int n, double* alpha, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCscal_v2")]
             internal static extern global::CUDA.CublasStatusT CscalV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsscal_v2")]
             internal static extern global::CUDA.CublasStatusT CsscalV2(global::System.IntPtr handle, int n, float* alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZscal_v2")]
             internal static extern global::CUDA.CublasStatusT ZscalV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdscal_v2")]
             internal static extern global::CUDA.CublasStatusT ZdscalV2(global::System.IntPtr handle, int n, double* alpha, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasAxpyEx")]
             internal static extern global::CUDA.CublasStatusT AxpyEx(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::CUDA.CudaDataTypeT alphaType, global::System.IntPtr x, global::CUDA.CudaDataTypeT xType, int incx, global::System.IntPtr y, global::CUDA.CudaDataTypeT yType, int incy, global::CUDA.CudaDataTypeT executiontype);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSaxpy_v2")]
             internal static extern global::CUDA.CublasStatusT SaxpyV2(global::System.IntPtr handle, int n, float* alpha, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDaxpy_v2")]
             internal static extern global::CUDA.CublasStatusT DaxpyV2(global::System.IntPtr handle, int n, double* alpha, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCaxpy_v2")]
             internal static extern global::CUDA.CublasStatusT CaxpyV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZaxpy_v2")]
             internal static extern global::CUDA.CublasStatusT ZaxpyV2(global::System.IntPtr handle, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScopy_v2")]
             internal static extern global::CUDA.CublasStatusT ScopyV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDcopy_v2")]
             internal static extern global::CUDA.CublasStatusT DcopyV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCcopy_v2")]
             internal static extern global::CUDA.CublasStatusT CcopyV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZcopy_v2")]
             internal static extern global::CUDA.CublasStatusT ZcopyV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSswap_v2")]
             internal static extern global::CUDA.CublasStatusT SswapV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDswap_v2")]
             internal static extern global::CUDA.CublasStatusT DswapV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCswap_v2")]
             internal static extern global::CUDA.CublasStatusT CswapV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZswap_v2")]
             internal static extern global::CUDA.CublasStatusT ZswapV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIsamax_v2")]
             internal static extern global::CUDA.CublasStatusT IsamaxV2(global::System.IntPtr handle, int n, float* x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIdamax_v2")]
             internal static extern global::CUDA.CublasStatusT IdamaxV2(global::System.IntPtr handle, int n, double* x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIcamax_v2")]
             internal static extern global::CUDA.CublasStatusT IcamaxV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIzamax_v2")]
             internal static extern global::CUDA.CublasStatusT IzamaxV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIsamin_v2")]
             internal static extern global::CUDA.CublasStatusT IsaminV2(global::System.IntPtr handle, int n, float* x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIdamin_v2")]
             internal static extern global::CUDA.CublasStatusT IdaminV2(global::System.IntPtr handle, int n, double* x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIcamin_v2")]
             internal static extern global::CUDA.CublasStatusT IcaminV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasIzamin_v2")]
             internal static extern global::CUDA.CublasStatusT IzaminV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, int* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSasum_v2")]
             internal static extern global::CUDA.CublasStatusT SasumV2(global::System.IntPtr handle, int n, float* x, int incx, float* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDasum_v2")]
             internal static extern global::CUDA.CublasStatusT DasumV2(global::System.IntPtr handle, int n, double* x, int incx, double* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasScasum_v2")]
             internal static extern global::CUDA.CublasStatusT ScasumV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, float* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDzasum_v2")]
             internal static extern global::CUDA.CublasStatusT DzasumV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, double* result);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrot_v2")]
             internal static extern global::CUDA.CublasStatusT SrotV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrot_v2")]
             internal static extern global::CUDA.CublasStatusT DrotV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCrot_v2")]
             internal static extern global::CUDA.CublasStatusT CrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float* c, global::System.IntPtr s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsrot_v2")]
             internal static extern global::CUDA.CublasStatusT CsrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZrot_v2")]
             internal static extern global::CUDA.CublasStatusT ZrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double* c, global::System.IntPtr s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdrot_v2")]
             internal static extern global::CUDA.CublasStatusT ZdrotV2(global::System.IntPtr handle, int n, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotg_v2")]
             internal static extern global::CUDA.CublasStatusT SrotgV2(global::System.IntPtr handle, float* a, float* b, float* c, float* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotg_v2")]
             internal static extern global::CUDA.CublasStatusT DrotgV2(global::System.IntPtr handle, double* a, double* b, double* c, double* s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCrotg_v2")]
             internal static extern global::CUDA.CublasStatusT CrotgV2(global::System.IntPtr handle, global::System.IntPtr a, global::System.IntPtr b, float* c, global::System.IntPtr s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZrotg_v2")]
             internal static extern global::CUDA.CublasStatusT ZrotgV2(global::System.IntPtr handle, global::System.IntPtr a, global::System.IntPtr b, double* c, global::System.IntPtr s);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotm_v2")]
             internal static extern global::CUDA.CublasStatusT SrotmV2(global::System.IntPtr handle, int n, float* x, int incx, float* y, int incy, float* param);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotm_v2")]
             internal static extern global::CUDA.CublasStatusT DrotmV2(global::System.IntPtr handle, int n, double* x, int incx, double* y, int incy, double* param);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSrotmg_v2")]
             internal static extern global::CUDA.CublasStatusT SrotmgV2(global::System.IntPtr handle, float* d1, float* d2, float* x1, float* y1, float* param);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDrotmg_v2")]
             internal static extern global::CUDA.CublasStatusT DrotmgV2(global::System.IntPtr handle, double* d1, double* d2, double* x1, double* y1, double* param);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemv_v2")]
             internal static extern global::CUDA.CublasStatusT SgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemv_v2")]
             internal static extern global::CUDA.CublasStatusT DgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemv_v2")]
             internal static extern global::CUDA.CublasStatusT CgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemv_v2")]
             internal static extern global::CUDA.CublasStatusT ZgemvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgbmv_v2")]
             internal static extern global::CUDA.CublasStatusT SgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgbmv_v2")]
             internal static extern global::CUDA.CublasStatusT DgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgbmv_v2")]
             internal static extern global::CUDA.CublasStatusT CgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgbmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZgbmvV2(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int kl, int ku, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrmv_v2")]
             internal static extern global::CUDA.CublasStatusT StrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrmv_v2")]
             internal static extern global::CUDA.CublasStatusT DtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrmv_v2")]
             internal static extern global::CUDA.CublasStatusT CtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtrmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStbmv_v2")]
             internal static extern global::CUDA.CublasStatusT StbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtbmv_v2")]
             internal static extern global::CUDA.CublasStatusT DtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtbmv_v2")]
             internal static extern global::CUDA.CublasStatusT CtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtbmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStpmv_v2")]
             internal static extern global::CUDA.CublasStatusT StpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* AP, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtpmv_v2")]
             internal static extern global::CUDA.CublasStatusT DtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* AP, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtpmv_v2")]
             internal static extern global::CUDA.CublasStatusT CtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtpmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrsv_v2")]
             internal static extern global::CUDA.CublasStatusT StrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrsv_v2")]
             internal static extern global::CUDA.CublasStatusT DtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrsv_v2")]
             internal static extern global::CUDA.CublasStatusT CtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrsv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtrsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStpsv_v2")]
             internal static extern global::CUDA.CublasStatusT StpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, float* AP, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtpsv_v2")]
             internal static extern global::CUDA.CublasStatusT DtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, double* AP, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtpsv_v2")]
             internal static extern global::CUDA.CublasStatusT CtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtpsv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtpsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, global::System.IntPtr AP, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStbsv_v2")]
             internal static extern global::CUDA.CublasStatusT StbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, float* A, int lda, float* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtbsv_v2")]
             internal static extern global::CUDA.CublasStatusT DtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, double* A, int lda, double* x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtbsv_v2")]
             internal static extern global::CUDA.CublasStatusT CtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtbsv_v2")]
             internal static extern global::CUDA.CublasStatusT ZtbsvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int n, int k, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsymv_v2")]
             internal static extern global::CUDA.CublasStatusT SsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsymv_v2")]
             internal static extern global::CUDA.CublasStatusT DsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsymv_v2")]
             internal static extern global::CUDA.CublasStatusT CsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsymv_v2")]
             internal static extern global::CUDA.CublasStatusT ZsymvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChemv_v2")]
             internal static extern global::CUDA.CublasStatusT ChemvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhemv_v2")]
             internal static extern global::CUDA.CublasStatusT ZhemvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsbmv_v2")]
             internal static extern global::CUDA.CublasStatusT SsbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, float* alpha, float* A, int lda, float* x, int incx, float* beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsbmv_v2")]
             internal static extern global::CUDA.CublasStatusT DsbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, double* alpha, double* A, int lda, double* x, int incx, double* beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChbmv_v2")]
             internal static extern global::CUDA.CublasStatusT ChbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhbmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZhbmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspmv_v2")]
             internal static extern global::CUDA.CublasStatusT SspmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* AP, float* x, int incx, float* beta, float* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspmv_v2")]
             internal static extern global::CUDA.CublasStatusT DspmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* AP, double* x, int incx, double* beta, double* y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpmv_v2")]
             internal static extern global::CUDA.CublasStatusT ChpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpmv_v2")]
             internal static extern global::CUDA.CublasStatusT ZhpmvV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr AP, global::System.IntPtr x, int incx, global::System.IntPtr beta, global::System.IntPtr y, int incy);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSger_v2")]
             internal static extern global::CUDA.CublasStatusT SgerV2(global::System.IntPtr handle, int m, int n, float* alpha, float* x, int incx, float* y, int incy, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDger_v2")]
             internal static extern global::CUDA.CublasStatusT DgerV2(global::System.IntPtr handle, int m, int n, double* alpha, double* x, int incx, double* y, int incy, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgeru_v2")]
             internal static extern global::CUDA.CublasStatusT CgeruV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgerc_v2")]
             internal static extern global::CUDA.CublasStatusT CgercV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgeru_v2")]
             internal static extern global::CUDA.CublasStatusT ZgeruV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgerc_v2")]
             internal static extern global::CUDA.CublasStatusT ZgercV2(global::System.IntPtr handle, int m, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr_v2")]
             internal static extern global::CUDA.CublasStatusT SsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr_v2")]
             internal static extern global::CUDA.CublasStatusT DsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyr_v2")]
             internal static extern global::CUDA.CublasStatusT CsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyr_v2")]
             internal static extern global::CUDA.CublasStatusT ZsyrV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher_v2")]
             internal static extern global::CUDA.CublasStatusT CherV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher_v2")]
             internal static extern global::CUDA.CublasStatusT ZherV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, global::System.IntPtr x, int incx, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspr_v2")]
             internal static extern global::CUDA.CublasStatusT SsprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspr_v2")]
             internal static extern global::CUDA.CublasStatusT DsprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpr_v2")]
             internal static extern global::CUDA.CublasStatusT ChprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpr_v2")]
             internal static extern global::CUDA.CublasStatusT ZhprV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, global::System.IntPtr x, int incx, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr2_v2")]
             internal static extern global::CUDA.CublasStatusT Ssyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* y, int incy, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr2_v2")]
             internal static extern global::CUDA.CublasStatusT Dsyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* y, int incy, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyr2_v2")]
             internal static extern global::CUDA.CublasStatusT Csyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyr2_v2")]
             internal static extern global::CUDA.CublasStatusT Zsyr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher2_v2")]
             internal static extern global::CUDA.CublasStatusT Cher2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher2_v2")]
             internal static extern global::CUDA.CublasStatusT Zher2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSspr2_v2")]
             internal static extern global::CUDA.CublasStatusT Sspr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* alpha, float* x, int incx, float* y, int incy, float* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDspr2_v2")]
             internal static extern global::CUDA.CublasStatusT Dspr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* alpha, double* x, int incx, double* y, int incy, double* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChpr2_v2")]
             internal static extern global::CUDA.CublasStatusT Chpr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhpr2_v2")]
             internal static extern global::CUDA.CublasStatusT Zhpr2V2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr alpha, global::System.IntPtr x, int incx, global::System.IntPtr y, int incy, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemm_v2")]
             internal static extern global::CUDA.CublasStatusT SgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemm_v2")]
             internal static extern global::CUDA.CublasStatusT DgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm_v2")]
             internal static extern global::CUDA.CublasStatusT CgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm3m")]
             internal static extern global::CUDA.CublasStatusT Cgemm3m(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm3mEx")]
             internal static extern global::CUDA.CublasStatusT Cgemm3mEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemm_v2")]
             internal static extern global::CUDA.CublasStatusT ZgemmV2(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemm3m")]
             internal static extern global::CUDA.CublasStatusT Zgemm3m(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasHgemm")]
             internal static extern global::CUDA.CublasStatusT Hgemm(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemmEx")]
             internal static extern global::CUDA.CublasStatusT SgemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGemmEx")]
             internal static extern global::CUDA.CublasStatusT GemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemmEx")]
             internal static extern global::CUDA.CublasStatusT CgemmEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasUint8gemmBias")]
             internal static extern global::CUDA.CublasStatusT Uint8gemmBias(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, global::CUDA.CublasOperationT transc, int m, int n, int k, byte* A, int A_bias, int lda, byte* B, int B_bias, int ldb, byte* C, int C_bias, int ldc, int C_mult, int C_shift);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyrk_v2")]
             internal static extern global::CUDA.CublasStatusT SsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyrk_v2")]
             internal static extern global::CUDA.CublasStatusT DsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyrk_v2")]
             internal static extern global::CUDA.CublasStatusT CsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyrk_v2")]
             internal static extern global::CUDA.CublasStatusT ZsyrkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyrkEx")]
             internal static extern global::CUDA.CublasStatusT CsyrkEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyrk3mEx")]
             internal static extern global::CUDA.CublasStatusT Csyrk3mEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCherk_v2")]
             internal static extern global::CUDA.CublasStatusT CherkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, int lda, float* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZherk_v2")]
             internal static extern global::CUDA.CublasStatusT ZherkV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, global::System.IntPtr A, int lda, double* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCherkEx")]
             internal static extern global::CUDA.CublasStatusT CherkEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCherk3mEx")]
             internal static extern global::CUDA.CublasStatusT Cherk3mEx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, float* beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyr2k_v2")]
             internal static extern global::CUDA.CublasStatusT Ssyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyr2k_v2")]
             internal static extern global::CUDA.CublasStatusT Dsyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyr2k_v2")]
             internal static extern global::CUDA.CublasStatusT Csyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyr2k_v2")]
             internal static extern global::CUDA.CublasStatusT Zsyr2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCher2k_v2")]
             internal static extern global::CUDA.CublasStatusT Cher2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, float* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZher2k_v2")]
             internal static extern global::CUDA.CublasStatusT Zher2kV2(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, double* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsyrkx")]
             internal static extern global::CUDA.CublasStatusT Ssyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsyrkx")]
             internal static extern global::CUDA.CublasStatusT Dsyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsyrkx")]
             internal static extern global::CUDA.CublasStatusT Csyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsyrkx")]
             internal static extern global::CUDA.CublasStatusT Zsyrkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCherkx")]
             internal static extern global::CUDA.CublasStatusT Cherkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, float* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZherkx")]
             internal static extern global::CUDA.CublasStatusT Zherkx(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, double* beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSsymm_v2")]
             internal static extern global::CUDA.CublasStatusT SsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, float* alpha, float* A, int lda, float* B, int ldb, float* beta, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDsymm_v2")]
             internal static extern global::CUDA.CublasStatusT DsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, double* alpha, double* A, int lda, double* B, int ldb, double* beta, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCsymm_v2")]
             internal static extern global::CUDA.CublasStatusT CsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZsymm_v2")]
             internal static extern global::CUDA.CublasStatusT ZsymmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasChemm_v2")]
             internal static extern global::CUDA.CublasStatusT ChemmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZhemm_v2")]
             internal static extern global::CUDA.CublasStatusT ZhemmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr beta, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrsm_v2")]
             internal static extern global::CUDA.CublasStatusT StrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float* A, int lda, float* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrsm_v2")]
             internal static extern global::CUDA.CublasStatusT DtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double* A, int lda, double* B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrsm_v2")]
             internal static extern global::CUDA.CublasStatusT CtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrsm_v2")]
             internal static extern global::CUDA.CublasStatusT ZtrsmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrmm_v2")]
             internal static extern global::CUDA.CublasStatusT StrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float* A, int lda, float* B, int ldb, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrmm_v2")]
             internal static extern global::CUDA.CublasStatusT DtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double* A, int lda, double* B, int ldb, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrmm_v2")]
             internal static extern global::CUDA.CublasStatusT CtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrmm_v2")]
             internal static extern global::CUDA.CublasStatusT ZtrmmV2(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasHgemmBatched")]
             internal static extern global::CUDA.CublasStatusT HgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemmBatched")]
             internal static extern global::CUDA.CublasStatusT SgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float** Aarray, int lda, float** Barray, int ldb, float* beta, float** Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemmBatched")]
             internal static extern global::CUDA.CublasStatusT DgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double** Aarray, int lda, double** Barray, int ldb, double* beta, double** Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemmBatched")]
             internal static extern global::CUDA.CublasStatusT CgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm3mBatched")]
             internal static extern global::CUDA.CublasStatusT Cgemm3mBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemmBatched")]
             internal static extern global::CUDA.CublasStatusT ZgemmBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr Aarray, int lda, global::System.IntPtr Barray, int ldb, global::System.IntPtr beta, global::System.IntPtr Carray, int ldc, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGemmBatchedEx")]
             internal static extern global::CUDA.CublasStatusT GemmBatchedEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, void** Aarray, global::CUDA.CudaDataTypeT Atype, int lda, void** Barray, global::CUDA.CudaDataTypeT Btype, int ldb, global::System.IntPtr beta, void** Carray, global::CUDA.CudaDataTypeT Ctype, int ldc, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasGemmStridedBatchedEx")]
             internal static extern global::CUDA.CublasStatusT GemmStridedBatchedEx(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, global::CUDA.CudaDataTypeT Atype, int lda, long strideA, global::System.IntPtr B, global::CUDA.CudaDataTypeT Btype, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, global::CUDA.CudaDataTypeT Ctype, int ldc, long strideC, int batchCount, global::CUDA.CudaDataTypeT computeType, global::CUDA.CublasGemmAlgoT algo);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgemmStridedBatched")]
             internal static extern global::CUDA.CublasStatusT SgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, float* alpha, float* A, int lda, long strideA, float* B, int ldb, long strideB, float* beta, float* C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgemmStridedBatched")]
             internal static extern global::CUDA.CublasStatusT DgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, double* alpha, double* A, int lda, long strideA, double* B, int ldb, long strideB, double* beta, double* C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemmStridedBatched")]
             internal static extern global::CUDA.CublasStatusT CgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgemm3mStridedBatched")]
             internal static extern global::CUDA.CublasStatusT Cgemm3mStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgemmStridedBatched")]
             internal static extern global::CUDA.CublasStatusT ZgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasHgemmStridedBatched")]
             internal static extern global::CUDA.CublasStatusT HgemmStridedBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, int k, global::System.IntPtr alpha, global::System.IntPtr A, int lda, long strideA, global::System.IntPtr B, int ldb, long strideB, global::System.IntPtr beta, global::System.IntPtr C, int ldc, long strideC, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgeam")]
             internal static extern global::CUDA.CublasStatusT Sgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, float* alpha, float* A, int lda, float* beta, float* B, int ldb, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgeam")]
             internal static extern global::CUDA.CublasStatusT Dgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, double* alpha, double* A, int lda, double* beta, double* B, int ldb, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgeam")]
             internal static extern global::CUDA.CublasStatusT Cgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgeam")]
             internal static extern global::CUDA.CublasStatusT Zgeam(global::System.IntPtr handle, global::CUDA.CublasOperationT transa, global::CUDA.CublasOperationT transb, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr beta, global::System.IntPtr B, int ldb, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgetrfBatched")]
             internal static extern global::CUDA.CublasStatusT SgetrfBatched(global::System.IntPtr handle, int n, float** A, int lda, int* P, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgetrfBatched")]
             internal static extern global::CUDA.CublasStatusT DgetrfBatched(global::System.IntPtr handle, int n, double** A, int lda, int* P, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgetrfBatched")]
             internal static extern global::CUDA.CublasStatusT CgetrfBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgetrfBatched")]
             internal static extern global::CUDA.CublasStatusT ZgetrfBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgetriBatched")]
             internal static extern global::CUDA.CublasStatusT SgetriBatched(global::System.IntPtr handle, int n, float** A, int lda, int* P, float** C, int ldc, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgetriBatched")]
             internal static extern global::CUDA.CublasStatusT DgetriBatched(global::System.IntPtr handle, int n, double** A, int lda, int* P, double** C, int ldc, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgetriBatched")]
             internal static extern global::CUDA.CublasStatusT CgetriBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, global::System.IntPtr C, int ldc, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgetriBatched")]
             internal static extern global::CUDA.CublasStatusT ZgetriBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, int* P, global::System.IntPtr C, int ldc, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgetrsBatched")]
             internal static extern global::CUDA.CublasStatusT SgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, float** Aarray, int lda, int* devIpiv, float** Barray, int ldb, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgetrsBatched")]
             internal static extern global::CUDA.CublasStatusT DgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, double** Aarray, int lda, int* devIpiv, double** Barray, int ldb, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgetrsBatched")]
             internal static extern global::CUDA.CublasStatusT CgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::System.IntPtr Aarray, int lda, int* devIpiv, global::System.IntPtr Barray, int ldb, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgetrsBatched")]
             internal static extern global::CUDA.CublasStatusT ZgetrsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int n, int nrhs, global::System.IntPtr Aarray, int lda, int* devIpiv, global::System.IntPtr Barray, int ldb, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrsmBatched")]
             internal static extern global::CUDA.CublasStatusT StrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, float* alpha, float** A, int lda, float** B, int ldb, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrsmBatched")]
             internal static extern global::CUDA.CublasStatusT DtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, double* alpha, double** A, int lda, double** B, int ldb, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrsmBatched")]
             internal static extern global::CUDA.CublasStatusT CtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrsmBatched")]
             internal static extern global::CUDA.CublasStatusT ZtrsmBatched(global::System.IntPtr handle, global::CUDA.CublasSideModeT side, global::CUDA.CublasFillModeT uplo, global::CUDA.CublasOperationT trans, global::CUDA.CublasDiagTypeT diag, int m, int n, global::System.IntPtr alpha, global::System.IntPtr A, int lda, global::System.IntPtr B, int ldb, int batchCount);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSmatinvBatched")]
             internal static extern global::CUDA.CublasStatusT SmatinvBatched(global::System.IntPtr handle, int n, float** A, int lda, float** Ainv, int lda_inv, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDmatinvBatched")]
             internal static extern global::CUDA.CublasStatusT DmatinvBatched(global::System.IntPtr handle, int n, double** A, int lda, double** Ainv, int lda_inv, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCmatinvBatched")]
             internal static extern global::CUDA.CublasStatusT CmatinvBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, global::System.IntPtr Ainv, int lda_inv, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZmatinvBatched")]
             internal static extern global::CUDA.CublasStatusT ZmatinvBatched(global::System.IntPtr handle, int n, global::System.IntPtr A, int lda, global::System.IntPtr Ainv, int lda_inv, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgeqrfBatched")]
             internal static extern global::CUDA.CublasStatusT SgeqrfBatched(global::System.IntPtr handle, int m, int n, float** Aarray, int lda, float** TauArray, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgeqrfBatched")]
             internal static extern global::CUDA.CublasStatusT DgeqrfBatched(global::System.IntPtr handle, int m, int n, double** Aarray, int lda, double** TauArray, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgeqrfBatched")]
             internal static extern global::CUDA.CublasStatusT CgeqrfBatched(global::System.IntPtr handle, int m, int n, global::System.IntPtr Aarray, int lda, global::System.IntPtr TauArray, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgeqrfBatched")]
             internal static extern global::CUDA.CublasStatusT ZgeqrfBatched(global::System.IntPtr handle, int m, int n, global::System.IntPtr Aarray, int lda, global::System.IntPtr TauArray, int* info, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSgelsBatched")]
             internal static extern global::CUDA.CublasStatusT SgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, float** Aarray, int lda, float** Carray, int ldc, int* info, int* devInfoArray, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDgelsBatched")]
             internal static extern global::CUDA.CublasStatusT DgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, double** Aarray, int lda, double** Carray, int ldc, int* info, int* devInfoArray, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCgelsBatched")]
             internal static extern global::CUDA.CublasStatusT CgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::System.IntPtr Aarray, int lda, global::System.IntPtr Carray, int ldc, int* info, int* devInfoArray, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZgelsBatched")]
             internal static extern global::CUDA.CublasStatusT ZgelsBatched(global::System.IntPtr handle, global::CUDA.CublasOperationT trans, int m, int n, int nrhs, global::System.IntPtr Aarray, int lda, global::System.IntPtr Carray, int ldc, int* info, int* devInfoArray, int batchSize);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasSdgmm")]
             internal static extern global::CUDA.CublasStatusT Sdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, float* A, int lda, float* x, int incx, float* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDdgmm")]
             internal static extern global::CUDA.CublasStatusT Ddgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, double* A, int lda, double* x, int incx, double* C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCdgmm")]
             internal static extern global::CUDA.CublasStatusT Cdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZdgmm")]
             internal static extern global::CUDA.CublasStatusT Zdgmm(global::System.IntPtr handle, global::CUDA.CublasSideModeT mode, int m, int n, global::System.IntPtr A, int lda, global::System.IntPtr x, int incx, global::System.IntPtr C, int ldc);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStpttr")]
             internal static extern global::CUDA.CublasStatusT Stpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* AP, float* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtpttr")]
             internal static extern global::CUDA.CublasStatusT Dtpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* AP, double* A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtpttr")]
             internal static extern global::CUDA.CublasStatusT Ctpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr AP, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtpttr")]
             internal static extern global::CUDA.CublasStatusT Ztpttr(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr AP, global::System.IntPtr A, int lda);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasStrttp")]
             internal static extern global::CUDA.CublasStatusT Strttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, float* A, int lda, float* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasDtrttp")]
             internal static extern global::CUDA.CublasStatusT Dtrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, double* A, int lda, double* AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasCtrttp")]
             internal static extern global::CUDA.CublasStatusT Ctrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr A, int lda, global::System.IntPtr AP);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cublasZtrttp")]
             internal static extern global::CUDA.CublasStatusT Ztrttp(global::System.IntPtr handle, global::CUDA.CublasFillModeT uplo, int n, global::System.IntPtr A, int lda, global::System.IntPtr AP);
         }
@@ -27801,117 +27801,117 @@ namespace CUDA
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCrealf@@YAMUfloat2@@@Z")]
             internal static extern float CuCrealf(global::CUDA.Float2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCimagf@@YAMUfloat2@@@Z")]
             internal static extern float CuCimagf(global::CUDA.Float2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cuFloatComplex@@YA?AUfloat2@@MM@Z")]
             internal static extern global::CUDA.Float2.__Internal MakeCuFloatComplex(float r, float i);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuConjf@@YA?AUfloat2@@U1@@Z")]
             internal static extern global::CUDA.Float2.__Internal CuConjf(global::CUDA.Float2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCaddf@@YA?AUfloat2@@U1@0@Z")]
             internal static extern global::CUDA.Float2.__Internal CuCaddf(global::CUDA.Float2.__Internal x, global::CUDA.Float2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCsubf@@YA?AUfloat2@@U1@0@Z")]
             internal static extern global::CUDA.Float2.__Internal CuCsubf(global::CUDA.Float2.__Internal x, global::CUDA.Float2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCmulf@@YA?AUfloat2@@U1@0@Z")]
             internal static extern global::CUDA.Float2.__Internal CuCmulf(global::CUDA.Float2.__Internal x, global::CUDA.Float2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCdivf@@YA?AUfloat2@@U1@0@Z")]
             internal static extern global::CUDA.Float2.__Internal CuCdivf(global::CUDA.Float2.__Internal x, global::CUDA.Float2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCabsf@@YAMUfloat2@@@Z")]
             internal static extern float CuCabsf(global::CUDA.Float2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCreal@@YANUdouble2@@@Z")]
             internal static extern double CuCreal(global::CUDA.Double2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCimag@@YANUdouble2@@@Z")]
             internal static extern double CuCimag(global::CUDA.Double2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cuDoubleComplex@@YA?AUdouble2@@NN@Z")]
             internal static extern void MakeCuDoubleComplex(global::System.IntPtr @return, double r, double i);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuConj@@YA?AUdouble2@@U1@@Z")]
             internal static extern void CuConj(global::System.IntPtr @return, global::CUDA.Double2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCadd@@YA?AUdouble2@@U1@0@Z")]
             internal static extern void CuCadd(global::System.IntPtr @return, global::CUDA.Double2.__Internal x, global::CUDA.Double2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCsub@@YA?AUdouble2@@U1@0@Z")]
             internal static extern void CuCsub(global::System.IntPtr @return, global::CUDA.Double2.__Internal x, global::CUDA.Double2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCmul@@YA?AUdouble2@@U1@0@Z")]
             internal static extern void CuCmul(global::System.IntPtr @return, global::CUDA.Double2.__Internal x, global::CUDA.Double2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCdiv@@YA?AUdouble2@@U1@0@Z")]
             internal static extern void CuCdiv(global::System.IntPtr @return, global::CUDA.Double2.__Internal x, global::CUDA.Double2.__Internal y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCabs@@YANUdouble2@@@Z")]
             internal static extern double CuCabs(global::CUDA.Double2.__Internal x);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?make_cuComplex@@YA?AUfloat2@@MM@Z")]
             internal static extern global::CUDA.Float2.__Internal MakeCuComplex(float x, float y);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuComplexFloatToDouble@@YA?AUdouble2@@Ufloat2@@@Z")]
             internal static extern void CuComplexFloatToDouble(global::System.IntPtr @return, global::CUDA.Float2.__Internal c);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuComplexDoubleToFloat@@YA?AUfloat2@@Udouble2@@@Z")]
             internal static extern global::CUDA.Float2.__Internal CuComplexDoubleToFloat(global::CUDA.Double2.__Internal c);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCfmaf@@YA?AUfloat2@@U1@00@Z")]
             internal static extern global::CUDA.Float2.__Internal CuCfmaf(global::CUDA.Float2.__Internal x, global::CUDA.Float2.__Internal y, global::CUDA.Float2.__Internal d);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?cuCfma@@YA?AUdouble2@@U1@00@Z")]
             internal static extern void CuCfma(global::System.IntPtr @return, global::CUDA.Double2.__Internal x, global::CUDA.Double2.__Internal y, global::CUDA.Double2.__Internal d);
         }
@@ -28111,7 +28111,7 @@ namespace CUDA
             internal ushort x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half_raw@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -28212,7 +28212,7 @@ namespace CUDA
             internal ushort y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half2_raw@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }
@@ -28323,17 +28323,17 @@ namespace CUDA
             internal ushort __x;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half@@QEAA@AEBU__half_raw@@@Z")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, global::System.IntPtr hr);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor_1(global::System.IntPtr instance, global::System.IntPtr _0);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??B__half@@QEBA?AU__half_raw@@XZ")]
             internal static extern void OperatorConversion(global::System.IntPtr instance, global::System.IntPtr @return);
         }
@@ -28460,22 +28460,22 @@ namespace CUDA
             internal global::CUDA.Half.__Internal y;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half2@@QEAA@AEBU__half@@0@Z")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, global::System.IntPtr a, global::System.IntPtr b);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half2@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr src);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0__half2@@QEAA@AEBU__half2_raw@@@Z")]
             internal static extern global::System.IntPtr ctor_1(global::System.IntPtr instance, global::System.IntPtr h2r);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("cublas", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("cublas64_91", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??B__half2@@QEBA?AU__half2_raw@@XZ")]
             internal static extern void OperatorConversion(global::System.IntPtr instance, global::System.IntPtr @return);
         }
