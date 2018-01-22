@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.1.0</Version>
+    <Version>0.2.2.0</Version>
     <Authors>Allister Beharry</Authors>
     <Company />
     <Product>Compute.NET</Product>
     <Description>.NET bindings for the NVIDIA CUDA toolkit</Description>
-    <AssemblyVersion>0.2.1.0</AssemblyVersion>
-    <FileVersion>0.2.1.0</FileVersion>
+    <AssemblyVersion>0.2.2.0</AssemblyVersion>
+    <FileVersion>0.2.2.0</FileVersion>
     <PackageIconUrl>https://github.com/allisterb/Compute.NET/raw/master/numanalysis.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/allisterb/Compute.NET/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/allisterb/Compute.NET</RepositoryUrl>
@@ -17,7 +17,7 @@
     <PackageLicenseUrl>https://github.com/allisterb/Compute.NET/blob/master/LICENSE</PackageLicenseUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Fixed wrong cuBlas shared library name.</PackageReleaseNotes>
+    <PackageReleaseNotes>Refactor CUDA classes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

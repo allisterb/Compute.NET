@@ -58,7 +58,7 @@ namespace Compute.Bindings
             if (cuBlas)
             {
                 this.Module.Headers.Add("cublas.h");
-                this.Module.SharedLibraryName = "cublas64_91";
+                this.Module.SharedLibraryName = "cudart64_91";
                 Info("Creating bindings for cuBLAS routines...");
             }
         }
